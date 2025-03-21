@@ -1,0 +1,12 @@
+field,dtype,drop,orig_name
+ID_jl,str,0
+jl_end_date,str,0,measurement.recording.stop_date
+jl_end_time,str,0,measurement.recording.stop_time
+jl_rec_downtime,float,0,
+jl_rec_duration,float,0,
+jl_rec_duration_str,str,0,
+jl_rec_end,datetime64[ms],0,
+jl_rec_start,datetime64[ms],0,
+jl_start_date,str,0,measurement.recording.start_date
+jl_start_time,str,0,measurement.recording.start_time
+jl_num_of_jobs,float,0

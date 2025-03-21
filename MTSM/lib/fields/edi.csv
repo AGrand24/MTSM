@@ -1,0 +1,7 @@
+field,dtype
+ID_rec,int
+ID_edi,str
+file_path,str
+edi_x,float
+edi_y,float
+edi_z,float

@@ -1,0 +1,4 @@
+field,dtype
+ID_site,int
+site_y,float
+site_x,float
