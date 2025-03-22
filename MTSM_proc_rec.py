@@ -40,17 +40,17 @@ def merge_xml2rec(gb):
 def load_new_sites():
 	gdf_site=pd.read_csv('MTSM/sites.csv')
 	gdf_site=save_gdf(gdf_site[['ID_site','site_x','site_y']],'site')
-	gdf_site=load_gdf('site')
-	gdf_rec_new=gdf_site.copy().rename(columns={'site_x':'rec_x','site_y':'rec_y'})
-	gdf_rec_new['ID_rec']=gdf_rec_new['ID_site']*10
-	gdf_rec_new=gdf_rec_new[['ID_site','rec_x','rec_y']]
-	gdf_rec_new=gdf_rec_new.set_index('ID_site')
+	gdf_site=load_gdf('site').drop(columns='geometry')
+	gdf_site=gdf_site.rename(columns={'site_x':'rec_x','site_y':'rec_y'})
+	gdf_site['ID_rec']=gdf_site['ID_site']*10
+	gdf_rec=load_gdf('rec')
 
-	gdf_rec=load_gdf('rec').drop(columns=['rec_x','rec_y'])
-	gdf_rec=pd.merge(gdf_rec,gdf_rec_new,left_on='ID_site',right_index=True,how='left')
-	gdf_rec=gdf_rec.drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
+	gdf_rec=pd.concat([gdf_rec,gdf_site]).drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
+	gdf_site=gdf_site.drop(columns='ID_site')
+	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_rec'),left_on='ID_rec',right_index=True,how='left')
 	gdf_rec=get_number_of_jobs(gdf_rec)
 	save_gdf(gdf_rec,'rec')
+
 
 def get_number_of_jobs(gdf):
 	# gdf=load_gdf('rec')
@@ -62,6 +62,7 @@ def get_number_of_jobs(gdf):
 			n_jobs.append(None)
 	gdf['rec_xml_num_of_jobs']=n_jobs
 	gdf['rec_xml_num_of_jobs']=gdf['rec_xml_num_of_jobs'].astype(float)
+	save_gdf(gdf,'rec')
 	return gdf
 
 def rec_mag_dec():
@@ -82,4 +83,6 @@ def run_proc_rec():
 	gb=groupby_xml()
 	gdf_rec=merge_xml2rec(gb)
 	load_new_sites()
+	# gdf_rec=get_number_of_jobs(gdf_rec)
+
 	rec_mag_dec()

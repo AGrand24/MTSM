@@ -12,6 +12,7 @@ from MTSM_edi import *
 from MTSM_id_rec_sync import *
 import sys
 
+
 try:
 	proc_type = sys.argv[1]
 except:
