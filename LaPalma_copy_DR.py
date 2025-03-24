@@ -1,9 +1,11 @@
 from MTSM_tools import *
 
-recs=[10240,9240]
+recs=[10200,8200,7200]
 
 gdf=load_gdf('rec')
 gdf=gdf.loc[gdf['ID_rec'].isin(recs)]
+print(tabulate(gdf[['ID_rec','xml_rec_start','xml_rec_end','xml_freq_sample']],showindex=False,headers='keys'))
+gdf=gdf.dropna(subset='ID_xml')
 if len(gdf)>0:
 	for coord in ['x','y']:
 		gdf[['deg','min']]=gdf[f'xml_{coord}'].astype(str).str.split('.',expand=True)
@@ -17,7 +19,7 @@ if len(gdf)>0:
 		gdf[f'xml_out_{coord}']=gdf['deg'].astype(str).str.zfill(2)+'° '+gdf['min'].astype(str).str.zfill(2)+"' "+gdf['sec'].astype(str)+"''"
 	gdf['xml_out_x']='W '+ gdf['xml_out_x'].str.replace('-','')
 	gdf['xml_out_y']='N '+ gdf['xml_out_y']
-	gdf['xml_gps_height']=np.round(gdf['xml_gps_height']/100).astype(int)
+	gdf['xml_gps_height']=np.round(gdf['xml_gps_height']/100).astype(float)
 	# gdf[['ID_site','xml_out_x','xml_out_y']]
 	gdf['xml_rec_start_out']=pd.to_datetime(gdf['xml_rec_start'].dt.date)+pd.Timedelta(hours=13)
 	gdf['jl_out']='4096-512-128'
