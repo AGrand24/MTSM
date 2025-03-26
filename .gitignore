@@ -30,3 +30,4 @@
 !.gitignore
 !osm_simplify.ipynb
 !wara_add_sites.ipynb
+*.rec

@@ -9,17 +9,9 @@ from MTSM_tools import *
 from MTSM_python_modules import *
 
 print('Exporting to excel..')
-gdf_rec=load_gdf('rec')
+gdf_rec=load_gdf('rec').drop(columns='geometry').sort_index(axis=1)
 
-fields=pd.read_csv('MTSM/lib/fields/rec_excel.tsv',sep='\t').dropna(subset='name_new')
+fp='tmp/rec_data_export_'+time.strftime('%y%m%d_%H%M%S')+'.csv'
 
-df_export=gdf_rec[fields['name_orig']]
-
-for col_old,col_new in zip(list(fields['name_orig']),list(fields['name_new'])):
-	df_export[col_new]=df_export[col_old]
-
-df_export=df_export[fields['name_new']]
-try:
-	df_export.to_excel('MTSM/export/rec_export.xlsx',index=False)
-except:
-	input('Error - Close MTSM/export/rec_export.xlsx!')
+gdf_rec.to_csv(fp,index=False)
+input(f'Rec database exported to - \t {fp}')

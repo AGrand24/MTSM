@@ -4,12 +4,12 @@ from MTSM_tools import *
 def export_rec():
 	gdf_rec=load_gdf('rec')
 	export_fields=[col for col in gdf_rec.columns if col.startswith('rec_') or col.startswith('ID_')]
-	path=f"MTSM/rec_import_export/export_rec_{datetime.now().strftime('%y_%m_%d_%H_%M_%S')}.tsv"
+	path=f"MTSM/rec_import_export/export_rec_{datetime.now().strftime('%y_%m_%d_%H_%M_%S')}.rec"
 	gdf_rec[export_fields].to_csv(path,sep='\t',index=False)
 	return path
 
 def import_rec():
-	ld=get_ld('MTSM/rec_import_export/',endswith='tsv')
+	ld=get_ld('MTSM/rec_import_export/',endswith='.rec')
 
 	for index in ld.index:
 		print(index,ld.loc[index,'file_name'])
