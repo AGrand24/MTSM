@@ -50,3 +50,9 @@ def import_xml_id_xml():
 	gdf_xml=pd.merge(gdf_xml,xml_sync,how='left',left_on='ID_xml',right_index=True)
 	gdf_xml=save_gdf(gdf_xml,'xml')
 	return gdf_xml
+
+def backup_id_xml_rec_match():
+	path=f"MTSM/id_xml_bckp/{datetime.now().strftime('%y_%m_%d_%H_%M_%S')}.ids"
+	gdf_xml=load_gdf('xml')
+
+	gdf_xml[['ID_xml','ID_rec']].to_csv(path,index=False,sep='\t')

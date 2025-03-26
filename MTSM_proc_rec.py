@@ -47,15 +47,16 @@ def load_new_sites():
 
 	gdf_rec=pd.concat([gdf_rec,gdf_site]).drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
 	gdf_site=gdf_site.drop(columns='ID_rec')
+	
 	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_site'),left_on='ID_site',right_index=True,how='left')
-	gdf_rec=get_number_of_jobs(gdf_rec)
 	save_gdf(gdf_rec,'rec')
 
 
-def get_number_of_jobs(gdf):
-	# gdf=load_gdf('rec')
+def get_number_of_jobs():
+	gdf=load_gdf('rec')
 	n_jobs=[]
 	for xml in gdf['ID_xml']:
+		# print(xml)
 		if xml is not None:
 			n_jobs.append(len(xml.split(', ')))
 		else:
@@ -86,3 +87,4 @@ def run_proc_rec():
 	# gdf_rec=get_number_of_jobs(gdf_rec)
 
 	rec_mag_dec()
+	gdf_rec=get_number_of_jobs()

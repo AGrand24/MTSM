@@ -113,7 +113,7 @@ def get_rec_duration_str(gdf_xml,prefix):
 
 
 def create_folders(**kwargs):
-	folders=['ts/1_unmatched/','ts/2_discarded/','ts/3_edit_ats']
+	folders=['ts/1_unmatched/','ts/2_discarded/','ts/3_edit_ats','tmp/']
 	
 	if kwargs.get('folders',None)=='unmatched':
 		folders=['ts/1_unmatched/']
@@ -132,8 +132,8 @@ def create_folders(**kwargs):
 	for folder in new_folders:
 		if not os.path.exists(folder):
 			os.makedirs(folder)
-
-
+	
+	
 def handleRemoveReadonly(func, path, exc):
   excvalue = exc[1]
   if func in (os.rmdir, os.remove) and excvalue.errno == errno.EACCES:
