@@ -46,8 +46,8 @@ def load_new_sites():
 	gdf_rec=load_gdf('rec')
 
 	gdf_rec=pd.concat([gdf_rec,gdf_site]).drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
-	gdf_site=gdf_site.drop(columns='ID_site')
-	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_rec'),left_on='ID_rec',right_index=True,how='left')
+	gdf_site=gdf_site.drop(columns='ID_rec')
+	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_site'),left_on='ID_site',right_index=True,how='left')
 	gdf_rec=get_number_of_jobs(gdf_rec)
 	save_gdf(gdf_rec,'rec')
 

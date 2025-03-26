@@ -1,787 +1,747 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis maxScale="0" simplifyDrawingTol="1" simplifyAlgorithm="0" version="3.40.3-Bratislava" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" autoRefreshMode="Disabled" simplifyMaxScale="1" readOnly="0" labelsEnabled="1" simplifyLocal="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" minScale="100000000" autoRefreshTime="0">
+<qgis version="3.42.0-Münster" simplifyDrawingTol="1" minScale="100000000" simplifyLocal="1" hasScaleBasedVisibilityFlag="0" simplifyMaxScale="1" symbologyReferenceScale="-1" maxScale="0" labelsEnabled="1" styleCategories="AllStyleCategories" autoRefreshMode="Disabled" simplifyDrawingHints="0" readOnly="0" autoRefreshTime="0" simplifyAlgorithm="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>0</Removable>
     <Searchable>1</Searchable>
     <Private>0</Private>
   </flags>
-  <temporal endField="" endExpression="" durationUnit="min" enabled="1" startField="" mode="2" durationField="fid" fixedDuration="0" accumulate="0" limitMode="1" startExpression="">
+  <temporal endExpression="" startExpression="" startField="xml_rec_start" fixedDuration="0" enabled="1" endField="xml_rec_end" limitMode="1" durationField="fid" mode="2" durationUnit="min" accumulate="0">
     <fixedRange>
       <start></start>
       <end></end>
     </fixedRange>
   </temporal>
-  <elevation showMarkerSymbolInSurfacePlots="0" zoffset="0" symbology="Line" extrusionEnabled="0" binding="Centroid" clamping="Terrain" type="IndividualFeatures" respectLayerSymbol="1" zscale="1" extrusion="0">
+  <elevation type="IndividualFeatures" zscale="1" binding="Centroid" clamping="Terrain" showMarkerSymbolInSurfacePlots="0" respectLayerSymbol="1" customToleranceEnabled="0" zoffset="0" symbology="Line" extrusion="0" extrusionEnabled="0">
     <data-defined-properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option type="QString" name="name" value=""/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option type="QString" name="type" value="collection"/>
       </Option>
     </data-defined-properties>
     <profileLineSymbol>
-      <symbol is_animated="0" type="line" clip_to_extent="1" alpha="1" frame_rate="10" name="" force_rhr="0">
+      <symbol type="line" is_animated="0" name="" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleLine" id="{23b99d76-96e1-4902-b995-d5a151614f81}">
+        <layer pass="0" id="{23b99d76-96e1-4902-b995-d5a151614f81}" enabled="1" class="SimpleLine" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="align_dash_pattern"/>
-            <Option type="QString" value="square" name="capstyle"/>
-            <Option type="QString" value="5;2" name="customdash"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale"/>
-            <Option type="QString" value="MM" name="customdash_unit"/>
-            <Option type="QString" value="0" name="dash_pattern_offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="dash_pattern_offset_unit"/>
-            <Option type="QString" value="0" name="draw_inside_polygon"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1" name="line_color"/>
-            <Option type="QString" value="solid" name="line_style"/>
-            <Option type="QString" value="0.6" name="line_width"/>
-            <Option type="QString" value="MM" name="line_width_unit"/>
-            <Option type="QString" value="0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="0" name="ring_filter"/>
-            <Option type="QString" value="0" name="trim_distance_end"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale"/>
-            <Option type="QString" value="MM" name="trim_distance_end_unit"/>
-            <Option type="QString" value="0" name="trim_distance_start"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale"/>
-            <Option type="QString" value="MM" name="trim_distance_start_unit"/>
-            <Option type="QString" value="0" name="tweak_dash_pattern_on_corners"/>
-            <Option type="QString" value="0" name="use_custom_dash"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="width_map_unit_scale"/>
+            <Option type="QString" name="align_dash_pattern" value="0"/>
+            <Option type="QString" name="capstyle" value="square"/>
+            <Option type="QString" name="customdash" value="5;2"/>
+            <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="customdash_unit" value="MM"/>
+            <Option type="QString" name="dash_pattern_offset" value="0"/>
+            <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="dash_pattern_offset_unit" value="MM"/>
+            <Option type="QString" name="draw_inside_polygon" value="0"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="line_color" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1"/>
+            <Option type="QString" name="line_style" value="solid"/>
+            <Option type="QString" name="line_width" value="0.6"/>
+            <Option type="QString" name="line_width_unit" value="MM"/>
+            <Option type="QString" name="offset" value="0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="ring_filter" value="0"/>
+            <Option type="QString" name="trim_distance_end" value="0"/>
+            <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="trim_distance_end_unit" value="MM"/>
+            <Option type="QString" name="trim_distance_start" value="0"/>
+            <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="trim_distance_start_unit" value="MM"/>
+            <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
+            <Option type="QString" name="use_custom_dash" value="0"/>
+            <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileLineSymbol>
     <profileFillSymbol>
-      <symbol is_animated="0" type="fill" clip_to_extent="1" alpha="1" frame_rate="10" name="" force_rhr="0">
+      <symbol type="fill" is_animated="0" name="" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleFill" id="{44bf2c75-923e-4e91-860b-ac2475f2edfb}">
+        <layer pass="0" id="{44bf2c75-923e-4e91-860b-ac2475f2edfb}" enabled="1" class="SimpleFill" locked="0">
           <Option type="Map">
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-            <Option type="QString" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1" name="color"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="117,81,63,255,rgb:0.45882352941176469,0.31764705882352939,0.24705882352941178,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0.2" name="outline_width"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="solid" name="style"/>
+            <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="color" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="offset" value="0,0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="outline_color" value="117,81,63,255,rgb:0.45882352941176469,0.31764705882352939,0.24705882352941178,1"/>
+            <Option type="QString" name="outline_style" value="solid"/>
+            <Option type="QString" name="outline_width" value="0.2"/>
+            <Option type="QString" name="outline_width_unit" value="MM"/>
+            <Option type="QString" name="style" value="solid"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileFillSymbol>
     <profileMarkerSymbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{3230076f-1f10-42cd-9336-8f324823db0e}">
+        <layer pass="0" id="{3230076f-1f10-42cd-9336-8f324823db0e}" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="angle"/>
-            <Option type="QString" value="square" name="cap_style"/>
-            <Option type="QString" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1" name="color"/>
-            <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="diamond" name="name"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="117,81,63,255,rgb:0.45882352941176469,0.31764705882352939,0.24705882352941178,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0.2" name="outline_width"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="diameter" name="scale_method"/>
-            <Option type="QString" value="3" name="size"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-            <Option type="QString" value="MM" name="size_unit"/>
-            <Option type="QString" value="1" name="vertical_anchor_point"/>
+            <Option type="QString" name="angle" value="0"/>
+            <Option type="QString" name="cap_style" value="square"/>
+            <Option type="QString" name="color" value="164,113,88,255,rgb:0.64313725490196083,0.44313725490196076,0.34509803921568627,1"/>
+            <Option type="QString" name="horizontal_anchor_point" value="1"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="name" value="diamond"/>
+            <Option type="QString" name="offset" value="0,0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="outline_color" value="117,81,63,255,rgb:0.45882352941176469,0.31764705882352939,0.24705882352941178,1"/>
+            <Option type="QString" name="outline_style" value="solid"/>
+            <Option type="QString" name="outline_width" value="0.2"/>
+            <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="outline_width_unit" value="MM"/>
+            <Option type="QString" name="scale_method" value="diameter"/>
+            <Option type="QString" name="size" value="3"/>
+            <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="size_unit" value="MM"/>
+            <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
     </profileMarkerSymbol>
   </elevation>
-  <renderer-v2 forceraster="0" symbollevels="0" enableorderby="0" referencescale="-1" type="RuleRenderer">
+  <renderer-v2 type="RuleRenderer" forceraster="0" symbollevels="0" referencescale="-1" enableorderby="0">
     <rules key="{7035bd6b-8d76-435d-bb33-743d6f58821a}">
-      <rule key="{3f7a20e1-2342-4b85-ad2d-ab61881c6a8b}" symbol="0" label="Operator + ADU"/>
-      <rule scalemindenom="80000" key="{8662995f-7512-436d-a6d7-2f0190005c22}" symbol="1" scalemaxdenom="100000"/>
-      <rule scalemindenom="5000" key="{f9028f04-e122-42b3-81a8-88b7aee943e7}" symbol="2" filter="xml_x is not null" scalemaxdenom="20000" label="Xml position"/>
-      <rule key="{47869f13-6f9c-4cab-89fa-d5bbd7b5849b}" symbol="3" filter="xml_x is not NULL" scalemaxdenom="5000" label="Xml sensor positions"/>
-      <rule key="{ac85d8d3-e7cc-4fa6-b380-54107fcb6f2c}" symbol="4" filter="xml_x is not NULL" scalemaxdenom="5000" label="FL sensor positions"/>
+      <rule label="Operator + ADU" key="{3f7a20e1-2342-4b85-ad2d-ab61881c6a8b}" symbol="0"/>
+      <rule filter="xml_x is not null" label="Xml position" scalemindenom="5000" key="{f9028f04-e122-42b3-81a8-88b7aee943e7}" scalemaxdenom="20000" symbol="1"/>
+      <rule filter="xml_x is not NULL" label="Xml sensor positions" key="{47869f13-6f9c-4cab-89fa-d5bbd7b5849b}" scalemaxdenom="5000" symbol="2"/>
+      <rule filter="xml_x is not NULL" label="FL sensor positions" key="{ac85d8d3-e7cc-4fa6-b380-54107fcb6f2c}" scalemaxdenom="5000" symbol="3"/>
     </rules>
     <symbols>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="0" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="0" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{263fe469-9eb2-47ba-bb9d-f3f95108789c}">
+        <layer pass="0" id="{263fe469-9eb2-47ba-bb9d-f3f95108789c}" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="angle"/>
-            <Option type="QString" value="square" name="cap_style"/>
-            <Option type="QString" value="255,255,255,255,rgb:1,1,1,1" name="color"/>
-            <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="circle" name="name"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0.25" name="outline_width"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="diameter" name="scale_method"/>
-            <Option type="QString" value="4" name="size"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-            <Option type="QString" value="MM" name="size_unit"/>
-            <Option type="QString" value="1" name="vertical_anchor_point"/>
+            <Option type="QString" name="angle" value="0"/>
+            <Option type="QString" name="cap_style" value="square"/>
+            <Option type="QString" name="color" value="255,255,255,255,rgb:1,1,1,1"/>
+            <Option type="QString" name="horizontal_anchor_point" value="1"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="name" value="circle"/>
+            <Option type="QString" name="offset" value="0,0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="outline_color" value="0,0,0,255,rgb:0,0,0,1"/>
+            <Option type="QString" name="outline_style" value="solid"/>
+            <Option type="QString" name="outline_width" value="0.25"/>
+            <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="outline_width_unit" value="MM"/>
+            <Option type="QString" name="scale_method" value="diameter"/>
+            <Option type="QString" name="size" value="4"/>
+            <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="size_unit" value="MM"/>
+            <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="fillColor">
-                  <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="op_clr" name="expression"/>
-                  <Option type="int" value="3" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="op_clr"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
                 <Option type="Map" name="outlineColor">
-                  <Option type="bool" value="false" name="active"/>
-                  <Option type="int" value="1" name="type"/>
-                  <Option type="QString" value="" name="val"/>
+                  <Option type="bool" name="active" value="false"/>
+                  <Option type="int" name="type" value="1"/>
+                  <Option type="QString" name="val" value=""/>
                 </Option>
               </Option>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
-        <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{4c1c9ec0-21c0-410c-a252-48befdb91e11}">
+        <layer pass="0" id="{4c1c9ec0-21c0-410c-a252-48befdb91e11}" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="angle"/>
-            <Option type="QString" value="square" name="cap_style"/>
-            <Option type="QString" value="255,255,255,255,rgb:1,1,1,1" name="color"/>
-            <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="square" name="name"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0.25" name="outline_width"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="diameter" name="scale_method"/>
-            <Option type="QString" value="2" name="size"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-            <Option type="QString" value="MM" name="size_unit"/>
-            <Option type="QString" value="1" name="vertical_anchor_point"/>
+            <Option type="QString" name="angle" value="0"/>
+            <Option type="QString" name="cap_style" value="square"/>
+            <Option type="QString" name="color" value="255,255,255,255,rgb:1,1,1,1"/>
+            <Option type="QString" name="horizontal_anchor_point" value="1"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="name" value="square"/>
+            <Option type="QString" name="offset" value="0,0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="outline_color" value="0,0,0,255,rgb:0,0,0,1"/>
+            <Option type="QString" name="outline_style" value="solid"/>
+            <Option type="QString" name="outline_width" value="0.25"/>
+            <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="outline_width_unit" value="MM"/>
+            <Option type="QString" name="scale_method" value="diameter"/>
+            <Option type="QString" name="size" value="2"/>
+            <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="size_unit" value="MM"/>
+            <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option type="Map" name="properties">
                 <Option type="Map" name="fillColor">
-                  <Option type="bool" value="true" name="active"/>
-                  <Option type="QString" value="adu_clr" name="expression"/>
-                  <Option type="int" value="3" name="type"/>
+                  <Option type="bool" name="active" value="true"/>
+                  <Option type="QString" name="expression" value="adu_clr"/>
+                  <Option type="int" name="type" value="3"/>
                 </Option>
                 <Option type="Map" name="outlineColor">
-                  <Option type="bool" value="false" name="active"/>
-                  <Option type="int" value="1" name="type"/>
-                  <Option type="QString" value="" name="val"/>
+                  <Option type="bool" name="active" value="false"/>
+                  <Option type="int" name="type" value="1"/>
+                  <Option type="QString" name="val" value=""/>
                 </Option>
               </Option>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="1" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="1" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{36c84737-2384-4e28-a688-8ade8aa82225}">
+        <layer pass="0" id="{8b20d8fe-2140-4038-9e63-95c5492badb7}" enabled="1" class="GeometryGenerator" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="angle"/>
-            <Option type="QString" value="square" name="cap_style"/>
-            <Option type="QString" value="125,139,143,255,rgb:0.49019607843137253,0.54509803921568623,0.5607843137254902,1" name="color"/>
-            <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="circle" name="name"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0" name="outline_width"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="diameter" name="scale_method"/>
-            <Option type="QString" value="2" name="size"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-            <Option type="QString" value="MM" name="size_unit"/>
-            <Option type="QString" value="1" name="vertical_anchor_point"/>
+            <Option type="QString" name="SymbolType" value="Marker"/>
+            <Option type="QString" name="geometryModifier" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)"/>
+            <Option type="QString" name="units" value="MapUnit"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
-        </layer>
-      </symbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="2" force_rhr="0">
-        <data_defined_properties>
-          <Option type="Map">
-            <Option type="QString" value="" name="name"/>
-            <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
-          </Option>
-        </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="GeometryGenerator" id="{8b20d8fe-2140-4038-9e63-95c5492badb7}">
-          <Option type="Map">
-            <Option type="QString" value="Marker" name="SymbolType"/>
-            <Option type="QString" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)" name="geometryModifier"/>
-            <Option type="QString" value="MapUnit" name="units"/>
-          </Option>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-          <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="@2@0" force_rhr="0">
+          <symbol type="marker" is_animated="0" name="@1@0" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{9809c1d9-0e9f-41dd-b78d-06e0aba65eb8}">
+            <layer pass="0" id="{9809c1d9-0e9f-41dd-b78d-06e0aba65eb8}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="255,255,255,255,rgb:1,1,1,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="star_diamond" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.25" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2.8" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MM" name="size_unit"/>
-                <Option type="QString" value="1" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="255,255,255,255,rgb:1,1,1,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="star_diamond"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,0,255,rgb:0,0,0,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0.25"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2.8"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MM"/>
+                <Option type="QString" name="vertical_anchor_point" value="1"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="fillColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="qc_clr" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="adu_clr"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="case&#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then '#FFFFFF'&#xd;&#xa;else '#000000'&#xd;&#xa;end" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="case&#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then '#FFFFFF'&#xd;&#xa;else '#000000'&#xd;&#xa;end"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </layer>
       </symbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="3" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="2" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="GeometryGenerator" id="{b4596438-891a-440f-9611-7714745f4d1c}">
+        <layer pass="0" id="{b4596438-891a-440f-9611-7714745f4d1c}" enabled="1" class="GeometryGenerator" locked="0">
           <Option type="Map">
-            <Option type="QString" value="Marker" name="SymbolType"/>
-            <Option type="QString" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)" name="geometryModifier"/>
-            <Option type="QString" value="MapUnit" name="units"/>
+            <Option type="QString" name="SymbolType" value="Marker"/>
+            <Option type="QString" name="geometryModifier" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)"/>
+            <Option type="QString" name="units" value="MapUnit"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
-          <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="@3@0" force_rhr="0">
+          <symbol type="marker" is_animated="0" name="@2@0" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{8c17101d-2ef2-4433-bfdb-e8fcd5578bc0}">
+            <layer pass="0" id="{8c17101d-2ef2-4433-bfdb-e8fcd5578bc0}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="1.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="3" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="1.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="3"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="90+rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="90+rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="attributes(get_feature( 'Settings','ID_set','clr_w'))['set_clr']" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="attributes(get_feature( 'Settings','ID_set','clr_w'))['set_clr']"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="xml_ch02_sensor_pos_y1" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="xml_ch02_sensor_pos_y1"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{6e677060-190d-4595-8c88-05b4602397e9}">
+            <layer pass="0" id="{6e677060-190d-4595-8c88-05b4602397e9}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="1.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="3" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="1.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="3"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="90+rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="90+rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="attributes(get_feature( 'Settings','ID_set','clr_e'))['set_clr']" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="attributes(get_feature( 'Settings','ID_set','clr_e'))['set_clr']"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="xml_ch02_sensor_pos_y2" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="xml_ch02_sensor_pos_y2"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{513af0dc-3f3b-4419-9fb2-debbf7721c31}">
+            <layer pass="0" id="{513af0dc-3f3b-4419-9fb2-debbf7721c31}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="1.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="3" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="1.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="3"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="attributes(get_feature( 'Settings','ID_set','clr_s'))['set_clr']" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="attributes(get_feature( 'Settings','ID_set','clr_s'))['set_clr']"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="-xml_ch01_sensor_pos_x2" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="-xml_ch01_sensor_pos_x2"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{77115fda-f2ab-429c-bc07-c432cee63646}">
+            <layer pass="0" id="{77115fda-f2ab-429c-bc07-c432cee63646}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="1.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="3" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="1.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="3"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="attributes(get_feature( 'Settings','ID_set','clr_n'))['set_clr']" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="attributes(get_feature( 'Settings','ID_set','clr_n'))['set_clr']"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="-xml_ch01_sensor_pos_x1" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="-xml_ch01_sensor_pos_x1"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </layer>
       </symbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="4" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="3" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="GeometryGenerator" id="{b4596438-891a-440f-9611-7714745f4d1c}">
+        <layer pass="0" id="{b4596438-891a-440f-9611-7714745f4d1c}" enabled="1" class="GeometryGenerator" locked="0">
           <Option type="Map">
-            <Option type="QString" value="Marker" name="SymbolType"/>
-            <Option type="QString" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)" name="geometryModifier"/>
-            <Option type="QString" value="MapUnit" name="units"/>
+            <Option type="QString" name="SymbolType" value="Marker"/>
+            <Option type="QString" name="geometryModifier" value="make_point(&quot;xml_x&quot;,&quot;xml_y&quot;)"/>
+            <Option type="QString" name="units" value="MapUnit"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
-          <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="@4@0" force_rhr="0">
+          <symbol type="marker" is_animated="0" name="@3@0" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{8c17101d-2ef2-4433-bfdb-e8fcd5578bc0}">
+            <layer pass="0" id="{8c17101d-2ef2-4433-bfdb-e8fcd5578bc0}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,4,255,rgb:0,0,0.01568627450980392,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,4,255,rgb:0,0,0.01568627450980392,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="90+rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="90+rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="false" name="active"/>
-                      <Option type="int" value="1" name="type"/>
-                      <Option type="QString" value="" name="val"/>
+                      <Option type="bool" name="active" value="false"/>
+                      <Option type="int" name="type" value="1"/>
+                      <Option type="QString" name="val" value=""/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="case when rec_fl_ey_w is not NULL&#xd;&#xa;then&#xd;&#xa;-1*abs(rec_fl_ey_w)&#xd;&#xa;else 0&#xd;&#xa;end" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="case when rec_fl_ey_w is not NULL&#xd;&#xa;then&#xd;&#xa;-1*abs(rec_fl_ey_w)&#xd;&#xa;else 0&#xd;&#xa;end"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{6e677060-190d-4595-8c88-05b4602397e9}">
+            <layer pass="0" id="{6e677060-190d-4595-8c88-05b4602397e9}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,4,255,rgb:0,0,0.01568627450980392,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,4,255,rgb:0,0,0.01568627450980392,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="90+rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="90+rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="false" name="active"/>
-                      <Option type="int" value="1" name="type"/>
-                      <Option type="QString" value="" name="val"/>
+                      <Option type="bool" name="active" value="false"/>
+                      <Option type="int" name="type" value="1"/>
+                      <Option type="QString" name="val" value=""/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="case when rec_fl_ey_e is not NULL&#xd;&#xa;then&#xd;&#xa;abs(rec_fl_ey_e)&#xd;&#xa;else 0&#xd;&#xa;end" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="case when rec_fl_ey_e is not NULL&#xd;&#xa;then&#xd;&#xa;abs(rec_fl_ey_e)&#xd;&#xa;else 0&#xd;&#xa;end"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{513af0dc-3f3b-4419-9fb2-debbf7721c31}">
+            <layer pass="0" id="{513af0dc-3f3b-4419-9fb2-debbf7721c31}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,4,255,rgb:0,0,0.01568627450980392,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,4,255,rgb:0,0,0.01568627450980392,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="false" name="active"/>
-                      <Option type="int" value="1" name="type"/>
-                      <Option type="QString" value="" name="val"/>
+                      <Option type="bool" name="active" value="false"/>
+                      <Option type="int" name="type" value="1"/>
+                      <Option type="QString" name="val" value=""/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="case when rec_fl_ex_s is not NULL&#xd;&#xa;then&#xd;&#xa;-1*abs(rec_fl_ex_s)&#xd;&#xa;else 0&#xd;&#xa;end" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="case when rec_fl_ex_s is not NULL&#xd;&#xa;then&#xd;&#xa;-1*abs(rec_fl_ex_s)&#xd;&#xa;else 0&#xd;&#xa;end"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{77115fda-f2ab-429c-bc07-c432cee63646}">
+            <layer pass="0" id="{77115fda-f2ab-429c-bc07-c432cee63646}" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="line" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,4,255,rgb:0,0,0.01568627450980392,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0.5" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MapUnit" name="size_unit"/>
-                <Option type="QString" value="2" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="232,113,141,255,rgb:0.90980392156862744,0.44313725490196076,0.55294117647058827,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="line"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,4,255,rgb:0,0,0.01568627450980392,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0.5"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MapUnit"/>
+                <Option type="QString" name="vertical_anchor_point" value="2"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="angle">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="rec_mag_dec" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="rec_mag_dec"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="false" name="active"/>
-                      <Option type="int" value="1" name="type"/>
-                      <Option type="QString" value="" name="val"/>
+                      <Option type="bool" name="active" value="false"/>
+                      <Option type="int" name="type" value="1"/>
+                      <Option type="QString" name="val" value=""/>
                     </Option>
                     <Option type="Map" name="size">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="case when rec_fl_ex_n is not NULL&#xd;&#xa;then&#xd;&#xa;abs(rec_fl_ex_n)&#xd;&#xa;else 0&#xd;&#xa;end" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="case when rec_fl_ex_n is not NULL&#xd;&#xa;then&#xd;&#xa;abs(rec_fl_ex_n)&#xd;&#xa;else 0&#xd;&#xa;end"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -791,94 +751,94 @@
     </symbols>
     <data-defined-properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option type="QString" name="name" value=""/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option type="QString" name="type" value="collection"/>
       </Option>
     </data-defined-properties>
-    <effect enabled="1" type="effectStack">
+    <effect type="effectStack" enabled="1">
       <effect type="dropShadow">
         <Option type="Map">
-          <Option type="QString" value="13" name="blend_mode"/>
-          <Option type="QString" value="0" name="blur_level"/>
-          <Option type="QString" value="MM" name="blur_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="blur_unit_scale"/>
-          <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="color"/>
-          <Option type="QString" value="2" name="draw_mode"/>
-          <Option type="QString" value="0" name="enabled"/>
-          <Option type="QString" value="135" name="offset_angle"/>
-          <Option type="QString" value="1" name="offset_distance"/>
-          <Option type="QString" value="MM" name="offset_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_unit_scale"/>
-          <Option type="QString" value="1" name="opacity"/>
+          <Option type="QString" name="blend_mode" value="13"/>
+          <Option type="QString" name="blur_level" value="0"/>
+          <Option type="QString" name="blur_unit" value="MM"/>
+          <Option type="QString" name="blur_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="color" value="0,0,0,255,rgb:0,0,0,1"/>
+          <Option type="QString" name="draw_mode" value="2"/>
+          <Option type="QString" name="enabled" value="0"/>
+          <Option type="QString" name="offset_angle" value="135"/>
+          <Option type="QString" name="offset_distance" value="1"/>
+          <Option type="QString" name="offset_unit" value="MM"/>
+          <Option type="QString" name="offset_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="opacity" value="1"/>
         </Option>
       </effect>
       <effect type="outerGlow">
         <Option type="Map">
-          <Option type="QString" value="0" name="blend_mode"/>
-          <Option type="QString" value="0" name="blur_level"/>
-          <Option type="QString" value="MM" name="blur_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="blur_unit_scale"/>
-          <Option type="QString" value="69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1" name="color1"/>
-          <Option type="QString" value="188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1" name="color2"/>
-          <Option type="QString" value="0" name="color_type"/>
-          <Option type="QString" value="ccw" name="direction"/>
-          <Option type="QString" value="0" name="discrete"/>
-          <Option type="QString" value="2" name="draw_mode"/>
-          <Option type="QString" value="1" name="enabled"/>
-          <Option type="QString" value="0.5" name="opacity"/>
-          <Option type="QString" value="gradient" name="rampType"/>
-          <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="single_color"/>
-          <Option type="QString" value="rgb" name="spec"/>
-          <Option type="QString" value="0.7" name="spread"/>
-          <Option type="QString" value="MM" name="spread_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="spread_unit_scale"/>
+          <Option type="QString" name="blend_mode" value="0"/>
+          <Option type="QString" name="blur_level" value="0"/>
+          <Option type="QString" name="blur_unit" value="MM"/>
+          <Option type="QString" name="blur_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="color1" value="69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1"/>
+          <Option type="QString" name="color2" value="188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1"/>
+          <Option type="QString" name="color_type" value="0"/>
+          <Option type="QString" name="direction" value="ccw"/>
+          <Option type="QString" name="discrete" value="0"/>
+          <Option type="QString" name="draw_mode" value="2"/>
+          <Option type="QString" name="enabled" value="1"/>
+          <Option type="QString" name="opacity" value="0.5"/>
+          <Option type="QString" name="rampType" value="gradient"/>
+          <Option type="QString" name="single_color" value="0,0,0,255,rgb:0,0,0,1"/>
+          <Option type="QString" name="spec" value="rgb"/>
+          <Option type="QString" name="spread" value="0.7"/>
+          <Option type="QString" name="spread_unit" value="MM"/>
+          <Option type="QString" name="spread_unit_scale" value="3x:0,0,0,0,0,0"/>
         </Option>
       </effect>
       <effect type="drawSource">
         <Option type="Map">
-          <Option type="QString" value="0" name="blend_mode"/>
-          <Option type="QString" value="2" name="draw_mode"/>
-          <Option type="QString" value="1" name="enabled"/>
-          <Option type="QString" value="1" name="opacity"/>
+          <Option type="QString" name="blend_mode" value="0"/>
+          <Option type="QString" name="draw_mode" value="2"/>
+          <Option type="QString" name="enabled" value="1"/>
+          <Option type="QString" name="opacity" value="1"/>
         </Option>
       </effect>
       <effect type="innerShadow">
         <Option type="Map">
-          <Option type="QString" value="13" name="blend_mode"/>
-          <Option type="QString" value="2.645" name="blur_level"/>
-          <Option type="QString" value="MM" name="blur_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="blur_unit_scale"/>
-          <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="color"/>
-          <Option type="QString" value="2" name="draw_mode"/>
-          <Option type="QString" value="0" name="enabled"/>
-          <Option type="QString" value="135" name="offset_angle"/>
-          <Option type="QString" value="2" name="offset_distance"/>
-          <Option type="QString" value="MM" name="offset_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_unit_scale"/>
-          <Option type="QString" value="1" name="opacity"/>
+          <Option type="QString" name="blend_mode" value="13"/>
+          <Option type="QString" name="blur_level" value="2.645"/>
+          <Option type="QString" name="blur_unit" value="MM"/>
+          <Option type="QString" name="blur_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="color" value="0,0,0,255,rgb:0,0,0,1"/>
+          <Option type="QString" name="draw_mode" value="2"/>
+          <Option type="QString" name="enabled" value="0"/>
+          <Option type="QString" name="offset_angle" value="135"/>
+          <Option type="QString" name="offset_distance" value="2"/>
+          <Option type="QString" name="offset_unit" value="MM"/>
+          <Option type="QString" name="offset_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="opacity" value="1"/>
         </Option>
       </effect>
       <effect type="innerGlow">
         <Option type="Map">
-          <Option type="QString" value="0" name="blend_mode"/>
-          <Option type="QString" value="2.645" name="blur_level"/>
-          <Option type="QString" value="MM" name="blur_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="blur_unit_scale"/>
-          <Option type="QString" value="69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1" name="color1"/>
-          <Option type="QString" value="188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1" name="color2"/>
-          <Option type="QString" value="0" name="color_type"/>
-          <Option type="QString" value="ccw" name="direction"/>
-          <Option type="QString" value="0" name="discrete"/>
-          <Option type="QString" value="2" name="draw_mode"/>
-          <Option type="QString" value="0" name="enabled"/>
-          <Option type="QString" value="0.5" name="opacity"/>
-          <Option type="QString" value="gradient" name="rampType"/>
-          <Option type="QString" value="255,255,255,255,rgb:1,1,1,1" name="single_color"/>
-          <Option type="QString" value="rgb" name="spec"/>
-          <Option type="QString" value="2" name="spread"/>
-          <Option type="QString" value="MM" name="spread_unit"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="spread_unit_scale"/>
+          <Option type="QString" name="blend_mode" value="0"/>
+          <Option type="QString" name="blur_level" value="2.645"/>
+          <Option type="QString" name="blur_unit" value="MM"/>
+          <Option type="QString" name="blur_unit_scale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="color1" value="69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1"/>
+          <Option type="QString" name="color2" value="188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1"/>
+          <Option type="QString" name="color_type" value="0"/>
+          <Option type="QString" name="direction" value="ccw"/>
+          <Option type="QString" name="discrete" value="0"/>
+          <Option type="QString" name="draw_mode" value="2"/>
+          <Option type="QString" name="enabled" value="0"/>
+          <Option type="QString" name="opacity" value="0.5"/>
+          <Option type="QString" name="rampType" value="gradient"/>
+          <Option type="QString" name="single_color" value="255,255,255,255,rgb:1,1,1,1"/>
+          <Option type="QString" name="spec" value="rgb"/>
+          <Option type="QString" name="spread" value="2"/>
+          <Option type="QString" name="spread_unit" value="MM"/>
+          <Option type="QString" name="spread_unit_scale" value="3x:0,0,0,0,0,0"/>
         </Option>
       </effect>
     </effect>
@@ -886,41 +846,41 @@
   <selection mode="Default">
     <selectionColor invalid="1"/>
     <selectionSymbol>
-      <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="" force_rhr="0">
+      <symbol type="marker" is_animated="0" name="" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
         <data_defined_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </data_defined_properties>
-        <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="{5b46121f-71e9-4c6f-81cf-770b3eb11edd}">
+        <layer pass="0" id="{5b46121f-71e9-4c6f-81cf-770b3eb11edd}" enabled="1" class="SimpleMarker" locked="0">
           <Option type="Map">
-            <Option type="QString" value="0" name="angle"/>
-            <Option type="QString" value="square" name="cap_style"/>
-            <Option type="QString" value="255,0,0,255,rgb:1,0,0,1" name="color"/>
-            <Option type="QString" value="1" name="horizontal_anchor_point"/>
-            <Option type="QString" value="bevel" name="joinstyle"/>
-            <Option type="QString" value="circle" name="name"/>
-            <Option type="QString" value="0,0" name="offset"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-            <Option type="QString" value="MM" name="offset_unit"/>
-            <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-            <Option type="QString" value="solid" name="outline_style"/>
-            <Option type="QString" value="0" name="outline_width"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-            <Option type="QString" value="MM" name="outline_width_unit"/>
-            <Option type="QString" value="diameter" name="scale_method"/>
-            <Option type="QString" value="2" name="size"/>
-            <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-            <Option type="QString" value="MM" name="size_unit"/>
-            <Option type="QString" value="1" name="vertical_anchor_point"/>
+            <Option type="QString" name="angle" value="0"/>
+            <Option type="QString" name="cap_style" value="square"/>
+            <Option type="QString" name="color" value="255,0,0,255,rgb:1,0,0,1"/>
+            <Option type="QString" name="horizontal_anchor_point" value="1"/>
+            <Option type="QString" name="joinstyle" value="bevel"/>
+            <Option type="QString" name="name" value="circle"/>
+            <Option type="QString" name="offset" value="0,0"/>
+            <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="offset_unit" value="MM"/>
+            <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+            <Option type="QString" name="outline_style" value="solid"/>
+            <Option type="QString" name="outline_width" value="0"/>
+            <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="outline_width_unit" value="MM"/>
+            <Option type="QString" name="scale_method" value="diameter"/>
+            <Option type="QString" name="size" value="2"/>
+            <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+            <Option type="QString" name="size_unit" value="MM"/>
+            <Option type="QString" name="vertical_anchor_point" value="1"/>
           </Option>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -929,234 +889,246 @@
   </selection>
   <labeling type="simple">
     <settings calloutType="simple">
-      <text-style textColor="255,255,255,255,rgb:1,1,1,1" fontKerning="1" blendMode="0" forcedBold="0" fontWordSpacing="0" fontSizeUnit="MM" textOpacity="1" tabStopDistanceUnit="Point" allowHtml="0" useSubstitutions="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" previewBkgrdColor="255,255,255,255,rgb:1,1,1,1" tabStopDistance="80" fontWeight="75" tabStopDistanceMapUnitScale="3x:0,0,0,0,0,0" multilineHeightUnit="Percentage" fontLetterSpacing="0" fontFamily="Segoe UI" namedStyle="Bold" multilineHeight="1" isExpression="1" fontSize="4" textOrientation="horizontal" fontStrikeout="1" fontUnderline="0" fontItalic="0" capitalization="0" forcedItalic="0" fieldName=" case&#xd;&#xa; when ID_rec%10>0&#xd;&#xa; then lpad( to_string(&quot;ID_rec&quot;),to_int(attributes(get_feature('Settings','ID_set','site_str_len'))['set_value']+1),'0')&#xd;&#xa; else&#xd;&#xa; lpad( to_string(&quot;ID_site&quot;),to_int(attributes(get_feature('Settings','ID_set','site_str_len'))['set_value']),'0')&#xd;&#xa; end" legendString="Aa">
+      <text-style fontSizeMapUnitScale="3x:0,0,0,0,0,0" legendString="Aa" fontUnderline="0" fieldName=" case&#xd;&#xa; when ID_rec%10>0&#xd;&#xa; then lpad( to_string(&quot;ID_rec&quot;),to_int(attributes(get_feature('Settings','ID_set','site_str_len'))['set_value']+1),'0')&#xd;&#xa; else&#xd;&#xa; lpad( to_string(&quot;ID_site&quot;),to_int(attributes(get_feature('Settings','ID_set','site_str_len'))['set_value']),'0')&#xd;&#xa; end" fontLetterSpacing="0" useSubstitutions="0" previewBkgrdColor="255,255,255,255,rgb:1,1,1,1" tabStopDistanceMapUnitScale="3x:0,0,0,0,0,0" fontItalic="0" tabStopDistance="80" forcedItalic="0" multilineHeight="1" fontWeight="75" forcedBold="0" fontSize="3.6000000000000001" textOpacity="1" capitalization="0" fontKerning="1" namedStyle="Bold" blendMode="0" fontFamily="Segoe UI" textOrientation="horizontal" isExpression="1" fontSizeUnit="MM" fontWordSpacing="0" tabStopDistanceUnit="Point" allowHtml="0" fontStrikeout="1" textColor="255,255,255,255,rgb:1,1,1,1" multilineHeightUnit="Percentage">
         <families/>
-        <text-buffer bufferBlendMode="0" bufferColor="0,0,0,255,rgb:0,0,0,1" bufferJoinStyle="128" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferNoFill="1" bufferSize="0.80000000000000004" bufferDraw="1" bufferSizeUnits="MM" bufferOpacity="1"/>
-        <text-mask maskType="0" maskSize="1.5" maskSize2="1.5" maskOpacity="1" maskedSymbolLayers="" maskJoinStyle="128" maskSizeUnits="MM" maskEnabled="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0"/>
-        <background shapeJoinStyle="64" shapeRadiiUnit="Point" shapeOffsetX="0" shapeSizeUnit="Point" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetY="0" shapeType="2" shapeOffsetUnit="Point" shapeSizeY="0" shapeBorderWidthUnit="MM" shapeSizeX="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeSizeType="0" shapeBorderColor="0,0,0,255,rgb:0,0,0,1" shapeRadiiX="0" shapeSVGFile="" shapeBlendMode="0" shapeRotationType="0" shapeRotation="0" shapeBorderWidth="0.40000000000000002" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="0,0,0,255,rgb:0,0,0,1" shapeOpacity="1">
-          <symbol is_animated="0" type="marker" clip_to_extent="1" alpha="1" frame_rate="10" name="markerSymbol" force_rhr="0">
+        <text-buffer bufferDraw="1" bufferBlendMode="0" bufferSizeUnits="MM" bufferSize="0.80000000000000004" bufferColor="0,0,0,255,rgb:0,0,0,1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferNoFill="1" bufferJoinStyle="128" bufferOpacity="1"/>
+        <text-mask maskOpacity="1" maskedSymbolLayers="" maskSize="1.5" maskJoinStyle="128" maskSize2="1.5" maskEnabled="0" maskType="0" maskSizeMapUnitScale="3x:0,0,0,0,0,0" maskSizeUnits="MM"/>
+        <background shapeSVGFile="" shapeRotation="0" shapeBorderWidth="0.40000000000000002" shapeRadiiX="0" shapeBlendMode="0" shapeDraw="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthUnit="MM" shapeType="2" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiY="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderColor="0,0,0,255,rgb:0,0,0,1" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeJoinStyle="64" shapeSizeUnit="Point" shapeRotationType="0" shapeOffsetX="0" shapeFillColor="0,0,0,255,rgb:0,0,0,1" shapeOffsetUnit="Point" shapeSizeY="0" shapeOpacity="1" shapeSizeX="0" shapeRadiiUnit="Point" shapeSizeType="0" shapeOffsetY="0">
+          <symbol type="marker" is_animated="0" name="markerSymbol" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleMarker" id="">
+            <layer pass="0" id="" enabled="1" class="SimpleMarker" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="angle"/>
-                <Option type="QString" value="square" name="cap_style"/>
-                <Option type="QString" value="190,178,151,255,rgb:0.74509803921568629,0.69803921568627447,0.59215686274509804,1" name="color"/>
-                <Option type="QString" value="1" name="horizontal_anchor_point"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="circle" name="name"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="0" name="outline_width"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="outline_width_map_unit_scale"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="diameter" name="scale_method"/>
-                <Option type="QString" value="2" name="size"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="size_map_unit_scale"/>
-                <Option type="QString" value="MM" name="size_unit"/>
-                <Option type="QString" value="1" name="vertical_anchor_point"/>
+                <Option type="QString" name="angle" value="0"/>
+                <Option type="QString" name="cap_style" value="square"/>
+                <Option type="QString" name="color" value="190,178,151,255,rgb:0.74509803921568629,0.69803921568627447,0.59215686274509804,1"/>
+                <Option type="QString" name="horizontal_anchor_point" value="1"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="name" value="circle"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="0"/>
+                <Option type="QString" name="outline_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="scale_method" value="diameter"/>
+                <Option type="QString" name="size" value="2"/>
+                <Option type="QString" name="size_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="size_unit" value="MM"/>
+                <Option type="QString" name="vertical_anchor_point" value="1"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-          <symbol is_animated="0" type="fill" clip_to_extent="1" alpha="0.454902" frame_rate="10" name="fillSymbol" force_rhr="0">
+          <symbol type="fill" is_animated="0" name="fillSymbol" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="0.454902">
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
-            <layer enabled="1" locked="0" pass="0" class="SimpleLine" id="">
+            <layer pass="0" id="" enabled="1" class="SimpleLine" locked="0">
               <Option type="Map">
-                <Option type="QString" value="0" name="align_dash_pattern"/>
-                <Option type="QString" value="square" name="capstyle"/>
-                <Option type="QString" value="5;2" name="customdash"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale"/>
-                <Option type="QString" value="MM" name="customdash_unit"/>
-                <Option type="QString" value="0" name="dash_pattern_offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="dash_pattern_offset_unit"/>
-                <Option type="QString" value="0" name="draw_inside_polygon"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="line_color"/>
-                <Option type="QString" value="solid" name="line_style"/>
-                <Option type="QString" value="1" name="line_width"/>
-                <Option type="QString" value="MM" name="line_width_unit"/>
-                <Option type="QString" value="-1" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0" name="ring_filter"/>
-                <Option type="QString" value="0" name="trim_distance_end"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale"/>
-                <Option type="QString" value="MM" name="trim_distance_end_unit"/>
-                <Option type="QString" value="0" name="trim_distance_start"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale"/>
-                <Option type="QString" value="MM" name="trim_distance_start_unit"/>
-                <Option type="QString" value="0" name="tweak_dash_pattern_on_corners"/>
-                <Option type="QString" value="0" name="use_custom_dash"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="width_map_unit_scale"/>
+                <Option type="QString" name="align_dash_pattern" value="0"/>
+                <Option type="QString" name="capstyle" value="square"/>
+                <Option type="QString" name="customdash" value="5;2"/>
+                <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="customdash_unit" value="MM"/>
+                <Option type="QString" name="dash_pattern_offset" value="0"/>
+                <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="dash_pattern_offset_unit" value="MM"/>
+                <Option type="QString" name="draw_inside_polygon" value="0"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="line_color" value="0,0,0,255,rgb:0,0,0,1"/>
+                <Option type="QString" name="line_style" value="solid"/>
+                <Option type="QString" name="line_width" value="1"/>
+                <Option type="QString" name="line_width_unit" value="MM"/>
+                <Option type="QString" name="offset" value="-1"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="ring_filter" value="0"/>
+                <Option type="QString" name="trim_distance_end" value="0"/>
+                <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="trim_distance_end_unit" value="MM"/>
+                <Option type="QString" name="trim_distance_start" value="0"/>
+                <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="trim_distance_start_unit" value="MM"/>
+                <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
+                <Option type="QString" name="use_custom_dash" value="0"/>
+                <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="adu_clr" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="adu_clr"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
-            <layer enabled="1" locked="0" pass="0" class="SimpleFill" id="">
+            <layer pass="0" id="" enabled="1" class="SimpleFill" locked="0">
               <Option type="Map">
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="border_width_map_unit_scale"/>
-                <Option type="QString" value="0,0,0,84,rgb:0,0,0,0.32941176470588235" name="color"/>
-                <Option type="QString" value="bevel" name="joinstyle"/>
-                <Option type="QString" value="0,0" name="offset"/>
-                <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-                <Option type="QString" value="MM" name="offset_unit"/>
-                <Option type="QString" value="0,0,0,255,rgb:0,0,0,1" name="outline_color"/>
-                <Option type="QString" value="solid" name="outline_style"/>
-                <Option type="QString" value="1" name="outline_width"/>
-                <Option type="QString" value="MM" name="outline_width_unit"/>
-                <Option type="QString" value="solid" name="style"/>
+                <Option type="QString" name="border_width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="color" value="0,0,0,84,rgb:0,0,0,0.32941176470588235"/>
+                <Option type="QString" name="joinstyle" value="bevel"/>
+                <Option type="QString" name="offset" value="0,0"/>
+                <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+                <Option type="QString" name="offset_unit" value="MM"/>
+                <Option type="QString" name="outline_color" value="0,0,0,255,rgb:0,0,0,1"/>
+                <Option type="QString" name="outline_style" value="solid"/>
+                <Option type="QString" name="outline_width" value="1"/>
+                <Option type="QString" name="outline_width_unit" value="MM"/>
+                <Option type="QString" name="style" value="solid"/>
               </Option>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option type="QString" name="name" value=""/>
                   <Option type="Map" name="properties">
                     <Option type="Map" name="outlineColor">
-                      <Option type="bool" value="true" name="active"/>
-                      <Option type="QString" value="op_clr" name="expression"/>
-                      <Option type="int" value="3" name="type"/>
+                      <Option type="bool" name="active" value="true"/>
+                      <Option type="QString" name="expression" value="op_clr"/>
+                      <Option type="int" name="type" value="3"/>
                     </Option>
                   </Option>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option type="QString" name="type" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </background>
-        <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetDist="1" shadowRadius="1.5" shadowOffsetUnit="MM" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowUnder="0" shadowOffsetAngle="135" shadowRadiusAlphaOnly="0" shadowScale="100" shadowColor="0,0,0,255,rgb:0,0,0,1" shadowOpacity="0.69999999999999996" shadowDraw="0" shadowOffsetGlobal="1" shadowRadiusUnit="MM"/>
+        <shadow shadowDraw="0" shadowOffsetGlobal="1" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadius="1.5" shadowOffsetUnit="MM" shadowBlendMode="6" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowColor="0,0,0,255,rgb:0,0,0,1" shadowOffsetDist="1" shadowOpacity="0.69999999999999996" shadowUnder="0" shadowScale="100" shadowRadiusAlphaOnly="0" shadowRadiusUnit="MM" shadowOffsetAngle="135"/>
         <dd_properties>
           <Option type="Map">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option name="properties"/>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
         </dd_properties>
         <substitutions/>
       </text-style>
-      <text-format decimals="3" rightDirectionSymbol=">" formatNumbers="0" autoWrapLength="0" placeDirectionSymbol="0" multilineAlign="3" wrapChar="" addDirectionSymbol="0" reverseDirectionSymbol="0" useMaxLineLengthForAutoWrap="1" leftDirectionSymbol="&lt;" plussign="0"/>
-      <placement overlapHandling="PreventOverlap" maximumDistanceMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" fitInPolygonOnly="0" maximumDistanceUnit="MM" repeatDistanceUnits="MM" overrunDistance="0" distMapUnitScale="3x:0,0,0,0,0,0" geometryGenerator="" rotationAngle="0" repeatDistance="0" rotationUnit="AngleDegrees" maxCurvedCharAngleOut="-25" polygonPlacementFlags="2" lineAnchorTextPoint="FollowPlacement" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" maximumDistance="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" centroidWhole="0" geometryGeneratorEnabled="0" lineAnchorPercent="0.5" yOffset="0" overrunDistanceUnit="MM" priority="5" offsetUnits="MM" offsetType="1" dist="2" preserveRotation="1" placement="0" prioritization="PreferCloser" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" allowDegraded="0" lineAnchorType="0" quadOffset="4" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" placementFlags="10" maxCurvedCharAngleIn="25" lineAnchorClipping="0" centroidInside="0" xOffset="0" geometryGeneratorType="PointGeometry" layerType="PointGeometry"/>
-      <rendering labelPerPart="0" fontMinPixelSize="3" minFeatureSize="0" fontLimitPixelSize="0" unplacedVisibility="0" mergeLines="0" fontMaxPixelSize="10000" limitNumLabels="0" maxNumLabels="2000" scaleMin="0" upsidedownLabels="0" scaleMax="0" drawLabels="1" obstacle="1" obstacleType="1" zIndex="0" scaleVisibility="0" obstacleFactor="1"/>
+      <text-format leftDirectionSymbol="&lt;" reverseDirectionSymbol="0" addDirectionSymbol="0" placeDirectionSymbol="0" wrapChar="" useMaxLineLengthForAutoWrap="1" decimals="3" rightDirectionSymbol=">" multilineAlign="3" formatNumbers="0" autoWrapLength="0" plussign="0"/>
+      <placement priority="5" polygonPlacementFlags="2" centroidWhole="0" rotationAngle="0" lineAnchorClipping="0" overrunDistance="0" offsetType="1" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" repeatDistanceUnits="MM" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" distMapUnitScale="3x:0,0,0,0,0,0" placement="0" geometryGeneratorEnabled="0" allowDegraded="0" yOffset="0" fitInPolygonOnly="0" maximumDistance="0" preserveRotation="1" overlapHandling="PreventOverlap" prioritization="PreferCloser" lineAnchorPercent="0.5" repeatDistance="0" maxCurvedCharAngleOut="-25" overrunDistanceMapUnitScale="3x:0,0,0,0,0,0" maximumDistanceMapUnitScale="3x:0,0,0,0,0,0" placementFlags="10" distUnits="MM" dist="2" geometryGeneratorType="PointGeometry" lineAnchorTextPoint="FollowPlacement" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" rotationUnit="AngleDegrees" quadOffset="4" xOffset="0" lineAnchorType="0" overrunDistanceUnit="MM" maxCurvedCharAngleIn="25" geometryGenerator="" offsetUnits="MM" maximumDistanceUnit="MM" centroidInside="0" layerType="PointGeometry"/>
+      <rendering obstacleType="1" unplacedVisibility="0" obstacleFactor="1" drawLabels="1" scaleMax="0" scaleMin="0" mergeLines="0" fontMaxPixelSize="10000" maxNumLabels="2000" upsidedownLabels="0" limitNumLabels="0" zIndex="0" obstacle="1" fontLimitPixelSize="0" minFeatureSize="0" labelPerPart="0" fontMinPixelSize="3" scaleVisibility="1"/>
       <dd_properties>
         <Option type="Map">
-          <Option type="QString" value="" name="name"/>
+          <Option type="QString" name="name" value=""/>
           <Option type="Map" name="properties">
             <Option type="Map" name="BufferColor">
-              <Option type="bool" value="true" name="active"/>
-              <Option type="QString" value="case&#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then '#FFFFFF'&#xd;&#xa;else '#000000'&#xd;&#xa;end" name="expression"/>
-              <Option type="int" value="3" name="type"/>
+              <Option type="bool" name="active" value="true"/>
+              <Option type="QString" name="expression" value="case&#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then '#FFFFFF'&#xd;&#xa;else '#000000'&#xd;&#xa;end"/>
+              <Option type="int" name="type" value="3"/>
             </Option>
             <Option type="Map" name="Color">
-              <Option type="bool" value="true" name="active"/>
-              <Option type="QString" value="qc_clr" name="expression"/>
-              <Option type="int" value="3" name="type"/>
+              <Option type="bool" name="active" value="true"/>
+              <Option type="QString" name="expression" value="qc_clr"/>
+              <Option type="int" name="type" value="3"/>
+            </Option>
+            <Option type="Map" name="MinimumScale">
+              <Option type="bool" name="active" value="true"/>
+              <Option type="QString" name="expression" value="to_int(attributes(get_feature('Settings','ID_set','buffer4'))['set_value'])*400"/>
+              <Option type="int" name="type" value="3"/>
             </Option>
             <Option type="Map" name="PositionX">
-              <Option type="bool" value="false" name="active"/>
-              <Option type="int" value="1" name="type"/>
-              <Option type="QString" value="" name="val"/>
+              <Option type="bool" name="active" value="false"/>
+              <Option type="int" name="type" value="1"/>
+              <Option type="QString" name="val" value=""/>
             </Option>
             <Option type="Map" name="PositionY">
-              <Option type="bool" value="false" name="active"/>
-              <Option type="int" value="1" name="type"/>
-              <Option type="QString" value="" name="val"/>
+              <Option type="bool" name="active" value="false"/>
+              <Option type="int" name="type" value="1"/>
+              <Option type="QString" name="val" value=""/>
             </Option>
             <Option type="Map" name="Strikeout">
-              <Option type="bool" value="true" name="active"/>
-              <Option type="QString" value="case &#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then 1&#xd;&#xa;end" name="expression"/>
-              <Option type="int" value="3" name="type"/>
+              <Option type="bool" name="active" value="true"/>
+              <Option type="QString" name="expression" value="case &#xd;&#xa;when rec_qc_status='Cancelled'&#xd;&#xa;then 1&#xd;&#xa;end"/>
+              <Option type="int" name="type" value="3"/>
             </Option>
           </Option>
-          <Option type="QString" value="collection" name="type"/>
+          <Option type="QString" name="type" value="collection"/>
         </Option>
       </dd_properties>
       <callout type="simple">
         <Option type="Map">
-          <Option type="QString" value="pole_of_inaccessibility" name="anchorPoint"/>
-          <Option type="int" value="0" name="blendMode"/>
+          <Option type="QString" name="anchorPoint" value="pole_of_inaccessibility"/>
+          <Option type="int" name="blendMode" value="0"/>
           <Option type="Map" name="ddProperties">
-            <Option type="QString" value="" name="name"/>
+            <Option type="QString" name="name" value=""/>
             <Option type="Map" name="properties">
               <Option type="Map" name="DestinationX">
-                <Option type="bool" value="true" name="active"/>
-                <Option type="QString" value="xml_x" name="expression"/>
-                <Option type="int" value="3" name="type"/>
+                <Option type="bool" name="active" value="true"/>
+                <Option type="QString" name="expression" value="xml_x"/>
+                <Option type="int" name="type" value="3"/>
               </Option>
               <Option type="Map" name="DestinationY">
-                <Option type="bool" value="true" name="active"/>
-                <Option type="QString" value="xml_y" name="expression"/>
-                <Option type="int" value="3" name="type"/>
+                <Option type="bool" name="active" value="true"/>
+                <Option type="QString" name="expression" value="xml_y"/>
+                <Option type="int" name="type" value="3"/>
               </Option>
             </Option>
-            <Option type="QString" value="collection" name="type"/>
+            <Option type="QString" name="type" value="collection"/>
           </Option>
-          <Option type="bool" value="false" name="drawToAllParts"/>
-          <Option type="QString" value="0" name="enabled"/>
-          <Option type="QString" value="point_on_exterior" name="labelAnchorPoint"/>
-          <Option type="QString" value="&lt;symbol is_animated=&quot;0&quot; type=&quot;line&quot; clip_to_extent=&quot;1&quot; alpha=&quot;1&quot; frame_rate=&quot;10&quot; name=&quot;symbol&quot; force_rhr=&quot;0&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;collection&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; pass=&quot;0&quot; class=&quot;SimpleLine&quot; id=&quot;{382d9e8e-1a38-4e51-93fb-c191bf9a4992}&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;align_dash_pattern&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;square&quot; name=&quot;capstyle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;5;2&quot; name=&quot;customdash&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;customdash_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;customdash_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;dash_pattern_offset&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;dash_pattern_offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;draw_inside_polygon&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;bevel&quot; name=&quot;joinstyle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1&quot; name=&quot;line_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;solid&quot; name=&quot;line_style&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.26&quot; name=&quot;line_width&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;line_width_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;offset&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;ring_filter&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;trim_distance_end&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;trim_distance_end_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;trim_distance_end_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;trim_distance_start&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;trim_distance_start_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;trim_distance_start_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;use_custom_dash&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;width_map_unit_scale&quot;/>&lt;/Option>&lt;effect enabled=&quot;1&quot; type=&quot;effectStack&quot;>&lt;effect type=&quot;dropShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;13&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;135&quot; name=&quot;offset_angle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;offset_distance&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;outerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot; name=&quot;color1&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot; name=&quot;color2&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;color_type&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;ccw&quot; name=&quot;direction&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;discrete&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.5&quot; name=&quot;opacity&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;gradient&quot; name=&quot;rampType&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;single_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;rgb&quot; name=&quot;spec&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;spread&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;spread_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;spread_unit_scale&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;drawSource&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;13&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;135&quot; name=&quot;offset_angle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;offset_distance&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot; name=&quot;color1&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot; name=&quot;color2&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;color_type&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;ccw&quot; name=&quot;direction&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;discrete&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.5&quot; name=&quot;opacity&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;gradient&quot; name=&quot;rampType&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;255,255,255,255,rgb:1,1,1,1&quot; name=&quot;single_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;rgb&quot; name=&quot;spec&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;spread&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;spread_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;spread_unit_scale&quot;/>&lt;/Option>&lt;/effect>&lt;/effect>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;&quot; name=&quot;name&quot;/>&lt;Option type=&quot;Map&quot; name=&quot;properties&quot;>&lt;Option type=&quot;Map&quot; name=&quot;outlineColor&quot;>&lt;Option type=&quot;bool&quot; value=&quot;true&quot; name=&quot;active&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;@symbol_color&quot; name=&quot;expression&quot;/>&lt;Option type=&quot;int&quot; value=&quot;3&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/Option>&lt;Option type=&quot;QString&quot; value=&quot;collection&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; pass=&quot;0&quot; class=&quot;HashLine&quot; id=&quot;{ac660d05-2098-4fc6-bbc7-cf2cc9ccf93a}&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;4&quot; name=&quot;average_angle_length&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;average_angle_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;average_angle_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;hash_angle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1.5&quot; name=&quot;hash_length&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;hash_length_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;hash_length_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;20&quot; name=&quot;interval&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;interval_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;RenderMetersInMapUnits&quot; name=&quot;interval_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;offset&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;offset_along_line&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_along_line_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_along_line_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;bool&quot; value=&quot;true&quot; name=&quot;place_on_every_part&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;Interval&quot; name=&quot;placements&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;ring_filter&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;rotate&quot;/>&lt;/Option>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;collection&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;symbol is_animated=&quot;0&quot; type=&quot;line&quot; clip_to_extent=&quot;1&quot; alpha=&quot;1&quot; frame_rate=&quot;10&quot; name=&quot;@symbol@1&quot; force_rhr=&quot;0&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;&quot; name=&quot;name&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;collection&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer enabled=&quot;1&quot; locked=&quot;0&quot; pass=&quot;0&quot; class=&quot;SimpleLine&quot; id=&quot;{c19760ed-d62a-49fc-8c6a-10a30f5389b0}&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;align_dash_pattern&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;square&quot; name=&quot;capstyle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;5;2&quot; name=&quot;customdash&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;customdash_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;customdash_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;dash_pattern_offset&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;dash_pattern_offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;draw_inside_polygon&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;bevel&quot; name=&quot;joinstyle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1&quot; name=&quot;line_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;solid&quot; name=&quot;line_style&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.26&quot; name=&quot;line_width&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;line_width_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;offset&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;ring_filter&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;trim_distance_end&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;trim_distance_end_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;trim_distance_end_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;trim_distance_start&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;trim_distance_start_map_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;trim_distance_start_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;tweak_dash_pattern_on_corners&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;use_custom_dash&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;width_map_unit_scale&quot;/>&lt;/Option>&lt;effect enabled=&quot;1&quot; type=&quot;effectStack&quot;>&lt;effect type=&quot;dropShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;13&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;135&quot; name=&quot;offset_angle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;offset_distance&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;outerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot; name=&quot;color1&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot; name=&quot;color2&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;color_type&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;ccw&quot; name=&quot;direction&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;discrete&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.5&quot; name=&quot;opacity&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;gradient&quot; name=&quot;rampType&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;single_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;rgb&quot; name=&quot;spec&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;spread&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;spread_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;spread_unit_scale&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;drawSource&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;13&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot; name=&quot;color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;135&quot; name=&quot;offset_angle&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;offset_distance&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;offset_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;offset_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;1&quot; name=&quot;opacity&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;blend_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2.645&quot; name=&quot;blur_level&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;blur_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;blur_unit_scale&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot; name=&quot;color1&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot; name=&quot;color2&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;color_type&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;ccw&quot; name=&quot;direction&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;discrete&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;draw_mode&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0&quot; name=&quot;enabled&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;0.5&quot; name=&quot;opacity&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;gradient&quot; name=&quot;rampType&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;255,255,255,255,rgb:1,1,1,1&quot; name=&quot;single_color&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;rgb&quot; name=&quot;spec&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;2&quot; name=&quot;spread&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;MM&quot; name=&quot;spread_unit&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;3x:0,0,0,0,0,0&quot; name=&quot;spread_unit_scale&quot;/>&lt;/Option>&lt;/effect>&lt;/effect>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; value=&quot;&quot; name=&quot;name&quot;/>&lt;Option type=&quot;Map&quot; name=&quot;properties&quot;>&lt;Option type=&quot;Map&quot; name=&quot;outlineColor&quot;>&lt;Option type=&quot;bool&quot; value=&quot;true&quot; name=&quot;active&quot;/>&lt;Option type=&quot;QString&quot; value=&quot;@symbol_color&quot; name=&quot;expression&quot;/>&lt;Option type=&quot;int&quot; value=&quot;3&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/Option>&lt;Option type=&quot;QString&quot; value=&quot;collection&quot; name=&quot;type&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>&lt;/layer>&lt;/symbol>" name="lineSymbol"/>
-          <Option type="double" value="0" name="minLength"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="minLengthMapUnitScale"/>
-          <Option type="QString" value="MM" name="minLengthUnit"/>
-          <Option type="double" value="0" name="offsetFromAnchor"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="offsetFromAnchorMapUnitScale"/>
-          <Option type="QString" value="MM" name="offsetFromAnchorUnit"/>
-          <Option type="double" value="0" name="offsetFromLabel"/>
-          <Option type="QString" value="3x:0,0,0,0,0,0" name="offsetFromLabelMapUnitScale"/>
-          <Option type="QString" value="MM" name="offsetFromLabelUnit"/>
+          <Option type="bool" name="drawToAllParts" value="false"/>
+          <Option type="QString" name="enabled" value="0"/>
+          <Option type="QString" name="labelAnchorPoint" value="point_on_exterior"/>
+          <Option type="QString" name="lineSymbol" value="&lt;symbol type=&quot;line&quot; is_animated=&quot;0&quot; name=&quot;symbol&quot; force_rhr=&quot;0&quot; frame_rate=&quot;10&quot; clip_to_extent=&quot;1&quot; alpha=&quot;1&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer pass=&quot;0&quot; id=&quot;{382d9e8e-1a38-4e51-93fb-c191bf9a4992}&quot; enabled=&quot;1&quot; class=&quot;SimpleLine&quot; locked=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;align_dash_pattern&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;capstyle&quot; value=&quot;square&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash&quot; value=&quot;5;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_inside_polygon&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;joinstyle&quot; value=&quot;bevel&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_color&quot; value=&quot;35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_style&quot; value=&quot;solid&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_width&quot; value=&quot;0.26&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_width_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;ring_filter&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;tweak_dash_pattern_on_corners&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;use_custom_dash&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;width_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;effect type=&quot;effectStack&quot; enabled=&quot;1&quot;>&lt;effect type=&quot;dropShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;13&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_angle&quot; value=&quot;135&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_distance&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;outerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color1&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color2&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color_type&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;direction&quot; value=&quot;ccw&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;discrete&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;0.5&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;rampType&quot; value=&quot;gradient&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;single_color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spec&quot; value=&quot;rgb&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;drawSource&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;13&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_angle&quot; value=&quot;135&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_distance&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color1&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color2&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color_type&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;direction&quot; value=&quot;ccw&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;discrete&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;0.5&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;rampType&quot; value=&quot;gradient&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;single_color&quot; value=&quot;255,255,255,255,rgb:1,1,1,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spec&quot; value=&quot;rgb&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;/effect>&lt;/effect>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option type=&quot;Map&quot; name=&quot;properties&quot;>&lt;Option type=&quot;Map&quot; name=&quot;outlineColor&quot;>&lt;Option type=&quot;bool&quot; name=&quot;active&quot; value=&quot;true&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;expression&quot; value=&quot;@symbol_color&quot;/>&lt;Option type=&quot;int&quot; name=&quot;type&quot; value=&quot;3&quot;/>&lt;/Option>&lt;/Option>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;layer pass=&quot;0&quot; id=&quot;{ac660d05-2098-4fc6-bbc7-cf2cc9ccf93a}&quot; enabled=&quot;1&quot; class=&quot;HashLine&quot; locked=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;average_angle_length&quot; value=&quot;4&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;average_angle_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;average_angle_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;hash_angle&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;hash_length&quot; value=&quot;1.5&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;hash_length_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;hash_length_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;interval&quot; value=&quot;20&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;interval_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;interval_unit&quot; value=&quot;RenderMetersInMapUnits&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_along_line&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_along_line_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_along_line_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;bool&quot; name=&quot;place_on_every_part&quot; value=&quot;true&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;placements&quot; value=&quot;Interval&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;ring_filter&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;rotate&quot; value=&quot;1&quot;/>&lt;/Option>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;symbol type=&quot;line&quot; is_animated=&quot;0&quot; name=&quot;@symbol@1&quot; force_rhr=&quot;0&quot; frame_rate=&quot;10&quot; clip_to_extent=&quot;1&quot; alpha=&quot;1&quot;>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option name=&quot;properties&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;layer pass=&quot;0&quot; id=&quot;{c19760ed-d62a-49fc-8c6a-10a30f5389b0}&quot; enabled=&quot;1&quot; class=&quot;SimpleLine&quot; locked=&quot;0&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;align_dash_pattern&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;capstyle&quot; value=&quot;square&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash&quot; value=&quot;5;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;customdash_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;dash_pattern_offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_inside_polygon&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;joinstyle&quot; value=&quot;bevel&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_color&quot; value=&quot;35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_style&quot; value=&quot;solid&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_width&quot; value=&quot;0.26&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;line_width_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;ring_filter&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_end_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;trim_distance_start_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;tweak_dash_pattern_on_corners&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;use_custom_dash&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;width_map_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;effect type=&quot;effectStack&quot; enabled=&quot;1&quot;>&lt;effect type=&quot;dropShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;13&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_angle&quot; value=&quot;135&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_distance&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;outerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color1&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color2&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color_type&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;direction&quot; value=&quot;ccw&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;discrete&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;0.5&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;rampType&quot; value=&quot;gradient&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;single_color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spec&quot; value=&quot;rgb&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;drawSource&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerShadow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;13&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color&quot; value=&quot;0,0,0,255,rgb:0,0,0,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_angle&quot; value=&quot;135&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_distance&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;offset_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;1&quot;/>&lt;/Option>&lt;/effect>&lt;effect type=&quot;innerGlow&quot;>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;blend_mode&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_level&quot; value=&quot;2.645&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;blur_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color1&quot; value=&quot;69,116,40,255,rgb:0.27058823529411763,0.45490196078431372,0.15686274509803921,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color2&quot; value=&quot;188,220,60,255,rgb:0.73725490196078436,0.86274509803921573,0.23529411764705882,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;color_type&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;direction&quot; value=&quot;ccw&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;discrete&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;draw_mode&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;enabled&quot; value=&quot;0&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;opacity&quot; value=&quot;0.5&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;rampType&quot; value=&quot;gradient&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;single_color&quot; value=&quot;255,255,255,255,rgb:1,1,1,1&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spec&quot; value=&quot;rgb&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread&quot; value=&quot;2&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit&quot; value=&quot;MM&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;spread_unit_scale&quot; value=&quot;3x:0,0,0,0,0,0&quot;/>&lt;/Option>&lt;/effect>&lt;/effect>&lt;data_defined_properties>&lt;Option type=&quot;Map&quot;>&lt;Option type=&quot;QString&quot; name=&quot;name&quot; value=&quot;&quot;/>&lt;Option type=&quot;Map&quot; name=&quot;properties&quot;>&lt;Option type=&quot;Map&quot; name=&quot;outlineColor&quot;>&lt;Option type=&quot;bool&quot; name=&quot;active&quot; value=&quot;true&quot;/>&lt;Option type=&quot;QString&quot; name=&quot;expression&quot; value=&quot;@symbol_color&quot;/>&lt;Option type=&quot;int&quot; name=&quot;type&quot; value=&quot;3&quot;/>&lt;/Option>&lt;/Option>&lt;Option type=&quot;QString&quot; name=&quot;type&quot; value=&quot;collection&quot;/>&lt;/Option>&lt;/data_defined_properties>&lt;/layer>&lt;/symbol>&lt;/layer>&lt;/symbol>"/>
+          <Option type="double" name="minLength" value="0"/>
+          <Option type="QString" name="minLengthMapUnitScale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="minLengthUnit" value="MM"/>
+          <Option type="double" name="offsetFromAnchor" value="0"/>
+          <Option type="QString" name="offsetFromAnchorMapUnitScale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="offsetFromAnchorUnit" value="MM"/>
+          <Option type="double" name="offsetFromLabel" value="0"/>
+          <Option type="QString" name="offsetFromLabelMapUnitScale" value="3x:0,0,0,0,0,0"/>
+          <Option type="QString" name="offsetFromLabelUnit" value="MM"/>
         </Option>
       </callout>
     </settings>
   </labeling>
   <customproperties>
     <Option type="Map">
-      <Option type="QString" value="copy" name="QFieldSync/action"/>
-      <Option type="QString" value="{}" name="QFieldSync/attachment_naming"/>
-      <Option type="QString" value="offline" name="QFieldSync/cloud_action"/>
-      <Option type="invalid" name="QFieldSync/geometry_locked_expression"/>
-      <Option type="QString" value="{}" name="QFieldSync/photo_naming"/>
-      <Option type="QString" value="{}" name="QFieldSync/relationship_maximum_visible"/>
-      <Option type="int" value="30" name="QFieldSync/tracking_distance_requirement_minimum_meters"/>
-      <Option type="int" value="1" name="QFieldSync/tracking_erroneous_distance_safeguard_maximum_meters"/>
-      <Option type="int" value="0" name="QFieldSync/tracking_measurement_type"/>
-      <Option type="int" value="30" name="QFieldSync/tracking_time_requirement_interval_seconds"/>
-      <Option type="int" value="0" name="QFieldSync/value_map_button_interface_threshold"/>
+      <Option type="QString" name="QFieldSync/action" value="copy"/>
+      <Option type="QString" name="QFieldSync/attachment_naming" value="{}"/>
+      <Option type="QString" name="QFieldSync/cloud_action" value="offline"/>
+      <Option type="QString" name="QFieldSync/geometry_locked_expression" value=""/>
+      <Option type="QString" name="QFieldSync/photo_naming" value="{}"/>
+      <Option type="QString" name="QFieldSync/relationship_maximum_visible" value="{}"/>
+      <Option type="int" name="QFieldSync/tracking_distance_requirement_minimum_meters" value="30"/>
+      <Option type="int" name="QFieldSync/tracking_erroneous_distance_safeguard_maximum_meters" value="1"/>
+      <Option type="int" name="QFieldSync/tracking_measurement_type" value="0"/>
+      <Option type="int" name="QFieldSync/tracking_time_requirement_interval_seconds" value="30"/>
+      <Option type="int" name="QFieldSync/value_map_button_interface_threshold" value="0"/>
       <Option type="List" name="dualview/previewExpressions">
         <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
         <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
         <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
+        <Option type="QString" value="COALESCE( &quot;ID_rec&quot;, '&lt;NULL>' )"/>
       </Option>
-      <Option type="int" value="0" name="embeddedWidgets/count"/>
+      <Option type="int" name="embeddedWidgets/count" value="0"/>
       <Option name="variableNames"/>
       <Option name="variableValues"/>
     </Option>
@@ -1164,56 +1136,56 @@
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
-  <LinearlyInterpolatedDiagramRenderer lowerHeight="0" lowerValue="0" upperHeight="5" upperWidth="5" lowerWidth="0" attributeLegend="1" classificationAttributeExpression="" diagramType="Text" upperValue="0">
-    <DiagramCategory backgroundAlpha="255" penWidth="0" stackedDiagramSpacing="0" stackedDiagramSpacingUnitScale="3x:0,0,0,0,0,0" rotationOffset="270" spacingUnitScale="3x:0,0,0,0,0,0" sizeType="MM" stackedDiagramMode="Horizontal" backgroundColor="#ffffff" spacingUnit="MM" scaleBasedVisibility="0" direction="0" minScaleDenominator="0" opacity="1" penColor="#000000" minimumSize="0" showAxis="1" penAlpha="255" lineSizeType="MM" lineSizeScale="3x:0,0,0,0,0,0" labelPlacementMethod="XHeight" enabled="0" width="15" scaleDependency="Diameter" height="15" stackedDiagramSpacingUnit="MM" maxScaleDenominator="1e+08" diagramOrientation="Right" spacing="5" sizeScale="3x:0,0,0,0,0,0" barWidth="5">
-      <fontProperties description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      <attribute field="" label="" color="#000000" colorOpacity="1"/>
-      <attribute field="&quot;xml_ch01_st_res&quot;" label="Ch0 res" color="#b4a333" colorOpacity="1"/>
-      <attribute field="&quot;xml_ch02_st_res&quot;" label="Ch1 res" color="#9912b4" colorOpacity="1"/>
+  <LinearlyInterpolatedDiagramRenderer upperWidth="5" lowerWidth="0" lowerValue="0" upperValue="0" attributeLegend="1" classificationAttributeExpression="" upperHeight="5" lowerHeight="0" diagramType="Text">
+    <DiagramCategory penWidth="0" stackedDiagramSpacingUnitScale="3x:0,0,0,0,0,0" spacingUnit="MM" backgroundColor="#ffffff" width="15" stackedDiagramSpacingUnit="MM" backgroundAlpha="255" sizeScale="3x:0,0,0,0,0,0" stackedDiagramSpacing="0" direction="0" opacity="1" scaleBasedVisibility="0" maxScaleDenominator="1e+08" minimumSize="0" spacing="5" rotationOffset="270" penAlpha="255" height="15" barWidth="5" showAxis="1" lineSizeType="MM" diagramOrientation="Right" enabled="0" sizeType="MM" spacingUnitScale="3x:0,0,0,0,0,0" scaleDependency="Diameter" labelPlacementMethod="XHeight" penColor="#000000" stackedDiagramMode="Horizontal" lineSizeScale="3x:0,0,0,0,0,0" minScaleDenominator="0">
+      <fontProperties style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+      <attribute label="" field="" colorOpacity="1" color="#000000"/>
+      <attribute label="Ch0 res" field="&quot;xml_ch01_st_res&quot;" colorOpacity="1" color="#b4a333"/>
+      <attribute label="Ch1 res" field="&quot;xml_ch02_st_res&quot;" colorOpacity="1" color="#9912b4"/>
       <axisSymbol>
-        <symbol is_animated="0" type="line" clip_to_extent="1" alpha="1" frame_rate="10" name="" force_rhr="0">
+        <symbol type="line" is_animated="0" name="" force_rhr="0" frame_rate="10" clip_to_extent="1" alpha="1">
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option type="QString" name="name" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option type="QString" name="type" value="collection"/>
             </Option>
           </data_defined_properties>
-          <layer enabled="1" locked="0" pass="0" class="SimpleLine" id="{dff5832b-cf56-4888-b785-151465621776}">
+          <layer pass="0" id="{dff5832b-cf56-4888-b785-151465621776}" enabled="1" class="SimpleLine" locked="0">
             <Option type="Map">
-              <Option type="QString" value="0" name="align_dash_pattern"/>
-              <Option type="QString" value="square" name="capstyle"/>
-              <Option type="QString" value="5;2" name="customdash"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="customdash_map_unit_scale"/>
-              <Option type="QString" value="MM" name="customdash_unit"/>
-              <Option type="QString" value="0" name="dash_pattern_offset"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="dash_pattern_offset_map_unit_scale"/>
-              <Option type="QString" value="MM" name="dash_pattern_offset_unit"/>
-              <Option type="QString" value="0" name="draw_inside_polygon"/>
-              <Option type="QString" value="bevel" name="joinstyle"/>
-              <Option type="QString" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1" name="line_color"/>
-              <Option type="QString" value="solid" name="line_style"/>
-              <Option type="QString" value="0.26" name="line_width"/>
-              <Option type="QString" value="MM" name="line_width_unit"/>
-              <Option type="QString" value="0" name="offset"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="offset_map_unit_scale"/>
-              <Option type="QString" value="MM" name="offset_unit"/>
-              <Option type="QString" value="0" name="ring_filter"/>
-              <Option type="QString" value="0" name="trim_distance_end"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_end_map_unit_scale"/>
-              <Option type="QString" value="MM" name="trim_distance_end_unit"/>
-              <Option type="QString" value="0" name="trim_distance_start"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="trim_distance_start_map_unit_scale"/>
-              <Option type="QString" value="MM" name="trim_distance_start_unit"/>
-              <Option type="QString" value="0" name="tweak_dash_pattern_on_corners"/>
-              <Option type="QString" value="0" name="use_custom_dash"/>
-              <Option type="QString" value="3x:0,0,0,0,0,0" name="width_map_unit_scale"/>
+              <Option type="QString" name="align_dash_pattern" value="0"/>
+              <Option type="QString" name="capstyle" value="square"/>
+              <Option type="QString" name="customdash" value="5;2"/>
+              <Option type="QString" name="customdash_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+              <Option type="QString" name="customdash_unit" value="MM"/>
+              <Option type="QString" name="dash_pattern_offset" value="0"/>
+              <Option type="QString" name="dash_pattern_offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+              <Option type="QString" name="dash_pattern_offset_unit" value="MM"/>
+              <Option type="QString" name="draw_inside_polygon" value="0"/>
+              <Option type="QString" name="joinstyle" value="bevel"/>
+              <Option type="QString" name="line_color" value="35,35,35,255,rgb:0.13725490196078433,0.13725490196078433,0.13725490196078433,1"/>
+              <Option type="QString" name="line_style" value="solid"/>
+              <Option type="QString" name="line_width" value="0.26"/>
+              <Option type="QString" name="line_width_unit" value="MM"/>
+              <Option type="QString" name="offset" value="0"/>
+              <Option type="QString" name="offset_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+              <Option type="QString" name="offset_unit" value="MM"/>
+              <Option type="QString" name="ring_filter" value="0"/>
+              <Option type="QString" name="trim_distance_end" value="0"/>
+              <Option type="QString" name="trim_distance_end_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+              <Option type="QString" name="trim_distance_end_unit" value="MM"/>
+              <Option type="QString" name="trim_distance_start" value="0"/>
+              <Option type="QString" name="trim_distance_start_map_unit_scale" value="3x:0,0,0,0,0,0"/>
+              <Option type="QString" name="trim_distance_start_unit" value="MM"/>
+              <Option type="QString" name="tweak_dash_pattern_on_corners" value="0"/>
+              <Option type="QString" name="use_custom_dash" value="0"/>
+              <Option type="QString" name="width_map_unit_scale" value="3x:0,0,0,0,0,0"/>
             </Option>
             <data_defined_properties>
               <Option type="Map">
-                <Option type="QString" value="" name="name"/>
+                <Option type="QString" name="name" value=""/>
                 <Option name="properties"/>
-                <Option type="QString" value="collection" name="type"/>
+                <Option type="QString" name="type" value="collection"/>
               </Option>
             </data_defined_properties>
           </layer>
@@ -1221,2075 +1193,2302 @@
       </axisSymbol>
     </DiagramCategory>
   </LinearlyInterpolatedDiagramRenderer>
-  <DiagramLayerSettings zIndex="0" linePlacementFlags="18" placement="0" dist="0" obstacle="0" showAll="1" priority="0">
+  <DiagramLayerSettings zIndex="0" dist="0" priority="0" obstacle="0" showAll="1" linePlacementFlags="18" placement="0">
     <properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option type="QString" name="name" value=""/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option type="QString" name="type" value="collection"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
-  <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+  <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
     <activeChecks/>
     <checkConfiguration/>
   </geometryOptions>
   <legend type="default-vector" showLabelLegend="0"/>
   <referencedLayers/>
   <fieldConfiguration>
-    <field configurationFlags="NoFlag" name="fid">
+    <field name="fid" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="ID_rec">
+    <field name="ID_rec" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="ID_site">
+    <field name="ID_site" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="ID_xml">
+    <field name="ID_xml" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="true"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_adu">
+    <field name="rec_fl_adu" configurationFlags="NoFlag">
       <editWidget type="ValueRelation">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="AllowMulti"/>
-            <Option type="bool" value="true" name="AllowNull"/>
+            <Option type="bool" name="AllowMulti" value="false"/>
+            <Option type="bool" name="AllowNull" value="true"/>
+            <Option type="int" name="CompleterMatchFlags" value="2"/>
             <Option type="invalid" name="Description"/>
+            <Option type="bool" name="DisplayGroupName" value="false"/>
             <Option type="invalid" name="FilterExpression"/>
-            <Option type="QString" value="ID_adu" name="Key"/>
-            <Option type="QString" value="adu_b970d1cc_8f9d_462d_bdda_fd773a3c2db7" name="Layer"/>
-            <Option type="QString" value="adu" name="LayerName"/>
-            <Option type="QString" value="ogr" name="LayerProviderName"/>
-            <Option type="QString" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2411_CSAMT_Spis/MTSM_qgis/mtsm_adu.gpkg|layername=adu" name="LayerSource"/>
-            <Option type="int" value="1" name="NofColumns"/>
-            <Option type="bool" value="true" name="OrderByValue"/>
-            <Option type="bool" value="false" name="UseCompleter"/>
-            <Option type="QString" value="ID_adu" name="Value"/>
+            <Option type="invalid" name="Group"/>
+            <Option type="QString" name="Key" value="ID_adu"/>
+            <Option type="QString" name="Layer" value="adu_b970d1cc_8f9d_462d_bdda_fd773a3c2db7"/>
+            <Option type="QString" name="LayerName" value="adu"/>
+            <Option type="QString" name="LayerProviderName" value="ogr"/>
+            <Option type="QString" name="LayerSource" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2503_MT_LaPalma_OD/MTSM_qgis/mtsm_adu.gpkg|layername=adu"/>
+            <Option type="int" name="NofColumns" value="1"/>
+            <Option type="bool" name="OrderByDescending" value="false"/>
+            <Option type="bool" name="OrderByField" value="false"/>
+            <Option type="invalid" name="OrderByFieldName"/>
+            <Option type="bool" name="OrderByKey" value="false"/>
+            <Option type="bool" name="OrderByValue" value="true"/>
+            <Option type="bool" name="UseCompleter" value="false"/>
+            <Option type="QString" name="Value" value="ID_adu"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_ex_n">
+    <field name="rec_fl_ex_n" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_ex_s">
+    <field name="rec_fl_ex_s" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_ey_e">
+    <field name="rec_fl_ey_e" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_ey_w">
+    <field name="rec_fl_ey_w" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_joblist">
+    <field name="rec_fl_joblist" configurationFlags="NoFlag">
       <editWidget type="ValueRelation">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="AllowMulti"/>
-            <Option type="bool" value="true" name="AllowNull"/>
+            <Option type="bool" name="AllowMulti" value="false"/>
+            <Option type="bool" name="AllowNull" value="true"/>
+            <Option type="int" name="CompleterMatchFlags" value="2"/>
             <Option type="invalid" name="Description"/>
+            <Option type="bool" name="DisplayGroupName" value="false"/>
             <Option type="invalid" name="FilterExpression"/>
-            <Option type="QString" value="ID_jl" name="Key"/>
-            <Option type="QString" value="mtsm_jl_d726820c_a550_4fda_b5fa_dfb6e3c915fc" name="Layer"/>
-            <Option type="QString" value="jl" name="LayerName"/>
-            <Option type="QString" value="ogr" name="LayerProviderName"/>
-            <Option type="QString" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2411_CSAMT_Spis/MTSM_qgis/mtsm_jl.gpkg|layername=mtsm_jl" name="LayerSource"/>
-            <Option type="int" value="1" name="NofColumns"/>
-            <Option type="bool" value="true" name="OrderByValue"/>
-            <Option type="bool" value="false" name="UseCompleter"/>
-            <Option type="QString" value="ID_jl" name="Value"/>
+            <Option type="invalid" name="Group"/>
+            <Option type="QString" name="Key" value="ID_jl"/>
+            <Option type="QString" name="Layer" value="mtsm_jl_d726820c_a550_4fda_b5fa_dfb6e3c915fc"/>
+            <Option type="QString" name="LayerName" value="jl"/>
+            <Option type="QString" name="LayerProviderName" value="ogr"/>
+            <Option type="QString" name="LayerSource" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2503_MT_LaPalma_OD/MTSM_qgis/mtsm_jl.gpkg|layername=mtsm_jl"/>
+            <Option type="int" name="NofColumns" value="1"/>
+            <Option type="bool" name="OrderByDescending" value="false"/>
+            <Option type="bool" name="OrderByField" value="false"/>
+            <Option type="invalid" name="OrderByFieldName"/>
+            <Option type="bool" name="OrderByKey" value="false"/>
+            <Option type="bool" name="OrderByValue" value="true"/>
+            <Option type="bool" name="UseCompleter" value="false"/>
+            <Option type="QString" name="Value" value="ID_jl"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_note">
+    <field name="rec_fl_note" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_operator">
+    <field name="rec_fl_operator" configurationFlags="NoFlag">
       <editWidget type="ValueRelation">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="AllowMulti"/>
-            <Option type="bool" value="true" name="AllowNull"/>
+            <Option type="bool" name="AllowMulti" value="false"/>
+            <Option type="bool" name="AllowNull" value="true"/>
+            <Option type="int" name="CompleterMatchFlags" value="2"/>
             <Option type="invalid" name="Description"/>
+            <Option type="bool" name="DisplayGroupName" value="false"/>
             <Option type="invalid" name="FilterExpression"/>
-            <Option type="QString" value="ID_operator" name="Key"/>
-            <Option type="QString" value="operators_cea26da6_3aac_4931_880f_a23dff0d7269" name="Layer"/>
-            <Option type="QString" value="operators" name="LayerName"/>
-            <Option type="QString" value="ogr" name="LayerProviderName"/>
-            <Option type="QString" value="C:\Users\adamg\OneDrive\01_Koral\01_Projects\2411_CSAMT_Spis\MTSM_qgis\mtsm_op.gpkg|layername=op" name="LayerSource"/>
-            <Option type="int" value="1" name="NofColumns"/>
-            <Option type="bool" value="true" name="OrderByValue"/>
-            <Option type="bool" value="false" name="UseCompleter"/>
-            <Option type="QString" value="ID_operator" name="Value"/>
+            <Option type="invalid" name="Group"/>
+            <Option type="QString" name="Key" value="ID_operator"/>
+            <Option type="QString" name="Layer" value="operators_cea26da6_3aac_4931_880f_a23dff0d7269"/>
+            <Option type="QString" name="LayerName" value="operators"/>
+            <Option type="QString" name="LayerProviderName" value="ogr"/>
+            <Option type="QString" name="LayerSource" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2503_MT_LaPalma_OD/MTSM_qgis/mtsm_op.gpkg|layername=op"/>
+            <Option type="int" name="NofColumns" value="1"/>
+            <Option type="bool" name="OrderByDescending" value="false"/>
+            <Option type="bool" name="OrderByField" value="false"/>
+            <Option type="invalid" name="OrderByFieldName"/>
+            <Option type="bool" name="OrderByKey" value="false"/>
+            <Option type="bool" name="OrderByValue" value="true"/>
+            <Option type="bool" name="UseCompleter" value="false"/>
+            <Option type="QString" name="Value" value="ID_operator"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_rec_start">
+    <field name="rec_fl_rec_start" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" value="true" name="allow_null"/>
-            <Option type="bool" value="true" name="calendar_popup"/>
-            <Option type="QString" value="yyyy-MM-dd HH:mm:ss" name="display_format"/>
-            <Option type="QString" value="yyyy-MM-dd HH:mm:ss" name="field_format"/>
-            <Option type="bool" value="false" name="field_format_overwrite"/>
-            <Option type="bool" value="false" name="field_iso_format"/>
+            <Option type="bool" name="allow_null" value="true"/>
+            <Option type="bool" name="calendar_popup" value="true"/>
+            <Option type="QString" name="display_format" value="yyyy-MM-dd HH:mm:ss"/>
+            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
+            <Option type="bool" name="field_format_overwrite" value="false"/>
+            <Option type="bool" name="field_iso_format" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_fl_remote_reference">
+    <field name="rec_fl_remote_reference" configurationFlags="NoFlag">
       <editWidget type="CheckBox">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="AllowNullState"/>
-            <Option type="QString" value="1" name="CheckedState"/>
-            <Option type="int" value="0" name="TextDisplayMethod"/>
-            <Option type="QString" value="0" name="UncheckedState"/>
+            <Option type="bool" name="AllowNullState" value="false"/>
+            <Option type="QString" name="CheckedState" value="1"/>
+            <Option type="int" name="TextDisplayMethod" value="0"/>
+            <Option type="QString" name="UncheckedState" value="0"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_mag_dec">
+    <field name="rec_mag_dec" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_date">
+    <field name="rec_qc_date" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" value="true" name="allow_null"/>
-            <Option type="bool" value="true" name="calendar_popup"/>
-            <Option type="QString" value="M/d/yyyy HH:mm:ss" name="display_format"/>
-            <Option type="QString" value="yyyy-MM-dd HH:mm:ss" name="field_format"/>
-            <Option type="bool" value="false" name="field_format_overwrite"/>
-            <Option type="bool" value="false" name="field_iso_format"/>
+            <Option type="bool" name="allow_null" value="true"/>
+            <Option type="bool" name="calendar_popup" value="true"/>
+            <Option type="QString" name="display_format" value="M/d/yyyy HH:mm:ss"/>
+            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
+            <Option type="bool" name="field_format_overwrite" value="false"/>
+            <Option type="bool" name="field_iso_format" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_exception">
+    <field name="rec_qc_exception" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_note">
+    <field name="rec_qc_note" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_nsp">
+    <field name="rec_qc_nsp" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_qcby">
+    <field name="rec_qc_qcby" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_qc_status">
+    <field name="rec_qc_status" configurationFlags="NoFlag">
       <editWidget type="ValueRelation">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="AllowMulti"/>
-            <Option type="bool" value="true" name="AllowNull"/>
+            <Option type="bool" name="AllowMulti" value="false"/>
+            <Option type="bool" name="AllowNull" value="true"/>
+            <Option type="int" name="CompleterMatchFlags" value="2"/>
             <Option type="invalid" name="Description"/>
+            <Option type="bool" name="DisplayGroupName" value="false"/>
             <Option type="invalid" name="FilterExpression"/>
-            <Option type="QString" value="ID_qc" name="Key"/>
-            <Option type="QString" value="qc_fd90931e_78f9_40a0_b3e3_94ba0db48f3d" name="Layer"/>
-            <Option type="QString" value="qc" name="LayerName"/>
-            <Option type="QString" value="ogr" name="LayerProviderName"/>
-            <Option type="QString" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2411_CSAMT_Spis/MTSM_qgis/mtsm_qc.gpkg|layername=qc" name="LayerSource"/>
-            <Option type="int" value="1" name="NofColumns"/>
-            <Option type="bool" value="true" name="OrderByValue"/>
-            <Option type="bool" value="false" name="UseCompleter"/>
-            <Option type="QString" value="ID_qc" name="Value"/>
+            <Option type="invalid" name="Group"/>
+            <Option type="QString" name="Key" value="ID_qc"/>
+            <Option type="QString" name="Layer" value="qc_fd90931e_78f9_40a0_b3e3_94ba0db48f3d"/>
+            <Option type="QString" name="LayerName" value="qc"/>
+            <Option type="QString" name="LayerProviderName" value="ogr"/>
+            <Option type="QString" name="LayerSource" value="C:/Users/adamg/OneDrive/01_Koral/01_Projects/2503_MT_LaPalma_OD/MTSM_qgis/mtsm_qc.gpkg|layername=qc"/>
+            <Option type="int" name="NofColumns" value="1"/>
+            <Option type="bool" name="OrderByDescending" value="false"/>
+            <Option type="bool" name="OrderByField" value="false"/>
+            <Option type="invalid" name="OrderByFieldName"/>
+            <Option type="bool" name="OrderByKey" value="false"/>
+            <Option type="bool" name="OrderByValue" value="true"/>
+            <Option type="bool" name="UseCompleter" value="false"/>
+            <Option type="QString" name="Value" value="ID_qc"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_x">
+    <field name="rec_x" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_xml_num_of_jobs">
+    <field name="rec_xml_num_of_jobs" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="rec_y">
+    <field name="rec_y" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_adu">
+    <field name="xml_adu" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_amplitude_max">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_ch_type">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_sensor_pos_x1">
+    <field name="xml_ch01_amplitude_max" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_sensor_pos_x2">
+    <field name="xml_ch01_ch_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_sensor_type">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_ser_num">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_adb_error">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_dc_offset">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_lsb_hf">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_lsb_lf">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_res">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_resNE">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_resSW">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch01_st_severity">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_amplitude_max">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_ch_type">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_sensor_pos_y1">
+    <field name="xml_ch01_sensor_pos_x1" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_sensor_pos_y2">
+    <field name="xml_ch01_sensor_pos_x2" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_sensor_type">
+    <field name="xml_ch01_sensor_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_ser_num">
+    <field name="xml_ch01_ser_num" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch01_st_adb_error" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_adb_error">
+    <field name="xml_ch01_st_dc_offset" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch01_st_lsb_hf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch01_st_lsb_lf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch01_st_res" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch01_st_resNE" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_dc_offset">
+    <field name="xml_ch01_st_resSW" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_lsb_hf">
+    <field name="xml_ch01_st_severity" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_lsb_lf">
+    <field name="xml_ch02_amplitude_max" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_ch_type" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_sensor_pos_y1" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_sensor_pos_y2" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_sensor_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_res">
+    <field name="xml_ch02_ser_num" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_adb_error" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_dc_offset" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_lsb_hf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_lsb_lf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_res" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch02_st_resNE" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_resNE">
+    <field name="xml_ch02_st_resSW" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_resSW">
+    <field name="xml_ch02_st_severity" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch02_st_severity">
+    <field name="xml_ch03_amplitude_max" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_amplitude_max">
+    <field name="xml_ch03_ch_type" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch03_sensor_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_ch_type">
+    <field name="xml_ch03_ser_num" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_sensor_type">
+    <field name="xml_ch03_st_adb_error" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_ser_num">
+    <field name="xml_ch03_st_dc_offset" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_adb_error">
+    <field name="xml_ch03_st_lsb_hf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch03_st_lsb_lf" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_dc_offset">
+    <field name="xml_ch03_st_res" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_lsb_hf">
+    <field name="xml_ch03_st_resNE" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch03_st_resSW" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_lsb_lf">
+    <field name="xml_ch03_st_severity" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_res">
+    <field name="xml_ch04_amplitude_max" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_resNE">
+    <field name="xml_ch04_ch_type" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch04_sensor_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_resSW">
+    <field name="xml_ch04_ser_num" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch03_st_severity">
+    <field name="xml_ch04_st_adb_error" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_amplitude_max">
+    <field name="xml_ch04_st_dc_offset" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_ch_type">
+    <field name="xml_ch04_st_lsb_hf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch04_st_lsb_lf" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_sensor_type">
+    <field name="xml_ch04_st_res" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_ser_num">
+    <field name="xml_ch04_st_resNE" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_adb_error">
+    <field name="xml_ch04_st_resSW" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_dc_offset">
+    <field name="xml_ch04_st_severity" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_lsb_hf">
+    <field name="xml_ch05_amplitude_max" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_lsb_lf">
+    <field name="xml_ch05_ch_type" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch05_sensor_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_res">
+    <field name="xml_ch05_ser_num" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_resNE">
+    <field name="xml_ch05_st_adb_error" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_resSW">
+    <field name="xml_ch05_st_dc_offset" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch04_st_severity">
+    <field name="xml_ch05_st_lsb_hf" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_ch05_st_lsb_lf" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_amplitude_max">
+    <field name="xml_ch05_st_res" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_ch_type">
+    <field name="xml_ch05_st_resNE" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_sensor_type">
+    <field name="xml_ch05_st_resSW" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_ser_num">
+    <field name="xml_ch05_st_severity" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_adb_error">
+    <field name="xml_disk_space_free" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_dc_offset">
+    <field name="xml_disk_space_total" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_lsb_hf">
+    <field name="xml_freq_base" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_freq_cal" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_lsb_lf">
+    <field name="xml_freq_sample" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_gps_dynamic_mode" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_res">
+    <field name="xml_gps_height" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_resNE">
+    <field name="xml_gps_num_sats" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_gps_sync" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="xml_meas_mode" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_resSW">
+    <field name="xml_meas_type" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_ch05_st_severity">
+    <field name="xml_num_of_ch" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_disk_space_free">
+    <field name="xml_path" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_disk_space_total">
+    <field name="xml_rec_duration" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_freq_base">
+    <field name="xml_rec_duration_str" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
-          <Option/>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_freq_cal">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_freq_sample">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_gps_dynamic_mode">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_gps_height">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_gps_num_sats">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_gps_sync">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_meas_mode">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_meas_type">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_num_of_ch">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_path">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_rec_duration">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_rec_duration_str">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="xml_rec_end">
+    <field name="xml_rec_end" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" value="true" name="allow_null"/>
-            <Option type="bool" value="true" name="calendar_popup"/>
-            <Option type="QString" value="yyyy/MM/dd HH:mm" name="display_format"/>
-            <Option type="QString" value="yyyy-MM-dd HH:mm:ss" name="field_format"/>
-            <Option type="bool" value="false" name="field_format_overwrite"/>
-            <Option type="bool" value="false" name="field_iso_format"/>
+            <Option type="bool" name="allow_null" value="true"/>
+            <Option type="bool" name="calendar_popup" value="true"/>
+            <Option type="QString" name="display_format" value="yyyy/MM/dd HH:mm"/>
+            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
+            <Option type="bool" name="field_format_overwrite" value="false"/>
+            <Option type="bool" name="field_iso_format" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_rec_end_date">
+    <field name="xml_rec_end_date" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_rec_end_time">
+    <field name="xml_rec_end_time" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_rec_start">
+    <field name="xml_rec_start" configurationFlags="NoFlag">
       <editWidget type="DateTime">
         <config>
           <Option type="Map">
-            <Option type="bool" value="true" name="allow_null"/>
-            <Option type="bool" value="true" name="calendar_popup"/>
-            <Option type="QString" value="yyyy/MM/dd HH:mm" name="display_format"/>
-            <Option type="QString" value="yyyy-MM-dd HH:mm:ss" name="field_format"/>
-            <Option type="bool" value="false" name="field_format_overwrite"/>
-            <Option type="bool" value="false" name="field_iso_format"/>
+            <Option type="bool" name="allow_null" value="true"/>
+            <Option type="bool" name="calendar_popup" value="true"/>
+            <Option type="QString" name="display_format" value="yyyy/MM/dd HH:mm"/>
+            <Option type="QString" name="field_format" value="yyyy-MM-dd HH:mm:ss"/>
+            <Option type="bool" name="field_format_overwrite" value="false"/>
+            <Option type="bool" name="field_iso_format" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_rec_start_date">
+    <field name="xml_rec_start_date" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_rec_start_time">
+    <field name="xml_rec_start_time" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_x">
+    <field name="xml_x" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="xml_y">
+    <field name="xml_y" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="adu_clr">
+    <field name="adu_clr" configurationFlags="NoFlag">
       <editWidget type="Color">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="adu_version">
+    <field name="adu_version" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="qc_clr">
+    <field name="qc_clr" configurationFlags="NoFlag">
       <editWidget type="Color">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="op_clr">
+    <field name="op_clr" configurationFlags="NoFlag">
       <editWidget type="Color">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="jl_rec_duration">
+    <field name="jl_rec_duration" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option/>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="jl_num_of_jobs">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="jl_rec_downtime">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="jl_rec_duration_str">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="edi_x">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="edi_y">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="edi_z">
-      <editWidget type="TextEdit">
-        <config>
-          <Option/>
-        </config>
-      </editWidget>
-    </field>
-    <field configurationFlags="NoFlag" name="vf_offset_xml">
+    <field name="jl_num_of_jobs" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="vf_path_ts">
+    <field name="jl_rec_downtime" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="vf_path_raw">
+    <field name="jl_rec_duration_str" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="vf_xml_gps_height">
+    <field name="edi_x" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option/>
+        </config>
+      </editWidget>
+    </field>
+    <field name="edi_y" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option/>
+        </config>
+      </editWidget>
+    </field>
+    <field name="edi_z" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option/>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_offset_xml" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="vf_rec_downtime_min">
+    <field name="vf_path_ts" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
-    <field configurationFlags="NoFlag" name="vf_offset_edi">
+    <field name="vf_path_raw" configurationFlags="NoFlag">
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="bool" value="false" name="IsMultiline"/>
-            <Option type="bool" value="false" name="UseHtml"/>
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_xml_gps_height" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_rec_downtime_min" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_offset_edi" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_jobs_str" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_sensor_pos_n" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_sensor_pos_s" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_sensor_pos_e" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_sesor_pos_w" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
+          </Option>
+        </config>
+      </editWidget>
+    </field>
+    <field name="vf_rec_duration_combined" configurationFlags="NoFlag">
+      <editWidget type="TextEdit">
+        <config>
+          <Option type="Map">
+            <Option type="bool" name="IsMultiline" value="false"/>
+            <Option type="bool" name="UseHtml" value="false"/>
           </Option>
         </config>
       </editWidget>
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias field="fid" index="0" name=""/>
-    <alias field="ID_rec" index="1" name=""/>
-    <alias field="ID_site" index="2" name=""/>
-    <alias field="ID_xml" index="3" name=""/>
-    <alias field="rec_fl_adu" index="4" name="ADU"/>
-    <alias field="rec_fl_ex_n" index="5" name="N (FL)"/>
-    <alias field="rec_fl_ex_s" index="6" name="S (FL)"/>
-    <alias field="rec_fl_ey_e" index="7" name="E (FL)"/>
-    <alias field="rec_fl_ey_w" index="8" name="W (FL)"/>
-    <alias field="rec_fl_joblist" index="9" name="Joblist"/>
-    <alias field="rec_fl_note" index="10" name="Note (FL)"/>
-    <alias field="rec_fl_operator" index="11" name="Operator"/>
-    <alias field="rec_fl_rec_start" index="12" name="Rec start (FL)"/>
-    <alias field="rec_fl_remote_reference" index="13" name="RR"/>
-    <alias field="rec_mag_dec" index="14" name=""/>
-    <alias field="rec_qc_date" index="15" name="Date (QC)"/>
-    <alias field="rec_qc_exception" index="16" name=""/>
-    <alias field="rec_qc_note" index="17" name="Note (QC)"/>
-    <alias field="rec_qc_nsp" index="18" name=""/>
-    <alias field="rec_qc_qcby" index="19" name="QC by"/>
-    <alias field="rec_qc_status" index="20" name="QC status"/>
-    <alias field="rec_x" index="21" name=""/>
-    <alias field="rec_xml_num_of_jobs" index="22" name="n Jobs"/>
-    <alias field="rec_y" index="23" name=""/>
-    <alias field="xml_adu" index="24" name=""/>
-    <alias field="xml_ch01_amplitude_max" index="25" name=""/>
-    <alias field="xml_ch01_ch_type" index="26" name=""/>
-    <alias field="xml_ch01_sensor_pos_x1" index="27" name="N (xml)"/>
-    <alias field="xml_ch01_sensor_pos_x2" index="28" name="S (xml)"/>
-    <alias field="xml_ch01_sensor_type" index="29" name=""/>
-    <alias field="xml_ch01_ser_num" index="30" name=""/>
-    <alias field="xml_ch01_st_adb_error" index="31" name=""/>
-    <alias field="xml_ch01_st_dc_offset" index="32" name=""/>
-    <alias field="xml_ch01_st_lsb_hf" index="33" name=""/>
-    <alias field="xml_ch01_st_lsb_lf" index="34" name=""/>
-    <alias field="xml_ch01_st_res" index="35" name=""/>
-    <alias field="xml_ch01_st_resNE" index="36" name=""/>
-    <alias field="xml_ch01_st_resSW" index="37" name=""/>
-    <alias field="xml_ch01_st_severity" index="38" name=""/>
-    <alias field="xml_ch02_amplitude_max" index="39" name=""/>
-    <alias field="xml_ch02_ch_type" index="40" name=""/>
-    <alias field="xml_ch02_sensor_pos_y1" index="41" name="W (xml)"/>
-    <alias field="xml_ch02_sensor_pos_y2" index="42" name="E (xml)"/>
-    <alias field="xml_ch02_sensor_type" index="43" name=""/>
-    <alias field="xml_ch02_ser_num" index="44" name=""/>
-    <alias field="xml_ch02_st_adb_error" index="45" name=""/>
-    <alias field="xml_ch02_st_dc_offset" index="46" name=""/>
-    <alias field="xml_ch02_st_lsb_hf" index="47" name=""/>
-    <alias field="xml_ch02_st_lsb_lf" index="48" name=""/>
-    <alias field="xml_ch02_st_res" index="49" name=""/>
-    <alias field="xml_ch02_st_resNE" index="50" name=""/>
-    <alias field="xml_ch02_st_resSW" index="51" name=""/>
-    <alias field="xml_ch02_st_severity" index="52" name=""/>
-    <alias field="xml_ch03_amplitude_max" index="53" name=""/>
-    <alias field="xml_ch03_ch_type" index="54" name=""/>
-    <alias field="xml_ch03_sensor_type" index="55" name=""/>
-    <alias field="xml_ch03_ser_num" index="56" name=""/>
-    <alias field="xml_ch03_st_adb_error" index="57" name=""/>
-    <alias field="xml_ch03_st_dc_offset" index="58" name=""/>
-    <alias field="xml_ch03_st_lsb_hf" index="59" name=""/>
-    <alias field="xml_ch03_st_lsb_lf" index="60" name=""/>
-    <alias field="xml_ch03_st_res" index="61" name=""/>
-    <alias field="xml_ch03_st_resNE" index="62" name=""/>
-    <alias field="xml_ch03_st_resSW" index="63" name=""/>
-    <alias field="xml_ch03_st_severity" index="64" name=""/>
-    <alias field="xml_ch04_amplitude_max" index="65" name=""/>
-    <alias field="xml_ch04_ch_type" index="66" name=""/>
-    <alias field="xml_ch04_sensor_type" index="67" name=""/>
-    <alias field="xml_ch04_ser_num" index="68" name=""/>
-    <alias field="xml_ch04_st_adb_error" index="69" name=""/>
-    <alias field="xml_ch04_st_dc_offset" index="70" name=""/>
-    <alias field="xml_ch04_st_lsb_hf" index="71" name=""/>
-    <alias field="xml_ch04_st_lsb_lf" index="72" name=""/>
-    <alias field="xml_ch04_st_res" index="73" name=""/>
-    <alias field="xml_ch04_st_resNE" index="74" name=""/>
-    <alias field="xml_ch04_st_resSW" index="75" name=""/>
-    <alias field="xml_ch04_st_severity" index="76" name=""/>
-    <alias field="xml_ch05_amplitude_max" index="77" name=""/>
-    <alias field="xml_ch05_ch_type" index="78" name=""/>
-    <alias field="xml_ch05_sensor_type" index="79" name=""/>
-    <alias field="xml_ch05_ser_num" index="80" name=""/>
-    <alias field="xml_ch05_st_adb_error" index="81" name=""/>
-    <alias field="xml_ch05_st_dc_offset" index="82" name=""/>
-    <alias field="xml_ch05_st_lsb_hf" index="83" name=""/>
-    <alias field="xml_ch05_st_lsb_lf" index="84" name=""/>
-    <alias field="xml_ch05_st_res" index="85" name=""/>
-    <alias field="xml_ch05_st_resNE" index="86" name=""/>
-    <alias field="xml_ch05_st_resSW" index="87" name=""/>
-    <alias field="xml_ch05_st_severity" index="88" name=""/>
-    <alias field="xml_disk_space_free" index="89" name=""/>
-    <alias field="xml_disk_space_total" index="90" name=""/>
-    <alias field="xml_freq_base" index="91" name=""/>
-    <alias field="xml_freq_cal" index="92" name=""/>
-    <alias field="xml_freq_sample" index="93" name=""/>
-    <alias field="xml_gps_dynamic_mode" index="94" name=""/>
-    <alias field="xml_gps_height" index="95" name=""/>
-    <alias field="xml_gps_num_sats" index="96" name=""/>
-    <alias field="xml_gps_sync" index="97" name=""/>
-    <alias field="xml_meas_mode" index="98" name=""/>
-    <alias field="xml_meas_type" index="99" name=""/>
-    <alias field="xml_num_of_ch" index="100" name=""/>
-    <alias field="xml_path" index="101" name=""/>
-    <alias field="xml_rec_duration" index="102" name=""/>
-    <alias field="xml_rec_duration_str" index="103" name=""/>
-    <alias field="xml_rec_end" index="104" name=""/>
-    <alias field="xml_rec_end_date" index="105" name=""/>
-    <alias field="xml_rec_end_time" index="106" name=""/>
-    <alias field="xml_rec_start" index="107" name=""/>
-    <alias field="xml_rec_start_date" index="108" name=""/>
-    <alias field="xml_rec_start_time" index="109" name=""/>
-    <alias field="xml_x" index="110" name=""/>
-    <alias field="xml_y" index="111" name=""/>
-    <alias field="adu_clr" index="112" name=""/>
-    <alias field="adu_version" index="113" name=""/>
-    <alias field="qc_clr" index="114" name=""/>
-    <alias field="op_clr" index="115" name=""/>
-    <alias field="jl_rec_duration" index="116" name=""/>
-    <alias field="jl_num_of_jobs" index="117" name=""/>
-    <alias field="jl_rec_downtime" index="118" name=""/>
-    <alias field="jl_rec_duration_str" index="119" name=""/>
-    <alias field="edi_x" index="120" name=""/>
-    <alias field="edi_y" index="121" name=""/>
-    <alias field="edi_z" index="122" name=""/>
-    <alias field="vf_offset_xml" index="123" name="Offset xml [m]"/>
-    <alias field="vf_path_ts" index="124" name=""/>
-    <alias field="vf_path_raw" index="125" name=""/>
-    <alias field="vf_xml_gps_height" index="126" name="Gps Height [m]"/>
-    <alias field="vf_rec_downtime_min" index="127" name="Rec downtime [min]"/>
-    <alias field="vf_offset_edi" index="128" name="Offset edi [m]"/>
+    <alias field="fid" name="" index="0"/>
+    <alias field="ID_rec" name="" index="1"/>
+    <alias field="ID_site" name="" index="2"/>
+    <alias field="ID_xml" name="" index="3"/>
+    <alias field="rec_fl_adu" name="ADU" index="4"/>
+    <alias field="rec_fl_ex_n" name="N (FL)" index="5"/>
+    <alias field="rec_fl_ex_s" name="S (FL)" index="6"/>
+    <alias field="rec_fl_ey_e" name="E (FL)" index="7"/>
+    <alias field="rec_fl_ey_w" name="W (FL)" index="8"/>
+    <alias field="rec_fl_joblist" name="Joblist" index="9"/>
+    <alias field="rec_fl_note" name="Note (FL)" index="10"/>
+    <alias field="rec_fl_operator" name="Operator" index="11"/>
+    <alias field="rec_fl_rec_start" name="Rec start (FL)" index="12"/>
+    <alias field="rec_fl_remote_reference" name="RR" index="13"/>
+    <alias field="rec_mag_dec" name="" index="14"/>
+    <alias field="rec_qc_date" name="Date (QC)" index="15"/>
+    <alias field="rec_qc_exception" name="" index="16"/>
+    <alias field="rec_qc_note" name="Note (QC)" index="17"/>
+    <alias field="rec_qc_nsp" name="" index="18"/>
+    <alias field="rec_qc_qcby" name="QC by" index="19"/>
+    <alias field="rec_qc_status" name="QC status" index="20"/>
+    <alias field="rec_x" name="" index="21"/>
+    <alias field="rec_xml_num_of_jobs" name="n Jobs" index="22"/>
+    <alias field="rec_y" name="" index="23"/>
+    <alias field="xml_adu" name="" index="24"/>
+    <alias field="xml_ch01_amplitude_max" name="Max. ampltiude" index="25"/>
+    <alias field="xml_ch01_ch_type" name="Ch. type" index="26"/>
+    <alias field="xml_ch01_sensor_pos_x1" name="N (xml)" index="27"/>
+    <alias field="xml_ch01_sensor_pos_x2" name="S (xml)" index="28"/>
+    <alias field="xml_ch01_sensor_type" name="" index="29"/>
+    <alias field="xml_ch01_ser_num" name="Serial number" index="30"/>
+    <alias field="xml_ch01_st_adb_error" name="" index="31"/>
+    <alias field="xml_ch01_st_dc_offset" name="DC offset" index="32"/>
+    <alias field="xml_ch01_st_lsb_hf" name="LSB HF" index="33"/>
+    <alias field="xml_ch01_st_lsb_lf" name="LSB LF" index="34"/>
+    <alias field="xml_ch01_st_res" name="Ground res." index="35"/>
+    <alias field="xml_ch01_st_resNE" name="" index="36"/>
+    <alias field="xml_ch01_st_resSW" name="" index="37"/>
+    <alias field="xml_ch01_st_severity" name="" index="38"/>
+    <alias field="xml_ch02_amplitude_max" name="" index="39"/>
+    <alias field="xml_ch02_ch_type" name="Ch. type" index="40"/>
+    <alias field="xml_ch02_sensor_pos_y1" name="W (xml)" index="41"/>
+    <alias field="xml_ch02_sensor_pos_y2" name="E (xml)" index="42"/>
+    <alias field="xml_ch02_sensor_type" name="" index="43"/>
+    <alias field="xml_ch02_ser_num" name="" index="44"/>
+    <alias field="xml_ch02_st_adb_error" name="" index="45"/>
+    <alias field="xml_ch02_st_dc_offset" name="" index="46"/>
+    <alias field="xml_ch02_st_lsb_hf" name="" index="47"/>
+    <alias field="xml_ch02_st_lsb_lf" name="" index="48"/>
+    <alias field="xml_ch02_st_res" name="" index="49"/>
+    <alias field="xml_ch02_st_resNE" name="" index="50"/>
+    <alias field="xml_ch02_st_resSW" name="" index="51"/>
+    <alias field="xml_ch02_st_severity" name="" index="52"/>
+    <alias field="xml_ch03_amplitude_max" name="" index="53"/>
+    <alias field="xml_ch03_ch_type" name="" index="54"/>
+    <alias field="xml_ch03_sensor_type" name="" index="55"/>
+    <alias field="xml_ch03_ser_num" name="" index="56"/>
+    <alias field="xml_ch03_st_adb_error" name="" index="57"/>
+    <alias field="xml_ch03_st_dc_offset" name="" index="58"/>
+    <alias field="xml_ch03_st_lsb_hf" name="" index="59"/>
+    <alias field="xml_ch03_st_lsb_lf" name="" index="60"/>
+    <alias field="xml_ch03_st_res" name="" index="61"/>
+    <alias field="xml_ch03_st_resNE" name="" index="62"/>
+    <alias field="xml_ch03_st_resSW" name="" index="63"/>
+    <alias field="xml_ch03_st_severity" name="" index="64"/>
+    <alias field="xml_ch04_amplitude_max" name="" index="65"/>
+    <alias field="xml_ch04_ch_type" name="" index="66"/>
+    <alias field="xml_ch04_sensor_type" name="" index="67"/>
+    <alias field="xml_ch04_ser_num" name="" index="68"/>
+    <alias field="xml_ch04_st_adb_error" name="" index="69"/>
+    <alias field="xml_ch04_st_dc_offset" name="" index="70"/>
+    <alias field="xml_ch04_st_lsb_hf" name="" index="71"/>
+    <alias field="xml_ch04_st_lsb_lf" name="" index="72"/>
+    <alias field="xml_ch04_st_res" name="" index="73"/>
+    <alias field="xml_ch04_st_resNE" name="" index="74"/>
+    <alias field="xml_ch04_st_resSW" name="" index="75"/>
+    <alias field="xml_ch04_st_severity" name="" index="76"/>
+    <alias field="xml_ch05_amplitude_max" name="" index="77"/>
+    <alias field="xml_ch05_ch_type" name="" index="78"/>
+    <alias field="xml_ch05_sensor_type" name="" index="79"/>
+    <alias field="xml_ch05_ser_num" name="" index="80"/>
+    <alias field="xml_ch05_st_adb_error" name="" index="81"/>
+    <alias field="xml_ch05_st_dc_offset" name="" index="82"/>
+    <alias field="xml_ch05_st_lsb_hf" name="" index="83"/>
+    <alias field="xml_ch05_st_lsb_lf" name="" index="84"/>
+    <alias field="xml_ch05_st_res" name="" index="85"/>
+    <alias field="xml_ch05_st_resNE" name="" index="86"/>
+    <alias field="xml_ch05_st_resSW" name="" index="87"/>
+    <alias field="xml_ch05_st_severity" name="" index="88"/>
+    <alias field="xml_disk_space_free" name="" index="89"/>
+    <alias field="xml_disk_space_total" name="" index="90"/>
+    <alias field="xml_freq_base" name="Tx fq" index="91"/>
+    <alias field="xml_freq_cal" name="" index="92"/>
+    <alias field="xml_freq_sample" name="Sample fq" index="93"/>
+    <alias field="xml_gps_dynamic_mode" name="" index="94"/>
+    <alias field="xml_gps_height" name="" index="95"/>
+    <alias field="xml_gps_num_sats" name="Sattelites" index="96"/>
+    <alias field="xml_gps_sync" name="GPS sync" index="97"/>
+    <alias field="xml_meas_mode" name="" index="98"/>
+    <alias field="xml_meas_type" name="" index="99"/>
+    <alias field="xml_num_of_ch" name="" index="100"/>
+    <alias field="xml_path" name="" index="101"/>
+    <alias field="xml_rec_duration" name="" index="102"/>
+    <alias field="xml_rec_duration_str" name="Rec duration HH:MM:SS" index="103"/>
+    <alias field="xml_rec_end" name="Rec end" index="104"/>
+    <alias field="xml_rec_end_date" name="" index="105"/>
+    <alias field="xml_rec_end_time" name="" index="106"/>
+    <alias field="xml_rec_start" name="Rec start" index="107"/>
+    <alias field="xml_rec_start_date" name="" index="108"/>
+    <alias field="xml_rec_start_time" name="" index="109"/>
+    <alias field="xml_x" name="" index="110"/>
+    <alias field="xml_y" name="" index="111"/>
+    <alias field="adu_clr" name="" index="112"/>
+    <alias field="adu_version" name="" index="113"/>
+    <alias field="qc_clr" name="" index="114"/>
+    <alias field="op_clr" name="" index="115"/>
+    <alias field="jl_rec_duration" name="" index="116"/>
+    <alias field="jl_num_of_jobs" name="n jobs (joblist)" index="117"/>
+    <alias field="jl_rec_downtime" name="" index="118"/>
+    <alias field="jl_rec_duration_str" name="Joblist rec duration (HH:MM:SS)" index="119"/>
+    <alias field="edi_x" name="" index="120"/>
+    <alias field="edi_y" name="" index="121"/>
+    <alias field="edi_z" name="" index="122"/>
+    <alias field="vf_offset_xml" name="Offset xml [m]" index="123"/>
+    <alias field="vf_path_ts" name="" index="124"/>
+    <alias field="vf_path_raw" name="" index="125"/>
+    <alias field="vf_xml_gps_height" name="Gps Height [m]" index="126"/>
+    <alias field="vf_rec_downtime_min" name="Rec downtime [min]" index="127"/>
+    <alias field="vf_offset_edi" name="Offset edi [m]" index="128"/>
+    <alias field="vf_jobs_str" name="Jobs (data / jl)" index="129"/>
+    <alias field="vf_sensor_pos_n" name="N" index="130"/>
+    <alias field="vf_sensor_pos_s" name="S" index="131"/>
+    <alias field="vf_sensor_pos_e" name="E" index="132"/>
+    <alias field="vf_sesor_pos_w" name="W" index="133"/>
+    <alias field="vf_rec_duration_combined" name="Rec duration (data / jl) [ HH:MM:SS]" index="134"/>
   </aliases>
   <splitPolicies>
-    <policy policy="DefaultValue" field="fid"/>
-    <policy policy="DefaultValue" field="ID_rec"/>
-    <policy policy="DefaultValue" field="ID_site"/>
-    <policy policy="DefaultValue" field="ID_xml"/>
-    <policy policy="DefaultValue" field="rec_fl_adu"/>
-    <policy policy="DefaultValue" field="rec_fl_ex_n"/>
-    <policy policy="DefaultValue" field="rec_fl_ex_s"/>
-    <policy policy="DefaultValue" field="rec_fl_ey_e"/>
-    <policy policy="DefaultValue" field="rec_fl_ey_w"/>
-    <policy policy="DefaultValue" field="rec_fl_joblist"/>
-    <policy policy="DefaultValue" field="rec_fl_note"/>
-    <policy policy="DefaultValue" field="rec_fl_operator"/>
-    <policy policy="DefaultValue" field="rec_fl_rec_start"/>
-    <policy policy="DefaultValue" field="rec_fl_remote_reference"/>
-    <policy policy="Duplicate" field="rec_mag_dec"/>
-    <policy policy="DefaultValue" field="rec_qc_date"/>
-    <policy policy="Duplicate" field="rec_qc_exception"/>
-    <policy policy="DefaultValue" field="rec_qc_note"/>
-    <policy policy="DefaultValue" field="rec_qc_nsp"/>
-    <policy policy="DefaultValue" field="rec_qc_qcby"/>
-    <policy policy="DefaultValue" field="rec_qc_status"/>
-    <policy policy="Duplicate" field="rec_x"/>
-    <policy policy="DefaultValue" field="rec_xml_num_of_jobs"/>
-    <policy policy="Duplicate" field="rec_y"/>
-    <policy policy="Duplicate" field="xml_adu"/>
-    <policy policy="Duplicate" field="xml_ch01_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch01_ch_type"/>
-    <policy policy="DefaultValue" field="xml_ch01_sensor_pos_x1"/>
-    <policy policy="DefaultValue" field="xml_ch01_sensor_pos_x2"/>
-    <policy policy="Duplicate" field="xml_ch01_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch01_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch01_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch01_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch01_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch01_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch01_st_res"/>
-    <policy policy="Duplicate" field="xml_ch01_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch01_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch01_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch02_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch02_ch_type"/>
-    <policy policy="DefaultValue" field="xml_ch02_sensor_pos_y1"/>
-    <policy policy="DefaultValue" field="xml_ch02_sensor_pos_y2"/>
-    <policy policy="Duplicate" field="xml_ch02_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch02_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch02_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch02_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch02_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch02_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch02_st_res"/>
-    <policy policy="Duplicate" field="xml_ch02_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch02_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch02_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch03_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch03_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch03_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch03_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch03_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch03_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch03_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch03_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch03_st_res"/>
-    <policy policy="Duplicate" field="xml_ch03_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch03_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch03_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch04_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch04_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch04_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch04_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch04_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch04_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch04_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch04_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch04_st_res"/>
-    <policy policy="Duplicate" field="xml_ch04_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch04_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch04_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch05_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch05_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch05_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch05_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch05_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch05_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch05_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch05_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch05_st_res"/>
-    <policy policy="Duplicate" field="xml_ch05_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch05_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch05_st_severity"/>
-    <policy policy="Duplicate" field="xml_disk_space_free"/>
-    <policy policy="Duplicate" field="xml_disk_space_total"/>
-    <policy policy="Duplicate" field="xml_freq_base"/>
-    <policy policy="Duplicate" field="xml_freq_cal"/>
-    <policy policy="Duplicate" field="xml_freq_sample"/>
-    <policy policy="Duplicate" field="xml_gps_dynamic_mode"/>
-    <policy policy="Duplicate" field="xml_gps_height"/>
-    <policy policy="Duplicate" field="xml_gps_num_sats"/>
-    <policy policy="Duplicate" field="xml_gps_sync"/>
-    <policy policy="Duplicate" field="xml_meas_mode"/>
-    <policy policy="Duplicate" field="xml_meas_type"/>
-    <policy policy="Duplicate" field="xml_num_of_ch"/>
-    <policy policy="Duplicate" field="xml_path"/>
-    <policy policy="Duplicate" field="xml_rec_duration"/>
-    <policy policy="Duplicate" field="xml_rec_duration_str"/>
-    <policy policy="DefaultValue" field="xml_rec_end"/>
-    <policy policy="Duplicate" field="xml_rec_end_date"/>
-    <policy policy="Duplicate" field="xml_rec_end_time"/>
-    <policy policy="DefaultValue" field="xml_rec_start"/>
-    <policy policy="Duplicate" field="xml_rec_start_date"/>
-    <policy policy="Duplicate" field="xml_rec_start_time"/>
-    <policy policy="Duplicate" field="xml_x"/>
-    <policy policy="Duplicate" field="xml_y"/>
-    <policy policy="DefaultValue" field="adu_clr"/>
-    <policy policy="DefaultValue" field="adu_version"/>
-    <policy policy="DefaultValue" field="qc_clr"/>
-    <policy policy="DefaultValue" field="op_clr"/>
-    <policy policy="Duplicate" field="jl_rec_duration"/>
-    <policy policy="Duplicate" field="jl_num_of_jobs"/>
-    <policy policy="Duplicate" field="jl_rec_downtime"/>
-    <policy policy="Duplicate" field="jl_rec_duration_str"/>
-    <policy policy="Duplicate" field="edi_x"/>
-    <policy policy="Duplicate" field="edi_y"/>
-    <policy policy="Duplicate" field="edi_z"/>
-    <policy policy="DefaultValue" field="vf_offset_xml"/>
-    <policy policy="DefaultValue" field="vf_path_ts"/>
-    <policy policy="DefaultValue" field="vf_path_raw"/>
-    <policy policy="DefaultValue" field="vf_xml_gps_height"/>
-    <policy policy="DefaultValue" field="vf_rec_downtime_min"/>
-    <policy policy="DefaultValue" field="vf_offset_edi"/>
+    <policy field="fid" policy="DefaultValue"/>
+    <policy field="ID_rec" policy="DefaultValue"/>
+    <policy field="ID_site" policy="DefaultValue"/>
+    <policy field="ID_xml" policy="DefaultValue"/>
+    <policy field="rec_fl_adu" policy="DefaultValue"/>
+    <policy field="rec_fl_ex_n" policy="DefaultValue"/>
+    <policy field="rec_fl_ex_s" policy="DefaultValue"/>
+    <policy field="rec_fl_ey_e" policy="DefaultValue"/>
+    <policy field="rec_fl_ey_w" policy="DefaultValue"/>
+    <policy field="rec_fl_joblist" policy="DefaultValue"/>
+    <policy field="rec_fl_note" policy="DefaultValue"/>
+    <policy field="rec_fl_operator" policy="DefaultValue"/>
+    <policy field="rec_fl_rec_start" policy="DefaultValue"/>
+    <policy field="rec_fl_remote_reference" policy="DefaultValue"/>
+    <policy field="rec_mag_dec" policy="Duplicate"/>
+    <policy field="rec_qc_date" policy="DefaultValue"/>
+    <policy field="rec_qc_exception" policy="Duplicate"/>
+    <policy field="rec_qc_note" policy="DefaultValue"/>
+    <policy field="rec_qc_nsp" policy="DefaultValue"/>
+    <policy field="rec_qc_qcby" policy="DefaultValue"/>
+    <policy field="rec_qc_status" policy="DefaultValue"/>
+    <policy field="rec_x" policy="Duplicate"/>
+    <policy field="rec_xml_num_of_jobs" policy="DefaultValue"/>
+    <policy field="rec_y" policy="Duplicate"/>
+    <policy field="xml_adu" policy="Duplicate"/>
+    <policy field="xml_ch01_amplitude_max" policy="DefaultValue"/>
+    <policy field="xml_ch01_ch_type" policy="DefaultValue"/>
+    <policy field="xml_ch01_sensor_pos_x1" policy="DefaultValue"/>
+    <policy field="xml_ch01_sensor_pos_x2" policy="DefaultValue"/>
+    <policy field="xml_ch01_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch01_ser_num" policy="DefaultValue"/>
+    <policy field="xml_ch01_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch01_st_dc_offset" policy="DefaultValue"/>
+    <policy field="xml_ch01_st_lsb_hf" policy="DefaultValue"/>
+    <policy field="xml_ch01_st_lsb_lf" policy="DefaultValue"/>
+    <policy field="xml_ch01_st_res" policy="DefaultValue"/>
+    <policy field="xml_ch01_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch01_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch01_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch02_amplitude_max" policy="DefaultValue"/>
+    <policy field="xml_ch02_ch_type" policy="DefaultValue"/>
+    <policy field="xml_ch02_sensor_pos_y1" policy="DefaultValue"/>
+    <policy field="xml_ch02_sensor_pos_y2" policy="DefaultValue"/>
+    <policy field="xml_ch02_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch02_ser_num" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_adb_error" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_dc_offset" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_lsb_hf" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_lsb_lf" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_res" policy="DefaultValue"/>
+    <policy field="xml_ch02_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch02_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch02_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch03_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch03_ch_type" policy="DefaultValue"/>
+    <policy field="xml_ch03_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch03_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch03_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch03_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch03_st_lsb_hf" policy="DefaultValue"/>
+    <policy field="xml_ch03_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch03_st_res" policy="Duplicate"/>
+    <policy field="xml_ch03_st_resNE" policy="DefaultValue"/>
+    <policy field="xml_ch03_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch03_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch04_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch04_ch_type" policy="DefaultValue"/>
+    <policy field="xml_ch04_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch04_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch04_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch04_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch04_st_lsb_hf" policy="DefaultValue"/>
+    <policy field="xml_ch04_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch04_st_res" policy="Duplicate"/>
+    <policy field="xml_ch04_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch04_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch04_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch05_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch05_ch_type" policy="DefaultValue"/>
+    <policy field="xml_ch05_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch05_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch05_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch05_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch05_st_lsb_hf" policy="DefaultValue"/>
+    <policy field="xml_ch05_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch05_st_res" policy="Duplicate"/>
+    <policy field="xml_ch05_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch05_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch05_st_severity" policy="Duplicate"/>
+    <policy field="xml_disk_space_free" policy="Duplicate"/>
+    <policy field="xml_disk_space_total" policy="Duplicate"/>
+    <policy field="xml_freq_base" policy="DefaultValue"/>
+    <policy field="xml_freq_cal" policy="Duplicate"/>
+    <policy field="xml_freq_sample" policy="DefaultValue"/>
+    <policy field="xml_gps_dynamic_mode" policy="Duplicate"/>
+    <policy field="xml_gps_height" policy="Duplicate"/>
+    <policy field="xml_gps_num_sats" policy="DefaultValue"/>
+    <policy field="xml_gps_sync" policy="DefaultValue"/>
+    <policy field="xml_meas_mode" policy="Duplicate"/>
+    <policy field="xml_meas_type" policy="Duplicate"/>
+    <policy field="xml_num_of_ch" policy="Duplicate"/>
+    <policy field="xml_path" policy="Duplicate"/>
+    <policy field="xml_rec_duration" policy="Duplicate"/>
+    <policy field="xml_rec_duration_str" policy="DefaultValue"/>
+    <policy field="xml_rec_end" policy="DefaultValue"/>
+    <policy field="xml_rec_end_date" policy="Duplicate"/>
+    <policy field="xml_rec_end_time" policy="Duplicate"/>
+    <policy field="xml_rec_start" policy="DefaultValue"/>
+    <policy field="xml_rec_start_date" policy="Duplicate"/>
+    <policy field="xml_rec_start_time" policy="Duplicate"/>
+    <policy field="xml_x" policy="Duplicate"/>
+    <policy field="xml_y" policy="Duplicate"/>
+    <policy field="adu_clr" policy="DefaultValue"/>
+    <policy field="adu_version" policy="DefaultValue"/>
+    <policy field="qc_clr" policy="DefaultValue"/>
+    <policy field="op_clr" policy="DefaultValue"/>
+    <policy field="jl_rec_duration" policy="Duplicate"/>
+    <policy field="jl_num_of_jobs" policy="DefaultValue"/>
+    <policy field="jl_rec_downtime" policy="DefaultValue"/>
+    <policy field="jl_rec_duration_str" policy="DefaultValue"/>
+    <policy field="edi_x" policy="Duplicate"/>
+    <policy field="edi_y" policy="Duplicate"/>
+    <policy field="edi_z" policy="Duplicate"/>
+    <policy field="vf_offset_xml" policy="DefaultValue"/>
+    <policy field="vf_path_ts" policy="DefaultValue"/>
+    <policy field="vf_path_raw" policy="DefaultValue"/>
+    <policy field="vf_xml_gps_height" policy="DefaultValue"/>
+    <policy field="vf_rec_downtime_min" policy="DefaultValue"/>
+    <policy field="vf_offset_edi" policy="DefaultValue"/>
+    <policy field="vf_jobs_str" policy="DefaultValue"/>
+    <policy field="vf_sensor_pos_n" policy="DefaultValue"/>
+    <policy field="vf_sensor_pos_s" policy="DefaultValue"/>
+    <policy field="vf_sensor_pos_e" policy="DefaultValue"/>
+    <policy field="vf_sesor_pos_w" policy="DefaultValue"/>
+    <policy field="vf_rec_duration_combined" policy="DefaultValue"/>
   </splitPolicies>
   <duplicatePolicies>
-    <policy policy="Duplicate" field="fid"/>
-    <policy policy="Duplicate" field="ID_rec"/>
-    <policy policy="Duplicate" field="ID_site"/>
-    <policy policy="Duplicate" field="ID_xml"/>
-    <policy policy="Duplicate" field="rec_fl_adu"/>
-    <policy policy="Duplicate" field="rec_fl_ex_n"/>
-    <policy policy="Duplicate" field="rec_fl_ex_s"/>
-    <policy policy="Duplicate" field="rec_fl_ey_e"/>
-    <policy policy="Duplicate" field="rec_fl_ey_w"/>
-    <policy policy="Duplicate" field="rec_fl_joblist"/>
-    <policy policy="Duplicate" field="rec_fl_note"/>
-    <policy policy="Duplicate" field="rec_fl_operator"/>
-    <policy policy="Duplicate" field="rec_fl_rec_start"/>
-    <policy policy="Duplicate" field="rec_fl_remote_reference"/>
-    <policy policy="Duplicate" field="rec_mag_dec"/>
-    <policy policy="Duplicate" field="rec_qc_date"/>
-    <policy policy="Duplicate" field="rec_qc_exception"/>
-    <policy policy="Duplicate" field="rec_qc_note"/>
-    <policy policy="Duplicate" field="rec_qc_nsp"/>
-    <policy policy="Duplicate" field="rec_qc_qcby"/>
-    <policy policy="Duplicate" field="rec_qc_status"/>
-    <policy policy="Duplicate" field="rec_x"/>
-    <policy policy="Duplicate" field="rec_xml_num_of_jobs"/>
-    <policy policy="Duplicate" field="rec_y"/>
-    <policy policy="Duplicate" field="xml_adu"/>
-    <policy policy="Duplicate" field="xml_ch01_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch01_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch01_sensor_pos_x1"/>
-    <policy policy="Duplicate" field="xml_ch01_sensor_pos_x2"/>
-    <policy policy="Duplicate" field="xml_ch01_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch01_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch01_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch01_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch01_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch01_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch01_st_res"/>
-    <policy policy="Duplicate" field="xml_ch01_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch01_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch01_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch02_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch02_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch02_sensor_pos_y1"/>
-    <policy policy="Duplicate" field="xml_ch02_sensor_pos_y2"/>
-    <policy policy="Duplicate" field="xml_ch02_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch02_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch02_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch02_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch02_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch02_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch02_st_res"/>
-    <policy policy="Duplicate" field="xml_ch02_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch02_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch02_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch03_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch03_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch03_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch03_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch03_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch03_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch03_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch03_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch03_st_res"/>
-    <policy policy="Duplicate" field="xml_ch03_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch03_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch03_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch04_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch04_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch04_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch04_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch04_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch04_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch04_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch04_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch04_st_res"/>
-    <policy policy="Duplicate" field="xml_ch04_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch04_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch04_st_severity"/>
-    <policy policy="Duplicate" field="xml_ch05_amplitude_max"/>
-    <policy policy="Duplicate" field="xml_ch05_ch_type"/>
-    <policy policy="Duplicate" field="xml_ch05_sensor_type"/>
-    <policy policy="Duplicate" field="xml_ch05_ser_num"/>
-    <policy policy="Duplicate" field="xml_ch05_st_adb_error"/>
-    <policy policy="Duplicate" field="xml_ch05_st_dc_offset"/>
-    <policy policy="Duplicate" field="xml_ch05_st_lsb_hf"/>
-    <policy policy="Duplicate" field="xml_ch05_st_lsb_lf"/>
-    <policy policy="Duplicate" field="xml_ch05_st_res"/>
-    <policy policy="Duplicate" field="xml_ch05_st_resNE"/>
-    <policy policy="Duplicate" field="xml_ch05_st_resSW"/>
-    <policy policy="Duplicate" field="xml_ch05_st_severity"/>
-    <policy policy="Duplicate" field="xml_disk_space_free"/>
-    <policy policy="Duplicate" field="xml_disk_space_total"/>
-    <policy policy="Duplicate" field="xml_freq_base"/>
-    <policy policy="Duplicate" field="xml_freq_cal"/>
-    <policy policy="Duplicate" field="xml_freq_sample"/>
-    <policy policy="Duplicate" field="xml_gps_dynamic_mode"/>
-    <policy policy="Duplicate" field="xml_gps_height"/>
-    <policy policy="Duplicate" field="xml_gps_num_sats"/>
-    <policy policy="Duplicate" field="xml_gps_sync"/>
-    <policy policy="Duplicate" field="xml_meas_mode"/>
-    <policy policy="Duplicate" field="xml_meas_type"/>
-    <policy policy="Duplicate" field="xml_num_of_ch"/>
-    <policy policy="Duplicate" field="xml_path"/>
-    <policy policy="Duplicate" field="xml_rec_duration"/>
-    <policy policy="Duplicate" field="xml_rec_duration_str"/>
-    <policy policy="Duplicate" field="xml_rec_end"/>
-    <policy policy="Duplicate" field="xml_rec_end_date"/>
-    <policy policy="Duplicate" field="xml_rec_end_time"/>
-    <policy policy="Duplicate" field="xml_rec_start"/>
-    <policy policy="Duplicate" field="xml_rec_start_date"/>
-    <policy policy="Duplicate" field="xml_rec_start_time"/>
-    <policy policy="Duplicate" field="xml_x"/>
-    <policy policy="Duplicate" field="xml_y"/>
-    <policy policy="Duplicate" field="adu_clr"/>
-    <policy policy="Duplicate" field="adu_version"/>
-    <policy policy="Duplicate" field="qc_clr"/>
-    <policy policy="Duplicate" field="op_clr"/>
-    <policy policy="Duplicate" field="jl_rec_duration"/>
-    <policy policy="Duplicate" field="jl_num_of_jobs"/>
-    <policy policy="Duplicate" field="jl_rec_downtime"/>
-    <policy policy="Duplicate" field="jl_rec_duration_str"/>
-    <policy policy="Duplicate" field="edi_x"/>
-    <policy policy="Duplicate" field="edi_y"/>
-    <policy policy="Duplicate" field="edi_z"/>
-    <policy policy="Duplicate" field="vf_offset_xml"/>
-    <policy policy="Duplicate" field="vf_path_ts"/>
-    <policy policy="Duplicate" field="vf_path_raw"/>
-    <policy policy="Duplicate" field="vf_xml_gps_height"/>
-    <policy policy="Duplicate" field="vf_rec_downtime_min"/>
-    <policy policy="Duplicate" field="vf_offset_edi"/>
+    <policy field="fid" policy="Duplicate"/>
+    <policy field="ID_rec" policy="Duplicate"/>
+    <policy field="ID_site" policy="Duplicate"/>
+    <policy field="ID_xml" policy="Duplicate"/>
+    <policy field="rec_fl_adu" policy="Duplicate"/>
+    <policy field="rec_fl_ex_n" policy="Duplicate"/>
+    <policy field="rec_fl_ex_s" policy="Duplicate"/>
+    <policy field="rec_fl_ey_e" policy="Duplicate"/>
+    <policy field="rec_fl_ey_w" policy="Duplicate"/>
+    <policy field="rec_fl_joblist" policy="Duplicate"/>
+    <policy field="rec_fl_note" policy="Duplicate"/>
+    <policy field="rec_fl_operator" policy="Duplicate"/>
+    <policy field="rec_fl_rec_start" policy="Duplicate"/>
+    <policy field="rec_fl_remote_reference" policy="Duplicate"/>
+    <policy field="rec_mag_dec" policy="Duplicate"/>
+    <policy field="rec_qc_date" policy="Duplicate"/>
+    <policy field="rec_qc_exception" policy="Duplicate"/>
+    <policy field="rec_qc_note" policy="Duplicate"/>
+    <policy field="rec_qc_nsp" policy="Duplicate"/>
+    <policy field="rec_qc_qcby" policy="Duplicate"/>
+    <policy field="rec_qc_status" policy="Duplicate"/>
+    <policy field="rec_x" policy="Duplicate"/>
+    <policy field="rec_xml_num_of_jobs" policy="Duplicate"/>
+    <policy field="rec_y" policy="Duplicate"/>
+    <policy field="xml_adu" policy="Duplicate"/>
+    <policy field="xml_ch01_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch01_ch_type" policy="Duplicate"/>
+    <policy field="xml_ch01_sensor_pos_x1" policy="Duplicate"/>
+    <policy field="xml_ch01_sensor_pos_x2" policy="Duplicate"/>
+    <policy field="xml_ch01_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch01_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch01_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch01_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch01_st_lsb_hf" policy="Duplicate"/>
+    <policy field="xml_ch01_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch01_st_res" policy="Duplicate"/>
+    <policy field="xml_ch01_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch01_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch01_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch02_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch02_ch_type" policy="Duplicate"/>
+    <policy field="xml_ch02_sensor_pos_y1" policy="Duplicate"/>
+    <policy field="xml_ch02_sensor_pos_y2" policy="Duplicate"/>
+    <policy field="xml_ch02_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch02_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch02_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch02_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch02_st_lsb_hf" policy="Duplicate"/>
+    <policy field="xml_ch02_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch02_st_res" policy="Duplicate"/>
+    <policy field="xml_ch02_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch02_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch02_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch03_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch03_ch_type" policy="Duplicate"/>
+    <policy field="xml_ch03_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch03_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch03_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch03_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch03_st_lsb_hf" policy="Duplicate"/>
+    <policy field="xml_ch03_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch03_st_res" policy="Duplicate"/>
+    <policy field="xml_ch03_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch03_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch03_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch04_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch04_ch_type" policy="Duplicate"/>
+    <policy field="xml_ch04_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch04_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch04_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch04_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch04_st_lsb_hf" policy="Duplicate"/>
+    <policy field="xml_ch04_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch04_st_res" policy="Duplicate"/>
+    <policy field="xml_ch04_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch04_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch04_st_severity" policy="Duplicate"/>
+    <policy field="xml_ch05_amplitude_max" policy="Duplicate"/>
+    <policy field="xml_ch05_ch_type" policy="Duplicate"/>
+    <policy field="xml_ch05_sensor_type" policy="Duplicate"/>
+    <policy field="xml_ch05_ser_num" policy="Duplicate"/>
+    <policy field="xml_ch05_st_adb_error" policy="Duplicate"/>
+    <policy field="xml_ch05_st_dc_offset" policy="Duplicate"/>
+    <policy field="xml_ch05_st_lsb_hf" policy="Duplicate"/>
+    <policy field="xml_ch05_st_lsb_lf" policy="Duplicate"/>
+    <policy field="xml_ch05_st_res" policy="Duplicate"/>
+    <policy field="xml_ch05_st_resNE" policy="Duplicate"/>
+    <policy field="xml_ch05_st_resSW" policy="Duplicate"/>
+    <policy field="xml_ch05_st_severity" policy="Duplicate"/>
+    <policy field="xml_disk_space_free" policy="Duplicate"/>
+    <policy field="xml_disk_space_total" policy="Duplicate"/>
+    <policy field="xml_freq_base" policy="Duplicate"/>
+    <policy field="xml_freq_cal" policy="Duplicate"/>
+    <policy field="xml_freq_sample" policy="Duplicate"/>
+    <policy field="xml_gps_dynamic_mode" policy="Duplicate"/>
+    <policy field="xml_gps_height" policy="Duplicate"/>
+    <policy field="xml_gps_num_sats" policy="Duplicate"/>
+    <policy field="xml_gps_sync" policy="Duplicate"/>
+    <policy field="xml_meas_mode" policy="Duplicate"/>
+    <policy field="xml_meas_type" policy="Duplicate"/>
+    <policy field="xml_num_of_ch" policy="Duplicate"/>
+    <policy field="xml_path" policy="Duplicate"/>
+    <policy field="xml_rec_duration" policy="Duplicate"/>
+    <policy field="xml_rec_duration_str" policy="Duplicate"/>
+    <policy field="xml_rec_end" policy="Duplicate"/>
+    <policy field="xml_rec_end_date" policy="Duplicate"/>
+    <policy field="xml_rec_end_time" policy="Duplicate"/>
+    <policy field="xml_rec_start" policy="Duplicate"/>
+    <policy field="xml_rec_start_date" policy="Duplicate"/>
+    <policy field="xml_rec_start_time" policy="Duplicate"/>
+    <policy field="xml_x" policy="Duplicate"/>
+    <policy field="xml_y" policy="Duplicate"/>
+    <policy field="adu_clr" policy="Duplicate"/>
+    <policy field="adu_version" policy="Duplicate"/>
+    <policy field="qc_clr" policy="Duplicate"/>
+    <policy field="op_clr" policy="Duplicate"/>
+    <policy field="jl_rec_duration" policy="Duplicate"/>
+    <policy field="jl_num_of_jobs" policy="Duplicate"/>
+    <policy field="jl_rec_downtime" policy="Duplicate"/>
+    <policy field="jl_rec_duration_str" policy="Duplicate"/>
+    <policy field="edi_x" policy="Duplicate"/>
+    <policy field="edi_y" policy="Duplicate"/>
+    <policy field="edi_z" policy="Duplicate"/>
+    <policy field="vf_offset_xml" policy="Duplicate"/>
+    <policy field="vf_path_ts" policy="Duplicate"/>
+    <policy field="vf_path_raw" policy="Duplicate"/>
+    <policy field="vf_xml_gps_height" policy="Duplicate"/>
+    <policy field="vf_rec_downtime_min" policy="Duplicate"/>
+    <policy field="vf_offset_edi" policy="Duplicate"/>
+    <policy field="vf_jobs_str" policy="Duplicate"/>
+    <policy field="vf_sensor_pos_n" policy="Duplicate"/>
+    <policy field="vf_sensor_pos_s" policy="Duplicate"/>
+    <policy field="vf_sensor_pos_e" policy="Duplicate"/>
+    <policy field="vf_sesor_pos_w" policy="Duplicate"/>
+    <policy field="vf_rec_duration_combined" policy="Duplicate"/>
   </duplicatePolicies>
   <defaults>
-    <default applyOnUpdate="0" field="fid" expression=""/>
-    <default applyOnUpdate="0" field="ID_rec" expression=""/>
-    <default applyOnUpdate="1" field="ID_site" expression="ID_rec//10"/>
-    <default applyOnUpdate="0" field="ID_xml" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_adu" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_ex_n" expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])"/>
-    <default applyOnUpdate="0" field="rec_fl_ex_s" expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])"/>
-    <default applyOnUpdate="0" field="rec_fl_ey_e" expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])"/>
-    <default applyOnUpdate="0" field="rec_fl_ey_w" expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])"/>
-    <default applyOnUpdate="0" field="rec_fl_joblist" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_note" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_operator" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_rec_start" expression=""/>
-    <default applyOnUpdate="0" field="rec_fl_remote_reference" expression=""/>
-    <default applyOnUpdate="0" field="rec_mag_dec" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_date" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_exception" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_note" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_nsp" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_qcby" expression=""/>
-    <default applyOnUpdate="0" field="rec_qc_status" expression=""/>
-    <default applyOnUpdate="0" field="rec_x" expression=""/>
-    <default applyOnUpdate="0" field="rec_xml_num_of_jobs" expression=""/>
-    <default applyOnUpdate="0" field="rec_y" expression=""/>
-    <default applyOnUpdate="0" field="xml_adu" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_amplitude_max" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_ch_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_sensor_pos_x1" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_sensor_pos_x2" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_sensor_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_ser_num" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_adb_error" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_dc_offset" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_lsb_hf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_lsb_lf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_res" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_resNE" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_resSW" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch01_st_severity" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_amplitude_max" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_ch_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_sensor_pos_y1" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_sensor_pos_y2" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_sensor_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_ser_num" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_adb_error" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_dc_offset" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_lsb_hf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_lsb_lf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_res" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_resNE" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_resSW" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch02_st_severity" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_amplitude_max" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_ch_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_sensor_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_ser_num" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_adb_error" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_dc_offset" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_lsb_hf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_lsb_lf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_res" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_resNE" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_resSW" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch03_st_severity" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_amplitude_max" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_ch_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_sensor_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_ser_num" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_adb_error" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_dc_offset" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_lsb_hf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_lsb_lf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_res" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_resNE" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_resSW" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch04_st_severity" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_amplitude_max" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_ch_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_sensor_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_ser_num" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_adb_error" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_dc_offset" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_lsb_hf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_lsb_lf" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_res" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_resNE" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_resSW" expression=""/>
-    <default applyOnUpdate="0" field="xml_ch05_st_severity" expression=""/>
-    <default applyOnUpdate="0" field="xml_disk_space_free" expression=""/>
-    <default applyOnUpdate="0" field="xml_disk_space_total" expression=""/>
-    <default applyOnUpdate="0" field="xml_freq_base" expression=""/>
-    <default applyOnUpdate="0" field="xml_freq_cal" expression=""/>
-    <default applyOnUpdate="0" field="xml_freq_sample" expression=""/>
-    <default applyOnUpdate="0" field="xml_gps_dynamic_mode" expression=""/>
-    <default applyOnUpdate="0" field="xml_gps_height" expression=""/>
-    <default applyOnUpdate="0" field="xml_gps_num_sats" expression=""/>
-    <default applyOnUpdate="0" field="xml_gps_sync" expression=""/>
-    <default applyOnUpdate="0" field="xml_meas_mode" expression=""/>
-    <default applyOnUpdate="0" field="xml_meas_type" expression=""/>
-    <default applyOnUpdate="0" field="xml_num_of_ch" expression=""/>
-    <default applyOnUpdate="0" field="xml_path" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_duration" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_duration_str" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_end" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_end_date" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_end_time" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_start" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_start_date" expression=""/>
-    <default applyOnUpdate="0" field="xml_rec_start_time" expression=""/>
-    <default applyOnUpdate="0" field="xml_x" expression=""/>
-    <default applyOnUpdate="0" field="xml_y" expression=""/>
-    <default applyOnUpdate="0" field="adu_clr" expression=""/>
-    <default applyOnUpdate="0" field="adu_version" expression=""/>
-    <default applyOnUpdate="0" field="qc_clr" expression=""/>
-    <default applyOnUpdate="0" field="op_clr" expression=""/>
-    <default applyOnUpdate="0" field="jl_rec_duration" expression=""/>
-    <default applyOnUpdate="0" field="jl_num_of_jobs" expression=""/>
-    <default applyOnUpdate="0" field="jl_rec_downtime" expression=""/>
-    <default applyOnUpdate="0" field="jl_rec_duration_str" expression=""/>
-    <default applyOnUpdate="0" field="edi_x" expression=""/>
-    <default applyOnUpdate="0" field="edi_y" expression=""/>
-    <default applyOnUpdate="0" field="edi_z" expression=""/>
-    <default applyOnUpdate="0" field="vf_offset_xml" expression=""/>
-    <default applyOnUpdate="0" field="vf_path_ts" expression=""/>
-    <default applyOnUpdate="0" field="vf_path_raw" expression=""/>
-    <default applyOnUpdate="0" field="vf_xml_gps_height" expression=""/>
-    <default applyOnUpdate="0" field="vf_rec_downtime_min" expression=""/>
-    <default applyOnUpdate="0" field="vf_offset_edi" expression=""/>
+    <default expression="" field="fid" applyOnUpdate="0"/>
+    <default expression="" field="ID_rec" applyOnUpdate="0"/>
+    <default expression="ID_rec//10" field="ID_site" applyOnUpdate="1"/>
+    <default expression="" field="ID_xml" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_adu" applyOnUpdate="0"/>
+    <default expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])" field="rec_fl_ex_n" applyOnUpdate="0"/>
+    <default expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])" field="rec_fl_ex_s" applyOnUpdate="0"/>
+    <default expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])" field="rec_fl_ey_e" applyOnUpdate="0"/>
+    <default expression="to_int(attributes(get_feature('Settings','ID_set','e_pos_default'))['set_value'])" field="rec_fl_ey_w" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_joblist" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_note" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_operator" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_rec_start" applyOnUpdate="0"/>
+    <default expression="" field="rec_fl_remote_reference" applyOnUpdate="0"/>
+    <default expression="" field="rec_mag_dec" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_date" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_exception" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_note" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_nsp" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_qcby" applyOnUpdate="0"/>
+    <default expression="" field="rec_qc_status" applyOnUpdate="0"/>
+    <default expression="" field="rec_x" applyOnUpdate="0"/>
+    <default expression="" field="rec_xml_num_of_jobs" applyOnUpdate="0"/>
+    <default expression="" field="rec_y" applyOnUpdate="0"/>
+    <default expression="" field="xml_adu" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_amplitude_max" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_ch_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_sensor_pos_x1" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_sensor_pos_x2" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_sensor_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_ser_num" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_adb_error" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_dc_offset" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_lsb_hf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_lsb_lf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_res" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_resNE" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_resSW" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch01_st_severity" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_amplitude_max" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_ch_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_sensor_pos_y1" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_sensor_pos_y2" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_sensor_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_ser_num" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_adb_error" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_dc_offset" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_lsb_hf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_lsb_lf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_res" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_resNE" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_resSW" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch02_st_severity" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_amplitude_max" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_ch_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_sensor_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_ser_num" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_adb_error" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_dc_offset" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_lsb_hf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_lsb_lf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_res" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_resNE" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_resSW" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch03_st_severity" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_amplitude_max" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_ch_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_sensor_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_ser_num" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_adb_error" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_dc_offset" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_lsb_hf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_lsb_lf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_res" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_resNE" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_resSW" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch04_st_severity" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_amplitude_max" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_ch_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_sensor_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_ser_num" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_adb_error" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_dc_offset" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_lsb_hf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_lsb_lf" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_res" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_resNE" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_resSW" applyOnUpdate="0"/>
+    <default expression="" field="xml_ch05_st_severity" applyOnUpdate="0"/>
+    <default expression="" field="xml_disk_space_free" applyOnUpdate="0"/>
+    <default expression="" field="xml_disk_space_total" applyOnUpdate="0"/>
+    <default expression="" field="xml_freq_base" applyOnUpdate="0"/>
+    <default expression="" field="xml_freq_cal" applyOnUpdate="0"/>
+    <default expression="" field="xml_freq_sample" applyOnUpdate="0"/>
+    <default expression="" field="xml_gps_dynamic_mode" applyOnUpdate="0"/>
+    <default expression="" field="xml_gps_height" applyOnUpdate="0"/>
+    <default expression="" field="xml_gps_num_sats" applyOnUpdate="0"/>
+    <default expression="" field="xml_gps_sync" applyOnUpdate="0"/>
+    <default expression="" field="xml_meas_mode" applyOnUpdate="0"/>
+    <default expression="" field="xml_meas_type" applyOnUpdate="0"/>
+    <default expression="" field="xml_num_of_ch" applyOnUpdate="0"/>
+    <default expression="" field="xml_path" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_duration" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_duration_str" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_end" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_end_date" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_end_time" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_start" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_start_date" applyOnUpdate="0"/>
+    <default expression="" field="xml_rec_start_time" applyOnUpdate="0"/>
+    <default expression="" field="xml_x" applyOnUpdate="0"/>
+    <default expression="" field="xml_y" applyOnUpdate="0"/>
+    <default expression="" field="adu_clr" applyOnUpdate="0"/>
+    <default expression="" field="adu_version" applyOnUpdate="0"/>
+    <default expression="" field="qc_clr" applyOnUpdate="0"/>
+    <default expression="" field="op_clr" applyOnUpdate="0"/>
+    <default expression="" field="jl_rec_duration" applyOnUpdate="0"/>
+    <default expression="" field="jl_num_of_jobs" applyOnUpdate="0"/>
+    <default expression="" field="jl_rec_downtime" applyOnUpdate="0"/>
+    <default expression="" field="jl_rec_duration_str" applyOnUpdate="0"/>
+    <default expression="" field="edi_x" applyOnUpdate="0"/>
+    <default expression="" field="edi_y" applyOnUpdate="0"/>
+    <default expression="" field="edi_z" applyOnUpdate="0"/>
+    <default expression="" field="vf_offset_xml" applyOnUpdate="0"/>
+    <default expression="" field="vf_path_ts" applyOnUpdate="0"/>
+    <default expression="" field="vf_path_raw" applyOnUpdate="0"/>
+    <default expression="" field="vf_xml_gps_height" applyOnUpdate="0"/>
+    <default expression="" field="vf_rec_downtime_min" applyOnUpdate="0"/>
+    <default expression="" field="vf_offset_edi" applyOnUpdate="0"/>
+    <default expression="" field="vf_jobs_str" applyOnUpdate="0"/>
+    <default expression="" field="vf_sensor_pos_n" applyOnUpdate="0"/>
+    <default expression="" field="vf_sensor_pos_s" applyOnUpdate="0"/>
+    <default expression="" field="vf_sensor_pos_e" applyOnUpdate="0"/>
+    <default expression="" field="vf_sesor_pos_w" applyOnUpdate="0"/>
+    <default expression="" field="vf_rec_duration_combined" applyOnUpdate="0"/>
   </defaults>
   <constraints>
-    <constraint constraints="3" field="fid" notnull_strength="1" exp_strength="0" unique_strength="1"/>
-    <constraint constraints="3" field="ID_rec" notnull_strength="2" exp_strength="0" unique_strength="1"/>
-    <constraint constraints="0" field="ID_site" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="ID_xml" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_adu" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_ex_n" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_ex_s" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_ey_e" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_ey_w" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_joblist" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_note" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_operator" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_rec_start" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_fl_remote_reference" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_mag_dec" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_date" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_exception" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_note" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_nsp" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_qcby" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_qc_status" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_x" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_xml_num_of_jobs" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="rec_y" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_adu" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_amplitude_max" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_ch_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_sensor_pos_x1" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_sensor_pos_x2" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_sensor_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_ser_num" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_adb_error" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_dc_offset" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_lsb_hf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_lsb_lf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_res" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_resNE" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_resSW" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch01_st_severity" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_amplitude_max" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_ch_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_sensor_pos_y1" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_sensor_pos_y2" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_sensor_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_ser_num" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_adb_error" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_dc_offset" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_lsb_hf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_lsb_lf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_res" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_resNE" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_resSW" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch02_st_severity" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_amplitude_max" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_ch_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_sensor_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_ser_num" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_adb_error" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_dc_offset" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_lsb_hf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_lsb_lf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_res" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_resNE" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_resSW" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch03_st_severity" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_amplitude_max" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_ch_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_sensor_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_ser_num" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_adb_error" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_dc_offset" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_lsb_hf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_lsb_lf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_res" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_resNE" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_resSW" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch04_st_severity" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_amplitude_max" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_ch_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_sensor_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_ser_num" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_adb_error" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_dc_offset" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_lsb_hf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_lsb_lf" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_res" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_resNE" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_resSW" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_ch05_st_severity" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_disk_space_free" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_disk_space_total" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_freq_base" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_freq_cal" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_freq_sample" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_gps_dynamic_mode" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_gps_height" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_gps_num_sats" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_gps_sync" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_meas_mode" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_meas_type" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_num_of_ch" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_path" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_duration" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_duration_str" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_end" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_end_date" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_end_time" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_start" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_start_date" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_rec_start_time" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_x" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="xml_y" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="adu_clr" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="adu_version" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="qc_clr" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="op_clr" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="jl_rec_duration" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="jl_num_of_jobs" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="jl_rec_downtime" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="jl_rec_duration_str" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="edi_x" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="edi_y" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="edi_z" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_offset_xml" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_path_ts" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_path_raw" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_xml_gps_height" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_rec_downtime_min" notnull_strength="0" exp_strength="0" unique_strength="0"/>
-    <constraint constraints="0" field="vf_offset_edi" notnull_strength="0" exp_strength="0" unique_strength="0"/>
+    <constraint exp_strength="0" field="fid" constraints="3" unique_strength="1" notnull_strength="1"/>
+    <constraint exp_strength="0" field="ID_rec" constraints="3" unique_strength="1" notnull_strength="2"/>
+    <constraint exp_strength="0" field="ID_site" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="ID_xml" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_adu" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_ex_n" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_ex_s" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_ey_e" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_ey_w" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_joblist" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_note" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_operator" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_rec_start" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_fl_remote_reference" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_mag_dec" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_date" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_exception" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_note" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_nsp" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_qcby" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_qc_status" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_x" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_xml_num_of_jobs" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="rec_y" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_adu" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_amplitude_max" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_ch_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_sensor_pos_x1" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_sensor_pos_x2" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_sensor_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_ser_num" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_adb_error" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_dc_offset" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_lsb_hf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_lsb_lf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_res" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_resNE" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_resSW" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch01_st_severity" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_amplitude_max" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_ch_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_sensor_pos_y1" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_sensor_pos_y2" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_sensor_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_ser_num" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_adb_error" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_dc_offset" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_lsb_hf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_lsb_lf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_res" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_resNE" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_resSW" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch02_st_severity" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_amplitude_max" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_ch_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_sensor_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_ser_num" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_adb_error" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_dc_offset" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_lsb_hf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_lsb_lf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_res" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_resNE" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_resSW" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch03_st_severity" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_amplitude_max" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_ch_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_sensor_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_ser_num" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_adb_error" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_dc_offset" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_lsb_hf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_lsb_lf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_res" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_resNE" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_resSW" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch04_st_severity" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_amplitude_max" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_ch_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_sensor_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_ser_num" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_adb_error" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_dc_offset" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_lsb_hf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_lsb_lf" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_res" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_resNE" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_resSW" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_ch05_st_severity" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_disk_space_free" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_disk_space_total" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_freq_base" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_freq_cal" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_freq_sample" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_gps_dynamic_mode" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_gps_height" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_gps_num_sats" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_gps_sync" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_meas_mode" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_meas_type" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_num_of_ch" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_path" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_duration" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_duration_str" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_end" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_end_date" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_end_time" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_start" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_start_date" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_rec_start_time" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_x" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="xml_y" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="adu_clr" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="adu_version" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="qc_clr" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="op_clr" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="jl_rec_duration" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="jl_num_of_jobs" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="jl_rec_downtime" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="jl_rec_duration_str" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="edi_x" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="edi_y" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="edi_z" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_offset_xml" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_path_ts" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_path_raw" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_xml_gps_height" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_rec_downtime_min" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_offset_edi" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_jobs_str" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_sensor_pos_n" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_sensor_pos_s" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_sensor_pos_e" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_sesor_pos_w" constraints="0" unique_strength="0" notnull_strength="0"/>
+    <constraint exp_strength="0" field="vf_rec_duration_combined" constraints="0" unique_strength="0" notnull_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint field="fid" exp="" desc=""/>
-    <constraint field="ID_rec" exp="" desc=""/>
-    <constraint field="ID_site" exp="" desc=""/>
-    <constraint field="ID_xml" exp="" desc=""/>
-    <constraint field="rec_fl_adu" exp="" desc=""/>
-    <constraint field="rec_fl_ex_n" exp="" desc=""/>
-    <constraint field="rec_fl_ex_s" exp="" desc=""/>
-    <constraint field="rec_fl_ey_e" exp="" desc=""/>
-    <constraint field="rec_fl_ey_w" exp="" desc=""/>
-    <constraint field="rec_fl_joblist" exp="" desc=""/>
-    <constraint field="rec_fl_note" exp="" desc=""/>
-    <constraint field="rec_fl_operator" exp="" desc=""/>
-    <constraint field="rec_fl_rec_start" exp="" desc=""/>
-    <constraint field="rec_fl_remote_reference" exp="" desc=""/>
-    <constraint field="rec_mag_dec" exp="" desc=""/>
-    <constraint field="rec_qc_date" exp="" desc=""/>
-    <constraint field="rec_qc_exception" exp="" desc=""/>
-    <constraint field="rec_qc_note" exp="" desc=""/>
-    <constraint field="rec_qc_nsp" exp="" desc=""/>
-    <constraint field="rec_qc_qcby" exp="" desc=""/>
-    <constraint field="rec_qc_status" exp="" desc=""/>
-    <constraint field="rec_x" exp="" desc=""/>
-    <constraint field="rec_xml_num_of_jobs" exp="" desc=""/>
-    <constraint field="rec_y" exp="" desc=""/>
-    <constraint field="xml_adu" exp="" desc=""/>
-    <constraint field="xml_ch01_amplitude_max" exp="" desc=""/>
-    <constraint field="xml_ch01_ch_type" exp="" desc=""/>
-    <constraint field="xml_ch01_sensor_pos_x1" exp="" desc=""/>
-    <constraint field="xml_ch01_sensor_pos_x2" exp="" desc=""/>
-    <constraint field="xml_ch01_sensor_type" exp="" desc=""/>
-    <constraint field="xml_ch01_ser_num" exp="" desc=""/>
-    <constraint field="xml_ch01_st_adb_error" exp="" desc=""/>
-    <constraint field="xml_ch01_st_dc_offset" exp="" desc=""/>
-    <constraint field="xml_ch01_st_lsb_hf" exp="" desc=""/>
-    <constraint field="xml_ch01_st_lsb_lf" exp="" desc=""/>
-    <constraint field="xml_ch01_st_res" exp="" desc=""/>
-    <constraint field="xml_ch01_st_resNE" exp="" desc=""/>
-    <constraint field="xml_ch01_st_resSW" exp="" desc=""/>
-    <constraint field="xml_ch01_st_severity" exp="" desc=""/>
-    <constraint field="xml_ch02_amplitude_max" exp="" desc=""/>
-    <constraint field="xml_ch02_ch_type" exp="" desc=""/>
-    <constraint field="xml_ch02_sensor_pos_y1" exp="" desc=""/>
-    <constraint field="xml_ch02_sensor_pos_y2" exp="" desc=""/>
-    <constraint field="xml_ch02_sensor_type" exp="" desc=""/>
-    <constraint field="xml_ch02_ser_num" exp="" desc=""/>
-    <constraint field="xml_ch02_st_adb_error" exp="" desc=""/>
-    <constraint field="xml_ch02_st_dc_offset" exp="" desc=""/>
-    <constraint field="xml_ch02_st_lsb_hf" exp="" desc=""/>
-    <constraint field="xml_ch02_st_lsb_lf" exp="" desc=""/>
-    <constraint field="xml_ch02_st_res" exp="" desc=""/>
-    <constraint field="xml_ch02_st_resNE" exp="" desc=""/>
-    <constraint field="xml_ch02_st_resSW" exp="" desc=""/>
-    <constraint field="xml_ch02_st_severity" exp="" desc=""/>
-    <constraint field="xml_ch03_amplitude_max" exp="" desc=""/>
-    <constraint field="xml_ch03_ch_type" exp="" desc=""/>
-    <constraint field="xml_ch03_sensor_type" exp="" desc=""/>
-    <constraint field="xml_ch03_ser_num" exp="" desc=""/>
-    <constraint field="xml_ch03_st_adb_error" exp="" desc=""/>
-    <constraint field="xml_ch03_st_dc_offset" exp="" desc=""/>
-    <constraint field="xml_ch03_st_lsb_hf" exp="" desc=""/>
-    <constraint field="xml_ch03_st_lsb_lf" exp="" desc=""/>
-    <constraint field="xml_ch03_st_res" exp="" desc=""/>
-    <constraint field="xml_ch03_st_resNE" exp="" desc=""/>
-    <constraint field="xml_ch03_st_resSW" exp="" desc=""/>
-    <constraint field="xml_ch03_st_severity" exp="" desc=""/>
-    <constraint field="xml_ch04_amplitude_max" exp="" desc=""/>
-    <constraint field="xml_ch04_ch_type" exp="" desc=""/>
-    <constraint field="xml_ch04_sensor_type" exp="" desc=""/>
-    <constraint field="xml_ch04_ser_num" exp="" desc=""/>
-    <constraint field="xml_ch04_st_adb_error" exp="" desc=""/>
-    <constraint field="xml_ch04_st_dc_offset" exp="" desc=""/>
-    <constraint field="xml_ch04_st_lsb_hf" exp="" desc=""/>
-    <constraint field="xml_ch04_st_lsb_lf" exp="" desc=""/>
-    <constraint field="xml_ch04_st_res" exp="" desc=""/>
-    <constraint field="xml_ch04_st_resNE" exp="" desc=""/>
-    <constraint field="xml_ch04_st_resSW" exp="" desc=""/>
-    <constraint field="xml_ch04_st_severity" exp="" desc=""/>
-    <constraint field="xml_ch05_amplitude_max" exp="" desc=""/>
-    <constraint field="xml_ch05_ch_type" exp="" desc=""/>
-    <constraint field="xml_ch05_sensor_type" exp="" desc=""/>
-    <constraint field="xml_ch05_ser_num" exp="" desc=""/>
-    <constraint field="xml_ch05_st_adb_error" exp="" desc=""/>
-    <constraint field="xml_ch05_st_dc_offset" exp="" desc=""/>
-    <constraint field="xml_ch05_st_lsb_hf" exp="" desc=""/>
-    <constraint field="xml_ch05_st_lsb_lf" exp="" desc=""/>
-    <constraint field="xml_ch05_st_res" exp="" desc=""/>
-    <constraint field="xml_ch05_st_resNE" exp="" desc=""/>
-    <constraint field="xml_ch05_st_resSW" exp="" desc=""/>
-    <constraint field="xml_ch05_st_severity" exp="" desc=""/>
-    <constraint field="xml_disk_space_free" exp="" desc=""/>
-    <constraint field="xml_disk_space_total" exp="" desc=""/>
-    <constraint field="xml_freq_base" exp="" desc=""/>
-    <constraint field="xml_freq_cal" exp="" desc=""/>
-    <constraint field="xml_freq_sample" exp="" desc=""/>
-    <constraint field="xml_gps_dynamic_mode" exp="" desc=""/>
-    <constraint field="xml_gps_height" exp="" desc=""/>
-    <constraint field="xml_gps_num_sats" exp="" desc=""/>
-    <constraint field="xml_gps_sync" exp="" desc=""/>
-    <constraint field="xml_meas_mode" exp="" desc=""/>
-    <constraint field="xml_meas_type" exp="" desc=""/>
-    <constraint field="xml_num_of_ch" exp="" desc=""/>
-    <constraint field="xml_path" exp="" desc=""/>
-    <constraint field="xml_rec_duration" exp="" desc=""/>
-    <constraint field="xml_rec_duration_str" exp="" desc=""/>
-    <constraint field="xml_rec_end" exp="" desc=""/>
-    <constraint field="xml_rec_end_date" exp="" desc=""/>
-    <constraint field="xml_rec_end_time" exp="" desc=""/>
-    <constraint field="xml_rec_start" exp="" desc=""/>
-    <constraint field="xml_rec_start_date" exp="" desc=""/>
-    <constraint field="xml_rec_start_time" exp="" desc=""/>
-    <constraint field="xml_x" exp="" desc=""/>
-    <constraint field="xml_y" exp="" desc=""/>
-    <constraint field="adu_clr" exp="" desc=""/>
-    <constraint field="adu_version" exp="" desc=""/>
-    <constraint field="qc_clr" exp="" desc=""/>
-    <constraint field="op_clr" exp="" desc=""/>
-    <constraint field="jl_rec_duration" exp="" desc=""/>
-    <constraint field="jl_num_of_jobs" exp="" desc=""/>
-    <constraint field="jl_rec_downtime" exp="" desc=""/>
-    <constraint field="jl_rec_duration_str" exp="" desc=""/>
-    <constraint field="edi_x" exp="" desc=""/>
-    <constraint field="edi_y" exp="" desc=""/>
-    <constraint field="edi_z" exp="" desc=""/>
-    <constraint field="vf_offset_xml" exp="" desc=""/>
-    <constraint field="vf_path_ts" exp="" desc=""/>
-    <constraint field="vf_path_raw" exp="" desc=""/>
-    <constraint field="vf_xml_gps_height" exp="" desc=""/>
-    <constraint field="vf_rec_downtime_min" exp="" desc=""/>
-    <constraint field="vf_offset_edi" exp="" desc=""/>
+    <constraint desc="" field="fid" exp=""/>
+    <constraint desc="" field="ID_rec" exp=""/>
+    <constraint desc="" field="ID_site" exp=""/>
+    <constraint desc="" field="ID_xml" exp=""/>
+    <constraint desc="" field="rec_fl_adu" exp=""/>
+    <constraint desc="" field="rec_fl_ex_n" exp=""/>
+    <constraint desc="" field="rec_fl_ex_s" exp=""/>
+    <constraint desc="" field="rec_fl_ey_e" exp=""/>
+    <constraint desc="" field="rec_fl_ey_w" exp=""/>
+    <constraint desc="" field="rec_fl_joblist" exp=""/>
+    <constraint desc="" field="rec_fl_note" exp=""/>
+    <constraint desc="" field="rec_fl_operator" exp=""/>
+    <constraint desc="" field="rec_fl_rec_start" exp=""/>
+    <constraint desc="" field="rec_fl_remote_reference" exp=""/>
+    <constraint desc="" field="rec_mag_dec" exp=""/>
+    <constraint desc="" field="rec_qc_date" exp=""/>
+    <constraint desc="" field="rec_qc_exception" exp=""/>
+    <constraint desc="" field="rec_qc_note" exp=""/>
+    <constraint desc="" field="rec_qc_nsp" exp=""/>
+    <constraint desc="" field="rec_qc_qcby" exp=""/>
+    <constraint desc="" field="rec_qc_status" exp=""/>
+    <constraint desc="" field="rec_x" exp=""/>
+    <constraint desc="" field="rec_xml_num_of_jobs" exp=""/>
+    <constraint desc="" field="rec_y" exp=""/>
+    <constraint desc="" field="xml_adu" exp=""/>
+    <constraint desc="" field="xml_ch01_amplitude_max" exp=""/>
+    <constraint desc="" field="xml_ch01_ch_type" exp=""/>
+    <constraint desc="" field="xml_ch01_sensor_pos_x1" exp=""/>
+    <constraint desc="" field="xml_ch01_sensor_pos_x2" exp=""/>
+    <constraint desc="" field="xml_ch01_sensor_type" exp=""/>
+    <constraint desc="" field="xml_ch01_ser_num" exp=""/>
+    <constraint desc="" field="xml_ch01_st_adb_error" exp=""/>
+    <constraint desc="" field="xml_ch01_st_dc_offset" exp=""/>
+    <constraint desc="" field="xml_ch01_st_lsb_hf" exp=""/>
+    <constraint desc="" field="xml_ch01_st_lsb_lf" exp=""/>
+    <constraint desc="" field="xml_ch01_st_res" exp=""/>
+    <constraint desc="" field="xml_ch01_st_resNE" exp=""/>
+    <constraint desc="" field="xml_ch01_st_resSW" exp=""/>
+    <constraint desc="" field="xml_ch01_st_severity" exp=""/>
+    <constraint desc="" field="xml_ch02_amplitude_max" exp=""/>
+    <constraint desc="" field="xml_ch02_ch_type" exp=""/>
+    <constraint desc="" field="xml_ch02_sensor_pos_y1" exp=""/>
+    <constraint desc="" field="xml_ch02_sensor_pos_y2" exp=""/>
+    <constraint desc="" field="xml_ch02_sensor_type" exp=""/>
+    <constraint desc="" field="xml_ch02_ser_num" exp=""/>
+    <constraint desc="" field="xml_ch02_st_adb_error" exp=""/>
+    <constraint desc="" field="xml_ch02_st_dc_offset" exp=""/>
+    <constraint desc="" field="xml_ch02_st_lsb_hf" exp=""/>
+    <constraint desc="" field="xml_ch02_st_lsb_lf" exp=""/>
+    <constraint desc="" field="xml_ch02_st_res" exp=""/>
+    <constraint desc="" field="xml_ch02_st_resNE" exp=""/>
+    <constraint desc="" field="xml_ch02_st_resSW" exp=""/>
+    <constraint desc="" field="xml_ch02_st_severity" exp=""/>
+    <constraint desc="" field="xml_ch03_amplitude_max" exp=""/>
+    <constraint desc="" field="xml_ch03_ch_type" exp=""/>
+    <constraint desc="" field="xml_ch03_sensor_type" exp=""/>
+    <constraint desc="" field="xml_ch03_ser_num" exp=""/>
+    <constraint desc="" field="xml_ch03_st_adb_error" exp=""/>
+    <constraint desc="" field="xml_ch03_st_dc_offset" exp=""/>
+    <constraint desc="" field="xml_ch03_st_lsb_hf" exp=""/>
+    <constraint desc="" field="xml_ch03_st_lsb_lf" exp=""/>
+    <constraint desc="" field="xml_ch03_st_res" exp=""/>
+    <constraint desc="" field="xml_ch03_st_resNE" exp=""/>
+    <constraint desc="" field="xml_ch03_st_resSW" exp=""/>
+    <constraint desc="" field="xml_ch03_st_severity" exp=""/>
+    <constraint desc="" field="xml_ch04_amplitude_max" exp=""/>
+    <constraint desc="" field="xml_ch04_ch_type" exp=""/>
+    <constraint desc="" field="xml_ch04_sensor_type" exp=""/>
+    <constraint desc="" field="xml_ch04_ser_num" exp=""/>
+    <constraint desc="" field="xml_ch04_st_adb_error" exp=""/>
+    <constraint desc="" field="xml_ch04_st_dc_offset" exp=""/>
+    <constraint desc="" field="xml_ch04_st_lsb_hf" exp=""/>
+    <constraint desc="" field="xml_ch04_st_lsb_lf" exp=""/>
+    <constraint desc="" field="xml_ch04_st_res" exp=""/>
+    <constraint desc="" field="xml_ch04_st_resNE" exp=""/>
+    <constraint desc="" field="xml_ch04_st_resSW" exp=""/>
+    <constraint desc="" field="xml_ch04_st_severity" exp=""/>
+    <constraint desc="" field="xml_ch05_amplitude_max" exp=""/>
+    <constraint desc="" field="xml_ch05_ch_type" exp=""/>
+    <constraint desc="" field="xml_ch05_sensor_type" exp=""/>
+    <constraint desc="" field="xml_ch05_ser_num" exp=""/>
+    <constraint desc="" field="xml_ch05_st_adb_error" exp=""/>
+    <constraint desc="" field="xml_ch05_st_dc_offset" exp=""/>
+    <constraint desc="" field="xml_ch05_st_lsb_hf" exp=""/>
+    <constraint desc="" field="xml_ch05_st_lsb_lf" exp=""/>
+    <constraint desc="" field="xml_ch05_st_res" exp=""/>
+    <constraint desc="" field="xml_ch05_st_resNE" exp=""/>
+    <constraint desc="" field="xml_ch05_st_resSW" exp=""/>
+    <constraint desc="" field="xml_ch05_st_severity" exp=""/>
+    <constraint desc="" field="xml_disk_space_free" exp=""/>
+    <constraint desc="" field="xml_disk_space_total" exp=""/>
+    <constraint desc="" field="xml_freq_base" exp=""/>
+    <constraint desc="" field="xml_freq_cal" exp=""/>
+    <constraint desc="" field="xml_freq_sample" exp=""/>
+    <constraint desc="" field="xml_gps_dynamic_mode" exp=""/>
+    <constraint desc="" field="xml_gps_height" exp=""/>
+    <constraint desc="" field="xml_gps_num_sats" exp=""/>
+    <constraint desc="" field="xml_gps_sync" exp=""/>
+    <constraint desc="" field="xml_meas_mode" exp=""/>
+    <constraint desc="" field="xml_meas_type" exp=""/>
+    <constraint desc="" field="xml_num_of_ch" exp=""/>
+    <constraint desc="" field="xml_path" exp=""/>
+    <constraint desc="" field="xml_rec_duration" exp=""/>
+    <constraint desc="" field="xml_rec_duration_str" exp=""/>
+    <constraint desc="" field="xml_rec_end" exp=""/>
+    <constraint desc="" field="xml_rec_end_date" exp=""/>
+    <constraint desc="" field="xml_rec_end_time" exp=""/>
+    <constraint desc="" field="xml_rec_start" exp=""/>
+    <constraint desc="" field="xml_rec_start_date" exp=""/>
+    <constraint desc="" field="xml_rec_start_time" exp=""/>
+    <constraint desc="" field="xml_x" exp=""/>
+    <constraint desc="" field="xml_y" exp=""/>
+    <constraint desc="" field="adu_clr" exp=""/>
+    <constraint desc="" field="adu_version" exp=""/>
+    <constraint desc="" field="qc_clr" exp=""/>
+    <constraint desc="" field="op_clr" exp=""/>
+    <constraint desc="" field="jl_rec_duration" exp=""/>
+    <constraint desc="" field="jl_num_of_jobs" exp=""/>
+    <constraint desc="" field="jl_rec_downtime" exp=""/>
+    <constraint desc="" field="jl_rec_duration_str" exp=""/>
+    <constraint desc="" field="edi_x" exp=""/>
+    <constraint desc="" field="edi_y" exp=""/>
+    <constraint desc="" field="edi_z" exp=""/>
+    <constraint desc="" field="vf_offset_xml" exp=""/>
+    <constraint desc="" field="vf_path_ts" exp=""/>
+    <constraint desc="" field="vf_path_raw" exp=""/>
+    <constraint desc="" field="vf_xml_gps_height" exp=""/>
+    <constraint desc="" field="vf_rec_downtime_min" exp=""/>
+    <constraint desc="" field="vf_offset_edi" exp=""/>
+    <constraint desc="" field="vf_jobs_str" exp=""/>
+    <constraint desc="" field="vf_sensor_pos_n" exp=""/>
+    <constraint desc="" field="vf_sensor_pos_s" exp=""/>
+    <constraint desc="" field="vf_sensor_pos_e" exp=""/>
+    <constraint desc="" field="vf_sesor_pos_w" exp=""/>
+    <constraint desc="" field="vf_rec_duration_combined" exp=""/>
   </constraintExpressions>
   <expressionfields>
-    <field expression="round(length(make_line(transform(make_point(rec_x,rec_y),'EPSG:4326',@project_crs),transform( make_point(xml_x, xml_y),'EPSG:4326',@project_crs))))" typeName="integer" subType="0" type="2" comment="" name="vf_offset_xml" precision="0" length="0"/>
-    <field expression="'ts/Site_' || ID_rec " typeName="string" subType="0" type="10" comment="" name="vf_path_ts" precision="0" length="0"/>
-    <field expression="'raw/' || lpad(xml_adu,3,0)" typeName="string" subType="0" type="10" comment="" name="vf_path_raw" precision="0" length="0"/>
-    <field expression="case&#xd;&#xa;when &quot;adu_version&quot; = 8 then xml_gps_height/1000&#xd;&#xa;when &quot;adu_version&quot; = 7 then xml_gps_height/100&#xd;&#xa;end" typeName="integer" subType="0" type="2" comment="" name="vf_xml_gps_height" precision="0" length="0"/>
-    <field expression="round((second(xml_rec_end-xml_rec_start)-xml_rec_duration)/60,1)" typeName="double precision" subType="0" type="6" comment="" name="vf_rec_downtime_min" precision="0" length="-1"/>
-    <field expression="round(length(make_line(transform(make_point(rec_x,rec_y),'EPSG:4326',@project_crs),transform( make_point(edi_x, edi_y),'EPSG:4326',@project_crs))))" typeName="integer" subType="0" type="2" comment="" name="vf_offset_edi" precision="0" length="0"/>
+    <field expression="round(length(make_line(transform(make_point(rec_x,rec_y),'EPSG:4326',@project_crs),transform( make_point(xml_x, xml_y),'EPSG:4326',@project_crs))))" type="2" typeName="integer" subType="0" name="vf_offset_xml" precision="0" comment="" length="0"/>
+    <field expression="'ts/Site_' || ID_rec " type="10" typeName="string" subType="0" name="vf_path_ts" precision="0" comment="" length="0"/>
+    <field expression="'raw/' || lpad(xml_adu,3,0)" type="10" typeName="string" subType="0" name="vf_path_raw" precision="0" comment="" length="0"/>
+    <field expression="case&#xd;&#xa;when &quot;adu_version&quot; = 8 then xml_gps_height/1000&#xd;&#xa;when &quot;adu_version&quot; = 7 then xml_gps_height/100&#xd;&#xa;end" type="2" typeName="integer" subType="0" name="vf_xml_gps_height" precision="0" comment="" length="0"/>
+    <field expression="round((second(xml_rec_end-xml_rec_start)-xml_rec_duration)/60,1)" type="6" typeName="double precision" subType="0" name="vf_rec_downtime_min" precision="0" comment="" length="-1"/>
+    <field expression="round(length(make_line(transform(make_point(rec_x,rec_y),'EPSG:4326',@project_crs),transform( make_point(edi_x, edi_y),'EPSG:4326',@project_crs))))" type="2" typeName="integer" subType="0" name="vf_offset_edi" precision="0" comment="" length="0"/>
+    <field expression="rec_xml_num_of_jobs || '/' ||jl_num_of_jobs" type="10" typeName="string" subType="0" name="vf_jobs_str" precision="0" comment="" length="0"/>
+    <field expression="coalesce(rec_fl_ex_n,xml_ch01_sensor_pos_x1,'-') || ' / ' || coalesce(xml_ch01_sensor_pos_x1,'-')" type="10" typeName="string" subType="0" name="vf_sensor_pos_n" precision="0" comment="" length="0"/>
+    <field expression="rec_fl_ex_n || ' / ' || xml_ch01_sensor_pos_x2" type="10" typeName="string" subType="0" name="vf_sensor_pos_n" precision="0" comment="" length="0"/>
+    <field expression="coalesce(rec_fl_ex_s,xml_ch01_sensor_pos_x2,'-') || ' / ' || coalesce(xml_ch01_sensor_pos_x2,'-')" type="10" typeName="string" subType="0" name="vf_sensor_pos_s" precision="0" comment="" length="0"/>
+    <field expression="coalesce(rec_fl_ey_e,xml_ch02_sensor_pos_y2,'-') || ' / ' || coalesce(xml_ch02_sensor_pos_y2,'-')" type="10" typeName="string" subType="0" name="vf_sensor_pos_e" precision="0" comment="" length="0"/>
+    <field expression="coalesce(rec_fl_ey_w,xml_ch02_sensor_pos_y1,'-') || ' / ' || coalesce(xml_ch02_sensor_pos_y1,'-')" type="10" typeName="string" subType="0" name="vf_sesor_pos_w" precision="0" comment="" length="0"/>
+    <field expression="coalesce(xml_rec_duration_str,'-') || ' / ' || coalesce(jl_rec_duration_str,'-')" type="10" typeName="string" subType="0" name="vf_rec_duration_combined" precision="0" comment="" length="0"/>
   </expressionfields>
   <attributeactions>
     <defaultAction key="Canvas" value="{92a90955-fd74-4589-940d-3984ee9fa82e}"/>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Open TS folder" id="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;os.chdir(dir_qgis)&#xd;&#xa;&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;)&#xd;&#xa;path=(dir_project+'[%vf_path_ts%]').replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Open TS folder" notificationMessage="">
-      <actionScope id="Form"/>
-      <actionScope id="Layer"/>
+    <actionsetting type="1" icon="" id="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}" isEnabledOnlyWhenEditable="0" capture="0" name="Open TS folder" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;os.chdir(dir_qgis)&#xd;&#xa;&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;)&#xd;&#xa;path=(dir_project+'[%vf_path_ts%]').replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Open TS folder">
       <actionScope id="Feature"/>
       <actionScope id="Field"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Edit ats" id="{8ac5fb8c-6ff8-40ad-b38b-13e6b09bca77}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_edit_ats.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Edit ats" notificationMessage="">
-      <actionScope id="Form"/>
       <actionScope id="Layer"/>
+      <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{8ac5fb8c-6ff8-40ad-b38b-13e6b09bca77}" isEnabledOnlyWhenEditable="0" capture="0" name="Edit ats" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_edit_ats.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Edit ats">
       <actionScope id="Feature"/>
+      <actionScope id="Canvas"/>
       <actionScope id="Field"/>
-      <actionScope id="Canvas"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Main processing" id="{92a90955-fd74-4589-940d-3984ee9fa82e}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_proc_main.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Main processing" notificationMessage="">
-      <actionScope id="Form"/>
       <actionScope id="Layer"/>
-      <actionScope id="Canvas"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Full processing" id="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_proc_full.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Full processing" notificationMessage="">
       <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{92a90955-fd74-4589-940d-3984ee9fa82e}" isEnabledOnlyWhenEditable="0" capture="0" name="Short processing" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_proc_main.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Short processing">
+      <actionScope id="Canvas"/>
       <actionScope id="Layer"/>
+      <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}" isEnabledOnlyWhenEditable="0" capture="0" name="Full processing" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_proc_full.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Full processing">
       <actionScope id="Feature"/>
       <actionScope id="Canvas"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Export tsv" id="{60c83ebd-c846-4021-ad83-3ccfc2749126}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec_export_tsv.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Export tsv" notificationMessage="">
-      <actionScope id="Form"/>
       <actionScope id="Layer"/>
+      <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{60c83ebd-c846-4021-ad83-3ccfc2749126}" isEnabledOnlyWhenEditable="0" capture="0" name="Export tsv" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec_export_tsv.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Export tsv">
       <actionScope id="Feature"/>
+      <actionScope id="Canvas"/>
       <actionScope id="Field"/>
-      <actionScope id="Canvas"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Import tsv" id="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec_import_tsv.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Import tsv" notificationMessage="">
-      <actionScope id="Form"/>
       <actionScope id="Layer"/>
-      <actionScope id="Feature"/>
-      <actionScope id="Field"/>
-      <actionScope id="Canvas"/>
-    </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Export to excel" id="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec2excel.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Export to excel" notificationMessage="">
       <actionScope id="Form"/>
-      <actionScope id="Layer"/>
-      <actionScope id="Feature"/>
-      <actionScope id="Field"/>
-      <actionScope id="Canvas"/>
     </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="View system history" id="{067cf6e3-595a-4d05-aaca-cd9451541fa4}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;with open(dir_project+'tmp/id_rec.txt','w') as file:&#xd;&#xa;    file.write('[%ID_rec%]')&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_sh.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="View system history" notificationMessage="">
-      <actionScope id="Form"/>
-      <actionScope id="Layer"/>
+    <actionsetting type="1" icon="" id="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}" isEnabledOnlyWhenEditable="0" capture="0" name="Import tsv" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec_import_tsv.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Import tsv">
       <actionScope id="Feature"/>
-      <actionScope id="Field"/>
       <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Layer"/>
+      <actionScope id="Form"/>
     </actionsetting>
-    <actionsetting icon="" isEnabledOnlyWhenEditable="0" shortTitle="Open edi" id="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;os.chdir(dir_qgis)&#xd;&#xa;&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;)&#xd;&#xa;path=(dir_project+'MTSM/edi/'+'[%ID_rec%]'+'_stack_all.edi').replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" type="1" capture="0" name="Open edi" notificationMessage="">
-      <actionScope id="Form"/>
-      <actionScope id="Layer"/>
+    <actionsetting type="1" icon="" id="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}" isEnabledOnlyWhenEditable="0" capture="0" name="Export to excel" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_rec2excel.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Export to excel">
       <actionScope id="Feature"/>
-      <actionScope id="Field"/>
       <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Layer"/>
+      <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{067cf6e3-595a-4d05-aaca-cd9451541fa4}" isEnabledOnlyWhenEditable="0" capture="0" name="View system history" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;).replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;os.chdir(dir_project)&#xd;&#xa;&#xd;&#xa;with open(dir_project+'tmp/id_rec.txt','w') as file:&#xd;&#xa;    file.write('[%ID_rec%]')&#xd;&#xa;&#xd;&#xa;path=(dir_project+'MTSM_run_sh.py')&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="View system history">
+      <actionScope id="Feature"/>
+      <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Layer"/>
+      <actionScope id="Form"/>
+    </actionsetting>
+    <actionsetting type="1" icon="" id="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}" isEnabledOnlyWhenEditable="0" capture="0" name="Open edi" action="from qgis.core import QgsProject&#xd;&#xa;import os&#xd;&#xa;import subprocess&#xd;&#xa;&#xd;&#xa;dir_qgis=QgsProject.instance().homePath()&#xd;&#xa;os.chdir(dir_qgis)&#xd;&#xa;&#xd;&#xa;dir_project=dir_qgis.replace(&quot;MTSM_qgis&quot;,&quot;&quot;)&#xd;&#xa;path=(dir_project+'MTSM/edi/'+'[%ID_rec%]'+'_stack_all.edi').replace(&quot;/&quot;,&quot;\\&quot;)&#xd;&#xa;&#xd;&#xa;print(f&quot;explorer {path}&quot;)&#xd;&#xa;subprocess.Popen(f&quot;explorer {path}&quot;)&#xd;&#xa;" notificationMessage="" shortTitle="Open edi">
+      <actionScope id="Feature"/>
+      <actionScope id="Canvas"/>
+      <actionScope id="Field"/>
+      <actionScope id="Layer"/>
+      <actionScope id="Form"/>
     </actionsetting>
   </attributeactions>
-  <attributetableconfig sortExpression="&quot;xml_ch03_ser_num&quot;" actionWidgetStyle="dropDown" sortOrder="0">
+  <attributetableconfig sortExpression="&quot;xml_ch03_ser_num&quot;" sortOrder="0" actionWidgetStyle="dropDown">
     <columns>
-      <column hidden="0" type="field" width="-1" name="fid"/>
-      <column hidden="0" type="field" width="-1" name="ID_rec"/>
-      <column hidden="0" type="field" width="-1" name="ID_site"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_adu"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_joblist"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_note"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_operator"/>
-      <column hidden="0" type="field" width="164" name="rec_fl_rec_start"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_remote_reference"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_date"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_exception"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_note"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_nsp"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_qcby"/>
-      <column hidden="0" type="field" width="-1" name="rec_qc_status"/>
-      <column hidden="0" type="field" width="-1" name="rec_x"/>
-      <column hidden="0" type="field" width="-1" name="rec_y"/>
-      <column hidden="0" type="field" width="-1" name="vf_offset_xml"/>
-      <column hidden="0" type="field" width="-1" name="vf_path_ts"/>
-      <column hidden="0" type="field" width="-1" name="vf_path_raw"/>
-      <column hidden="0" type="field" width="-1" name="adu_clr"/>
-      <column hidden="0" type="field" width="-1" name="adu_version"/>
-      <column hidden="0" type="field" width="-1" name="vf_xml_gps_height"/>
-      <column hidden="0" type="field" width="-1" name="op_clr"/>
-      <column hidden="0" type="field" width="-1" name="qc_clr"/>
-      <column hidden="0" type="field" width="-1" name="vf_rec_downtime_min"/>
-      <column hidden="0" type="field" width="-1" name="ID_xml"/>
-      <column hidden="0" type="field" width="-1" name="jl_rec_duration"/>
-      <column hidden="0" type="field" width="-1" name="jl_num_of_jobs"/>
-      <column hidden="0" type="field" width="-1" name="jl_rec_downtime"/>
-      <column hidden="0" type="field" width="-1" name="jl_rec_duration_str"/>
-      <column hidden="0" type="field" width="-1" name="edi_x"/>
-      <column hidden="0" type="field" width="-1" name="edi_y"/>
-      <column hidden="0" type="field" width="-1" name="edi_z"/>
-      <column hidden="0" type="field" width="-1" name="vf_offset_edi"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_ex_n"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_ex_s"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_ey_e"/>
-      <column hidden="0" type="field" width="-1" name="rec_fl_ey_w"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_end"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_start"/>
-      <column hidden="0" type="field" width="-1" name="xml_adu"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_amplitude_max"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_ch_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_sensor_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_ser_num"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_adb_error"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_dc_offset"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_lsb_hf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_lsb_lf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_res"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_resNE"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_resSW"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_st_severity"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_amplitude_max"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_ch_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_sensor_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_ser_num"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_adb_error"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_dc_offset"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_lsb_hf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_lsb_lf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_res"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_resNE"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_resSW"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_st_severity"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_amplitude_max"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_ch_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_sensor_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_ser_num"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_adb_error"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_dc_offset"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_lsb_hf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_lsb_lf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_res"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_resNE"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_resSW"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch03_st_severity"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_amplitude_max"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_ch_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_sensor_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_ser_num"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_adb_error"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_dc_offset"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_lsb_hf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_lsb_lf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_res"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_resNE"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_resSW"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch04_st_severity"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_amplitude_max"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_ch_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_sensor_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_ser_num"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_adb_error"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_dc_offset"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_lsb_hf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_lsb_lf"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_res"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_resNE"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_resSW"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch05_st_severity"/>
-      <column hidden="0" type="field" width="-1" name="xml_disk_space_free"/>
-      <column hidden="0" type="field" width="-1" name="xml_disk_space_total"/>
-      <column hidden="0" type="field" width="-1" name="xml_freq_base"/>
-      <column hidden="0" type="field" width="-1" name="xml_freq_cal"/>
-      <column hidden="0" type="field" width="-1" name="xml_freq_sample"/>
-      <column hidden="0" type="field" width="-1" name="xml_gps_dynamic_mode"/>
-      <column hidden="0" type="field" width="-1" name="xml_gps_height"/>
-      <column hidden="0" type="field" width="-1" name="xml_gps_num_sats"/>
-      <column hidden="0" type="field" width="-1" name="xml_gps_sync"/>
-      <column hidden="0" type="field" width="-1" name="xml_meas_mode"/>
-      <column hidden="0" type="field" width="-1" name="xml_meas_type"/>
-      <column hidden="0" type="field" width="-1" name="xml_num_of_ch"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_duration"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_duration_str"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_end_date"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_end_time"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_start_date"/>
-      <column hidden="0" type="field" width="-1" name="xml_rec_start_time"/>
-      <column hidden="0" type="field" width="-1" name="xml_x"/>
-      <column hidden="0" type="field" width="-1" name="xml_y"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_sensor_pos_x1"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch01_sensor_pos_x2"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_sensor_pos_y1"/>
-      <column hidden="0" type="field" width="-1" name="xml_ch02_sensor_pos_y2"/>
-      <column hidden="0" type="field" width="-1" name="rec_xml_num_of_jobs"/>
-      <column hidden="0" type="field" width="-1" name="xml_path"/>
-      <column hidden="0" type="field" width="-1" name="rec_mag_dec"/>
-      <column hidden="1" type="actions" width="-1"/>
+      <column type="field" hidden="0" width="-1" name="fid"/>
+      <column type="field" hidden="0" width="-1" name="ID_rec"/>
+      <column type="field" hidden="0" width="-1" name="ID_site"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_adu"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_joblist"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_note"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_operator"/>
+      <column type="field" hidden="0" width="164" name="rec_fl_rec_start"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_remote_reference"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_date"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_exception"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_note"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_nsp"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_qcby"/>
+      <column type="field" hidden="0" width="-1" name="rec_qc_status"/>
+      <column type="field" hidden="0" width="-1" name="rec_x"/>
+      <column type="field" hidden="0" width="-1" name="rec_y"/>
+      <column type="field" hidden="0" width="-1" name="vf_offset_xml"/>
+      <column type="field" hidden="0" width="-1" name="vf_path_ts"/>
+      <column type="field" hidden="0" width="-1" name="vf_path_raw"/>
+      <column type="field" hidden="0" width="-1" name="adu_clr"/>
+      <column type="field" hidden="0" width="-1" name="adu_version"/>
+      <column type="field" hidden="0" width="-1" name="vf_xml_gps_height"/>
+      <column type="field" hidden="0" width="-1" name="op_clr"/>
+      <column type="field" hidden="0" width="-1" name="qc_clr"/>
+      <column type="field" hidden="0" width="-1" name="vf_rec_downtime_min"/>
+      <column type="field" hidden="0" width="-1" name="ID_xml"/>
+      <column type="field" hidden="0" width="-1" name="jl_rec_duration"/>
+      <column type="field" hidden="0" width="-1" name="jl_num_of_jobs"/>
+      <column type="field" hidden="0" width="-1" name="jl_rec_downtime"/>
+      <column type="field" hidden="0" width="-1" name="jl_rec_duration_str"/>
+      <column type="field" hidden="0" width="-1" name="edi_x"/>
+      <column type="field" hidden="0" width="-1" name="edi_y"/>
+      <column type="field" hidden="0" width="-1" name="edi_z"/>
+      <column type="field" hidden="0" width="-1" name="vf_offset_edi"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_ex_n"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_ex_s"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_ey_e"/>
+      <column type="field" hidden="0" width="-1" name="rec_fl_ey_w"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_end"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_start"/>
+      <column type="field" hidden="0" width="-1" name="xml_adu"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_amplitude_max"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_ch_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_sensor_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_ser_num"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_adb_error"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_dc_offset"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_lsb_hf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_lsb_lf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_res"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_resNE"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_resSW"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_st_severity"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_amplitude_max"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_ch_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_sensor_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_ser_num"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_adb_error"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_dc_offset"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_lsb_hf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_lsb_lf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_res"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_resNE"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_resSW"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_st_severity"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_amplitude_max"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_ch_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_sensor_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_ser_num"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_adb_error"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_dc_offset"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_lsb_hf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_lsb_lf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_res"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_resNE"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_resSW"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch03_st_severity"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_amplitude_max"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_ch_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_sensor_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_ser_num"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_adb_error"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_dc_offset"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_lsb_hf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_lsb_lf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_res"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_resNE"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_resSW"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch04_st_severity"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_amplitude_max"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_ch_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_sensor_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_ser_num"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_adb_error"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_dc_offset"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_lsb_hf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_lsb_lf"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_res"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_resNE"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_resSW"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch05_st_severity"/>
+      <column type="field" hidden="0" width="-1" name="xml_disk_space_free"/>
+      <column type="field" hidden="0" width="-1" name="xml_disk_space_total"/>
+      <column type="field" hidden="0" width="-1" name="xml_freq_base"/>
+      <column type="field" hidden="0" width="-1" name="xml_freq_cal"/>
+      <column type="field" hidden="0" width="-1" name="xml_freq_sample"/>
+      <column type="field" hidden="0" width="-1" name="xml_gps_dynamic_mode"/>
+      <column type="field" hidden="0" width="-1" name="xml_gps_height"/>
+      <column type="field" hidden="0" width="-1" name="xml_gps_num_sats"/>
+      <column type="field" hidden="0" width="-1" name="xml_gps_sync"/>
+      <column type="field" hidden="0" width="-1" name="xml_meas_mode"/>
+      <column type="field" hidden="0" width="-1" name="xml_meas_type"/>
+      <column type="field" hidden="0" width="-1" name="xml_num_of_ch"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_duration"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_duration_str"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_end_date"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_end_time"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_start_date"/>
+      <column type="field" hidden="0" width="-1" name="xml_rec_start_time"/>
+      <column type="field" hidden="0" width="-1" name="xml_x"/>
+      <column type="field" hidden="0" width="-1" name="xml_y"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_sensor_pos_x1"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch01_sensor_pos_x2"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_sensor_pos_y1"/>
+      <column type="field" hidden="0" width="-1" name="xml_ch02_sensor_pos_y2"/>
+      <column type="field" hidden="0" width="-1" name="rec_xml_num_of_jobs"/>
+      <column type="field" hidden="0" width="-1" name="xml_path"/>
+      <column type="field" hidden="0" width="-1" name="rec_mag_dec"/>
+      <column type="field" hidden="0" width="-1" name="vf_jobs_str"/>
+      <column type="field" hidden="0" width="-1" name="vf_sensor_pos_n"/>
+      <column type="field" hidden="0" width="-1" name="vf_sensor_pos_s"/>
+      <column type="field" hidden="0" width="-1" name="vf_sensor_pos_e"/>
+      <column type="field" hidden="0" width="-1" name="vf_sesor_pos_w"/>
+      <column type="field" hidden="0" width="-1" name="vf_rec_duration_combined"/>
+      <column type="actions" hidden="1" width="-1"/>
     </columns>
   </attributetableconfig>
   <conditionalstyles>
@@ -3321,493 +3520,493 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>tablayout</editorlayout>
   <attributeEditorForm>
-    <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-      <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+      <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
     </labelStyle>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="2" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="id1" groupBox="0" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    <attributeEditorContainer type="GroupBox" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="1" visibilityExpression="" verticalStretch="0" name="IDs" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="1" showLabel="1" name="ID_rec">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="2" showLabel="1" name="ID_site">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorField>
-    </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="1" name="id2" groupBox="0" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-        <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      </labelStyle>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="3" showLabel="1" name="ID_xml">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorField>
-    </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="2" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="proc1" groupBox="0" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      </labelStyle>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{92a90955-fd74-4589-940d-3984ee9fa82e}" showLabel="1" name="{92a90955-fd74-4589-940d-3984ee9fa82e}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}" showLabel="1" name="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}" showLabel="1" name="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{8ac5fb8c-6ff8-40ad-b38b-13e6b09bca77}" showLabel="1" name="{8ac5fb8c-6ff8-40ad-b38b-13e6b09bca77}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-    </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="2" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="proc2" groupBox="0" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      </labelStyle>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}" showLabel="1" name="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{60c83ebd-c846-4021-ad83-3ccfc2749126}" showLabel="1" name="{60c83ebd-c846-4021-ad83-3ccfc2749126}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}" showLabel="1" name="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}" showLabel="1" name="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-      <attributeEditorAction horizontalStretch="0" verticalStretch="0" ActionUUID="{067cf6e3-595a-4d05-aaca-cd9451541fa4}" showLabel="1" name="{067cf6e3-595a-4d05-aaca-cd9451541fa4}">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorAction>
-    </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="GroupBox" showLabel="1" name="FL" groupBox="1" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      </labelStyle>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="FL1" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="4" showLabel="1" name="rec_fl_adu">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="ID_rec" index="1" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="9" showLabel="1" name="rec_fl_joblist">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="11" showLabel="1" name="rec_fl_operator">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="12" showLabel="1" name="rec_fl_rec_start">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="ID_site" index="2" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="1" name="FL2" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="10" showLabel="1" name="rec_fl_note">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-      </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="1" name="FL3" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-          <labelFont description="Segoe UI,8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="5" showLabel="1" name="rec_fl_ex_n">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="6" showLabel="1" name="rec_fl_ex_s">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="7" showLabel="1" name="rec_fl_ey_e">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="8" showLabel="1" name="rec_fl_ey_w">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-      </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="1" name="Sensor_pos_xml" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-          <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="27" showLabel="1" name="xml_ch01_sensor_pos_x1">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="28" showLabel="1" name="xml_ch01_sensor_pos_x2">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="42" showLabel="1" name="xml_ch02_sensor_pos_y2">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="41" showLabel="1" name="xml_ch02_sensor_pos_y1">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-      </attributeEditorContainer>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="13" showLabel="1" name="rec_fl_remote_reference">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-      </attributeEditorField>
-    </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="GroupBox" showLabel="1" name="QC" groupBox="1" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-      </labelStyle>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="qc1" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="20" showLabel="1" name="rec_qc_status">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="15" showLabel="1" name="rec_qc_date">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="19" showLabel="1" name="rec_qc_qcby">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-      </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="2" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="qc2" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-        </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="17" showLabel="1" name="rec_qc_note">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="1" verticalStretch="0" name="ID_xml" index="3" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
     </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="1" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="GroupBox" showLabel="1" name="Xml data" groupBox="1" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    <attributeEditorContainer type="GroupBox" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="1" visibilityExpression="" verticalStretch="0" name="Field log" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="5" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="xml1" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="107" showLabel="1" name="xml_rec_start">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_adu" index="4" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="104" showLabel="1" name="xml_rec_end">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_joblist" index="9" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="103" showLabel="1" name="xml_rec_duration_str">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_operator" index="11" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="127" showLabel="1" name="vf_rec_downtime_min">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_rec_start" index="12" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="5" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="0" name="xml3" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="22" showLabel="1" name="rec_xml_num_of_jobs">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="">
-            <labelFont description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="117" showLabel="1" name="jl_num_of_jobs">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="119" showLabel="1" name="jl_rec_duration_str">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="118" showLabel="1" name="jl_rec_downtime">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_note" index="10" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
-      <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="5" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="Row" showLabel="1" name="xml2" groupBox="0" collapsedExpression="">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,7.8,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="126" showLabel="1" name="vf_xml_gps_height">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_ex_n" index="5" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="97" showLabel="1" name="xml_gps_sync">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_ex_s" index="6" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="96" showLabel="1" name="xml_gps_num_sats">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_ey_e" index="7" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="123" showLabel="1" name="vf_offset_xml">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
-          </labelStyle>
-        </attributeEditorField>
-        <attributeEditorField horizontalStretch="0" verticalStretch="0" index="128" showLabel="1" name="vf_offset_edi">
-          <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-            <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_fl_ey_w" index="8" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
           </labelStyle>
         </attributeEditorField>
       </attributeEditorContainer>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="93" showLabel="1" name="xml_freq_sample">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="GroupBox" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="1" visibilityExpression="" verticalStretch="0" name="QC" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="qc1" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_qc_status" index="20" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_qc_date" index="15" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_qc_qcby" index="19" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+      </attributeEditorContainer>
+      <attributeEditorContainer type="Row" columnCount="2" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="qc2" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="rec_qc_note" index="17" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+      </attributeEditorContainer>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="GroupBox" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="1" visibilityExpression="" verticalStretch="0" name="Xml data" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_freq_sample" index="93" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="91" showLabel="1" name="xml_freq_base">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_freq_base" index="91" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorContainer type="Row" columnCount="5" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_jobs_str" index="129" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_rec_start" index="107" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_rec_end" index="104" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_rec_duration_combined" index="134" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+      </attributeEditorContainer>
+      <attributeEditorContainer type="Row" columnCount="5" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorContainer>
+      <attributeEditorContainer type="Row" columnCount="5" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="xml2" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_xml_gps_height" index="126" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_gps_sync" index="97" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_gps_num_sats" index="96" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_offset_edi" index="128" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_offset_xml" index="123" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+      </attributeEditorContainer>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="GroupBox" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="1" visibilityExpression="" verticalStretch="0" name="Seonsor position" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="Segoe UI,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="(FL / data)" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+        <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_sensor_pos_n" index="130" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_sensor_pos_s" index="131" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_sensor_pos_e" index="132" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+        <attributeEditorField horizontalStretch="0" verticalStretch="0" name="vf_sesor_pos_w" index="133" showLabel="1">
+          <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+            <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+          </labelStyle>
+        </attributeEditorField>
+      </attributeEditorContainer>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="7" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="Ch. 0" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_ch_type" index="26" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_ser_num" index="30" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_st_res" index="35" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_st_dc_offset" index="32" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_amplitude_max" index="25" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_st_lsb_lf" index="34" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorField>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch01_st_lsb_hf" index="33" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
     </attributeEditorContainer>
-    <attributeEditorContainer collapsedExpressionEnabled="0" horizontalStretch="0" collapsed="0" columnCount="7" visibilityExpression="" visibilityExpressionEnabled="0" verticalStretch="0" type="GroupBox" showLabel="1" name="Selftest (ChType - SerNum  - Res - DC - MaxAmp - LSB LF - LSB HF)" groupBox="1" collapsedExpression="">
-      <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-        <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    <attributeEditorContainer type="Row" columnCount="5" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="Ch. 1" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
       </labelStyle>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="26" showLabel="0" name="xml_ch01_ch_type">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_ch_type" index="40" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="30" showLabel="0" name="xml_ch01_ser_num">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_ser_num" index="44" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="35" showLabel="0" name="xml_ch01_st_res">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_st_res" index="49" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="32" showLabel="0" name="xml_ch01_st_dc_offset">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_st_dc_offset" index="46" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="25" showLabel="0" name="xml_ch01_amplitude_max">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_amplitude_max" index="39" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="34" showLabel="0" name="xml_ch01_st_lsb_lf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_st_lsb_lf" index="48" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="33" showLabel="0" name="xml_ch01_st_lsb_hf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch02_st_lsb_hf" index="47" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="40" showLabel="0" name="xml_ch02_ch_type">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="5" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="Ch. 2" collapsedExpressionEnabled="0" showLabel="1" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_ch_type" index="54" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="44" showLabel="0" name="xml_ch02_ser_num">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_ser_num" index="56" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="49" showLabel="0" name="xml_ch02_st_res">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_st_res" index="61" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="46" showLabel="0" name="xml_ch02_st_dc_offset">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_st_dc_offset" index="58" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="39" showLabel="0" name="xml_ch02_amplitude_max">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_amplitude_max" index="53" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="48" showLabel="0" name="xml_ch02_st_lsb_lf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_st_lsb_lf" index="60" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="47" showLabel="0" name="xml_ch02_st_lsb_hf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch03_st_lsb_hf" index="59" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="54" showLabel="0" name="xml_ch03_ch_type">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="Ch. 3 " collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_ch_type" index="66" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="56" showLabel="0" name="xml_ch03_ser_num">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_ser_num" index="68" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="61" showLabel="0" name="xml_ch03_st_res">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_st_res" index="73" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="58" showLabel="0" name="xml_ch03_st_dc_offset">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_st_dc_offset" index="70" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="53" showLabel="0" name="xml_ch03_amplitude_max">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_amplitude_max" index="65" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="60" showLabel="0" name="xml_ch03_st_lsb_lf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_st_lsb_lf" index="72" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="59" showLabel="0" name="xml_ch03_st_lsb_hf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch04_st_lsb_hf" index="71" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="66" showLabel="0" name="xml_ch04_ch_type">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="1" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="Ch. 4" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_ch_type" index="78" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="68" showLabel="0" name="xml_ch04_ser_num">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_ser_num" index="80" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="73" showLabel="0" name="xml_ch04_st_res">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_st_res" index="85" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="70" showLabel="0" name="xml_ch04_st_dc_offset">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_st_dc_offset" index="82" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="65" showLabel="0" name="xml_ch04_amplitude_max">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_amplitude_max" index="77" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="72" showLabel="0" name="xml_ch04_st_lsb_lf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_st_lsb_lf" index="84" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="71" showLabel="0" name="xml_ch04_st_lsb_hf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      <attributeEditorField horizontalStretch="0" verticalStretch="0" name="xml_ch05_st_lsb_hf" index="83" showLabel="0">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,8.3,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
       </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="78" showLabel="0" name="xml_ch05_ch_type">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="2" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="proc1" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{92a90955-fd74-4589-940d-3984ee9fa82e}" ActionUUID="{92a90955-fd74-4589-940d-3984ee9fa82e}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="80" showLabel="0" name="xml_ch05_ser_num">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}" ActionUUID="{4d948bbb-920b-4966-8bbe-c1df400d6ad1}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="85" showLabel="0" name="xml_ch05_st_res">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}" ActionUUID="{445e14f5-f1f4-4a39-b764-63fe5ec8876a}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="82" showLabel="0" name="xml_ch05_st_dc_offset">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}" ActionUUID="{603ea921-128d-40f8-9af2-ebf5ba9d74e6}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="77" showLabel="0" name="xml_ch05_amplitude_max">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{60c83ebd-c846-4021-ad83-3ccfc2749126}" ActionUUID="{60c83ebd-c846-4021-ad83-3ccfc2749126}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="84" showLabel="0" name="xml_ch05_st_lsb_lf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}" ActionUUID="{3149bc44-ab93-4e12-baaf-8912d0b4cfef}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
-      <attributeEditorField horizontalStretch="0" verticalStretch="0" index="83" showLabel="0" name="xml_ch05_st_lsb_hf">
-        <labelStyle overrideLabelColor="0" overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1">
-          <labelFont description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0" strikethrough="0" style="" italic="0" underline="0"/>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}" ActionUUID="{8b86d9d6-27cc-40b9-8fa0-141d801069ea}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
         </labelStyle>
-      </attributeEditorField>
+      </attributeEditorAction>
+      <attributeEditorAction horizontalStretch="0" verticalStretch="0" name="{067cf6e3-595a-4d05-aaca-cd9451541fa4}" ActionUUID="{067cf6e3-595a-4d05-aaca-cd9451541fa4}" showLabel="1">
+        <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+          <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+        </labelStyle>
+      </attributeEditorAction>
+    </attributeEditorContainer>
+    <attributeEditorContainer type="Row" columnCount="2" visibilityExpressionEnabled="0" horizontalStretch="0" groupBox="0" visibilityExpression="" verticalStretch="0" name="proc2" collapsedExpressionEnabled="0" showLabel="0" collapsed="0" collapsedExpression="">
+      <labelStyle overrideLabelFont="0" labelColor="0,0,0,255,rgb:0,0,0,1" overrideLabelColor="0">
+        <labelFont style="" strikethrough="0" italic="0" underline="0" description="MS Shell Dlg 2,7,-1,5,50,0,0,0,0,0" bold="0"/>
+      </labelStyle>
     </attributeEditorContainer>
   </attributeEditorForm>
   <editable>
@@ -3857,12 +4056,19 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="rec_xml_num_of_jobs"/>
     <field editable="1" name="rec_y"/>
     <field editable="1" name="test"/>
+    <field editable="0" name="vf_jobs_str"/>
     <field editable="0" name="vf_offset_edi"/>
     <field editable="0" name="vf_offset_xml"/>
     <field editable="0" name="vf_path_raw"/>
     <field editable="0" name="vf_path_ts"/>
     <field editable="0" name="vf_rec_downtime_min"/>
     <field editable="0" name="vf_rec_duration"/>
+    <field editable="0" name="vf_rec_duration_combined"/>
+    <field editable="0" name="vf_rec_time_xml_jl_str"/>
+    <field editable="0" name="vf_sensor_pos_e"/>
+    <field editable="0" name="vf_sensor_pos_n"/>
+    <field editable="0" name="vf_sensor_pos_s"/>
+    <field editable="0" name="vf_sesor_pos_w"/>
     <field editable="0" name="vf_xml_gps_height"/>
     <field editable="1" name="xml_adu"/>
     <field editable="0" name="xml_ch01_amplitude_max"/>
@@ -3960,302 +4166,316 @@ def my_form_open(dialog, layer, feature):
     <field editable="1" name="xml_y"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="ID_operator"/>
-    <field labelOnTop="0" name="ID_qc"/>
-    <field labelOnTop="0" name="ID_rec"/>
-    <field labelOnTop="0" name="ID_site"/>
-    <field labelOnTop="0" name="ID_xml"/>
-    <field labelOnTop="0" name="ID_xml_x"/>
-    <field labelOnTop="0" name="ID_xml_y"/>
-    <field labelOnTop="0" name="Unnamed: 0"/>
-    <field labelOnTop="0" name="adu_clr"/>
-    <field labelOnTop="0" name="adu_version"/>
-    <field labelOnTop="0" name="edi_x"/>
-    <field labelOnTop="0" name="edi_y"/>
-    <field labelOnTop="0" name="edi_z"/>
-    <field labelOnTop="0" name="fid"/>
-    <field labelOnTop="0" name="jl_num_of_jobs"/>
-    <field labelOnTop="0" name="jl_rec_downtime"/>
-    <field labelOnTop="0" name="jl_rec_duration"/>
-    <field labelOnTop="0" name="jl_rec_duration_str"/>
-    <field labelOnTop="0" name="name_orig"/>
-    <field labelOnTop="0" name="op_clr"/>
-    <field labelOnTop="0" name="prs_clr"/>
-    <field labelOnTop="0" name="prs_clr2"/>
-    <field labelOnTop="0" name="prs_operator"/>
-    <field labelOnTop="0" name="prs_qc"/>
-    <field labelOnTop="0" name="qc_clr"/>
-    <field labelOnTop="1" name="rec_fl_adu"/>
-    <field labelOnTop="1" name="rec_fl_ex_n"/>
-    <field labelOnTop="1" name="rec_fl_ex_s"/>
-    <field labelOnTop="1" name="rec_fl_ey_e"/>
-    <field labelOnTop="1" name="rec_fl_ey_w"/>
-    <field labelOnTop="1" name="rec_fl_joblist"/>
-    <field labelOnTop="0" name="rec_fl_note"/>
-    <field labelOnTop="1" name="rec_fl_operator"/>
-    <field labelOnTop="1" name="rec_fl_rec_start"/>
-    <field labelOnTop="1" name="rec_fl_remote_reference"/>
-    <field labelOnTop="0" name="rec_mag_dec"/>
-    <field labelOnTop="1" name="rec_qc_date"/>
-    <field labelOnTop="0" name="rec_qc_exception"/>
-    <field labelOnTop="0" name="rec_qc_note"/>
-    <field labelOnTop="0" name="rec_qc_nsp"/>
-    <field labelOnTop="1" name="rec_qc_qcby"/>
-    <field labelOnTop="1" name="rec_qc_status"/>
-    <field labelOnTop="0" name="rec_x"/>
-    <field labelOnTop="0" name="rec_xml_num_of_jobs"/>
-    <field labelOnTop="0" name="rec_y"/>
-    <field labelOnTop="0" name="test"/>
-    <field labelOnTop="0" name="vf_offset_edi"/>
-    <field labelOnTop="0" name="vf_offset_xml"/>
-    <field labelOnTop="0" name="vf_path_raw"/>
-    <field labelOnTop="0" name="vf_path_ts"/>
-    <field labelOnTop="0" name="vf_rec_downtime_min"/>
-    <field labelOnTop="0" name="vf_rec_duration"/>
-    <field labelOnTop="0" name="vf_xml_gps_height"/>
-    <field labelOnTop="0" name="xml_adu"/>
-    <field labelOnTop="0" name="xml_ch01_amplitude_max"/>
-    <field labelOnTop="0" name="xml_ch01_ch_type"/>
-    <field labelOnTop="0" name="xml_ch01_filter_type"/>
-    <field labelOnTop="1" name="xml_ch01_sensor_pos_x1"/>
-    <field labelOnTop="1" name="xml_ch01_sensor_pos_x2"/>
-    <field labelOnTop="0" name="xml_ch01_sensor_type"/>
-    <field labelOnTop="0" name="xml_ch01_ser_num"/>
-    <field labelOnTop="0" name="xml_ch01_st_adb_error"/>
-    <field labelOnTop="0" name="xml_ch01_st_dc_offset"/>
-    <field labelOnTop="0" name="xml_ch01_st_lsb_hf"/>
-    <field labelOnTop="0" name="xml_ch01_st_lsb_lf"/>
-    <field labelOnTop="0" name="xml_ch01_st_res"/>
-    <field labelOnTop="0" name="xml_ch01_st_resNE"/>
-    <field labelOnTop="0" name="xml_ch01_st_resSW"/>
-    <field labelOnTop="0" name="xml_ch01_st_severity"/>
-    <field labelOnTop="0" name="xml_ch02_amplitude_max"/>
-    <field labelOnTop="0" name="xml_ch02_ch_type"/>
-    <field labelOnTop="0" name="xml_ch02_filter_type"/>
-    <field labelOnTop="1" name="xml_ch02_sensor_pos_y1"/>
-    <field labelOnTop="1" name="xml_ch02_sensor_pos_y2"/>
-    <field labelOnTop="0" name="xml_ch02_sensor_type"/>
-    <field labelOnTop="0" name="xml_ch02_ser_num"/>
-    <field labelOnTop="0" name="xml_ch02_st_adb_error"/>
-    <field labelOnTop="0" name="xml_ch02_st_dc_offset"/>
-    <field labelOnTop="0" name="xml_ch02_st_lsb_hf"/>
-    <field labelOnTop="0" name="xml_ch02_st_lsb_lf"/>
-    <field labelOnTop="0" name="xml_ch02_st_res"/>
-    <field labelOnTop="0" name="xml_ch02_st_resNE"/>
-    <field labelOnTop="0" name="xml_ch02_st_resSW"/>
-    <field labelOnTop="0" name="xml_ch02_st_severity"/>
-    <field labelOnTop="0" name="xml_ch03_amplitude_max"/>
-    <field labelOnTop="0" name="xml_ch03_ch_type"/>
-    <field labelOnTop="0" name="xml_ch03_filter_type"/>
-    <field labelOnTop="0" name="xml_ch03_sensor_type"/>
-    <field labelOnTop="0" name="xml_ch03_ser_num"/>
-    <field labelOnTop="0" name="xml_ch03_st_adb_error"/>
-    <field labelOnTop="0" name="xml_ch03_st_dc_offset"/>
-    <field labelOnTop="0" name="xml_ch03_st_lsb_hf"/>
-    <field labelOnTop="0" name="xml_ch03_st_lsb_lf"/>
-    <field labelOnTop="0" name="xml_ch03_st_res"/>
-    <field labelOnTop="0" name="xml_ch03_st_resNE"/>
-    <field labelOnTop="0" name="xml_ch03_st_resSW"/>
-    <field labelOnTop="0" name="xml_ch03_st_severity"/>
-    <field labelOnTop="0" name="xml_ch04_amplitude_max"/>
-    <field labelOnTop="0" name="xml_ch04_ch_type"/>
-    <field labelOnTop="0" name="xml_ch04_filter_type"/>
-    <field labelOnTop="0" name="xml_ch04_sensor_type"/>
-    <field labelOnTop="0" name="xml_ch04_ser_num"/>
-    <field labelOnTop="0" name="xml_ch04_st_adb_error"/>
-    <field labelOnTop="0" name="xml_ch04_st_dc_offset"/>
-    <field labelOnTop="0" name="xml_ch04_st_lsb_hf"/>
-    <field labelOnTop="0" name="xml_ch04_st_lsb_lf"/>
-    <field labelOnTop="0" name="xml_ch04_st_res"/>
-    <field labelOnTop="0" name="xml_ch04_st_resNE"/>
-    <field labelOnTop="0" name="xml_ch04_st_resSW"/>
-    <field labelOnTop="0" name="xml_ch04_st_severity"/>
-    <field labelOnTop="0" name="xml_ch05_amplitude_max"/>
-    <field labelOnTop="0" name="xml_ch05_ch_type"/>
-    <field labelOnTop="0" name="xml_ch05_filter_type"/>
-    <field labelOnTop="0" name="xml_ch05_sensor_type"/>
-    <field labelOnTop="0" name="xml_ch05_ser_num"/>
-    <field labelOnTop="0" name="xml_ch05_st_adb_error"/>
-    <field labelOnTop="0" name="xml_ch05_st_dc_offset"/>
-    <field labelOnTop="0" name="xml_ch05_st_lsb_hf"/>
-    <field labelOnTop="0" name="xml_ch05_st_lsb_lf"/>
-    <field labelOnTop="0" name="xml_ch05_st_res"/>
-    <field labelOnTop="0" name="xml_ch05_st_resNE"/>
-    <field labelOnTop="0" name="xml_ch05_st_resSW"/>
-    <field labelOnTop="0" name="xml_ch05_st_severity"/>
-    <field labelOnTop="0" name="xml_disk_space_free"/>
-    <field labelOnTop="0" name="xml_disk_space_total"/>
-    <field labelOnTop="0" name="xml_freq_base"/>
-    <field labelOnTop="0" name="xml_freq_cal"/>
-    <field labelOnTop="0" name="xml_freq_sample"/>
-    <field labelOnTop="0" name="xml_gps_dynamic_mode"/>
-    <field labelOnTop="0" name="xml_gps_height"/>
-    <field labelOnTop="0" name="xml_gps_num_sats"/>
-    <field labelOnTop="0" name="xml_gps_sync"/>
-    <field labelOnTop="0" name="xml_meas_mode"/>
-    <field labelOnTop="0" name="xml_meas_type"/>
-    <field labelOnTop="0" name="xml_num_of_ch"/>
-    <field labelOnTop="0" name="xml_num_of_jobs"/>
-    <field labelOnTop="0" name="xml_path"/>
-    <field labelOnTop="0" name="xml_rec_duration"/>
-    <field labelOnTop="0" name="xml_rec_duration_str"/>
-    <field labelOnTop="0" name="xml_rec_end"/>
-    <field labelOnTop="0" name="xml_rec_end_date"/>
-    <field labelOnTop="0" name="xml_rec_end_time"/>
-    <field labelOnTop="0" name="xml_rec_start"/>
-    <field labelOnTop="0" name="xml_rec_start_date"/>
-    <field labelOnTop="0" name="xml_rec_start_time"/>
-    <field labelOnTop="0" name="xml_x"/>
-    <field labelOnTop="0" name="xml_y"/>
+    <field name="ID_operator" labelOnTop="0"/>
+    <field name="ID_qc" labelOnTop="0"/>
+    <field name="ID_rec" labelOnTop="0"/>
+    <field name="ID_site" labelOnTop="0"/>
+    <field name="ID_xml" labelOnTop="0"/>
+    <field name="ID_xml_x" labelOnTop="0"/>
+    <field name="ID_xml_y" labelOnTop="0"/>
+    <field name="Unnamed: 0" labelOnTop="0"/>
+    <field name="adu_clr" labelOnTop="0"/>
+    <field name="adu_version" labelOnTop="0"/>
+    <field name="edi_x" labelOnTop="0"/>
+    <field name="edi_y" labelOnTop="0"/>
+    <field name="edi_z" labelOnTop="0"/>
+    <field name="fid" labelOnTop="0"/>
+    <field name="jl_num_of_jobs" labelOnTop="0"/>
+    <field name="jl_rec_downtime" labelOnTop="0"/>
+    <field name="jl_rec_duration" labelOnTop="0"/>
+    <field name="jl_rec_duration_str" labelOnTop="0"/>
+    <field name="name_orig" labelOnTop="0"/>
+    <field name="op_clr" labelOnTop="0"/>
+    <field name="prs_clr" labelOnTop="0"/>
+    <field name="prs_clr2" labelOnTop="0"/>
+    <field name="prs_operator" labelOnTop="0"/>
+    <field name="prs_qc" labelOnTop="0"/>
+    <field name="qc_clr" labelOnTop="0"/>
+    <field name="rec_fl_adu" labelOnTop="1"/>
+    <field name="rec_fl_ex_n" labelOnTop="0"/>
+    <field name="rec_fl_ex_s" labelOnTop="0"/>
+    <field name="rec_fl_ey_e" labelOnTop="0"/>
+    <field name="rec_fl_ey_w" labelOnTop="0"/>
+    <field name="rec_fl_joblist" labelOnTop="1"/>
+    <field name="rec_fl_note" labelOnTop="0"/>
+    <field name="rec_fl_operator" labelOnTop="1"/>
+    <field name="rec_fl_rec_start" labelOnTop="1"/>
+    <field name="rec_fl_remote_reference" labelOnTop="1"/>
+    <field name="rec_mag_dec" labelOnTop="0"/>
+    <field name="rec_qc_date" labelOnTop="1"/>
+    <field name="rec_qc_exception" labelOnTop="0"/>
+    <field name="rec_qc_note" labelOnTop="0"/>
+    <field name="rec_qc_nsp" labelOnTop="0"/>
+    <field name="rec_qc_qcby" labelOnTop="1"/>
+    <field name="rec_qc_status" labelOnTop="1"/>
+    <field name="rec_x" labelOnTop="0"/>
+    <field name="rec_xml_num_of_jobs" labelOnTop="0"/>
+    <field name="rec_y" labelOnTop="0"/>
+    <field name="test" labelOnTop="0"/>
+    <field name="vf_jobs_str" labelOnTop="1"/>
+    <field name="vf_offset_edi" labelOnTop="1"/>
+    <field name="vf_offset_xml" labelOnTop="1"/>
+    <field name="vf_path_raw" labelOnTop="0"/>
+    <field name="vf_path_ts" labelOnTop="0"/>
+    <field name="vf_rec_downtime_min" labelOnTop="0"/>
+    <field name="vf_rec_duration" labelOnTop="0"/>
+    <field name="vf_rec_duration_combined" labelOnTop="1"/>
+    <field name="vf_rec_time_xml_jl_str" labelOnTop="0"/>
+    <field name="vf_sensor_pos_e" labelOnTop="0"/>
+    <field name="vf_sensor_pos_n" labelOnTop="0"/>
+    <field name="vf_sensor_pos_s" labelOnTop="0"/>
+    <field name="vf_sesor_pos_w" labelOnTop="0"/>
+    <field name="vf_xml_gps_height" labelOnTop="1"/>
+    <field name="xml_adu" labelOnTop="0"/>
+    <field name="xml_ch01_amplitude_max" labelOnTop="0"/>
+    <field name="xml_ch01_ch_type" labelOnTop="0"/>
+    <field name="xml_ch01_filter_type" labelOnTop="0"/>
+    <field name="xml_ch01_sensor_pos_x1" labelOnTop="1"/>
+    <field name="xml_ch01_sensor_pos_x2" labelOnTop="1"/>
+    <field name="xml_ch01_sensor_type" labelOnTop="0"/>
+    <field name="xml_ch01_ser_num" labelOnTop="0"/>
+    <field name="xml_ch01_st_adb_error" labelOnTop="0"/>
+    <field name="xml_ch01_st_dc_offset" labelOnTop="0"/>
+    <field name="xml_ch01_st_lsb_hf" labelOnTop="0"/>
+    <field name="xml_ch01_st_lsb_lf" labelOnTop="0"/>
+    <field name="xml_ch01_st_res" labelOnTop="0"/>
+    <field name="xml_ch01_st_resNE" labelOnTop="0"/>
+    <field name="xml_ch01_st_resSW" labelOnTop="0"/>
+    <field name="xml_ch01_st_severity" labelOnTop="0"/>
+    <field name="xml_ch02_amplitude_max" labelOnTop="0"/>
+    <field name="xml_ch02_ch_type" labelOnTop="0"/>
+    <field name="xml_ch02_filter_type" labelOnTop="0"/>
+    <field name="xml_ch02_sensor_pos_y1" labelOnTop="1"/>
+    <field name="xml_ch02_sensor_pos_y2" labelOnTop="1"/>
+    <field name="xml_ch02_sensor_type" labelOnTop="0"/>
+    <field name="xml_ch02_ser_num" labelOnTop="0"/>
+    <field name="xml_ch02_st_adb_error" labelOnTop="0"/>
+    <field name="xml_ch02_st_dc_offset" labelOnTop="0"/>
+    <field name="xml_ch02_st_lsb_hf" labelOnTop="0"/>
+    <field name="xml_ch02_st_lsb_lf" labelOnTop="0"/>
+    <field name="xml_ch02_st_res" labelOnTop="0"/>
+    <field name="xml_ch02_st_resNE" labelOnTop="0"/>
+    <field name="xml_ch02_st_resSW" labelOnTop="0"/>
+    <field name="xml_ch02_st_severity" labelOnTop="0"/>
+    <field name="xml_ch03_amplitude_max" labelOnTop="0"/>
+    <field name="xml_ch03_ch_type" labelOnTop="0"/>
+    <field name="xml_ch03_filter_type" labelOnTop="0"/>
+    <field name="xml_ch03_sensor_type" labelOnTop="0"/>
+    <field name="xml_ch03_ser_num" labelOnTop="0"/>
+    <field name="xml_ch03_st_adb_error" labelOnTop="0"/>
+    <field name="xml_ch03_st_dc_offset" labelOnTop="0"/>
+    <field name="xml_ch03_st_lsb_hf" labelOnTop="0"/>
+    <field name="xml_ch03_st_lsb_lf" labelOnTop="0"/>
+    <field name="xml_ch03_st_res" labelOnTop="0"/>
+    <field name="xml_ch03_st_resNE" labelOnTop="0"/>
+    <field name="xml_ch03_st_resSW" labelOnTop="0"/>
+    <field name="xml_ch03_st_severity" labelOnTop="0"/>
+    <field name="xml_ch04_amplitude_max" labelOnTop="0"/>
+    <field name="xml_ch04_ch_type" labelOnTop="0"/>
+    <field name="xml_ch04_filter_type" labelOnTop="0"/>
+    <field name="xml_ch04_sensor_type" labelOnTop="0"/>
+    <field name="xml_ch04_ser_num" labelOnTop="0"/>
+    <field name="xml_ch04_st_adb_error" labelOnTop="0"/>
+    <field name="xml_ch04_st_dc_offset" labelOnTop="0"/>
+    <field name="xml_ch04_st_lsb_hf" labelOnTop="0"/>
+    <field name="xml_ch04_st_lsb_lf" labelOnTop="0"/>
+    <field name="xml_ch04_st_res" labelOnTop="0"/>
+    <field name="xml_ch04_st_resNE" labelOnTop="0"/>
+    <field name="xml_ch04_st_resSW" labelOnTop="0"/>
+    <field name="xml_ch04_st_severity" labelOnTop="0"/>
+    <field name="xml_ch05_amplitude_max" labelOnTop="0"/>
+    <field name="xml_ch05_ch_type" labelOnTop="0"/>
+    <field name="xml_ch05_filter_type" labelOnTop="0"/>
+    <field name="xml_ch05_sensor_type" labelOnTop="0"/>
+    <field name="xml_ch05_ser_num" labelOnTop="0"/>
+    <field name="xml_ch05_st_adb_error" labelOnTop="0"/>
+    <field name="xml_ch05_st_dc_offset" labelOnTop="0"/>
+    <field name="xml_ch05_st_lsb_hf" labelOnTop="0"/>
+    <field name="xml_ch05_st_lsb_lf" labelOnTop="0"/>
+    <field name="xml_ch05_st_res" labelOnTop="0"/>
+    <field name="xml_ch05_st_resNE" labelOnTop="0"/>
+    <field name="xml_ch05_st_resSW" labelOnTop="0"/>
+    <field name="xml_ch05_st_severity" labelOnTop="0"/>
+    <field name="xml_disk_space_free" labelOnTop="0"/>
+    <field name="xml_disk_space_total" labelOnTop="0"/>
+    <field name="xml_freq_base" labelOnTop="0"/>
+    <field name="xml_freq_cal" labelOnTop="0"/>
+    <field name="xml_freq_sample" labelOnTop="0"/>
+    <field name="xml_gps_dynamic_mode" labelOnTop="0"/>
+    <field name="xml_gps_height" labelOnTop="0"/>
+    <field name="xml_gps_num_sats" labelOnTop="1"/>
+    <field name="xml_gps_sync" labelOnTop="1"/>
+    <field name="xml_meas_mode" labelOnTop="0"/>
+    <field name="xml_meas_type" labelOnTop="0"/>
+    <field name="xml_num_of_ch" labelOnTop="0"/>
+    <field name="xml_num_of_jobs" labelOnTop="0"/>
+    <field name="xml_path" labelOnTop="0"/>
+    <field name="xml_rec_duration" labelOnTop="0"/>
+    <field name="xml_rec_duration_str" labelOnTop="1"/>
+    <field name="xml_rec_end" labelOnTop="1"/>
+    <field name="xml_rec_end_date" labelOnTop="0"/>
+    <field name="xml_rec_end_time" labelOnTop="0"/>
+    <field name="xml_rec_start" labelOnTop="1"/>
+    <field name="xml_rec_start_date" labelOnTop="0"/>
+    <field name="xml_rec_start_time" labelOnTop="0"/>
+    <field name="xml_x" labelOnTop="0"/>
+    <field name="xml_y" labelOnTop="0"/>
   </labelOnTop>
   <reuseLastValue>
-    <field reuseLastValue="0" name="ID_operator"/>
-    <field reuseLastValue="0" name="ID_qc"/>
-    <field reuseLastValue="0" name="ID_rec"/>
-    <field reuseLastValue="0" name="ID_site"/>
-    <field reuseLastValue="0" name="ID_xml"/>
-    <field reuseLastValue="0" name="ID_xml_x"/>
-    <field reuseLastValue="0" name="ID_xml_y"/>
-    <field reuseLastValue="0" name="Unnamed: 0"/>
-    <field reuseLastValue="0" name="adu_clr"/>
-    <field reuseLastValue="0" name="adu_version"/>
-    <field reuseLastValue="0" name="edi_x"/>
-    <field reuseLastValue="0" name="edi_y"/>
-    <field reuseLastValue="0" name="edi_z"/>
-    <field reuseLastValue="0" name="fid"/>
-    <field reuseLastValue="0" name="jl_num_of_jobs"/>
-    <field reuseLastValue="0" name="jl_rec_downtime"/>
-    <field reuseLastValue="0" name="jl_rec_duration"/>
-    <field reuseLastValue="0" name="jl_rec_duration_str"/>
-    <field reuseLastValue="0" name="name_orig"/>
-    <field reuseLastValue="0" name="op_clr"/>
-    <field reuseLastValue="0" name="prs_clr"/>
-    <field reuseLastValue="0" name="prs_clr2"/>
-    <field reuseLastValue="0" name="prs_operator"/>
-    <field reuseLastValue="0" name="prs_qc"/>
-    <field reuseLastValue="0" name="qc_clr"/>
-    <field reuseLastValue="0" name="rec_fl_adu"/>
-    <field reuseLastValue="0" name="rec_fl_ex_n"/>
-    <field reuseLastValue="0" name="rec_fl_ex_s"/>
-    <field reuseLastValue="0" name="rec_fl_ey_e"/>
-    <field reuseLastValue="0" name="rec_fl_ey_w"/>
-    <field reuseLastValue="0" name="rec_fl_joblist"/>
-    <field reuseLastValue="0" name="rec_fl_note"/>
-    <field reuseLastValue="0" name="rec_fl_operator"/>
-    <field reuseLastValue="0" name="rec_fl_rec_start"/>
-    <field reuseLastValue="0" name="rec_fl_remote_reference"/>
-    <field reuseLastValue="0" name="rec_mag_dec"/>
-    <field reuseLastValue="0" name="rec_qc_date"/>
-    <field reuseLastValue="0" name="rec_qc_exception"/>
-    <field reuseLastValue="0" name="rec_qc_note"/>
-    <field reuseLastValue="0" name="rec_qc_nsp"/>
-    <field reuseLastValue="0" name="rec_qc_qcby"/>
-    <field reuseLastValue="0" name="rec_qc_status"/>
-    <field reuseLastValue="0" name="rec_x"/>
-    <field reuseLastValue="0" name="rec_xml_num_of_jobs"/>
-    <field reuseLastValue="0" name="rec_y"/>
-    <field reuseLastValue="0" name="test"/>
-    <field reuseLastValue="0" name="vf_offset_edi"/>
-    <field reuseLastValue="0" name="vf_offset_xml"/>
-    <field reuseLastValue="0" name="vf_path_raw"/>
-    <field reuseLastValue="0" name="vf_path_ts"/>
-    <field reuseLastValue="0" name="vf_rec_downtime_min"/>
-    <field reuseLastValue="0" name="vf_rec_duration"/>
-    <field reuseLastValue="0" name="vf_xml_gps_height"/>
-    <field reuseLastValue="0" name="xml_adu"/>
-    <field reuseLastValue="0" name="xml_ch01_amplitude_max"/>
-    <field reuseLastValue="0" name="xml_ch01_ch_type"/>
-    <field reuseLastValue="0" name="xml_ch01_filter_type"/>
-    <field reuseLastValue="0" name="xml_ch01_sensor_pos_x1"/>
-    <field reuseLastValue="0" name="xml_ch01_sensor_pos_x2"/>
-    <field reuseLastValue="0" name="xml_ch01_sensor_type"/>
-    <field reuseLastValue="0" name="xml_ch01_ser_num"/>
-    <field reuseLastValue="0" name="xml_ch01_st_adb_error"/>
-    <field reuseLastValue="0" name="xml_ch01_st_dc_offset"/>
-    <field reuseLastValue="0" name="xml_ch01_st_lsb_hf"/>
-    <field reuseLastValue="0" name="xml_ch01_st_lsb_lf"/>
-    <field reuseLastValue="0" name="xml_ch01_st_res"/>
-    <field reuseLastValue="0" name="xml_ch01_st_resNE"/>
-    <field reuseLastValue="0" name="xml_ch01_st_resSW"/>
-    <field reuseLastValue="0" name="xml_ch01_st_severity"/>
-    <field reuseLastValue="0" name="xml_ch02_amplitude_max"/>
-    <field reuseLastValue="0" name="xml_ch02_ch_type"/>
-    <field reuseLastValue="0" name="xml_ch02_filter_type"/>
-    <field reuseLastValue="0" name="xml_ch02_sensor_pos_y1"/>
-    <field reuseLastValue="0" name="xml_ch02_sensor_pos_y2"/>
-    <field reuseLastValue="0" name="xml_ch02_sensor_type"/>
-    <field reuseLastValue="0" name="xml_ch02_ser_num"/>
-    <field reuseLastValue="0" name="xml_ch02_st_adb_error"/>
-    <field reuseLastValue="0" name="xml_ch02_st_dc_offset"/>
-    <field reuseLastValue="0" name="xml_ch02_st_lsb_hf"/>
-    <field reuseLastValue="0" name="xml_ch02_st_lsb_lf"/>
-    <field reuseLastValue="0" name="xml_ch02_st_res"/>
-    <field reuseLastValue="0" name="xml_ch02_st_resNE"/>
-    <field reuseLastValue="0" name="xml_ch02_st_resSW"/>
-    <field reuseLastValue="0" name="xml_ch02_st_severity"/>
-    <field reuseLastValue="0" name="xml_ch03_amplitude_max"/>
-    <field reuseLastValue="0" name="xml_ch03_ch_type"/>
-    <field reuseLastValue="0" name="xml_ch03_filter_type"/>
-    <field reuseLastValue="0" name="xml_ch03_sensor_type"/>
-    <field reuseLastValue="0" name="xml_ch03_ser_num"/>
-    <field reuseLastValue="0" name="xml_ch03_st_adb_error"/>
-    <field reuseLastValue="0" name="xml_ch03_st_dc_offset"/>
-    <field reuseLastValue="0" name="xml_ch03_st_lsb_hf"/>
-    <field reuseLastValue="0" name="xml_ch03_st_lsb_lf"/>
-    <field reuseLastValue="0" name="xml_ch03_st_res"/>
-    <field reuseLastValue="0" name="xml_ch03_st_resNE"/>
-    <field reuseLastValue="0" name="xml_ch03_st_resSW"/>
-    <field reuseLastValue="0" name="xml_ch03_st_severity"/>
-    <field reuseLastValue="0" name="xml_ch04_amplitude_max"/>
-    <field reuseLastValue="0" name="xml_ch04_ch_type"/>
-    <field reuseLastValue="0" name="xml_ch04_filter_type"/>
-    <field reuseLastValue="0" name="xml_ch04_sensor_type"/>
-    <field reuseLastValue="0" name="xml_ch04_ser_num"/>
-    <field reuseLastValue="0" name="xml_ch04_st_adb_error"/>
-    <field reuseLastValue="0" name="xml_ch04_st_dc_offset"/>
-    <field reuseLastValue="0" name="xml_ch04_st_lsb_hf"/>
-    <field reuseLastValue="0" name="xml_ch04_st_lsb_lf"/>
-    <field reuseLastValue="0" name="xml_ch04_st_res"/>
-    <field reuseLastValue="0" name="xml_ch04_st_resNE"/>
-    <field reuseLastValue="0" name="xml_ch04_st_resSW"/>
-    <field reuseLastValue="0" name="xml_ch04_st_severity"/>
-    <field reuseLastValue="0" name="xml_ch05_amplitude_max"/>
-    <field reuseLastValue="0" name="xml_ch05_ch_type"/>
-    <field reuseLastValue="0" name="xml_ch05_filter_type"/>
-    <field reuseLastValue="0" name="xml_ch05_sensor_type"/>
-    <field reuseLastValue="0" name="xml_ch05_ser_num"/>
-    <field reuseLastValue="0" name="xml_ch05_st_adb_error"/>
-    <field reuseLastValue="0" name="xml_ch05_st_dc_offset"/>
-    <field reuseLastValue="0" name="xml_ch05_st_lsb_hf"/>
-    <field reuseLastValue="0" name="xml_ch05_st_lsb_lf"/>
-    <field reuseLastValue="0" name="xml_ch05_st_res"/>
-    <field reuseLastValue="0" name="xml_ch05_st_resNE"/>
-    <field reuseLastValue="0" name="xml_ch05_st_resSW"/>
-    <field reuseLastValue="0" name="xml_ch05_st_severity"/>
-    <field reuseLastValue="0" name="xml_disk_space_free"/>
-    <field reuseLastValue="0" name="xml_disk_space_total"/>
-    <field reuseLastValue="0" name="xml_freq_base"/>
-    <field reuseLastValue="0" name="xml_freq_cal"/>
-    <field reuseLastValue="0" name="xml_freq_sample"/>
-    <field reuseLastValue="0" name="xml_gps_dynamic_mode"/>
-    <field reuseLastValue="0" name="xml_gps_height"/>
-    <field reuseLastValue="0" name="xml_gps_num_sats"/>
-    <field reuseLastValue="0" name="xml_gps_sync"/>
-    <field reuseLastValue="0" name="xml_meas_mode"/>
-    <field reuseLastValue="0" name="xml_meas_type"/>
-    <field reuseLastValue="0" name="xml_num_of_ch"/>
-    <field reuseLastValue="0" name="xml_num_of_jobs"/>
-    <field reuseLastValue="0" name="xml_path"/>
-    <field reuseLastValue="0" name="xml_rec_duration"/>
-    <field reuseLastValue="0" name="xml_rec_duration_str"/>
-    <field reuseLastValue="0" name="xml_rec_end"/>
-    <field reuseLastValue="0" name="xml_rec_end_date"/>
-    <field reuseLastValue="0" name="xml_rec_end_time"/>
-    <field reuseLastValue="0" name="xml_rec_start"/>
-    <field reuseLastValue="0" name="xml_rec_start_date"/>
-    <field reuseLastValue="0" name="xml_rec_start_time"/>
-    <field reuseLastValue="0" name="xml_x"/>
-    <field reuseLastValue="0" name="xml_y"/>
+    <field name="ID_operator" reuseLastValue="0"/>
+    <field name="ID_qc" reuseLastValue="0"/>
+    <field name="ID_rec" reuseLastValue="0"/>
+    <field name="ID_site" reuseLastValue="0"/>
+    <field name="ID_xml" reuseLastValue="0"/>
+    <field name="ID_xml_x" reuseLastValue="0"/>
+    <field name="ID_xml_y" reuseLastValue="0"/>
+    <field name="Unnamed: 0" reuseLastValue="0"/>
+    <field name="adu_clr" reuseLastValue="0"/>
+    <field name="adu_version" reuseLastValue="0"/>
+    <field name="edi_x" reuseLastValue="0"/>
+    <field name="edi_y" reuseLastValue="0"/>
+    <field name="edi_z" reuseLastValue="0"/>
+    <field name="fid" reuseLastValue="0"/>
+    <field name="jl_num_of_jobs" reuseLastValue="0"/>
+    <field name="jl_rec_downtime" reuseLastValue="0"/>
+    <field name="jl_rec_duration" reuseLastValue="0"/>
+    <field name="jl_rec_duration_str" reuseLastValue="0"/>
+    <field name="name_orig" reuseLastValue="0"/>
+    <field name="op_clr" reuseLastValue="0"/>
+    <field name="prs_clr" reuseLastValue="0"/>
+    <field name="prs_clr2" reuseLastValue="0"/>
+    <field name="prs_operator" reuseLastValue="0"/>
+    <field name="prs_qc" reuseLastValue="0"/>
+    <field name="qc_clr" reuseLastValue="0"/>
+    <field name="rec_fl_adu" reuseLastValue="0"/>
+    <field name="rec_fl_ex_n" reuseLastValue="0"/>
+    <field name="rec_fl_ex_s" reuseLastValue="0"/>
+    <field name="rec_fl_ey_e" reuseLastValue="0"/>
+    <field name="rec_fl_ey_w" reuseLastValue="0"/>
+    <field name="rec_fl_joblist" reuseLastValue="0"/>
+    <field name="rec_fl_note" reuseLastValue="0"/>
+    <field name="rec_fl_operator" reuseLastValue="0"/>
+    <field name="rec_fl_rec_start" reuseLastValue="0"/>
+    <field name="rec_fl_remote_reference" reuseLastValue="0"/>
+    <field name="rec_mag_dec" reuseLastValue="0"/>
+    <field name="rec_qc_date" reuseLastValue="0"/>
+    <field name="rec_qc_exception" reuseLastValue="0"/>
+    <field name="rec_qc_note" reuseLastValue="0"/>
+    <field name="rec_qc_nsp" reuseLastValue="0"/>
+    <field name="rec_qc_qcby" reuseLastValue="0"/>
+    <field name="rec_qc_status" reuseLastValue="0"/>
+    <field name="rec_x" reuseLastValue="0"/>
+    <field name="rec_xml_num_of_jobs" reuseLastValue="0"/>
+    <field name="rec_y" reuseLastValue="0"/>
+    <field name="test" reuseLastValue="0"/>
+    <field name="vf_jobs_str" reuseLastValue="0"/>
+    <field name="vf_offset_edi" reuseLastValue="0"/>
+    <field name="vf_offset_xml" reuseLastValue="0"/>
+    <field name="vf_path_raw" reuseLastValue="0"/>
+    <field name="vf_path_ts" reuseLastValue="0"/>
+    <field name="vf_rec_downtime_min" reuseLastValue="0"/>
+    <field name="vf_rec_duration" reuseLastValue="0"/>
+    <field name="vf_rec_duration_combined" reuseLastValue="0"/>
+    <field name="vf_rec_time_xml_jl_str" reuseLastValue="0"/>
+    <field name="vf_sensor_pos_e" reuseLastValue="0"/>
+    <field name="vf_sensor_pos_n" reuseLastValue="0"/>
+    <field name="vf_sensor_pos_s" reuseLastValue="0"/>
+    <field name="vf_sesor_pos_w" reuseLastValue="0"/>
+    <field name="vf_xml_gps_height" reuseLastValue="0"/>
+    <field name="xml_adu" reuseLastValue="0"/>
+    <field name="xml_ch01_amplitude_max" reuseLastValue="0"/>
+    <field name="xml_ch01_ch_type" reuseLastValue="0"/>
+    <field name="xml_ch01_filter_type" reuseLastValue="0"/>
+    <field name="xml_ch01_sensor_pos_x1" reuseLastValue="0"/>
+    <field name="xml_ch01_sensor_pos_x2" reuseLastValue="0"/>
+    <field name="xml_ch01_sensor_type" reuseLastValue="0"/>
+    <field name="xml_ch01_ser_num" reuseLastValue="0"/>
+    <field name="xml_ch01_st_adb_error" reuseLastValue="0"/>
+    <field name="xml_ch01_st_dc_offset" reuseLastValue="0"/>
+    <field name="xml_ch01_st_lsb_hf" reuseLastValue="0"/>
+    <field name="xml_ch01_st_lsb_lf" reuseLastValue="0"/>
+    <field name="xml_ch01_st_res" reuseLastValue="0"/>
+    <field name="xml_ch01_st_resNE" reuseLastValue="0"/>
+    <field name="xml_ch01_st_resSW" reuseLastValue="0"/>
+    <field name="xml_ch01_st_severity" reuseLastValue="0"/>
+    <field name="xml_ch02_amplitude_max" reuseLastValue="0"/>
+    <field name="xml_ch02_ch_type" reuseLastValue="0"/>
+    <field name="xml_ch02_filter_type" reuseLastValue="0"/>
+    <field name="xml_ch02_sensor_pos_y1" reuseLastValue="0"/>
+    <field name="xml_ch02_sensor_pos_y2" reuseLastValue="0"/>
+    <field name="xml_ch02_sensor_type" reuseLastValue="0"/>
+    <field name="xml_ch02_ser_num" reuseLastValue="0"/>
+    <field name="xml_ch02_st_adb_error" reuseLastValue="0"/>
+    <field name="xml_ch02_st_dc_offset" reuseLastValue="0"/>
+    <field name="xml_ch02_st_lsb_hf" reuseLastValue="0"/>
+    <field name="xml_ch02_st_lsb_lf" reuseLastValue="0"/>
+    <field name="xml_ch02_st_res" reuseLastValue="0"/>
+    <field name="xml_ch02_st_resNE" reuseLastValue="0"/>
+    <field name="xml_ch02_st_resSW" reuseLastValue="0"/>
+    <field name="xml_ch02_st_severity" reuseLastValue="0"/>
+    <field name="xml_ch03_amplitude_max" reuseLastValue="0"/>
+    <field name="xml_ch03_ch_type" reuseLastValue="0"/>
+    <field name="xml_ch03_filter_type" reuseLastValue="0"/>
+    <field name="xml_ch03_sensor_type" reuseLastValue="0"/>
+    <field name="xml_ch03_ser_num" reuseLastValue="0"/>
+    <field name="xml_ch03_st_adb_error" reuseLastValue="0"/>
+    <field name="xml_ch03_st_dc_offset" reuseLastValue="0"/>
+    <field name="xml_ch03_st_lsb_hf" reuseLastValue="0"/>
+    <field name="xml_ch03_st_lsb_lf" reuseLastValue="0"/>
+    <field name="xml_ch03_st_res" reuseLastValue="0"/>
+    <field name="xml_ch03_st_resNE" reuseLastValue="0"/>
+    <field name="xml_ch03_st_resSW" reuseLastValue="0"/>
+    <field name="xml_ch03_st_severity" reuseLastValue="0"/>
+    <field name="xml_ch04_amplitude_max" reuseLastValue="0"/>
+    <field name="xml_ch04_ch_type" reuseLastValue="0"/>
+    <field name="xml_ch04_filter_type" reuseLastValue="0"/>
+    <field name="xml_ch04_sensor_type" reuseLastValue="0"/>
+    <field name="xml_ch04_ser_num" reuseLastValue="0"/>
+    <field name="xml_ch04_st_adb_error" reuseLastValue="0"/>
+    <field name="xml_ch04_st_dc_offset" reuseLastValue="0"/>
+    <field name="xml_ch04_st_lsb_hf" reuseLastValue="0"/>
+    <field name="xml_ch04_st_lsb_lf" reuseLastValue="0"/>
+    <field name="xml_ch04_st_res" reuseLastValue="0"/>
+    <field name="xml_ch04_st_resNE" reuseLastValue="0"/>
+    <field name="xml_ch04_st_resSW" reuseLastValue="0"/>
+    <field name="xml_ch04_st_severity" reuseLastValue="0"/>
+    <field name="xml_ch05_amplitude_max" reuseLastValue="0"/>
+    <field name="xml_ch05_ch_type" reuseLastValue="0"/>
+    <field name="xml_ch05_filter_type" reuseLastValue="0"/>
+    <field name="xml_ch05_sensor_type" reuseLastValue="0"/>
+    <field name="xml_ch05_ser_num" reuseLastValue="0"/>
+    <field name="xml_ch05_st_adb_error" reuseLastValue="0"/>
+    <field name="xml_ch05_st_dc_offset" reuseLastValue="0"/>
+    <field name="xml_ch05_st_lsb_hf" reuseLastValue="0"/>
+    <field name="xml_ch05_st_lsb_lf" reuseLastValue="0"/>
+    <field name="xml_ch05_st_res" reuseLastValue="0"/>
+    <field name="xml_ch05_st_resNE" reuseLastValue="0"/>
+    <field name="xml_ch05_st_resSW" reuseLastValue="0"/>
+    <field name="xml_ch05_st_severity" reuseLastValue="0"/>
+    <field name="xml_disk_space_free" reuseLastValue="0"/>
+    <field name="xml_disk_space_total" reuseLastValue="0"/>
+    <field name="xml_freq_base" reuseLastValue="0"/>
+    <field name="xml_freq_cal" reuseLastValue="0"/>
+    <field name="xml_freq_sample" reuseLastValue="0"/>
+    <field name="xml_gps_dynamic_mode" reuseLastValue="0"/>
+    <field name="xml_gps_height" reuseLastValue="0"/>
+    <field name="xml_gps_num_sats" reuseLastValue="0"/>
+    <field name="xml_gps_sync" reuseLastValue="0"/>
+    <field name="xml_meas_mode" reuseLastValue="0"/>
+    <field name="xml_meas_type" reuseLastValue="0"/>
+    <field name="xml_num_of_ch" reuseLastValue="0"/>
+    <field name="xml_num_of_jobs" reuseLastValue="0"/>
+    <field name="xml_path" reuseLastValue="0"/>
+    <field name="xml_rec_duration" reuseLastValue="0"/>
+    <field name="xml_rec_duration_str" reuseLastValue="0"/>
+    <field name="xml_rec_end" reuseLastValue="0"/>
+    <field name="xml_rec_end_date" reuseLastValue="0"/>
+    <field name="xml_rec_end_time" reuseLastValue="0"/>
+    <field name="xml_rec_start" reuseLastValue="0"/>
+    <field name="xml_rec_start_date" reuseLastValue="0"/>
+    <field name="xml_rec_start_time" reuseLastValue="0"/>
+    <field name="xml_x" reuseLastValue="0"/>
+    <field name="xml_y" reuseLastValue="0"/>
   </reuseLastValue>
   <dataDefinedFieldProperties/>
   <widgets/>

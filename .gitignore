@@ -1,4 +1,5 @@
 /*
+*.edi
 !cal
 !MTSM_create_project.py
 !df2gpkg.py
@@ -27,3 +28,5 @@
 !req.txt
 !LaPalma_copy_DR.py
 !.gitignore
+!osm_simplify.ipynb
+!wara_add_sites.ipynb
