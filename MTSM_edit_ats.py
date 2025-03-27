@@ -4,6 +4,7 @@ from MTSM_ts_sort import *
 def run_edit_ats():
 	run_ts_sort()
 
+
 	gdf_rec=load_gdf('rec')
 	# gdf_rec=gdf_rec.query('rec_fl_operator=="Adam"')
 
@@ -25,21 +26,30 @@ def run_edit_ats():
 
 
 
-	gdf=gdf[['ID_rec','xml_rec_start']+sensor_pos_fl+sensor_pos_xml].groupby('ID_rec',as_index=False).first()
+	# .groupby('ID_rec',as_index=False).mean()
 	gdf=gdf.sort_values('ID_rec')
 	gdf['ID_rec']=gdf['ID_rec'].astype(str).str.replace('.0','')
 	gdf['rec_fl_ex_n']=-np.abs(gdf['rec_fl_ex_n'])
 	gdf['rec_fl_ey_w']=-np.abs(gdf['rec_fl_ey_w'])
 
+
+	cols_out=['n (FL/xml)','s(FL/xml)','e (FL/xml)','w (FL/xml)']
+	for i,d in enumerate(cols_out):
+		gdf[d]=gdf[sensor_pos_fl[i]].astype(str)+'/'+gdf[sensor_pos_xml[i]].astype(str)
+
+	gdf=gdf[['ID_rec','ID_xml']+cols_out]
+
+
 	gdf.to_html('tmp/sensor_positions.html',index=False)
 	os.startfile(os.getcwd()+'\\tmp\\sensor_positions.html')
 
-	gdf['path_orig']='ts/Site_'+gdf['ID_rec']+'/'
-	gdf['path_dest']='ts/3_edit_ats/Site_'+gdf['ID_rec']+'/'
 
-	delete_empty_folders('ts/3_edit_ats/')
-	for fp_orig,fp_dest in zip(gdf['path_orig'],gdf['path_dest']):
-		print('Copying..',fp_orig,fp_dest)
-		shutil.move(fp_orig,fp_dest)
+	# gdf['path_orig']='ts/Site_'+gdf['ID_rec']+'/'
+	# gdf['path_dest']='ts/3_edit_ats/Site_'+gdf['ID_rec']+'/'
+
+	# delete_empty_folders('ts/3_edit_ats/')
+	# for fp_orig,fp_dest in zip(gdf['path_orig'],gdf['path_dest']):
+	# 	print('Copying..',fp_orig,fp_dest)
+	# 	shutil.move(fp_orig,fp_dest)
 
 

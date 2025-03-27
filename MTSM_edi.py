@@ -50,4 +50,10 @@ def run_read_edi():
 		df_edi=df_edi.groupby('ID_rec',as_index=False).agg('first')
 
 		gdf_edi=save_gdf(df_edi,'edi')
+		
+		gdf_rec=load_gdf('rec').dropna(subset='ID_xml')
+		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
+		if len(missing_edi)>0:
+			print(f"\tMissing edi for recs: {missing_edi}")
+
 	return df_edi

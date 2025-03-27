@@ -84,7 +84,7 @@ def run_proc_rec():
 	gb=groupby_xml()
 	gdf_rec=merge_xml2rec(gb)
 	load_new_sites()
-	# gdf_rec=get_number_of_jobs(gdf_rec)
 
+	print('\tCalculating magnetic declination...')
 	rec_mag_dec()
 	gdf_rec=get_number_of_jobs()

@@ -8,13 +8,18 @@ def load_gdf_xml():
 		gdf_xml=gdf_xml.loc[gdf_xml['ID_xml']!='placeholder']
 	return gdf_xml
 
+
 def get_xml_ld(gdf_xml):
-	'get list dir dataframe from/raw folder, filters dataframe for entries not in gdf_xml'
-	ld_unsorted=get_ld('ts/',endswith='xml')
-	if len (gdf_xml)>0:
-		ld=ld_unsorted.copy().loc[~ld_unsorted['ID_xml'].isin(gdf_xml['ID_xml'])]
-	else:
-		ld=ld_unsorted
+	gdf_rec=load_gdf('rec')
+	rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).to_list()
+	rec_excluded.append(0)
+	ld=get_ld('ts/',endswith='.xml')
+	ld=pd.merge(ld,gdf_xml.set_index('ID_xml')['ID_rec'],how='left',left_on='ID_xml',right_index=True)
+	ld=ld.loc[~ld['ID_rec'].isin(rec_excluded)]
+
+	forced_reload=ld['ID_rec'].dropna().drop_duplicates().astype(int).to_list()
+	if len (forced_reload)>0:
+		print(f'\tForcing xml reload on recs: {forced_reload}')
 	return ld
 
 def read_xml_data(ld):
@@ -22,11 +27,16 @@ def read_xml_data(ld):
 	df_fields=pd.read_csv(f'MTSM/lib/fields/xml.csv').query('drop!=1').dropna(subset='orig_name')
 	df_xml_read=pd.DataFrame()
 	for i,index in enumerate(ld.index):
-		xml_read=extract_xml(ld.loc[index,'file_path'])
-		xml_single=pd.DataFrame(xml_read.loc[xml_read.index.isin(df_fields['orig_name'])]).T
-		xml_single['xml_path']=ld.loc[index,'file_path'].replace('\\','/')
-		df_xml_read=pd.concat([df_xml_read,xml_single])
-		print(f"Reading \t{i+1}/{len(ld)}\t{ld.loc[index,'file_name']}",end='\r')
+		try:
+			xml_read=extract_xml(ld.loc[index,'file_path'])
+			xml_single=pd.DataFrame(xml_read.loc[xml_read.index.isin(df_fields['orig_name'])]).T
+			xml_single['xml_path']=ld.loc[index,'file_path'].replace('\\','/')
+			xml_single['ID_rec']=ld.loc[index,'ID_rec']
+			df_xml_read=pd.concat([df_xml_read,xml_single])
+			print(f"\tReading \t{i+1}/{len(ld)}\t{str(ld.loc[index,'ID_rec']).replace('.0','')}\t{ld.loc[index,'file_name']}",end='\n')
+		except:
+			print(f"\tError reading \t{i+1}/{len(ld)}\t{str(ld.loc[index,'ID_rec']).replace('.0','')}\t{ld.loc[index,'file_name']}",end='\n')
+
 	return df_xml_read.reset_index(drop=True)
 
 def fromat_xml_data(ld,df_xml_read):
@@ -55,7 +65,8 @@ def round_xml_data(gdf_xml):
 
 def merge_xml_data(gdf_xml,df_xml_read):
 	'merges data from gdf_xml with new data read into xml_read dataframe, prioritizes data from gdf'
-	gdf_xml=pd.concat([gdf_xml,df_xml_read]).drop_duplicates(subset='ID_xml',keep='first')
+	gdf_xml=pd.concat([gdf_xml,df_xml_read]).drop_duplicates(subset='ID_xml',keep='last')
+	gdf_rec=load_gdf('rec')[['ID_rec','ID_xml']]
 	gdf_xml['xml_adu']=gdf_xml['xml_adu'].str.zfill(3)
 	return gdf_xml
 

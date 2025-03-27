@@ -41,14 +41,12 @@ if len (gdf_xml)>0:
 print('Synchronizing ts/ folder...')
 run_ts_sort()
 
-print('Sorting edi...')
+print('Sorting and reading edi...')
 run_sort_edi()
-
-print('Reading edi...')
 run_read_edi()
 
 print('Processing rec database...')
 run_proc_rec()
 
 
-input('Proccesing finished! Enter to exit!')
+input('\n\nProccesing finished! Enter to exit!')
