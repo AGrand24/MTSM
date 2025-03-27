@@ -1,5 +1,6 @@
 from MTSM_python_modules import *
 from MTSM_tools import *
+from MTSM_import_export import backup_id_xml_rec_match
 
 
 def load_gdf_xml():
@@ -9,17 +10,24 @@ def load_gdf_xml():
 	return gdf_xml
 
 
-def get_xml_ld(gdf_xml):
+def get_xml_ld(gdf_xml,full_reload):
 	gdf_rec=load_gdf('rec')
-	rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).to_list()
-	rec_excluded.append(0)
+	if full_reload==False:
+		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).to_list()
+		rec_excluded.append(0)
+	else:
+		rec_excluded=[]
+	
 	ld=get_ld('ts/',endswith='.xml')
 	ld=pd.merge(ld,gdf_xml.set_index('ID_xml')['ID_rec'],how='left',left_on='ID_xml',right_index=True)
 	ld=ld.loc[~ld['ID_rec'].isin(rec_excluded)]
 
-	forced_reload=ld['ID_rec'].dropna().drop_duplicates().astype(int).to_list()
-	if len (forced_reload)>0:
-		print(f'\tForcing xml reload on recs: {forced_reload}')
+	if full_reload==False:
+		forced_reload=ld['ID_rec'].dropna().drop_duplicates().astype(int).to_list()
+		if len (forced_reload)>0:
+			print(f'\tForcing xml reload on recs: {forced_reload}')
+	else:
+		print('\tForcing full xml reload...')
 	return ld
 
 def read_xml_data(ld):
@@ -70,10 +78,12 @@ def merge_xml_data(gdf_xml,df_xml_read):
 	gdf_xml['xml_adu']=gdf_xml['xml_adu'].str.zfill(3)
 	return gdf_xml
 
-def run_xml_read():
+def run_xml_read(full_reload):
+	if full_reload==True:
+		backup_id_xml_rec_match()
+	
 	gdf_xml=load_gdf_xml()
-
-	ld=get_xml_ld(gdf_xml)
+	ld=get_xml_ld(gdf_xml,full_reload)
 	df_xml_read=read_xml_data(ld)
 	if len(df_xml_read)>0:
 		gdf_xml_read=fromat_xml_data(ld,df_xml_read)
@@ -83,15 +93,15 @@ def run_xml_read():
 		gdf_xml=save_gdf(gdf_xml,'xml')
 	return gdf_xml
 
-def run_xml_read_full():
-	gdf_xml=load_gdf_xml()
-	gdf_xml[['ID_xml','ID_rec']].to_csv('MTSM/lib/id_rec_xml_match.csv',index=False)
+# def run_xml_read_full():
+# 	gdf_xml=load_gdf_xml()
+# 	gdf_xml[['ID_xml','ID_rec']].to_csv('MTSM/lib/id_rec_xml_match.csv',index=False)
 
 
-	gdf_xml=gdf_xml.drop(index=gdf_xml.index.to_list())
-	gdf_xml=save_gdf(gdf_xml,'xml')
-	gdf_xml=run_xml_read()
-	gdf_xml=gdf_xml.drop(columns=['ID_rec'])
-	gdf_xml=pd.merge(gdf_xml,pd.read_csv('MTSM/lib/id_rec_xml_match.csv').set_index('ID_xml'),left_on='ID_xml',right_index=True,how='left').sort_index(axis=1)
-	gdf_xml=save_gdf(gdf_xml,'xml')
-	return gdf_xml
+# 	gdf_xml=gdf_xml.drop(index=gdf_xml.index.to_list())
+# 	gdf_xml=save_gdf(gdf_xml,'xml')
+# 	gdf_xml=run_xml_read()
+# 	gdf_xml=gdf_xml.drop(columns=['ID_rec'])
+# 	gdf_xml=pd.merge(gdf_xml,pd.read_csv('MTSM/lib/id_rec_xml_match.csv').set_index('ID_xml'),left_on='ID_xml',right_index=True,how='left').sort_index(axis=1)
+# 	gdf_xml=save_gdf(gdf_xml,'xml')
+# 	return gdf_xml

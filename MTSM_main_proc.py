@@ -18,14 +18,13 @@ try:
 except:
 	proc_type='main'
 # print(num1)
-print('Reading jolbist data...')
 run_proc_jl()
 
 print('Reading xml data...')
 if proc_type=='main':
-	gdf_xml=run_xml_read()
+	gdf_xml=run_xml_read(False)
 else:
-	gdf_xml=run_xml_read_full()
+	gdf_xml=run_xml_read(True)
 
 empty_rec=pd.isna(gdf_xml['ID_rec'])==True
 gdf_xml=gdf_xml[empty_rec]

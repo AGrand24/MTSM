@@ -52,7 +52,10 @@ def import_xml_id_xml():
 	return gdf_xml
 
 def backup_id_xml_rec_match():
-	path=f"MTSM/id_xml_bckp/{datetime.now().strftime('%y_%m_%d_%H_%M_%S')}.ids"
+	path=f"MTSM/id_xml_bckp/{datetime.now().strftime('%y%m%d_%H%M%S')}.ids"
+	print(f'\tCreated backup of ID_rec-ID_xml match in - \t{path}')
 	gdf_xml=load_gdf('xml')
 
 	gdf_xml[['ID_xml','ID_rec']].to_csv(path,index=False,sep='\t')
+
+

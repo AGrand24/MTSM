@@ -27,9 +27,11 @@ def groupby_jl_data(df_xml):
 	return df_jl
 
 def run_proc_jl():
+	print('Reading jolbist data from "MTSM/joblists/" folder...')
 	ld=get_ld('MTSM/joblists/')
 	ld=ld.replace('ADUConf.xml','').replace('HwConfig.xml','').replace('HwDatabase.xml','').replace('',None).dropna(subset='file_name')
 	if len(ld)>0:
+		print(f"\t Found:")
 		id_jl=ld['file_path'].str.findall(r"(?<=joblists\/)(.*)(?=\\JLE_Template)")
 		ld['ID_jl']=[id[0] for id in id_jl]
 
@@ -41,4 +43,10 @@ def run_proc_jl():
 
 		gdf_jl=gpd.GeoDataFrame(data=df_jl)
 		gdf_jl.to_file(f'MTSM_qgis/mtsm_jl.gpkg',engine='pyogrio')
+		gdf_jl['ph1']='\t'
+		gdf_jl['ph2']='\t'
+		print(tabulate(gdf_jl[['ph1','ph2','ID_jl','jl_num_of_jobs','jl_rec_start','jl_rec_end','jl_rec_duration_str']],showindex=False,headers=['\t','\t','ID_jl','Jobs','Start','End','Duration']))
+
+		print()
+
 		return gdf_jl
