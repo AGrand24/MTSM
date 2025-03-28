@@ -1,54 +1,92 @@
 from MTSM_python_modules import *
 from MTSM_tools import *
 
+def get_edi_priority(ld):
+	priority=[]
+	for fn in ld['file_name']:
+		if '_Site' in fn:
+			priority.append(0)
+		elif '_stack_all' in fn:
+			priority.append(1)
+		elif '_ct' in fn:
+			priority.append(2)
+		elif '_median' in fn:
+			priority.append(3)
+		else:
+			priority.append(4)
+
+	ld['priority']=priority
+	return ld
+
 def run_sort_edi():
-	gdf_rec=load_gdf('rec')
-	id_rec=gdf_rec['ID_rec']
+	print('Looking for new edi files...')
+	ld1=get_ld('edi',endswith='edi')
+	id_rec=load_gdf('rec')['ID_rec']
 
-	ld=get_ld('edi',endswith='.edi')
+
+	if len (ld1)>0:
+
+		ld1['ID_rec']=ld1['file_name'].copy().str.replace('Site_','').str.replace('.edi','_proc_mini.edi')
+		ld1['ID_rec']=ld1['ID_rec'].str.findall(r"^[^_]*")
+		ld1['ID_rec']=[int(rec[0]) for rec in ld1['ID_rec']]
+		ld1['ID_rec']=ld1['ID_rec'].astype(int)
+		ld1=ld1.loc[ld1['ID_rec'].isin(id_rec)]
+		
+
+	ld2=get_ld('MTSM/',endswith='edi')
+	ld2['ID_rec']=ld2['file_name'].str.replace('.edi','').astype(int)
+	ld2=ld2.loc[ld2['ID_rec'].isin(id_rec)]
+
+	ld=pd.concat([ld1,ld2])
+
 	if len(ld)>0:
-		ld['ID_rec']=ld['file_name'].str.findall(r"^[^_]*")
-		ld['ID_rec']=[int(rec[0]) for rec in ld['ID_rec']]
+		ld['mod_time']=[time.ctime(os.path.getmtime(file)) for file in ld['file_path']]
+		ld['mod_time']=pd.to_datetime(ld['mod_time'])
+		ld=get_edi_priority(ld)
+		ld=ld.sort_values(['ID_rec','mod_time','priority']).drop_duplicates('ID_rec',keep='last').reset_index(drop=True)
 
-		for index in ld.index:
-			for type in ['_median','_stack_all','_ct']:
-				if type in ld.loc[index,'file_name']:
-					ld.loc[index,'edi_type']=type
+		ld['fp_dest']='MTSM/edi/'+ld['ID_rec'].astype(str)+'.edi'
 
-		ld['ID_edi']=ld['ID_rec'].astype(str)+ld['edi_type']
+		ld=ld.loc[ld['file_path'].str.replace('\\','/')!=ld['fp_dest']]
 
-		ld['dest']='MTSM/edi/'+ld['ID_edi'].astype(str)+'.edi'
-
-		ld=ld.loc[ld['ID_rec'].isin(id_rec)]
-		for origin,dest in zip(list(ld['file_path']),list(ld['dest'])):
+		for origin,dest in zip(ld['file_path'],ld['fp_dest']):
 			shutil.copy(origin,dest)
-			# print(f'\tCopied {origin}\t-\t{dest}')
+			print(f'\tCopied {origin}\tto\t{dest}')
 
 def run_read_edi():
 	ld=get_ld('MTSM/edi/')
+	id_rec=load_gdf('rec')['ID_rec'].astype(str)
+
 	if len(ld)>0:
 		ld=ld.drop(columns='ID_xml')
-		ld['ID_rec']=ld['file_name'].str.findall(r"^[^_]*")
-		ld['ID_rec']=[int(lst[0]) for lst in ld['ID_rec']]
+		# ld['ID_rec']=ld['file_name'].str.findall(r"^[^_]*")
+		# ld['ID_rec']=[int(lst[0]) for lst in ld['ID_rec']]
+		# ld['ID_rec']=ld['file_name'].str.replace('.edi','')
 		ld['ID_edi']=ld['file_name'].str.replace('.edi','')
+		ld=ld.loc[ld['ID_edi'].isin(id_rec)]
+		ld['ID_rec']=ld['ID_edi'].copy().astype(int)
 
 		df_edi=ld.copy()
-		for index in df_edi.index:
-			with open(df_edi.loc[index,'file_path']) as file:
+
+		edi_x=[];edi_y=[];edi_z=[]
+		for fp in df_edi['file_path']:
+			with open(fp) as file:
 				lines=file.readlines()
+			lines=pd.Series([l.strip() for l in lines])
 
-			df_edi.loc[index,'edi_y']=lines[10][:-1].replace('  LAT=','')
-			df_edi.loc[index,'edi_x']=lines[11][:-1].replace('  LONG=','')
-			df_edi.loc[index,'edi_z']=lines[12][:-1].replace('  ELEV=','')
+			edi_x.append(lines.loc[lines.str.startswith('LONG=')].str.replace('LONG=','').iloc[0])
+			edi_y.append(lines.loc[lines.str.startswith('LAT=')].str.replace('LAT=','').iloc[0])
+			edi_z.append(lines.loc[lines.str.startswith('ELEV=')].str.replace('ELEV=','').iloc[0])
 
+		df_edi['edi_x']=edi_x
+		df_edi['edi_y']=edi_y
+		df_edi['edi_z']=edi_z
 		for axis in ['x','y']:
 			coord_in=df_edi[f'edi_{axis}'].str.split(':')
 			coord_out=[]
 			for c in coord_in:
 				coord_out.append(float(c[0])+(float(c[0])/abs(float(c[0])))*(float(c[1])/60+float(c[2])/3600))
 			df_edi[f'edi_{axis}']=coord_out
-
-		df_edi=df_edi.groupby('ID_rec',as_index=False).agg('first')
 
 		gdf_edi=save_gdf(df_edi,'edi')
 		

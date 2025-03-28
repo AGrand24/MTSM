@@ -22,9 +22,9 @@ run_proc_jl()
 
 
 if proc_type=='main':
-	gdf_xml=run_xml_read(False)
+	gdf_xml=run_xml_read('matched')
 else:
-	gdf_xml=run_xml_read(True)
+	gdf_xml=run_xml_read('full')
 
 empty_rec=pd.isna(gdf_xml['ID_rec'])==True
 gdf_xml=gdf_xml[empty_rec]
@@ -34,7 +34,7 @@ if len (gdf_xml)>0:
 	[print(x) for x in gdf_xml['ID_xml']]
 	if input ('\nTo run distance synchronization type "y":\n')=='y':
 		id_rec_by_distance()
-		gdf_xml=run_xml_read()
+		gdf_xml=run_xml_read('matched+unmatched')
 
 
 run_ts_sort()

@@ -10,11 +10,12 @@ def load_gdf_xml():
 	return gdf_xml
 
 
-def get_xml_ld(gdf_xml,full_reload):
+def get_xml_ld(gdf_xml,reload):
 	gdf_rec=load_gdf('rec')
-	if full_reload==False:
+	if reload=='matched':
+		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).dropna().to_list()
+	elif reload=='matched+umatched':
 		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).to_list()
-		rec_excluded.append(0)
 	else:
 		rec_excluded=[]
 	
@@ -22,7 +23,7 @@ def get_xml_ld(gdf_xml,full_reload):
 	ld=pd.merge(ld,gdf_xml.set_index('ID_xml')['ID_rec'],how='left',left_on='ID_xml',right_index=True)
 	ld=ld.loc[~ld['ID_rec'].isin(rec_excluded)]
 
-	if full_reload==False:
+	if reload!='full':
 		forced_reload=ld['ID_rec'].dropna().drop_duplicates().astype(int).to_list()
 		if len (forced_reload)>0:
 			print(f'\tForcing xml reload on recs: {forced_reload}')
@@ -78,13 +79,13 @@ def merge_xml_data(gdf_xml,df_xml_read):
 	gdf_xml['xml_adu']=gdf_xml['xml_adu'].str.zfill(3)
 	return gdf_xml
 
-def run_xml_read(full_reload):
+def run_xml_read(reload):
 	print('Reading xml data...')
-	if full_reload==True:
+	if reload=='full':
 		backup_id_xml_rec_match()
 	
 	gdf_xml=load_gdf_xml()
-	ld=get_xml_ld(gdf_xml,full_reload)
+	ld=get_xml_ld(gdf_xml,reload)
 	df_xml_read=read_xml_data(ld)
 	if len(df_xml_read)>0:
 		gdf_xml_read=fromat_xml_data(ld,df_xml_read)
