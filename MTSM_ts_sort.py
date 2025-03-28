@@ -5,6 +5,8 @@ from MTSM_read_xml import load_gdf_xml
 from MTSM_tools import *
 
 def run_ts_sort():
+	print('Synchronizing /ts folder...')
+
 	delete_empty_folders('ts')
 	gdf_xml=load_gdf_xml()
 	ld=get_ld('ts/')
@@ -47,9 +49,15 @@ def run_ts_sort():
 			if not os.path.exists(dir):
 				os.makedirs(dir)
 			shutil.move(fp1,fp2)
+			print(f'\tMoving {fp1}\t to \t {fp2}')
+		
+		if len(ld['fp_sync'])<1:
+			print('\t/ts folder fully synchronized!')
 
 		delete_empty_folders('ts')
+		print()
 
 		create_folders(folders='unmatched')
+		print()
 
 

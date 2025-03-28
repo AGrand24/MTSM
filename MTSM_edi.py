@@ -22,6 +22,7 @@ def run_sort_edi():
 		ld=ld.loc[ld['ID_rec'].isin(id_rec)]
 		for origin,dest in zip(list(ld['file_path']),list(ld['dest'])):
 			shutil.copy(origin,dest)
+			# print(f'\tCopied {origin}\t-\t{dest}')
 
 def run_read_edi():
 	ld=get_ld('MTSM/edi/')
@@ -51,7 +52,7 @@ def run_read_edi():
 
 		gdf_edi=save_gdf(df_edi,'edi')
 		
-		gdf_rec=load_gdf('rec').dropna(subset='ID_xml')
+		gdf_rec=load_gdf('rec').dropna(subset='ID_xml').query('rec_qc_status!="Recording"').sort_values('ID_rec')
 		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
 		if len(missing_edi)>0:
 			print(f"\tMissing edi for recs: {missing_edi}")

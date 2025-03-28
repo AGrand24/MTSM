@@ -148,6 +148,7 @@ def delete_folder(path):
 
 
 def delete_empty_folders(path):
+	# print('\tDeleting empty folders...')
 	empty_dirs = []
 	for dirpath, dirnames, filenames in os.walk(path):
 		if not dirnames and not filenames:

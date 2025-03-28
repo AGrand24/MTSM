@@ -38,6 +38,7 @@ def merge_xml2rec(gb):
 	return gdf_rec
 
 def load_new_sites():
+	print('\tLooking for new sites...')
 	gdf_site=pd.read_csv('MTSM/sites.csv')
 	gdf_site=save_gdf(gdf_site[['ID_site','site_x','site_y']],'site')
 	gdf_site=load_gdf('site').drop(columns='geometry')
@@ -46,8 +47,15 @@ def load_new_sites():
 	gdf_rec=load_gdf('rec')
 
 	gdf_rec=pd.concat([gdf_rec,gdf_site]).drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
+
+	new_sites=gdf_site.loc[~gdf_site['ID_site'].isin(gdf_rec['ID_site'])]['ID_site']
+	if len(new_sites)>0:
+		new_sites=new_sites.sort_values().to_list()
+		print(f'\t\t Loaded new sites - {list(set(new_sites))}')
+	
 	gdf_site=gdf_site.drop(columns='ID_rec')
 	
+	print('\tReloading site geometries...')
 	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_site'),left_on='ID_site',right_index=True,how='left')
 	save_gdf(gdf_rec,'rec')
 
@@ -81,8 +89,10 @@ def rec_mag_dec():
 
 
 def run_proc_rec():
+	print('\tMatchning xml data...')
 	gb=groupby_xml()
 	gdf_rec=merge_xml2rec(gb)
+	
 	load_new_sites()
 
 	print('\tCalculating magnetic declination...')

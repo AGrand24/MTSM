@@ -79,6 +79,7 @@ def merge_xml_data(gdf_xml,df_xml_read):
 	return gdf_xml
 
 def run_xml_read(full_reload):
+	print('Reading xml data...')
 	if full_reload==True:
 		backup_id_xml_rec_match()
 	
@@ -91,6 +92,7 @@ def run_xml_read(full_reload):
 		gdf_xml=get_rec_duration_str(gdf_xml,'xml')
 		gdf_xml=round_xml_data(gdf_xml)
 		gdf_xml=save_gdf(gdf_xml,'xml')
+	print()
 	return gdf_xml
 
 # def run_xml_read_full():

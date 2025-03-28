@@ -20,7 +20,7 @@ except:
 # print(num1)
 run_proc_jl()
 
-print('Reading xml data...')
+
 if proc_type=='main':
 	gdf_xml=run_xml_read(False)
 else:
@@ -37,14 +37,12 @@ if len (gdf_xml)>0:
 		gdf_xml=run_xml_read()
 
 
-print('Synchronizing ts/ folder...')
 run_ts_sort()
 
 print('Sorting and reading edi...')
 run_sort_edi()
 run_read_edi()
-
-print('Processing rec database...')
+print('\nProcessing rec database...')
 run_proc_rec()
 
 
