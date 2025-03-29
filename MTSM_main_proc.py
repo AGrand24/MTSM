@@ -34,7 +34,7 @@ if len (gdf_xml)>0:
 	[print(x) for x in gdf_xml['ID_xml']]
 	if input ('\nTo run distance synchronization type "y":\n')=='y':
 		id_rec_by_distance()
-		gdf_xml=run_xml_read('matched+unmatched')
+		gdf_xml=run_xml_read('matched+umatched')
 
 
 run_ts_sort()
@@ -46,4 +46,4 @@ print('\nProcessing rec database...')
 run_proc_rec()
 
 
-input('\n\nProccesing finished! Enter to exit!')
+input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')

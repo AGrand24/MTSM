@@ -12,12 +12,17 @@ def load_gdf_xml():
 
 def get_xml_ld(gdf_xml,reload):
 	gdf_rec=load_gdf('rec')
-	if reload=='matched':
-		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).dropna().to_list()
-	elif reload=='matched+umatched':
-		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float).to_list()
-	else:
+	if reload=='full':
 		rec_excluded=[]
+	else:
+		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float)
+		if reload=='matched':
+			rec_excluded=rec_excluded.dropna().to_list()
+		
+		elif reload=='matched+umatched':
+			rec_excluded=rec_excluded.to_list()
+		
+		rec_excluded.append(0)
 	
 	ld=get_ld('ts/',endswith='.xml')
 	ld=pd.merge(ld,gdf_xml.set_index('ID_xml')['ID_rec'],how='left',left_on='ID_xml',right_index=True)

@@ -3,8 +3,7 @@ from MTSM_python_modules import *
 
 def groupby_xml():
 	gdf_xml=load_gdf('xml').dropna(subset='ID_rec')
-	gdf_xml['ID_rec']=gdf_xml['ID_rec']
-
+	gdf_xml=gdf_xml.sort_values(['ID_rec','ID_xml'])
 	gb_fields=pd.read_csv('MTSM/lib/fields/xml.csv').query('drop!=1').dropna(subset='groupby')
 
 	for index in gb_fields.index:

@@ -22,10 +22,12 @@ def view_sh(gdf_xml,rec_id):
 		single_xml=single_xml.loc[single_xml.index.str.startswith('measurement.SystemHistory')]
 		single_xml.index=single_xml.index.str.replace('measurement.SystemHistory.message','')
 
-		columns=['time','date','component','text','batt1_curr','batt2_curr','batt_volt','temp','DynamicMode','latitude','longitude','height','num_sats','sync_state']
+		columns=['time','date','component','text','batt1_curr','batt2_curr','batt_volt','temp_','DynamicMode','latitude','longitude','height','num_sats','sync_state']
 		df_single=pd.DataFrame()
 		for col in columns:
 			tmp=single_xml.loc[single_xml.index.str.contains(col)]
+			single_xml=single_xml.loc[~single_xml.index.str.contains('sensor')]
+
 			tmp.index=tmp.index.str.replace('.'+col,'').str.replace('[','').str.replace(']','').astype(int)
 			tmp.name=col
 			df_single=pd.concat([df_single,tmp],axis='columns')

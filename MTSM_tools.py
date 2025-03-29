@@ -113,7 +113,7 @@ def get_rec_duration_str(gdf_xml,prefix):
 
 
 def create_folders(**kwargs):
-	folders=['ts/1_unmatched/','ts/2_discarded/','ts/3_edit_ats','tmp/']
+	folders=['ts/1_unmatched/','ts/2_discarded/','ts/3_edit_ats','tmp/','MTSM/rec_import_export/','MTSM/id_xml_bckp/']
 	
 	if kwargs.get('folders',None)=='unmatched':
 		folders=['ts/1_unmatched/']
