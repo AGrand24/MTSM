@@ -49,8 +49,11 @@ def run_ts_sort():
 			if not os.path.exists(dir):
 				os.makedirs(dir)
 			shutil.move(fp1,fp2)
-			print(f'\tMoving {fp1}\t to \t {fp2}')
-		
+			try:
+				print(f'\tMoving {fp1[3:46]}...\t to \t {fp2[3:44]}')
+			except:
+				pass
+
 		if len(ld['fp_sync'])<1:
 			print('\t/ts folder fully synchronized!')
 
