@@ -1,10 +1,10 @@
 from MTSM_python_modules import *
 
-def df_to_gdf(df,db_name,**kwargs):
+def df_to_gdf(df,db_name,geometry,**kwargs):
 	gdf=gpd.GeoDataFrame(data=df)
 	crs=kwargs.get('crs',4326)
 	
-	if kwargs.get('geometry',True)==True:
+	if geometry==True:
 		gdf=gdf.set_geometry(gpd.points_from_xy(df[f'{db_name}_x'],df[f'{db_name}_y']))
 		gdf=gdf.set_crs(crs)
 	gdf=gdf.sort_index(axis='columns')
@@ -12,7 +12,7 @@ def df_to_gdf(df,db_name,**kwargs):
 
 def save_gdf(df,db_name,**kwargs):
 	df=set_dtypes(df,db_name)
-	gdf=df_to_gdf(df,db_name,**kwargs)
+	gdf=df_to_gdf(df,db_name,kwargs.get('geometry',True))
 	gdf=gdf.drop_duplicates(subset=f'ID_{db_name}',keep='last')
 	gdf=gdf.replace('None',None).replace('nan',None)
 	gdf.to_file(f'MTSM_qgis/mtsm_{db_name}.gpkg',engine='pyogrio')

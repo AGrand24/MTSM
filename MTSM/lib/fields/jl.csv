@@ -10,3 +10,5 @@ jl_rec_start,datetime64[ms],0,
 jl_start_date,str,0,measurement.recording.start_date
 jl_start_time,str,0,measurement.recording.start_time
 jl_num_of_jobs,float,0
+jl_freq_sample,float,0,measurement.recording.input.Hardware.global_config.sample_freq
+jl_freq_base,float,0,measurement.recording.input.TXM22Hardware.Sequence.TransmissionList.Cycle.BaseFrequency

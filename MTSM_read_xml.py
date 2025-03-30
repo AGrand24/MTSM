@@ -34,7 +34,7 @@ def get_xml_ld(gdf_xml,reload):
 			print(f'\tForcing xml reload on recs: {forced_reload}')
 	else:
 		print('\tForcing full xml reload...')
-	return ld
+	return ld.drop_duplicates('ID_xml',keep='first')
 
 def read_xml_data(ld):
 	'reads xml data baset on ld dataframe into single dataframe'

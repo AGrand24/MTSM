@@ -18,12 +18,27 @@ def read_job_data(ld):
 	df_xml_read['jl_rec_end']=pd.to_datetime(df_xml_read['jl_end_date']+'T'+df_xml_read['jl_end_time'])
 
 	df_xml_read['jl_rec_duration']=(df_xml_read['jl_rec_end']-df_xml_read['jl_rec_start']).dt.total_seconds()
-	
+
+	freq=[]
+	for fq in df_xml_read['jl_freq_sample'].astype(float):
+		if fq>999:
+			freq.append(str(int(np.round(fq/1000)))+'k')
+		else:
+			freq.append(str(int(np.round(fq))))
+	df_xml_read['jl_freq_sample']=freq
+	df_xml_read=df_xml_read.sort_values(['ID_jl','jl_rec_start'])
 	return df_xml_read.reset_index(drop=True)
+
 
 def groupby_jl_data(df_xml):
 	df_jl=df_xml.groupby('ID_jl').aggregate({'jl_rec_start':'min','jl_rec_end':'max','jl_rec_duration':'sum','jl_num_of_jobs':'count'})
 	df_jl['jl_rec_downtime']=((df_jl['jl_rec_end']-df_jl['jl_rec_start']).dt.total_seconds()-df_jl['jl_rec_duration'])/60
+
+
+	for col in ['jl_freq_sample','jl_freq_base']:
+		gb_tmp=df_xml.groupby('ID_jl').aggregate({col:(', ').join})
+		df_jl=pd.concat([df_jl,gb_tmp],axis=1)
+
 	return df_jl
 
 def run_proc_jl():
@@ -37,7 +52,7 @@ def run_proc_jl():
 
 		df_job=read_job_data(ld)
 		df_job['jl_num_of_jobs']='ID_jl'
-		df_job=df_job[['ID_jl','jl_rec_start','jl_rec_end','jl_rec_duration','jl_num_of_jobs']]
+		df_job=df_job[['ID_jl','jl_rec_start','jl_rec_end','jl_rec_duration','jl_num_of_jobs','jl_freq_sample','jl_freq_base']]
 		df_jl=groupby_jl_data(df_job).reset_index()
 		df_jl=get_rec_duration_str(df_jl,'jl')
 
