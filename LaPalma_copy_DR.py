@@ -1,6 +1,6 @@
 from MTSM_tools import *
 
-recs=[10200,8200,7200]
+recs=[13180,8200,7200]
 
 gdf=load_gdf('rec')
 gdf=gdf.loc[gdf['ID_rec'].isin(recs)]

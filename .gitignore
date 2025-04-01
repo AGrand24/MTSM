@@ -30,5 +30,6 @@
 !.gitignore
 !osm_simplify.ipynb
 !wara_add_sites.ipynb
+!wrk_rec_timeline.ipynb
 *.rec
 *.ids
