@@ -92,7 +92,7 @@ def set_dtypes(df,db_name):
 	for field,dtype in zip(df_empty.dtypes.index,df_empty.dtypes):
 		# print(field,dtype)
 		if dtype=='datetime64[ms]':
-			df_new[field]=pd.to_datetime(df_new[field]).dt.round('1s')
+			df_new[field]=pd.to_datetime(df_new[field],format='mixed').dt.round('1s')
 		else:
 			df_new[field]=df_new[field].astype(dtype)
 	
