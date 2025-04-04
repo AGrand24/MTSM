@@ -10,6 +10,7 @@ def id_rec_by_distance():
 	gdf_xml=load_gdf('xml').to_crs(crs)
 	gdf_xml_sync=gdf_xml.loc[gdf_xml['ID_rec'].isnull()]
 	gdf_rec=load_gdf('rec').to_crs(crs)
+	gdf_rec=gdf_rec.sort_values('ID_rec').drop_duplicates('ID_site',keep='last')
 
 	gdf_rec[['x','y']]=gdf_rec.get_coordinates()
 	gdf_xml_sync[['x','y']]=gdf_xml_sync.get_coordinates()
