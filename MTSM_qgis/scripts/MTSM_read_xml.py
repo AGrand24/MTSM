@@ -90,8 +90,6 @@ def merge_xml_data(gdf_xml,df_xml_read):
 
 def run_xml_read(reload):
 	print('Reading xml data...')
-	if reload=='full':
-		backup_id_xml_rec_match()
 	
 	gdf_xml=load_gdf_xml()
 	ld=get_xml_ld(gdf_xml,reload)

@@ -7,6 +7,7 @@ os.chdir(dname)
 from MTSM_proc_jl import *
 from MTSM_read_xml import *
 from MTSM_id_rec_sync import id_rec_by_distance
+from MTSM_edi import *
 os.chdir( Path(__file__).parents[2])
 # from MTSM_read_xml import *
 # from MTSM_ts_sort import *
@@ -48,17 +49,19 @@ try:
 			[print('\t'+x) for x in gdf_xml['ID_xml']]
 			print(f'\tFound {len(gdf_xml)} unmatched xml data:')
 
-		with open('search_radius.txt') as file:
-			search_radius=int(file.read().strip())
+			with open('search_radius.txt') as file:
+				search_radius=int(file.read().strip())
 
-		print(f"\n\tSearh radius set to {search_radius}m!")
-		search_dialog=input ('\tTo run distance synchronization type "y"! To change search radius type "c"!\n\t\t')
-		
-		if search_dialog=='c':
-			search_radius=int(input('\tEnter new search radius:\n\t\t'))
-			id_rec_by_distance(search_radius)
-		elif search_dialog=='y':
-			id_rec_by_distance(search_radius)
+			print(f"\n\tSearh radius set to {search_radius}m!")
+			search_dialog=input ('\tTo run distance synchronization type "y"! To change search radius type "c"! To skip sync press ENTER!\n\t\t')
+			
+			if search_dialog=='c':
+				search_radius=int(input('\tEnter new search radius:\n\t\t'))
+				id_rec_by_distance(search_radius)
+				run_xml_read('smart')
+			elif search_dialog=='y':
+				id_rec_by_distance(search_radius)
+				run_xml_read('smart')
 			
 
 	else:
@@ -68,7 +71,13 @@ except Exception as error:
 	input('Press ENTER to continue!')
 	# print('Error reading joblists!')
 print(80*'_')
-	
 
+try:
+	run_sort_edi()
+	run_read_edi()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print(80*'_')
 
 input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')

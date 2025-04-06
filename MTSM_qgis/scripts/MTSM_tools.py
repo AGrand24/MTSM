@@ -124,7 +124,7 @@ def get_rec_duration_str(gdf_xml,prefix):
 
 def create_folders(**kwargs):
 	print('\tChcecking folder structure..')
-	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','MTSM_qgis/rec_import_export/','MTSM_qgis/id_xml_bckp/']
+	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','MTSM_qgis/rec_import_export/','MTSM_qgis/id_xml_bckp/','edi/','edi_sorted/']
 
 	adus=load_gdf('adu')['ID_adu'].to_list()
 
