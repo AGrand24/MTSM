@@ -41,8 +41,9 @@ def run_sort_edi():
 		
 
 		ld2=get_ld('edi_sorted/',endswith='edi')
-		ld2['ID_rec']=ld2['file_name'].str.replace('.edi','').astype(int)
-		ld2=ld2.loc[ld2['ID_rec'].isin(id_rec)]
+		if len(ld2)>0:
+			ld2['ID_rec']=ld2['file_name'].str.replace('.edi','').astype(int)
+			ld2=ld2.loc[ld2['ID_rec'].isin(id_rec)]
 
 		ld=pd.concat([ld1,ld2])
 
@@ -68,9 +69,6 @@ def run_read_edi():
 	if len(ld)>0:
 		id_rec=load_gdf('rec')['ID_rec'].astype(str)
 		ld=ld.drop(columns='ID_xml')
-		# ld['ID_rec']=ld['file_name'].str.findall(r"^[^_]*")
-		# ld['ID_rec']=[int(lst[0]) for lst in ld['ID_rec']]
-		# ld['ID_rec']=ld['file_name'].str.replace('.edi','')
 		ld['ID_edi']=ld['file_name'].str.replace('.edi','')
 		ld=ld.loc[ld['ID_edi'].isin(id_rec)]
 		ld['ID_rec']=ld['ID_edi'].copy().astype(int)
@@ -97,12 +95,12 @@ def run_read_edi():
 				coord_out.append(float(c[0])+(float(c[0])/abs(float(c[0])))*(float(c[1])/60+float(c[2])/3600))
 			df_edi[f'edi_{axis}']=coord_out
 
-			gdf_edi=save_gdf(df_edi,'edi')
-			
-			gdf_rec=load_gdf('rec').dropna(subset='ID_xml').query('rec_qc_status!="Recording"').sort_values('ID_rec')
-			missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
-			if len(missing_edi)>0:
-				print(f"\tMissing edi for recs: {missing_edi}")
+		gdf_edi=save_gdf(df_edi,'edi')
+		
+		gdf_rec=load_gdf('rec').dropna(subset='ID_xml').query('rec_qc_status!="Recording"').sort_values('ID_rec')
+		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
+		if len(missing_edi)>0:
+			print(f"\tMissing edi for recs: {missing_edi}")
 
 
 			return df_edi

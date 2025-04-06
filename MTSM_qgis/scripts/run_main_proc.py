@@ -9,6 +9,7 @@ from MTSM_read_xml import *
 from MTSM_id_rec_sync import id_rec_by_distance
 from MTSM_edi import *
 from MTSM_proc_rec import *
+from MTSM_ts_sort import run_ts_sort
 
 os.chdir( Path(__file__).parents[2])
 
@@ -68,6 +69,14 @@ except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
 	# print('Error reading joblists!')
+print(80*'_')
+
+try:
+	run_ts_sort()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print()
 print(80*'_')
 
 try:

@@ -5,7 +5,7 @@ dname=os.path.dirname(abspath)
 os.chdir(dname)
 
 from MTSM_tools import *
-from MTSM_read_xml import load_gdf_xml
+from MTSM_read_xml import load_gdf_xml,reload_xml_paths
 
 
 os.chdir( Path(__file__).parents[2])
@@ -67,6 +67,7 @@ def run_ts_sort():
 		print()
 
 		create_folders(folders='unmatched')
+		reload_xml_paths()
 		print()
 
 

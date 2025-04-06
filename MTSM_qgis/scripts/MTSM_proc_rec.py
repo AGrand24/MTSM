@@ -96,7 +96,8 @@ def rec_mag_dec():
 
 
 def run_proc_rec():
-	print('\tMatchning xml data...')
+	print('Processing REC database...')
+	print('\tMatchning XML data...')
 	gb=groupby_xml()
 	gdf_rec=merge_xml2rec(gb)
 	

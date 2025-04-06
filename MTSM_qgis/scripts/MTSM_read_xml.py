@@ -5,7 +5,6 @@ dname=os.path.dirname(abspath)
 os.chdir(dname)
 
 from MTSM_tools import *
-from MTSM_tools import *
 from MTSM_import_export import backup_id_xml_rec_match
 
 os.chdir( Path(__file__).parents[2])
@@ -87,6 +86,15 @@ def merge_xml_data(gdf_xml,df_xml_read):
 	gdf_rec=load_gdf('rec')[['ID_rec','ID_xml']]
 	gdf_xml['xml_adu']=gdf_xml['xml_adu'].str.zfill(3)
 	return gdf_xml
+
+def reload_xml_paths():
+	print('\tReloading xml paths...')
+	gdf_xml=load_gdf_xml().drop(columns='xml_path')
+	ld=get_ld('ts/',endswith='.xml').set_index('ID_xml').rename(columns={'file_path':'xml_path'})['xml_path'].str.replace('/','\\')
+
+	gdf_xml=pd.merge(gdf_xml,ld,how='left',left_on=['ID_xml'],right_index=True)
+
+	gdf_xml=save_gdf(gdf_xml,'xml')
 
 def run_xml_read(reload):
 	print('Reading xml data...')
