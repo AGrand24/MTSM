@@ -8,12 +8,10 @@ from MTSM_proc_jl import *
 from MTSM_read_xml import *
 from MTSM_id_rec_sync import id_rec_by_distance
 from MTSM_edi import *
+from MTSM_proc_rec import *
+
 os.chdir( Path(__file__).parents[2])
-# from MTSM_read_xml import *
-# from MTSM_ts_sort import *
-# from MTSM_proc_rec import *
-# from MTSM_edi import *
-# from MTSM_id_rec_sync import *
+
 try:
 	print('Chcecking folder structure..')
 	create_folders(print=True)
@@ -78,6 +76,14 @@ try:
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
+print(80*'_')
+
+try:
+	run_proc_rec()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print()
 print(80*'_')
 
 input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')
