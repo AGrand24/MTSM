@@ -1,0 +1,17 @@
+
+/*
+*.edi
+*.rec
+*.ids
+*.zip
+*.tif
+*.aux.xml
+*.gpkg
+*.qgs
+*.qgs~
+MTSM_qgis/.qfieldsync
+__pycache__
+
+!.gitignore
+!MTSM_qgis
+!osm_simplify.ipynb
