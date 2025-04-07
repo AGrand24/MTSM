@@ -11,7 +11,7 @@ os.chdir( Path(__file__).parents[2])
 def export_rec():
 	gdf_rec=load_gdf('rec')
 	export_fields=[col for col in gdf_rec.columns if col.startswith('rec_') or col.startswith('ID_')]
-	path=f"MTSM_qgis/rec_import_export/export_rec_{datetime.now().strftime('%y%m%d_%H%M%S')}.rec"
+	path=f"backups/{datetime.now().strftime('%y%m%d_%H%M%S')}.rec"
 	gdf_rec[export_fields].to_csv(path,sep='\t',index=False)
 	print(f"\tExported REC data to:\n\t\t{path}")
 	return path
@@ -41,7 +41,7 @@ def import_rec(fpath):
 	return fpath
 
 def backup_id_xml_rec_match():
-	path=f"MTSM_qgis/id_xml_bckp/{datetime.now().strftime('%y%m%d_%H%M%S')}.ids"
+	path=f"backups/{datetime.now().strftime('%y%m%d_%H%M%S')}.ids"
 	print(f'\tExported ID_xml-ID_rec match to:\n\t\t{path}')
 	gdf_xml=load_gdf('xml')
 

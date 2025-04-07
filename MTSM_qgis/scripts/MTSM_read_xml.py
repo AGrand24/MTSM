@@ -90,7 +90,7 @@ def merge_xml_data(gdf_xml,df_xml_read):
 def reload_xml_paths():
 	print('\tReloading xml paths...')
 	gdf_xml=load_gdf_xml().drop(columns='xml_path')
-	ld=get_ld('ts/',endswith='.xml').set_index('ID_xml').rename(columns={'file_path':'xml_path'})['xml_path'].str.replace('/','\\')
+	ld=get_ld('ts/',endswith='.xml').set_index('ID_xml').rename(columns={'file_path':'xml_path'})['xml_path'].str.replace('\\','/').astype(str)
 
 	gdf_xml=pd.merge(gdf_xml,ld,how='left',left_on=['ID_xml'],right_index=True)
 

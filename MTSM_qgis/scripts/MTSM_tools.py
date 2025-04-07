@@ -124,7 +124,7 @@ def get_rec_duration_str(gdf_xml,prefix):
 
 def create_folders(**kwargs):
 	print('\tChcecking folder structure..')
-	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','MTSM_qgis/rec_import_export/','MTSM_qgis/id_xml_bckp/','edi/','edi_sorted/']
+	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','edi/','edi_sorted/','backups/']
 
 	adus=load_gdf('adu')['ID_adu'].to_list()
 
@@ -166,3 +166,7 @@ def get_mag_dec(lon,lat,h,date):
 	Be, Bn, Bu = ppigrf.igrf(lon, lat, h, date)
 	mag_dec=ppigrf.get_inclination_declination(Be,Bn,Bu)
 	return float(mag_dec[1][0])
+
+def warning_missing_data():
+	gdf=load_gdf('xml')
+	print('WARNING! Following RECSs have XML data, but are missing data in "/ts/" folder\n\t',gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').unique())

@@ -22,8 +22,8 @@ def run_ts_sort():
 		if len(ld_delete)>0:
 			for fp in ld_delete['file_path']:
 				os.remove(fp)
-
 		gdf_xml=gdf_xml[['ID_rec','ID_xml']].set_index('ID_xml')
+		ld=ld.loc[ld['file_name'].str.endswith(('xml','ats'))]
 		ld['tmp']=ld['file_path'].str.findall(r'(?<=meas_)(.*)(?=)')
 		ld['tmp']=[x[0] for x in ld['tmp']]
 		ld['meas']=ld['tmp'].str.slice(0,19)

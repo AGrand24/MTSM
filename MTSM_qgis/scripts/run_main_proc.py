@@ -89,6 +89,10 @@ print(80*'_')
 
 try:
 	run_proc_rec()
+	print()
+	print(80*'_')
+	warning_missing_data()
+	reload_xml_paths()
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
