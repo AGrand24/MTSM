@@ -14,8 +14,14 @@ def df_to_gdf(df,db_name,geometry,**kwargs):
 	crs=kwargs.get('crs',4326)
 	
 	if geometry==True:
-		gdf=gdf.set_geometry(gpd.points_from_xy(df[f'{db_name}_x'],df[f'{db_name}_y']))
+		if db_name=='rec':
+			df.loc[~df['xml_x'].isnull(),'rec_x']=df['xml_x']
+			df.loc[~df['xml_y'].isnull(),'rec_y']=df['xml_y']
+			gdf=gdf.set_geometry(gpd.points_from_xy(df['rec_x'],df['rec_y']))
+		else:
+			gdf=gdf.set_geometry(gpd.points_from_xy(df[f'{db_name}_x'],df[f'{db_name}_y']))
 		gdf=gdf.set_crs(crs)
+
 	gdf=gdf.sort_index(axis='columns')
 	return gdf
 

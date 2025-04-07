@@ -83,7 +83,7 @@ def get_number_of_jobs():
 
 def rec_mag_dec():
 	gdf=load_gdf('rec')
-	dates=gdf['xml_rec_start'].dt.date.replace(np.nan,'2000-01-01').astype(str)
+	dates=gdf['xml_rec_start'].dt.date.replace(np.nan,'2025-01-01').astype(str)
 	dates=[datetime.strptime(date,'%Y-%m-%d') for date in dates]
 
 	mag_dec=[]
