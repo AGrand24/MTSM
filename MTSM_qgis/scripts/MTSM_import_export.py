@@ -42,7 +42,6 @@ def import_rec(fpath):
 
 def backup_id_xml_rec_match():
 	path=f"backups/{datetime.now().strftime('%y%m%d_%H%M%S')}.ids"
-	print(f'\tExported ID_xml-ID_rec match to:\n\t\t{path}')
 	gdf_xml=load_gdf('xml')
 
 	gdf_xml[['ID_xml','ID_rec']].to_csv(path,index=False,sep='\t')
@@ -52,3 +51,13 @@ def export_backups():
 	print('Creating backups...')
 	export_rec()
 	backup_id_xml_rec_match()
+
+def dump_to_csv():
+	path=f"tmp/{datetime.now().strftime('%y%m%d_%H%M%S')}_rec.csv"
+	load_gdf('rec').to_csv(path,index=False)
+	print(f'Exported REC data to:\n\t\t{path}')
+	
+	load_gdf('xml').to_csv(path,index=False)
+	path=path.replace('_rec.csv','_xml.csv')
+	print(f'Exported XML data to:\n\t\t{path}')
+	input('Pres ENTER to exit!')

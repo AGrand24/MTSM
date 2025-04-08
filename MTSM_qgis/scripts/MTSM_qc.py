@@ -43,3 +43,23 @@ def run_check_sensor_pos():
 
 	gdf.to_html('tmp/sensor_positions.html',index=False)
 	os.startfile(os.getcwd()+'\\tmp\\sensor_positions.html')
+
+
+def qc_rec_start_span():
+	gdf_xml=load_gdf('xml').dropna(subset='ID_rec').query('ID_rec!=0')
+
+	gb=gdf_xml.groupby('ID_rec',as_index=False).agg(first=('xml_rec_start','min'),last=('xml_rec_start','max'))
+	gb['td']=(gb['last']-gb['first'])
+
+	gb=gb.loc[gb['td']>pd.Timedelta(hours=24)]
+	# gdf_rec=load_gdf('rec')
+	# gb=pd.merge(gb,gdf_rec[['ID_rec','rec_fl_note','rec_qc_note']].set_index('ID_rec'),how='left',left_on='ID_rec',right_index=True)
+	print('QC WARNING - Following RECs have diference between first and last job starts > 24 hours:\n')
+	# print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta','note (FL)','note (QC)']))
+	print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta']))
+
+
+def qc_missing_data():
+	gdf=load_gdf('xml')
+	print('QC WARNING! Following RECSs have XML data, but data are missing  in "/ts/" folder\n\t',gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').astype(int).unique())
+	print()
