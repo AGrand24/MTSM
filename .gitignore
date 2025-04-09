@@ -11,6 +11,7 @@
 *.qgs~
 MTSM_qgis/.qfieldsync
 MTSM_qgis/sites.csv
+*.gpkg-shm
 
 __pycache__
 !.gitignore
