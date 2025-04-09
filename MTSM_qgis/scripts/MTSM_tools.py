@@ -33,8 +33,12 @@ def save_gdf(df,db_name,**kwargs):
 	gdf.to_file(f'MTSM_qgis/mtsm_{db_name}.gpkg',engine='pyogrio')
 	return gdf
 
-def load_gdf(db_name):
-	gdf=gpd.read_file(f'MTSM_qgis/mtsm_{db_name}.gpkg',engine='pyogrio')
+def load_gdf(db_name,**kwargs):
+	layer= kwargs.get('layer',None)
+	if layer==None:
+		gdf=gpd.read_file(f'MTSM_qgis/mtsm_{db_name}.gpkg',engine='pyogrio')
+	else:
+		gdf=gpd.read_file(f'MTSM_qgis/mtsm_{db_name}.gpkg',engine='pyogrio',layer=layer)
 	return gdf
 
 

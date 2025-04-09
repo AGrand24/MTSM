@@ -1,0 +1,20 @@
+[out:xml] [timeout:25];
+(
+    node["power"]( {{bbox}});
+    node["highway"]( {{bbox}});
+    node["man_made"]( {{bbox}});
+    node["railway"]( {{bbox}});
+    node["waterway"]( {{bbox}});
+    way["power"]( {{bbox}});
+    way["highway"]( {{bbox}});
+    way["man_made"]( {{bbox}});
+    way["railway"]( {{bbox}});
+    way["waterway"]( {{bbox}});
+    relation["power"]( {{bbox}});
+    relation["highway"]( {{bbox}});
+    relation["man_made"]( {{bbox}});
+    relation["railway"]( {{bbox}});
+    relation["waterway"]( {{bbox}});
+);
+(._;>;);
+out body;
