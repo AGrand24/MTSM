@@ -17,11 +17,11 @@ def run_ts_sort():
 	gdf_xml=load_gdf_xml()
 	ld=get_ld('ts/')
 	if len(ld)>0:
-		ld_delete=ld.copy().loc[~ld['file_name'].str.endswith(('xml','ats'))]
+		# ld_delete=ld.copy().loc[~ld['file_name'].str.endswith(('xml','ats'))]
 
-		if len(ld_delete)>0:
-			for fp in ld_delete['file_path']:
-				os.remove(fp)
+		# if len(ld_delete)>0:
+		# 	for fp in ld_delete['file_path']:
+		# 		os.remove(fp)
 		gdf_xml=gdf_xml[['ID_rec','ID_xml']].set_index('ID_xml')
 		ld=ld.loc[ld['file_name'].str.endswith(('xml','ats'))]
 		ld['tmp']=ld['file_path'].str.findall(r'(?<=meas_)(.*)(?=)')

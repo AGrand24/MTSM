@@ -103,4 +103,3 @@ def run_read_edi():
 			print(f"\tMissing edi for recs: {missing_edi}")
 
 
-			return df_edi
