@@ -46,9 +46,19 @@ def merge_xml2rec(gb):
 
 def load_new_sites():
 	print('\tLooking for new sites...')
-	gdf_site=pd.read_csv('MTSM_qgis/sites.csv')
-	gdf_site=save_gdf(gdf_site[['ID_site','site_x','site_y']],'site')
-	gdf_site=load_gdf('site').drop(columns='geometry')
+
+
+	df_site_csv=pd.read_csv('MTSM_qgis/sites.csv')
+	gdf_site_gpkg=load_gdf('site')
+
+
+	gdf_site_gpkg['site_x']=gdf_site_gpkg.get_coordinates().iloc[:,0]
+	gdf_site_gpkg['site_y']=gdf_site_gpkg.get_coordinates().iloc[:,1]
+	df_site_gpkg=gdf_site_gpkg.drop(columns='geometry')
+
+	df_site=pd.concat([df_site_gpkg,df_site_csv]).drop_duplicates('ID_site',keep='first').sort_values('ID_site')
+	gdf_site=save_gdf(df_site[['ID_site','site_x','site_y']],'site')
+
 	gdf_site=gdf_site.rename(columns={'site_x':'rec_x','site_y':'rec_y'})
 	gdf_site['ID_rec']=gdf_site['ID_site']*10
 	gdf_rec=load_gdf('rec')

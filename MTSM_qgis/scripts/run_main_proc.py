@@ -23,7 +23,13 @@ except Exception as error:
 print()
 print(80*'_')
 
-
+try:
+	print('Loading sites...')
+	load_new_sites()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print(80*'_')
 
 
 try:
@@ -102,5 +108,10 @@ except Exception as error:
 	input('Press ENTER to continue!')
 print()
 print(80*'_')
+
+try:
+	export_qc_geometry()
+except:
+	pass
 
 input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')

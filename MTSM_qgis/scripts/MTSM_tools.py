@@ -136,13 +136,14 @@ def create_folders(**kwargs):
 	print('\tChcecking folder structure..')
 	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','edi/','edi_sorted/','backups/']
 
-	adus=load_gdf('adu')['ID_adu'].to_list()
+	# adus=load_gdf('adu')['ID_adu'].to_list()
 
-	new_folders=[]
-	for folder in folders[:2]:
-		[new_folders.append(folder+adu) for adu in adus]
+	# new_folders=[]
+	# for folder in folders[:2]:
+	# 	[new_folders.append(folder+adu) for adu in adus]
 
-	new_folders=folders+new_folders
+	# new_folders=folders+new_folders
+	new_folders=folders
 
 	for folder in new_folders:
 		if not os.path.exists(folder):
@@ -180,3 +181,29 @@ def get_mag_dec(lon,lat,h,date):
 def warning_missing_data():
 	gdf=load_gdf('xml')
 	print('WARNING! Following RECSs have XML data, but are missing data in "/ts/" folder\n\t',gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').unique())
+
+def export_qc_geometry():
+	gdf_project_extents=load_gdf('set',layer='project_extents')
+	coord_extents=gdf_project_extents.get_coordinates()
+	crs=gdf_project_extents.crs
+
+	x0=coord_extents['x'].min()
+	x100=coord_extents['x'].max()
+	xrange=x100-x0
+
+	y0=coord_extents['y'].min()
+	y100=coord_extents['y'].max()
+	yrange=y100-y0
+
+	df_qc=load_gdf('qc')
+	df_qc.sort_values('ID_qc').reset_index(drop=True)
+
+	total_sites=len(load_gdf('site'))
+	df_qc['total_sites']=total_sites
+
+
+	df_qc['qc_x']=x0+.05*xrange
+	df_qc['qc_y']=y0+((df_qc.index.astype(int)+1)*0.03*xrange)
+
+	gdf_qc=gpd.GeoDataFrame(df_qc,geometry=gpd.points_from_xy(df_qc['qc_x'],df_qc['qc_y']),crs=crs)
+	gdf_qc.to_file('MTSM_qgis/mtsm_qc.gpkg',engine='pyogrio',layer='qc')

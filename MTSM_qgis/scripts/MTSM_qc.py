@@ -59,7 +59,7 @@ def qc_rec_start_span():
 	# gdf_rec=load_gdf('rec')
 	# gb=pd.merge(gb,gdf_rec[['ID_rec','rec_fl_note','rec_qc_note']].set_index('ID_rec'),how='left',left_on='ID_rec',right_index=True)
 	if len(gb)>0:
-		print('QC WARNING - Following RECs have diference between first and last job starts > 24 hours:\n')
+		print('\nQC WARNING - Following RECs have diference between first and last job starts > 24 hours:\n')
 		# print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta','note (FL)','note (QC)']))
 		print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta']))
 
@@ -74,5 +74,5 @@ def qc_missing_edi():
 		gdf_rec=load_gdf('rec').dropna(subset='ID_xml').sort_values('ID_rec')
 		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
 		if len(missing_edi)>0:
-			print(f"QC WARNING - Missing edi for recs: {missing_edi}")
+			print(f"\nQC WARNING - Missing edi for recs: {missing_edi}")
 
