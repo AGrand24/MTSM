@@ -66,8 +66,10 @@ def qc_rec_start_span():
 
 def qc_missing_data():
 	gdf=load_gdf('xml')
-	print('QC WARNING! Following RECSs have XML data, but data are missing  in "/ts/" folder\n\t',gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').astype(int).unique())
-	print()
+	missing=gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').astype(int).unique()
+	if len (missing)>0:
+		print(f'QC WARNING! Following RECSs have XML data, but data are missing  in "/ts/" folder\n\t',{missing})
+		print()
 
 def qc_missing_edi():
 		gdf_edi=load_gdf('edi')

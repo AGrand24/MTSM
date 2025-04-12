@@ -28,9 +28,19 @@ def groupby_xml():
 	for col in cols_join:
 		gb_tmp=gdf_xml.groupby('ID_rec').aggregate({col:(', ').join})
 		gb=gb.join(gb_tmp)
+
+	gdf_xml['xml_x']*=gdf_xml['xml_gps_sync']
+	gdf_xml['xml_y']*=gdf_xml['xml_gps_sync']
+
+	gb_coord=gdf_xml.groupby(['ID_rec'],as_index=False)[['xml_gps_sync','xml_x','xml_y']]
+	gb_coord=gb_coord.agg('sum')
+
+	gb_coord['xml_x']/=gdf_xml['xml_gps_sync']
+	gb_coord['xml_y']/=gdf_xml['xml_gps_sync']
+
+	gb=pd.merge(gb.drop(columns=['xml_x','xml_y']),gb_coord[['xml_x','xml_y']],left_index=True,right_index=True,how='left')
 	
-	# gb['xml_num_of_jobs']=gdf_xml.groupby('ID_rec')['ID_xml'].count().to_list()
-	
+
 	gb['xml_gps_num_sats']=np.round(gb['xml_gps_num_sats'],2)
 	return gb
 
