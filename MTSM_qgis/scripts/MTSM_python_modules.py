@@ -16,6 +16,8 @@ import errno, stat
 import ppigrf
 from shapely import Point,Polygon,LineString,MultiPolygon,MultiLineString
 from pathlib import Path
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', 'GeoSeries.notna', UserWarning)

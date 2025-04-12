@@ -89,6 +89,7 @@ print(80*'_')
 try:
 	run_sort_edi()
 	run_read_edi()
+	run_plot_edi()
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
