@@ -17,10 +17,8 @@ def groupby_xml():
 	for index in gb_fields.index:
 		gdf_xml[gb_fields.loc[index,'field']]=gdf_xml[gb_fields.loc[index,'field']].astype(gb_fields.loc[index,'dtype'])
 
-
 	agg_dict=dict(zip(list(gb_fields['field'].loc[gb_fields['groupby']!='list']),list(gb_fields['groupby'].loc[gb_fields['groupby']!='list'])))
 	gb=gdf_xml.groupby('ID_rec').agg(agg_dict)
-
 
 	cols_join=gb_fields.loc[gb_fields['groupby']=='list']['field']
 	gdf_xml[cols_join]=gdf_xml[cols_join].astype(str)
@@ -29,17 +27,17 @@ def groupby_xml():
 		gb_tmp=gdf_xml.groupby('ID_rec').aggregate({col:(', ').join})
 		gb=gb.join(gb_tmp)
 
-	gdf_xml['xml_x']*=gdf_xml['xml_gps_sync']
-	gdf_xml['xml_y']*=gdf_xml['xml_gps_sync']
+	gdf_xml['xml_x']=gdf_xml['xml_x']*gdf_xml['xml_gps_sync']
+	gdf_xml['xml_y']=gdf_xml['xml_y']*gdf_xml['xml_gps_sync']
+	gdf_xml=gdf_xml.loc[gdf_xml['xml_gps_sync']>1]
 
-	gb_coord=gdf_xml.groupby(['ID_rec'],as_index=False)[['xml_gps_sync','xml_x','xml_y']]
+	gb_coord=gdf_xml.groupby('ID_rec')[['xml_gps_sync','xml_x','xml_y']]
 	gb_coord=gb_coord.agg('sum')
 
-	gb_coord['xml_x']/=gdf_xml['xml_gps_sync']
-	gb_coord['xml_y']/=gdf_xml['xml_gps_sync']
+	gb_coord['xml_x']=gb_coord['xml_x']/gb_coord['xml_gps_sync']
+	gb_coord['xml_y']=gb_coord['xml_y']/gb_coord['xml_gps_sync']
 
 	gb=pd.merge(gb.drop(columns=['xml_x','xml_y']),gb_coord[['xml_x','xml_y']],left_index=True,right_index=True,how='left')
-	
 
 	gb['xml_gps_num_sats']=np.round(gb['xml_gps_num_sats'],2)
 	return gb

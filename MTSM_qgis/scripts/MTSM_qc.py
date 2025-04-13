@@ -56,11 +56,8 @@ def qc_rec_start_span():
 	gb['td']=(gb['last']-gb['first'])
 
 	gb=gb.loc[gb['td']>pd.Timedelta(hours=24)]
-	# gdf_rec=load_gdf('rec')
-	# gb=pd.merge(gb,gdf_rec[['ID_rec','rec_fl_note','rec_qc_note']].set_index('ID_rec'),how='left',left_on='ID_rec',right_index=True)
 	if len(gb)>0:
 		print('\nQC WARNING - Following RECs have diference between first and last job starts > 24 hours:\n')
-		# print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta','note (FL)','note (QC)']))
 		print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta']))
 
 

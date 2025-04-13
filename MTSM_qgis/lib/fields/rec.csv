@@ -18,6 +18,7 @@ rec_qc_nsp,float
 rec_qc_qcby,str
 rec_qc_status,str
 rec_qc_exception,float
+rec_qc_msg,str
 rec_x,float
 rec_y,float
 xml_rec_start,datetime64[ms]

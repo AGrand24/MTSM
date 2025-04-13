@@ -310,6 +310,7 @@ def plot_edi(dfs,colors1,colors2,recs,alpha):
 	axs[2,0].set_yscale('log')
 
 	axs[2,1].set_ylabel("T_phi x-y")
+	axs[2,1].set_ylim(-190,190)
 
 	axs[3,0].set_ylabel("coh")
 	axs[3,0].set_ylim(0.5,1.1)
