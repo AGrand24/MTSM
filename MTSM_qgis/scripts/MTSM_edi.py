@@ -48,8 +48,10 @@ def run_sort_edi():
 		ld=pd.concat([ld1,ld2])
 
 		if len(ld)>0:
+			ld['mod_time']=[time.ctime(os.path.getmtime(file)) for file in ld['file_path']]
+			ld['mod_time']=pd.to_datetime(ld['mod_time']).dt.round('T')
 			ld=get_edi_priority(ld)
-			ld=ld.sort_values(['ID_rec','priority']).drop_duplicates('ID_rec',keep='last').reset_index(drop=True)
+			ld=ld.sort_values(['ID_rec','mod_time','priority']).drop_duplicates('ID_rec',keep='last').reset_index(drop=True)
 
 			ld['fp_dest']='edi_sorted/'+ld['ID_rec'].astype(str)+'.edi'
 

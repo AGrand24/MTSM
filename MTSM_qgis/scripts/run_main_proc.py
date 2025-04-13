@@ -110,7 +110,10 @@ print(80*'_')
 
 try:
 	export_qc_geometry()
+	delete_folder('MTSM_qgis/.qfieldsync')
 except:
 	pass
+
+
 
 input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')
