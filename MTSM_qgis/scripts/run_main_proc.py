@@ -10,7 +10,7 @@ from MTSM_id_rec_sync import id_rec_by_distance
 from MTSM_edi import *
 from MTSM_proc_rec import *
 from MTSM_ts_sort import run_ts_sort
-from MTSM_qc import qc_missing_data,qc_rec_start_span,qc_missing_edi
+from MTSM_qc import run_qc
 
 os.chdir( Path(__file__).parents[2])
 
@@ -100,9 +100,7 @@ try:
 	reload_xml_paths()
 	print()
 	print(80*'_')
-	qc_missing_data()
-	qc_rec_start_span()
-	qc_missing_edi()
+	run_qc()
 	
 except Exception as error:
 	traceback.print_exc()

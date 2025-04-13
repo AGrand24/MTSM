@@ -12,15 +12,15 @@ def get_edi_priority(ld):
 	priority=[]
 	for fn in ld['file_name']:
 		if '_Site' in fn:
-			priority.append(0)
+			priority.append(4)
 		elif '_stack_all' in fn:
 			priority.append(2)
 		elif '_ct' in fn:
-			priority.append(1)
-		elif '_median' in fn:
 			priority.append(3)
+		elif '_median' in fn:
+			priority.append(1)
 		else:
-			priority.append(4)
+			priority.append(0)
 
 	ld['priority']=priority
 	return ld
@@ -48,10 +48,8 @@ def run_sort_edi():
 		ld=pd.concat([ld1,ld2])
 
 		if len(ld)>0:
-			ld['mod_time']=[time.ctime(os.path.getmtime(file)) for file in ld['file_path']]
-			ld['mod_time']=pd.to_datetime(ld['mod_time'])
 			ld=get_edi_priority(ld)
-			ld=ld.sort_values(['ID_rec','mod_time','priority']).drop_duplicates('ID_rec',keep='last').reset_index(drop=True)
+			ld=ld.sort_values(['ID_rec','priority']).drop_duplicates('ID_rec',keep='last').reset_index(drop=True)
 
 			ld['fp_dest']='edi_sorted/'+ld['ID_rec'].astype(str)+'.edi'
 
@@ -97,15 +95,6 @@ def run_read_edi():
 
 		gdf_edi=save_gdf(df_edi,'edi')
 		
-		gdf_rec=load_gdf('rec').dropna(subset='ID_xml').query('rec_qc_status!="Recording"').sort_values('ID_rec')
-		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
-		if len(missing_edi)>0:
-			print(f"\tMissing edi for recs: {missing_edi}")
-
-edi_fp1='edi_sorted/10040.edi'
-edi_fp2='edi_sorted/10220.edi'
-
-fps_edi=[edi_fp1,edi_fp2]
 
 def calc_phase(df):
 	for direction in ['xy','yx','xx','yy']:
@@ -365,3 +354,9 @@ def run_plot_edi():
 			plot_edi([df],colors1,colors2,[rec],alpha)
 		except:
 			print(f'\tCannot read {edi}')
+
+
+def clear_edi_img():
+	ld=get_ld('edi_sorted/img/')
+	for fp in ld['file_path']:
+		os.remove(fp)

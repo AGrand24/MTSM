@@ -8,7 +8,7 @@ from MTSM_tools import *
 
 os.chdir( Path(__file__).parents[2])
 
-def run_check_sensor_pos():
+def run_check_sensor_pos(**kwargs):
 
 	gdf_rec=load_gdf('rec')
 
@@ -40,14 +40,25 @@ def run_check_sensor_pos():
 
 	gdf=gdf[['ID_rec','ID_xml']+cols_out]
 
+	if kwargs.get('html',True)==True:
+		gdf.to_html('tmp/sensor_positions.html',index=False)
+		os.startfile(os.getcwd()+'\\tmp\\sensor_positions.html')
+	else:
+		if len(gdf)>0:
+			gdf=gdf.drop_duplicates('ID_rec')
+			recs=gdf['ID_rec'].astype(int).to_list()
+			print(f'\nQC WARNING - Inconsistent sensor positions - {recs}')
 
-	gdf.to_html('tmp/sensor_positions.html',index=False)
-	os.startfile(os.getcwd()+'\\tmp\\sensor_positions.html')
+def qc_exception(gdf_rec):
+	gdf_rec=gdf_rec.loc[gdf_rec['rec_qc_exception']!=1].reset_index(drop=True)
+	return gdf_rec
 
-
-def qc_rec_start_span():
-	gdf_xml=load_gdf('xml').dropna(subset='ID_rec').query('ID_rec!=0')
-	gdf_rec=load_gdf('rec')[['ID_rec','rec_qc_status']].set_index('ID_rec')
+def qc_rec_start_span(gdf_xml,gdf_rec):
+	gdf_rec=qc_exception(gdf_rec)
+	gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec!=0')
+	gdf_xml=gdf_xml.loc[gdf_xml['ID_rec'].isin(gdf_rec['ID_rec'])]
+		
+	gdf_rec=gdf_rec[['ID_rec','rec_qc_status']].set_index('ID_rec')
 	gdf_xml=pd.merge(gdf_xml,gdf_rec,how='left',left_on='ID_rec',right_index=True)
 
 	gdf_xml=gdf_xml.loc[~gdf_xml["rec_qc_status"].isin(["Recording","Accepted","Processed","Remeasured"])]
@@ -61,17 +72,38 @@ def qc_rec_start_span():
 		print(tabulate(gb,showindex=False,tablefmt='presto',headers=['ID_rec','first job','last job','time delta']))
 
 
-def qc_missing_data():
-	gdf=load_gdf('xml')
+def qc_missing_data(gdf):
 	missing=gdf.loc[gdf['xml_path'].isnull()]['ID_rec'].sort_values().astype(str).str.replace('.0','').astype(int).unique()
 	if len (missing)>0:
 		print(f'QC WARNING! Following RECSs have XML data, but data are missing  in "/ts/" folder\n\t',{missing})
 		print()
 
-def qc_missing_edi():
-		gdf_edi=load_gdf('edi')
-		gdf_rec=load_gdf('rec').dropna(subset='ID_xml').sort_values('ID_rec')
+def qc_missing_edi(gdf_edi,gdf_rec):
+		gdf_rec=gdf_rec.dropna(subset='ID_xml').sort_values('ID_rec')
 		missing_edi=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_edi['ID_rec'])]['ID_rec'].to_list()
 		if len(missing_edi)>0:
 			print(f"\nQC WARNING - Missing edi for recs: {missing_edi}")
 
+def qc_gps_sync(gdf_rec):
+	gdf_rec=qc_exception(gdf_rec)
+	gdf_rec=gdf_rec.loc[gdf_rec['xml_gps_sync']<3.5]
+	rec=gdf_rec['ID_rec'].to_list()
+	if len (gdf_rec)>0:
+		print(f'\nQC WARNING - Unreliable GPS sync (average<3.5) - {rec}')
+
+
+def run_qc():
+	print('Running qc check...')
+	gdf_rec=load_gdf('rec')
+	gdf_xml=load_gdf('xml')
+	gdf_edi=load_gdf('edi')
+
+	gdf_except=qc_exception(gdf_rec)
+	exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
+	if len(exceptions)>0:
+		print(f'\nFollowing RECs are excluded from qc checks: {exceptions} - Uncheck "rec_qc_exception" to incude them!')
+	qc_rec_start_span(gdf_xml,gdf_rec)
+	qc_missing_edi(gdf_edi,gdf_rec)
+	qc_missing_data(gdf_xml)
+	qc_gps_sync(gdf_rec)
+	run_check_sensor_pos(html=False)
