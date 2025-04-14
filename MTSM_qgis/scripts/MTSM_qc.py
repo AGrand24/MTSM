@@ -54,7 +54,7 @@ def qc_exception(gdf_rec):
 	return gdf_rec
 
 def qc_rec_start_span(gdf_xml,gdf_rec):
-	gdf_rec=qc_exception(gdf_rec)
+	# gdf_rec=qc_exception(gdf_rec)
 	gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec!=0')
 	gdf_xml=gdf_xml.loc[gdf_xml['ID_rec'].isin(gdf_rec['ID_rec'])]
 		
@@ -85,7 +85,7 @@ def qc_missing_edi(gdf_edi,gdf_rec):
 			print(f"\nQC WARNING - Missing edi for recs: {missing_edi}")
 
 def qc_gps_sync(gdf_rec):
-	gdf_rec=qc_exception(gdf_rec)
+	# gdf_rec=qc_exception(gdf_rec)
 	gdf_rec=gdf_rec.loc[gdf_rec['xml_gps_sync']<3.5]
 	rec=gdf_rec['ID_rec'].to_list()
 	if len (gdf_rec)>0:
@@ -95,7 +95,7 @@ def qc_n_jobs(gdf_jl,gdf_rec):
 	gdf_rec=load_gdf('rec')
 	gdf_jl=load_gdf('jl')
 	gdf_rec=gdf_rec.dropna(subset='ID_xml')
-	gdf_rec=qc_exception(gdf_rec)
+	# gdf_rec=qc_exception(gdf_rec)
 	gdf_jl=gdf_jl.set_index('ID_jl')
 
 	gdf_rec=pd.merge(gdf_rec,gdf_jl['jl_num_of_jobs'],left_on='rec_fl_joblist',right_index=True,how='left')[['ID_rec','rec_xml_num_of_jobs','jl_num_of_jobs','rec_fl_num_test_jobs']]
@@ -110,20 +110,25 @@ def qc_n_jobs(gdf_jl,gdf_rec):
 
 
 
-def run_qc():
+def run_qc(ignore_exceptions):
 	print('Running qc check...')
 	gdf_rec=load_gdf('rec')
 	gdf_xml=load_gdf('xml')
 	gdf_edi=load_gdf('edi')
 	gdf_jl=load_gdf('jl')
 
-	gdf_except=qc_exception(gdf_rec)
-	exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
-	if len(exceptions)>0:
-		print(f'\nFollowing RECs are excluded from qc checks: {exceptions} - Uncheck "rec_qc_exception" to incude them!')
-	qc_rec_start_span(gdf_xml,gdf_rec)
+	if ignore_exceptions==False:
+		gdf_except=qc_exception(gdf_rec)
+		exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
+		if len(exceptions)>0:
+			print(f'\nFollowing RECs are excluded from qc checks: {exceptions} - Uncheck "rec_qc_exception" to incude them!')
+	else:
+		print('\tIgnoring exceptions during qc!')
+		gdf_except=gdf_rec
+
+	qc_rec_start_span(gdf_xml,gdf_except)
 	qc_missing_edi(gdf_edi,gdf_rec)
 	qc_missing_data(gdf_xml)
-	qc_gps_sync(gdf_rec)
-	qc_n_jobs(gdf_rec,gdf_jl)
+	qc_gps_sync(gdf_except)
+	qc_n_jobs(gdf_except,gdf_jl)
 	run_check_sensor_pos(html=False)

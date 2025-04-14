@@ -11,6 +11,7 @@ from MTSM_edi import *
 from MTSM_proc_rec import *
 from MTSM_ts_sort import run_ts_sort
 from MTSM_qc import run_qc
+from MTSM_report import run_proc_report
 
 os.chdir( Path(__file__).parents[2])
 
@@ -100,8 +101,8 @@ try:
 	reload_xml_paths()
 	print()
 	print(80*'_')
-	run_qc()
-	
+	run_qc(False)
+	run_proc_report()
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
