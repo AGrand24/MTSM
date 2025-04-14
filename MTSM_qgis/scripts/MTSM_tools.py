@@ -134,7 +134,7 @@ def get_rec_duration_str(gdf_xml,prefix):
 
 def create_folders(**kwargs):
 	print('\tChcecking folder structure..')
-	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','edi/','edi_sorted/','backups/']
+	folders=['ts/1_unmatched/','ts/2_discarded/','tmp/','edi/','edi_sorted/img','backups/']
 
 	# adus=load_gdf('adu')['ID_adu'].to_list()
 

@@ -4,6 +4,7 @@ ID_site,int
 ID_xml,str
 rec_fl_adu,str
 rec_fl_joblist,str
+rec_fl_num_test_jobs,float
 rec_fl_note,str
 rec_fl_operator,str
 rec_fl_rec_start,datetime64[ms]

@@ -95,9 +95,10 @@ def get_number_of_jobs():
 		else:
 			n_jobs.append(None)
 	gdf['rec_xml_num_of_jobs']=n_jobs
-	gdf['rec_xml_num_of_jobs']=gdf['rec_xml_num_of_jobs'].astype(float)
+	gdf['rec_xml_num_of_jobs']=gdf['rec_xml_num_of_jobs'].astype(float)-gdf['rec_fl_num_test_jobs'].replace(np.nan,0)
 	save_gdf(gdf,'rec')
 	return gdf
+
 
 def rec_mag_dec():
 	gdf=load_gdf('rec')

@@ -91,12 +91,31 @@ def qc_gps_sync(gdf_rec):
 	if len (gdf_rec)>0:
 		print(f'\nQC WARNING - Unreliable GPS sync (average<3.5) - {rec}')
 
+def qc_n_jobs(gdf_jl,gdf_rec):
+	gdf_rec=load_gdf('rec')
+	gdf_jl=load_gdf('jl')
+	gdf_rec=gdf_rec.dropna(subset='ID_xml')
+	gdf_rec=qc_exception(gdf_rec)
+	gdf_jl=gdf_jl.set_index('ID_jl')
+
+	gdf_rec=pd.merge(gdf_rec,gdf_jl['jl_num_of_jobs'],left_on='rec_fl_joblist',right_index=True,how='left')[['ID_rec','rec_xml_num_of_jobs','jl_num_of_jobs','rec_fl_num_test_jobs']]
+
+	cols_jobs=['rec_xml_num_of_jobs','jl_num_of_jobs','rec_fl_num_test_jobs']
+	for col in cols_jobs:
+		gdf_rec[col]=gdf_rec[col].replace(np.nan,0).astype(int)
+
+	gdf_rec=gdf_rec.loc[gdf_rec['rec_xml_num_of_jobs']!=gdf_rec['jl_num_of_jobs']]
+	print('\nQC WARNING - Inconsistent  number of jobs:\n')
+	print(tabulate(gdf_rec[['ID_rec']+cols_jobs],showindex=False,headers=['ID_rec','Data','Joblist','Test'],tablefmt="presto"))
+
+
 
 def run_qc():
 	print('Running qc check...')
 	gdf_rec=load_gdf('rec')
 	gdf_xml=load_gdf('xml')
 	gdf_edi=load_gdf('edi')
+	gdf_jl=load_gdf('jl')
 
 	gdf_except=qc_exception(gdf_rec)
 	exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
@@ -106,4 +125,5 @@ def run_qc():
 	qc_missing_edi(gdf_edi,gdf_rec)
 	qc_missing_data(gdf_xml)
 	qc_gps_sync(gdf_rec)
+	qc_n_jobs(gdf_rec,gdf_jl)
 	run_check_sensor_pos(html=False)
