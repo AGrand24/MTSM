@@ -72,3 +72,4 @@ pd_rx_7_prs2,str
 pd_rx_7_prs3,str
 pd_rx_7_prs4,str
 pd_rx_7_prs5,str
+pd_rx_relation_prs,int

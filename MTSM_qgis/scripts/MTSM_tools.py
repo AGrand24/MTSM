@@ -10,7 +10,7 @@ os.chdir( Path(__file__).parents[2])
 
 
 def df_to_gdf(df,db_name,geometry,**kwargs):
-	gdf=gpd.GeoDataFrame(data=df)
+	gdf=gpd.GeoDataFrame(data=df.copy())
 	crs=kwargs.get('crs',4326)
 	
 	if geometry==True:
@@ -207,3 +207,8 @@ def export_qc_geometry():
 
 	gdf_qc=gpd.GeoDataFrame(df_qc,geometry=gpd.points_from_xy(df_qc['qc_x'],df_qc['qc_y']),crs=crs)
 	gdf_qc.to_file('MTSM_qgis/mtsm_qc.gpkg',engine='pyogrio',layer='qc')
+
+def get_project_crs():
+	with open('MTSM_qgis/lib/epsg.txt') as file:
+		crs=file.read()
+	return crs
