@@ -212,3 +212,8 @@ def get_project_crs():
 	with open('MTSM_qgis/lib/epsg.txt') as file:
 		crs=file.read()
 	return crs
+
+def get_sunrise_sunset(latitude, longitude, date):
+	location = LocationInfo(latitude=latitude, longitude=longitude)
+	s = sun(location.observer, date=date)
+	return pd.Timestamp(s['sunrise']).round('1T').tz_localize(None),pd.Timestamp(s['sunset']).round('1T').tz_localize(None)

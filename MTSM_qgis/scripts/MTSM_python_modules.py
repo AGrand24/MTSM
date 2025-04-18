@@ -18,6 +18,8 @@ from shapely import Point,Polygon,LineString,MultiPolygon,MultiLineString
 from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
+from astral import LocationInfo
+from astral.sun import sun
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', 'GeoSeries.notna', UserWarning)
