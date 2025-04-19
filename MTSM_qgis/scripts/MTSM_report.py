@@ -110,18 +110,18 @@ def tl_get_df_tl():
 	#add RECs without xml data
 	gdf_rec_filt=gdf_rec.copy().loc[gdf_rec['rec_qc_status']=='Recording']
 	gdf_rec_filt=gdf_rec_filt.loc[~gdf_rec_filt['rec_fl_rec_start'].isnull()]
-	gdf_rec_filt=gdf_rec_filt.rename(columns={'rec_fl_adu':'ID_adu'})[['ID_rec','ID_adu']]
+	gdf_rec_filt=gdf_rec_filt.rename(columns={'rec_fl_adu':'ID_adu'})[['ID_rec','ID_adu']].reset_index(drop=True)
 
 	df_tl=pd.concat([df_tl,gdf_rec_filt]).reset_index(drop=True)
 	df_tl['ID_adu']=df_tl['ID_adu'].astype(str).str.zfill(3)
 
 	#merge ID_xml and fl data
-	df_tl=pd.merge(df_tl,gdf_rec.set_index('ID_rec')[['ID_xml','rec_fl_rec_start','rec_fl_joblist']],how='left',left_on='ID_rec',right_index=True)
-	df_tl['rec_fl_rec_start']=df_tl['rec_fl_rec_start'].dt.tz_convert('UTC').dt.tz_localize(None).max().round('1T')
+	df_tl=pd.merge(df_tl,gdf_rec.set_index('ID_rec')[['ID_xml','rec_fl_rec_start','rec_fl_joblist']],how='left',left_on='ID_rec',right_index=True).reset_index(drop=True)
+	df_tl['rec_fl_rec_start']=df_tl['rec_fl_rec_start'].dt.tz_convert('UTC').dt.tz_localize(None).round('1T')
 
 	#merge jl_rec_duration
 	gdf_jl=load_gdf('jl')
-	df_tl=pd.merge(df_tl,gdf_jl.set_index('ID_jl')['jl_rec_duration'],how='left',left_on='rec_fl_joblist',right_index=True)
+	df_tl=pd.merge(df_tl,gdf_jl.set_index('ID_jl')['jl_rec_duration'],how='left',left_on='rec_fl_joblist',right_index=True).reset_index(drop=True)
 
 	#convert jl duration to sec
 	df_tl['jl_rec_duration']=df_tl['jl_rec_duration'].fillna(0)
@@ -130,9 +130,10 @@ def tl_get_df_tl():
 	#unify start, end times
 	df_tl['tl_start']=df_tl['xml_rec_start']
 	df_tl['tl_end']=df_tl['xml_rec_end']
+	df_tl=df_tl.reset_index(drop=True)
 	df_tl.loc[df_tl['ID_xml'].isnull(),'tl_start']=df_tl['rec_fl_rec_start']
 	df_tl.loc[df_tl['ID_xml'].isnull(),'tl_end']=df_tl['rec_fl_rec_start']+df_tl['jl_rec_duration_sec']
-	df_tl=df_tl[['ID_adu','ID_xml','ID_rec','tl_start','tl_end']]
+	df_tl=df_tl[['ID_adu','ID_xml','ID_rec','tl_start','tl_end','rec_fl_rec_start']]
 	return df_tl
 
 def tl_get_date_max(df_tl):
