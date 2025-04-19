@@ -344,6 +344,22 @@ def map_export_rec_qc():
 	df_qc.loc[len(df_qc)] = ['Remaining', None,remaining]
 	gpd.GeoDataFrame(df_qc).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_qc')
 
+def eq_export_coils():
+	gdf_xml=load_gdf('xml')
+
+	df_coils=pd.DataFrame()
+	for ch in [str(i) for i in range(3,6)]:
+		gdf_xml=gdf_xml.loc[gdf_xml[f'xml_ch0{ch}_ser_num']!='0']
+		ser_num=gdf_xml[f'xml_ch0{ch}_ser_num'].astype(str).str.zfill(3)
+		sen_type=gdf_xml[f'xml_ch0{ch}_sensor_type']
+		gdf_xml[f'ID_coil']=sen_type+'-'+ser_num
+		df_coils=pd.concat([df_coils,gdf_xml['ID_coil']],axis=0)
+
+	df_coils=df_coils.groupby('ID_coil',as_index=False).agg('first').sort_values('ID_coil').reset_index(drop=True)
+	gpd.GeoDataFrame(df_coils).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_coils',engine='pyogrio')
+
+
+
 
 
 def run_proc_report(tl_range,page_range):
@@ -353,4 +369,5 @@ def run_proc_report(tl_range,page_range):
 	db_format_report_db()
 	tl_proc(tl_range,page_range)
 	map_export_rec_qc()
+	eq_export_coils()
 	print('\tFinished!')
