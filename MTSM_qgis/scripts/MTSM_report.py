@@ -362,7 +362,12 @@ def eq_export_coils():
 
 
 
-def run_proc_report(tl_range,page_range):
+def run_proc_report():
+	with open('tl_range.txt','r') as file:
+		tl_range=int(file.read().strip())
+	with open('tl_page_range.txt','r') as file:
+		page_range=int(file.read().strip())
+	
 	print(f'Generating report data...')
 	print(f'\tTimeline range: {tl_range} days' )
 	print(f'\tTimeline days/page: {page_range} ' )

@@ -104,13 +104,15 @@ def get_xml_rec_start():
 	gdf_xml=load_gdf('xml').dropna(subset='ID_rec')
 	gdf_xml['ID_rec']=gdf_xml['ID_rec'].astype(int)
 
-	gdf_filt=gdf_rec.copy().dropna(subset='rec_fl_num_test_jobs')
+	gdf_filt=gdf_rec.copy().dropna(subset='rec_fl_num_test_jobs').dropna(subset='ID_xml').reset_index(drop=True)
 	gdf_xml=gdf_xml[['ID_rec','xml_rec_start']]
 
-	df_rec_start=pd.DataFrame()
 	for rec,tj in zip(gdf_filt['ID_rec'],gdf_filt['rec_fl_num_test_jobs'].astype(int)):
-		rec_start=gdf_xml.loc[gdf_xml['ID_rec']==rec].sort_values('xml_rec_start').iloc[tj,1]
-		gdf_rec.loc[gdf_rec['ID_rec']==rec,'xml_rec_start']=rec_start
+		try:
+			rec_start=gdf_xml.loc[gdf_xml['ID_rec']==rec].sort_values('xml_rec_start').iloc[tj,1]
+			gdf_rec.loc[gdf_rec['ID_rec']==rec,'xml_rec_start']=rec_start
+		except:
+			print(f'\tError getting rec start - Rec-{rec},test jobs-{tj}')
 
 	save_gdf(gdf_rec,'rec')
 

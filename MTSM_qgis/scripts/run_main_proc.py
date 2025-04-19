@@ -101,8 +101,12 @@ try:
 	reload_xml_paths()
 	print()
 	print(80*'_')
-	run_qc(False)
+	
 	run_proc_report()
+	print()
+	print(80*'_')
+
+	run_qc(False)
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
