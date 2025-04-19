@@ -88,7 +88,7 @@ def db_format_report_db():
 			gdf_rec[col]=gdf_rec[col].str.replace(s,'')
 
 	gdf_rep=gpd.GeoDataFrame(gdf_rec[cols]).reset_index(drop=True)
-	gdf_rep['page']=(gdf_rep.index.astype(int)//24)
+	gdf_rep['page']=(gdf_rep.index.astype(int)//14)
 	gdf_rep.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_db',engine='pyogrio')
 
 	pages=gdf_rep['page'].sort_values().unique()
@@ -358,7 +358,50 @@ def eq_export_coils():
 	df_coils=df_coils.groupby('ID_coil',as_index=False).agg('first').sort_values('ID_coil').reset_index(drop=True)
 	gpd.GeoDataFrame(df_coils).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_coils',engine='pyogrio')
 
+def pd_export():
+	df=gpd.read_file('MTSM_qgis/mtsm_pd_rx.gpkg')
 
+	for grp in range(1,8):
+		operators=df[[f'pd_rx_{grp}_op1',f'pd_rx_{grp}_op2']].agg(lambda x:', '.join(x.dropna()), axis=1)
+		cols_crw=[]
+		[cols_crw.append(f"pd_rx_{grp}_prs{crw}") for crw in range(1,6)]
+		crew=df[cols_crw].agg(lambda x:', '.join(x.dropna()), axis=1)
+		try:
+			df[f'pd_rx_{grp}_start']=df[f'pd_rx_{grp}_start'].dt.tz_convert('UTC').dt.tz_localize(None).dt.strftime("%H:%M")
+			df[f'pd_rx_{grp}_end']=df[f'pd_rx_{grp}_end'].dt.tz_convert('UTC').dt.tz_localize(None).dt.strftime("%H:%M")
+		except:
+			pass
+		times=df[[f'pd_rx_{grp}_start',f'pd_rx_{grp}_end']].agg(lambda x:' - '.join(x.dropna()), axis=1)
+
+		df[f'operators_{grp}']=operators
+		df[f'crew_{grp}']=crew
+		df[f'times_{grp}']=times
+		
+		str_cols=[f'times_{grp}',f'operators_{grp}',f'crew_{grp}']
+
+		df[f'grp_str_{grp}']=df[str_cols].agg(lambda x:'\n'.join(x.dropna()), axis=1)
+
+	cols_out=['ID_pd_rx','pd_rx_weather','pd_rx_note']
+	[cols_out.append(f"grp_str_{grp}") for grp in range(1,8)]
+	df=df[cols_out]
+	df['page']=df.reset_index(drop=True).index.astype(int)//14
+
+	# df=df.replace('\n\n',None)
+	# df=df.dropna(axis=1,how='all')
+
+	gdf_rec=load_gdf('rec')
+	gdf_rec['rec_fl_rec_start']=gdf_rec['rec_fl_rec_start'].dt.tz_convert('UTC').dt.tz_localize(None)
+
+	df['n_recs']=0
+	for date in df['ID_pd_rx']:
+		dt_start=date
+		dt_end=date+pd.Timedelta(hours=24)
+		df.loc[df['ID_pd_rx']==date,'n_recs']=len(gdf_rec.loc[(gdf_rec['rec_fl_rec_start']>=dt_start)&(gdf_rec['rec_fl_rec_start']<dt_end)])
+
+	gpd.GeoDataFrame(df).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_pd',engine='pyogrio')
+
+	df_pages=df.groupby('page',as_index=False).agg('first')
+	gpd.GeoDataFrame(df_pages['page']).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_pd_pages',engine='pyogrio')
 
 
 
@@ -375,4 +418,5 @@ def run_proc_report():
 	tl_proc(tl_range,page_range)
 	map_export_rec_qc()
 	eq_export_coils()
+	pd_export()
 	print('\tFinished!')
