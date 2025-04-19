@@ -370,6 +370,8 @@ def pd_export():
 			df[f'pd_rx_{grp}_start']=df[f'pd_rx_{grp}_start'].dt.tz_convert('UTC').dt.tz_localize(None).dt.strftime("%H:%M")
 			df[f'pd_rx_{grp}_end']=df[f'pd_rx_{grp}_end'].dt.tz_convert('UTC').dt.tz_localize(None).dt.strftime("%H:%M")
 		except:
+			df[f'pd_rx_{grp}_start']=df[f'pd_rx_{grp}_start'].dt.strftime("%H:%M")
+			df[f'pd_rx_{grp}_end']=df[f'pd_rx_{grp}_end'].dt.strftime("%H:%M")
 			pass
 		times=df[[f'pd_rx_{grp}_start',f'pd_rx_{grp}_end']].agg(lambda x:' - '.join(x.dropna()), axis=1)
 
@@ -380,6 +382,7 @@ def pd_export():
 		str_cols=[f'times_{grp}',f'operators_{grp}',f'crew_{grp}']
 
 		df[f'grp_str_{grp}']=df[str_cols].agg(lambda x:'\n'.join(x.dropna()), axis=1)
+		df[f'grp_str_{grp}']=df[f'grp_str_{grp}'].str.strip()
 
 	cols_out=['ID_pd_rx','pd_rx_weather','pd_rx_note']
 	[cols_out.append(f"grp_str_{grp}") for grp in range(1,8)]

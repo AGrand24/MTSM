@@ -13,8 +13,8 @@ pd_rx_1_prs3,str
 pd_rx_1_prs4,str
 pd_rx_1_prs5,str
 pd_rx_2_eq,str
-pd_rx_2_start,str
-pd_rx_2_end,str
+pd_rx_2_start,datetime64[ms]
+pd_rx_2_end,datetime64[ms]
 pd_rx_2_op1,str
 pd_rx_2_op2,str
 pd_rx_2_prs1,str
@@ -23,8 +23,8 @@ pd_rx_2_prs3,str
 pd_rx_2_prs4,str
 pd_rx_2_prs5,str
 pd_rx_3_eq,str
-pd_rx_3_start,str
-pd_rx_3_end,str
+pd_rx_3_start,datetime64[ms]
+pd_rx_3_end,datetime64[ms]
 pd_rx_3_op1,str
 pd_rx_3_op2,str
 pd_rx_3_prs1,str
@@ -33,8 +33,8 @@ pd_rx_3_prs3,str
 pd_rx_3_prs4,str
 pd_rx_3_prs5,str
 pd_rx_4_eq,str
-pd_rx_4_start,str
-pd_rx_4_end,str
+pd_rx_4_start,datetime64[ms]
+pd_rx_4_end,datetime64[ms]
 pd_rx_4_op1,str
 pd_rx_4_op2,str
 pd_rx_4_prs1,str
@@ -43,8 +43,8 @@ pd_rx_4_prs3,str
 pd_rx_4_prs4,str
 pd_rx_4_prs5,str
 pd_rx_5_eq,str
-pd_rx_5_start,str
-pd_rx_5_end,str
+pd_rx_5_start,datetime64[ms]
+pd_rx_5_end,datetime64[ms]
 pd_rx_5_op1,str
 pd_rx_5_op2,str
 pd_rx_5_prs1,str
@@ -53,8 +53,8 @@ pd_rx_5_prs3,str
 pd_rx_5_prs4,str
 pd_rx_5_prs5,str
 pd_rx_6_eq,str
-pd_rx_6_start,str
-pd_rx_6_end,str
+pd_rx_6_start,datetime64[ms]
+pd_rx_6_end,datetime64[ms]
 pd_rx_6_op1,str
 pd_rx_6_op2,str
 pd_rx_6_prs1,str
@@ -63,8 +63,8 @@ pd_rx_6_prs3,str
 pd_rx_6_prs4,str
 pd_rx_6_prs5,str
 pd_rx_7_eq,str
-pd_rx_7_start,str
-pd_rx_7_end,str
+pd_rx_7_start,datetime64[ms]
+pd_rx_7_end,datetime64[ms]
 pd_rx_7_op1,str
 pd_rx_7_op2,str
 pd_rx_7_prs1,str
@@ -72,4 +72,3 @@ pd_rx_7_prs2,str
 pd_rx_7_prs3,str
 pd_rx_7_prs4,str
 pd_rx_7_prs5,str
-pd_rx_relation_prs,int
