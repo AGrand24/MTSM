@@ -10,7 +10,7 @@ import warnings
 from lxml import etree
 from tabulate import tabulate
 import re
-from datetime import datetime,timedelta,time
+from datetime import datetime,timedelta,time,date
 import time
 import errno, stat
 import ppigrf

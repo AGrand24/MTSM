@@ -5,11 +5,30 @@ dname=os.path.dirname(abspath)
 os.chdir(dname)
 
 from MTSM_tools import *
+from MTSM_read_xml import load_gdf_xml
 
 os.chdir( Path(__file__).parents[2])
 
+
+def get_report_date():
+	try:
+		with open('report_date.txt','r') as file:
+			date=file.read()
+	except:
+		date=date.today().strftime('%yyyy-%mm-%ddd')
+	df_set=load_gdf('set',layer='set')
+	df_set.loc[df_set['ID_set']=='dr_date','set_value']=date
+	gpd.GeoDataFrame(df_set).to_file('MTSM_qgis/mtsm_set.gpkg',layer='set',engine='pyogrio')
+	return pd.Timestamp(date)
+
 def db_format_report_db():
+
+	dr_date=get_report_date()
 	gdf_rec=load_gdf('rec').sort_values('ID_rec')
+	
+	gdf_rec=gdf_rec.loc[(gdf_rec['rec_fl_rec_start'].dt.tz_localize(None).dt.normalize()<=dr_date) | (gdf_rec['rec_qc_status']=='Cancelled')] 
+
+
 	gdf_jl=load_gdf('jl')
 
 
@@ -68,17 +87,24 @@ def db_format_report_db():
 		for s in ['nan','None','NaT']:
 			gdf_rec[col]=gdf_rec[col].str.replace(s,'')
 
-	gdf_rep=gpd.GeoDataFrame(gdf_rec[cols])
+	gdf_rep=gpd.GeoDataFrame(gdf_rec[cols]).reset_index(drop=True)
+	gdf_rep['page']=(gdf_rep.index.astype(int)//24)
 	gdf_rep.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_db',engine='pyogrio')
 
+	pages=gdf_rep['page'].sort_values().unique()
+	gdf_pages=gpd.GeoDataFrame(pd.DataFrame(data={'page':pages}))
+	gdf_pages.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_db_pages',engine='pyogrio')
+
 def tl_get_df_tl():
-	gdf_xml=load_gdf('xml')
-	gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec>0')
-	gdf_xml=gdf_xml.rename(columns={'xml_adu':'ID_adu'})
+	gdf_xml=load_gdf_xml()
+	if len(gdf_xml)>0:
+		gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec>0')
+		gdf_xml=gdf_xml.rename(columns={'xml_adu':'ID_adu'})
 
-	df_tl=gdf_xml[['ID_rec','ID_adu','xml_rec_start','xml_rec_end']]
-	df_tl['ID_rec']=df_tl['ID_rec'].astype(int)
-
+		df_tl=gdf_xml[['ID_rec','ID_adu','xml_rec_start','xml_rec_end']]
+		df_tl['ID_rec']=df_tl['ID_rec'].astype(int)
+	else:
+		df_tl=pd.DataFrame()
 	gdf_rec=load_gdf('rec')
 
 	#add RECs without xml data
@@ -109,88 +135,35 @@ def tl_get_df_tl():
 	df_tl=df_tl[['ID_adu','ID_xml','ID_rec','tl_start','tl_end']]
 	return df_tl
 
-
-# def tl_get_df_tl():
-# 	gdf_xml=load_gdf('xml')
-# 	gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec>0')
-# 	gdf_adu=load_gdf('adu').sort_values('ID_adu')
-
-# 	df_eq=gdf_adu.copy()
-# 	df_eq['ID_eq']='ADU0'+df_eq['adu_version']+'-'+df_eq['ID_adu']
-
-# 	df_xml_adu=pd.merge(gdf_xml,df_eq.set_index('ID_adu')['ID_eq'],left_on='xml_adu',right_index=True,how='left')[['ID_eq','ID_rec','xml_rec_start','xml_rec_end']]
-
-# 	df_xml_coils=pd.DataFrame()
-
-# 	for ch in list(range(3,6)):
-# 		ch=str(ch)
-# 		tmp=gdf_xml.loc[gdf_xml[f'xml_ch0{ch}_ser_num'].astype(int)>0]
-# 		tmp[f'xml_ch0{ch}_ser_num']=tmp[f'xml_ch0{ch}_ser_num'].astype(str).str.zfill(3)
-# 		tmp[f'ID_eq']=tmp[[f'xml_ch0{ch}_sensor_type',f'xml_ch0{ch}_ser_num']].agg('-'.join,axis=1)
-# 		df_xml_coils=pd.concat([df_xml_coils,tmp[['ID_eq','ID_rec','xml_rec_start','xml_rec_end']]])
-
-# 	df_tl=pd.concat([df_xml_adu,df_xml_coils])
-# 	df_tl['ID_rec']=df_tl['ID_rec'].astype(int)
-
-# 	# merge jl duration and adu version
-# 	gdf_rec=load_gdf('rec')
-# 	df_tl=pd.merge(df_tl,gdf_rec.set_index('ID_rec')[['rec_fl_rec_start','ID_xml']],how='left',left_on='ID_rec',right_index=True)
-# 	gdf_rec_filt=gdf_rec.copy().loc[gdf_rec['ID_xml'].isnull()]
-# 	gdf_rec_filt=gdf_rec_filt.loc[~gdf_rec_filt['rec_fl_rec_start'].isnull()]
-
-# 	gdf_rec_filt['rec_fl_rec_start']=gdf_rec_filt['rec_fl_rec_start'].dt.tz_convert('UTC').dt.tz_localize(None).max().round('1T')
-# 	df_tl=pd.concat([df_tl,gdf_rec_filt[['ID_rec','rec_fl_rec_start']]]).rename(columns={'xml_rec_start':'tl_start','xml_rec_end':'tl_end'}).reset_index(drop=True)
-
-# 	# merge recording and xml data
-# 	gdf_rec_filt=pd.merge(gdf_rec_filt,df_eq.set_index('ID_adu')['ID_eq'],left_on='rec_fl_adu',right_index=True,how='left')
-# 	gdf_rec_filt=gdf_rec_filt[['ID_rec','ID_eq','rec_fl_rec_start','rec_fl_adu']]
-
-# 	#merge jl_rec_duration
-# 	gdf_jl=load_gdf('jl')
-# 	df_tl=pd.merge(df_tl,gdf_jl.set_index('ID_jl')['jl_rec_duration'],how='left',left_on='rec_fl_joblist',right_index=True)
-	
-# 	print(df_tl)
-# 	df_tl['jl_rec_duration']=df_tl['jl_rec_duration'].fillna(0)
-# 	df_tl['jl_rec_duration']=[timedelta(seconds=sec) for sec in df_tl['jl_rec_duration']]
-
-# 	# unify start and end
-# 	df_tl.loc[df_tl['ID_xml'].isnull(),'tl_start']=df_tl['rec_fl_rec_start']
-# 	df_tl.loc[df_tl['ID_xml'].isnull(),'tl_end']=df_tl['rec_fl_rec_start']+df_tl['jl_rec_duration']
-
-
-# 	df_tl=df_tl[['ID_eq','ID_xml','ID_rec','tl_start','tl_end','jl_rec_duration']]
-# 	df_tl=pd.merge(df_tl,gdf_rec.set_index('ID_rec')['rec_fl_adu'],how='left',left_on='ID_rec',right_index=True)
-# 	return df_tl
-
 def tl_get_date_max(df_tl):
 	gdf_rec=load_gdf('rec')
 
 	dt_fl=(gdf_rec['rec_fl_rec_start'].dt.tz_convert('UTC').dt.tz_localize(None)).max().round('1T')
 	dt_xml=(df_tl)['tl_start'].max().round('1T')
 
-	date_max=max([dt_fl,dt_xml]).normalize()+timedelta(days=1)
+	date_max=max([dt_fl,dt_xml]).normalize()+timedelta(hours=24)
+	dr_report=get_report_date()
+
+	if date_max>dr_report:
+		date_max=dr_report.normalize()+timedelta(hours=24)
 	return date_max
 
 def tl_get_dt_range(tl_range,df_tl):
 	date_max=tl_get_date_max(df_tl)+timedelta(hours=1)
-	if tl_range=='full':
+	if tl_range==0:
 		date_min=df_tl['tl_start'].min().normalize()
 	else:
-		date_min=date_max-timedelta(days=tl_range)
+		date_min=date_max-timedelta(days=tl_range,hours=1)
 
-	dt_range=np.arange(date_min-timedelta(hours=1),date_max,timedelta(hours=1))
+	dt_range=np.arange(date_min,date_max,timedelta(hours=1))
 	return dt_range
 
-def tl_cut_df_tl(df_tl,dt_range):
-	df_tl=df_tl.loc[df_tl['tl_end']>=dt_range.min()]
-	df_tl.loc[df_tl['tl_start']<=dt_range.min(),'tl_start']=dt_range.min()
-	return df_tl
 
+# def tl_cut_df_tl(df_tl,dt_range):
+# 	df_tl=df_tl.loc[df_tl['tl_end']>=dt_range.min()]
+# 	df_tl.loc[df_tl['tl_start']<=dt_range.min(),'tl_start']=dt_range.min()
+# 	return df_tl
 
-# def tl_get_df_eq(df_tl):
-# 	df_eq=df_tl.groupby('ID_eq',as_index=False).agg('first').sort_values('ID_eq').reset_index(drop=True)
-# 	df_eq.loc[df_eq['ID_eq'].str.startswith('ADU'),'ID_adu']=df_eq['ID_eq'].str.slice(-3,None)
-# 	return df_eq[['ID_eq','ID_adu','y']]
 
 def tl_get_ymax():
 	df_adu=load_gdf('adu').sort_values('ID_adu')
@@ -199,11 +172,11 @@ def tl_get_ymax():
 	ymax+=y0
 	return ymax
 
-def tl_dt2x(dt,ymax,dt_range):
-	x_range_sec=np.ptp(dt_range).astype(int)/10**6
-	dt_sec=(dt-dt_range.min()).dt.total_seconds()
+def tl_dt2x(dt,ymax,dt_range,page_range):
 	x0,y0=tl_get_x0_y0()
-	x=dt_sec*((ymax-y0)/x_range_sec)/.7
+	k_dt2x=((ymax-y0)/timedelta(days=page_range).total_seconds())/.7
+	dt_sec=(dt-dt_range.min()).dt.total_seconds()
+	x=dt_sec*k_dt2x
 	x+=x0
 	return x
 
@@ -219,9 +192,9 @@ def tl_get_x0_y0():
 	x0,y0=coords.median()
 	return x0,y0
 
-def tl_export_gdf_tl(df_tl,ymax,dt_range):
-	df_tl['x1']=tl_dt2x(df_tl['tl_start'],ymax,dt_range)
-	df_tl['x2']=tl_dt2x(df_tl['tl_end'],ymax,dt_range)
+def tl_export_gdf_tl(df_tl,ymax,dt_range,page_range):
+	df_tl['x1']=tl_dt2x(df_tl['tl_start'],ymax,dt_range,page_range)
+	df_tl['x2']=tl_dt2x(df_tl['tl_end'],ymax,dt_range,page_range)
 	df_tl=tl_adu2_y(df_tl)
 
 	geom=[]
@@ -232,10 +205,10 @@ def tl_export_gdf_tl(df_tl,ymax,dt_range):
 	gdf_tl.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_tl_data',engine='pyogrio')
 	return gdf_tl
 
-def tl_export_xlabels(dt_range,ymax):
-	dt=pd.Series(np.arange(dt_range.min(),dt_range.max()+timedelta(hours=1),timedelta(hours=1)))
+def tl_export_xlabels(dt_range,ymax,page_range):
+	dt=pd.Series(np.arange(dt_range.min(),dt_range.max()+timedelta(hours=24*page_range+1),timedelta(hours=1)))
 	x0,y0=tl_get_x0_y0()
-	x=tl_dt2x(dt,ymax,dt_range)
+	x=tl_dt2x(dt,ymax,dt_range,page_range)
 	
 	geom=[]
 	for xx in x:
@@ -244,11 +217,11 @@ def tl_export_xlabels(dt_range,ymax):
 	gdf=gpd.GeoDataFrame(pd.DataFrame(data={'dt':dt}),geometry=geom,crs=get_project_crs())
 	gdf.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_tl_x',engine='pyogrio')
 
-def tl_export_ylabels(ymax,dt_range):
+def tl_export_ylabels(ymax,dt_range,page_range):
 	df_adu=load_gdf('adu')
 	df_adu['y']=ymax-(df_adu.index+1)
 
-	x=tl_dt2x(pd.Series([dt_range.min(),dt_range.max()]),ymax,dt_range)
+	x=tl_dt2x(pd.Series([dt_range.min(),dt_range.max()]),ymax,dt_range,page_range)
 	x1=x[0]
 	x2=x[1]
 
@@ -263,24 +236,49 @@ def tl_export_ylabels(ymax,dt_range):
 
 
 
-def tl_export_atlas(dt_range,ymax):
-	dt=pd.Series([dt_range.min(),dt_range.max()])
-	x1,y1=tl_get_x0_y0()
-	x2=tl_dt2x(dt,ymax,dt_range)[1]
+# def tl_export_atlas(dt_range,ymax):
+# 	dt=pd.Series([dt_range.min(),dt_range.max()])
+
+# 	x1,y1=tl_get_x0_y0()
+# 	x2=tl_dt2x(dt,ymax,dt_range)[1]
+# 	y2=ymax
+# 	geom=Polygon(((x1,y1),(x2,y1),(x2,y2),(x1,y2)))
+
+# 	gdf_atas=gpd.GeoDataFrame(data={'page':['1']},geometry=[geom],crs=get_project_crs())
+# 	gdf_atas['x1']=x1
+# 	gdf_atas['x2']=x2
+# 	gdf_atas['w']=x2-x1
+# 	gdf_atas['y1']=y1
+# 	gdf_atas['y2']=y2
+# 	gdf_atas['h']=y2-y1
+
+# 	gdf_atas.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_tl_atlas',engine='pyogrio')
+
+def tl_export_atlas(dt_range,page_range,ymax):
+	dt_atlas=pd.Series(dt_range.copy())
+	dt_atlas=dt_atlas.loc[dt_atlas.index%(page_range*24)==0].reset_index(drop=True)
+	y1=tl_get_x0_y0()[1]
 	y2=ymax
-	geom=Polygon(((x1,y1),(x2,y1),(x2,y2),(x1,y2)))
+	geom=[]
+	dx=[]
+	for dt in dt_atlas:
+		
+		dt_page_max=dt+timedelta(days=page_range)
+		if dt_page_max>dt_range.max():
+			dt_page_max=dt_range.max()
+		
+		dt_page=pd.Series([dt,dt_page_max])
+		x_page=tl_dt2x(dt_page,ymax,dt_range,page_range)
+		x1,x2=x_page[0],x_page[1]
+		geom.append(Polygon(((x1,y1),(x2,y1),(x2,y2),(x1,y2))))
+		# print(dt_page)
+		dx.append(x2-x1)
 
-	gdf_atas=gpd.GeoDataFrame(data={'page':['1']},geometry=[geom],crs=get_project_crs())
-	gdf_atas['x1']=x1
-	gdf_atas['x2']=x2
-	gdf_atas['w']=x2-x1
-	gdf_atas['y1']=y1
-	gdf_atas['y2']=y2
-	gdf_atas['h']=y2-y1
-
+	gdf_atas=gpd.GeoDataFrame(data={'dt_start':dt_atlas,'dx':dx},geometry=geom,crs=get_project_crs())
+	gdf_atas=gdf_atas.loc[gdf_atas['dx']>0].reset_index(drop=True)
 	gdf_atas.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_tl_atlas',engine='pyogrio')
 
-def tl_export_daylight(dt_range,ymax):
+def tl_export_daylight(dt_range,ymax,page_range):
 	gdf_site=load_gdf('site')
 	lon=gdf_site['site_x'].median()
 	lat=gdf_site['site_y'].median()
@@ -294,7 +292,7 @@ def tl_export_daylight(dt_range,ymax):
 	geom=[]
 	for s in sun:
 		dt=pd.Series([s[0],s[1]])
-		x=tl_dt2x(dt,ymax,dt_range)
+		x=tl_dt2x(dt,ymax,dt_range,page_range)
 		x1=x[0]
 		x2=x[1]
 		y1=y0
@@ -304,8 +302,55 @@ def tl_export_daylight(dt_range,ymax):
 	gdf=gpd.GeoDataFrame(geometry=geom,crs=get_project_crs())
 	gdf.to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_tl_sun',engine='pyogrio')
 
+def tl_proc(tl_range,page_range):
+	df_tl=tl_get_df_tl()
+	if len(df_tl)>0:
+		ymax=tl_get_ymax()
+		x0,y0=tl_get_x0_y0()
+		dt_range=tl_get_dt_range(tl_range,df_tl)
+
+		tl_range=pd.Timedelta(dt_range.max()-dt_range.min()).total_seconds()/24/3600
+
+
+		tl_export_atlas(dt_range,page_range,ymax)
+
+		tl_export_xlabels(dt_range,ymax,page_range)
+		tl_export_ylabels(ymax,dt_range,page_range)
+		tl_export_gdf_tl(df_tl,ymax,dt_range,page_range)
+
+		tl_export_daylight(dt_range,ymax,page_range)
+
+
+def map_export_rec_qc():
+	dr_date=get_report_date()
+	gdf=load_gdf('rec')
+	gdf['rec_fl_rec_start']=gdf['rec_fl_rec_start'].dt.tz_localize(None).dt.normalize()
+	gdf.loc[(gdf['rec_fl_rec_start']>dr_date)&(gdf['rec_fl_rec_start']!='Cancelled'),'rec_qc_status']=None
+	gdf['last_prod']=0
+	gdf.loc[gdf['rec_fl_rec_start']==dr_date,'last_prod']=1
+
+	gdf[['ID_rec','ID_site','rec_qc_status','geometry','last_prod']].to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_rec',engine='pyogrio')
+
+	df_qc=load_gdf('qc')
+	gdf['rec_qc_status']=gdf['rec_qc_status'].fillna('Projected')
+	df_qc_filt=gdf.groupby('rec_qc_status',as_index=False).agg(count=('ID_rec','count'))
+	df_qc=pd.merge(df_qc,df_qc_filt.set_index('rec_qc_status'),how='left',left_on='ID_qc',right_index=True)
+	df_qc=df_qc[['ID_qc','qc_clr','count']]
+	df_qc['count']=(df_qc['count'].fillna(0)).astype(int)
+
+	total=df_qc.loc[df_qc['ID_qc']!='Remeasured','count'].sum()
+	remaining=df_qc.loc[df_qc['ID_qc'].isin(['Projected','Rejected']),'count'].sum()
+	df_qc.loc[len(df_qc)] = ['Total', None,total]
+	df_qc.loc[len(df_qc)] = ['Remaining', None,remaining]
+	gpd.GeoDataFrame(df_qc).to_file('MTSM_qgis/mtsm_report.gpkg',layer='mtsm_rep_qc')
 
 
 
-def run_proc_report():
+def run_proc_report(tl_range,page_range):
+	print(f'Generating report data...')
+	print(f'\tTimeline range: {tl_range} days' )
+	print(f'\tTimeline days/page: {page_range} ' )
 	db_format_report_db()
+	tl_proc(tl_range,page_range)
+	map_export_rec_qc()
+	print('\tFinished!')
