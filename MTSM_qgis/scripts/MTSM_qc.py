@@ -108,6 +108,28 @@ def qc_n_jobs(gdf_jl,gdf_rec):
 	print('\nQC WARNING - Inconsistent  number of jobs:\n')
 	print(tabulate(gdf_rec[['ID_rec']+cols_jobs],showindex=False,headers=['ID_rec','Data','Joblist','Test'],tablefmt="presto"))
 
+def qc_missing_fl_data():
+	gdf_rec=load_gdf('rec')
+	gdf_qc=gdf_rec.copy().loc[gdf_rec['rec_qc_status']!='Cancelled']
+
+	qc_cols=['ID_rec','rec_fl_rec_start','rec_fl_operator','rec_fl_joblist','rec_fl_adu']
+
+	gdf_qc=gdf_qc.copy()[qc_cols].set_index('ID_rec')
+	gdf_qc=gdf_qc.dropna(axis=0,how='all')
+
+	gdf_out=pd.DataFrame(index=gdf_qc.index)
+
+	for col in qc_cols[1:]:
+		tmp=gdf_qc[col].fillna(col)
+		gdf_out=pd.concat([gdf_out,tmp.loc[tmp==col]],axis=1)
+
+	gdf_out=gdf_out.dropna(axis=0,how='all')
+	if len(gdf_out)>0:
+		gdf_out['str']=gdf_out[qc_cols[1:]].agg(lambda x:', '.join(x.dropna()), axis=1)
+		
+		print('\nQC WARNING - Missing FL data:\n')
+		for rec,s in zip(gdf_out.index,gdf_out['str']):
+			print(f'\t{rec}\t{s}')
 
 
 def run_qc(ignore_exceptions):
@@ -121,7 +143,7 @@ def run_qc(ignore_exceptions):
 		gdf_except=qc_exception(gdf_rec)
 		exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
 		if len(exceptions)>0:
-			print(f'\nFollowing RECs are excluded from qc checks: {exceptions} - Uncheck "rec_qc_exception" to incude them!')
+			print(f'\nFollowing RECs are excluded from qc checks by user:\n\t{exceptions}')
 	else:
 		print('\tIgnoring exceptions during qc!')
 		gdf_except=gdf_rec
@@ -132,3 +154,4 @@ def run_qc(ignore_exceptions):
 	qc_gps_sync(gdf_except)
 	qc_n_jobs(gdf_except,gdf_jl)
 	run_check_sensor_pos(html=False)
+	qc_missing_fl_data()

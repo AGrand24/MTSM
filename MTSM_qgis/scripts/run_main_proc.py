@@ -99,13 +99,21 @@ print(80*'_')
 try:
 	run_proc_rec()
 	reload_xml_paths()
-	print()
-	print(80*'_')
-	
-	run_proc_report()
-	print()
-	print(80*'_')
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print()
+print(80*'_')
 
+try:
+	run_proc_report()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+print()
+print(80*'_')
+
+try:
 	run_qc(False)
 except Exception as error:
 	traceback.print_exc()
@@ -115,10 +123,12 @@ print(80*'_')
 
 try:
 	export_qc_geometry()
+except Exception as error:
+	traceback.print_exc()
+	input('Press ENTER to continue!')
+try:
 	delete_folder('MTSM_qgis/.qfieldsync')
 except:
 	pass
-
-
 
 input('\n\nProccesing finished! Enter to exit! Refresh QGIS project to see changes!')
