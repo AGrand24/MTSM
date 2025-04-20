@@ -131,6 +131,16 @@ def qc_missing_fl_data():
 		for rec,s in zip(gdf_out.index,gdf_out['str']):
 			print(f'\t{rec}\t{s}')
 
+def qc_memory():
+	gdf=load_gdf('rec')
+	gdf['xml_disk_space_free']/=(10**6)
+	gdf['xml_disk_space_free']=np.round(gdf['xml_disk_space_free'],1)
+	gdf=gdf.loc[gdf['xml_disk_space_free']<1.5]
+
+	print('\nQC WARNING - Low memory:\n')
+	if len(gdf)>0:
+		for rec,adu,mem in zip(gdf['ID_rec'],gdf['xml_adu'],gdf['xml_disk_space_free']):
+			print(f'\t{rec}\t{adu}\t{mem} GB')
 
 def run_qc(ignore_exceptions):
 	print('Running qc check...')
@@ -155,3 +165,4 @@ def run_qc(ignore_exceptions):
 	qc_n_jobs(gdf_except,gdf_jl)
 	run_check_sensor_pos(html=False)
 	qc_missing_fl_data()
+	qc_memory()
