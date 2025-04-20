@@ -268,7 +268,7 @@ def run_qc(ignore_exceptions):
 			print(f"\t{rec}:\t{msg}")
 
 		rec_string=f'ID_rec IN ({df_qc_msg['ID_rec'].drop_duplicates().astype(str).agg(lambda x:','.join(x.dropna()), axis=0)})'
-		print(f'\n\tFilter string copied to clipboard: {rec_string}')
+		print(f'\n\tFilter string copied to clipboard!')
 		pyperclip.copy(rec_string)
 
 	else:
