@@ -49,6 +49,7 @@ def merge_xml2rec(gb):
 	gdf_rec=pd.merge(gdf_rec,gb,how='left',left_on='ID_rec',right_index=True)
 	gdf_rec=get_rec_duration_str(gdf_rec,'xml')
 	gdf_rec['rec_fl_adu']=gdf_rec['rec_fl_adu'].str.zfill(3)
+	gdf_rec['rec_qc_exception']=gdf_rec['rec_qc_exception'].fillna(0)
 	gdf_rec=save_gdf(gdf_rec,'rec')
 	return gdf_rec
 

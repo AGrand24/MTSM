@@ -23,3 +23,4 @@ xml_rec_start,datetime64[ms]
 xml_rec_end,datetime64[ms]
 rec_xml_num_of_jobs,float
 rec_mag_dec,float
+rec_qc_check_msg,str

@@ -9,8 +9,9 @@ from MTSM_qc import run_qc
 
 os.chdir( Path(__file__).parents[2])
 try:
-	print('WARNING - to see changes in REC, XML databases run main processing first!\n\n')
-	run_qc(True)
+
+	print('Ignoring exceptions during qc!')
+	run_qc(ignore_exceptions=True,print_qc_msg=True)
 	input('\nPress ENTER to continue!')
 except Exception as error:
 	traceback.print_exc()

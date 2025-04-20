@@ -32,7 +32,7 @@ def run_check_sensor_pos(recs_list,qc_msg,**kwargs):
 		gdf_xml[diff]=gdf_xml[fl]-gdf_xml[xml]
 
 	for diff,fl,xml,ss,d in zip(sensor_diff,sensor_pos_fl,sensor_pos_xml,sensor_str,directions):
-		gdf_xml.loc[gdf_xml[diff]!=0,ss]=f"{d} " +gdf_xml[fl].astype(int).astype(str)+' - '+gdf_xml[xml].astype(int).astype(str)
+		gdf_xml.loc[gdf_xml[diff]!=0,ss]=f"{d} " +gdf_xml[fl].astype(int).astype(str)+'-'+gdf_xml[xml].astype(int).astype(str)
 
 	id_rec=gdf_xml.copy()['ID_rec']
 
@@ -44,7 +44,7 @@ def run_check_sensor_pos(recs_list,qc_msg,**kwargs):
 	gdf_xml=gdf_xml.reset_index().sort_index(axis=1)
 
 	gb=gdf_xml.drop(columns='ID_xml').groupby('ID_rec').agg('first')
-	gb['str']='inconsistent sensor positions (FL/XML)\t ' +gb.agg(lambda x:' | '.join(x.dropna()), axis=1)
+	gb['str']='inconsistent sensor positions (FL-XML)\t ' +gb.agg(lambda x:' | '.join(x.dropna()), axis=1)
 
 	recs_list.extend(gb.index.to_list())
 	qc_msg.extend(gb['str'].to_list())
@@ -160,7 +160,6 @@ def qc_missing_fl_data(recs_list,qc_msg):
 			qc_msg.append(f'missing FL data: {s}')
 	return recs_list,qc_msg
 
-
 def qc_memory(recs_list,qc_msg):
 	gdf=load_gdf('rec')
 	gdf['xml_disk_space_free']/=(10**6)
@@ -170,7 +169,7 @@ def qc_memory(recs_list,qc_msg):
 	if len(gdf)>0:
 		for rec,adu,mem in zip(gdf['ID_rec'],gdf['xml_adu'],gdf['xml_disk_space_free']):
 			recs_list.append(rec)
-			qc_msg.append(f'low memory - ADU {adu}\t{mem} GB')
+			qc_msg.append(f'low memory - ADU {adu}  {mem} GB')
 	return recs_list,qc_msg
 
 def qc_dc_offset(recs_list,qc_msg):
@@ -223,9 +222,33 @@ def qc_ser_num(recs_list,qc_msg):
 		qc_msg.extend(df_out['str'].to_list())
 	return recs_list,qc_msg
 
+def qc_xml_offset(recs_list,qc_msg):
+	gdf_rec=load_gdf('rec').to_crs(get_project_crs()).set_index('ID_rec')[['ID_site','geometry']]
+	gdf_site=load_gdf('site').to_crs(get_project_crs()).set_index('ID_site')['geometry']
+	gdf_rec=pd.merge(gdf_rec,gdf_site,'left',left_on='ID_site',right_index=True)
 
-def run_qc(ignore_exceptions):
-	print('Running qc check...')
+	site_distances=[]
+	offset=[]
+	for g1,g2 in zip(gdf_rec['geometry_x'],gdf_rec['geometry_y']):
+		tmp=pd.Series(Point(g2).distance(gdf_rec['geometry_y']))
+		site_distances.append(tmp.loc[tmp>0].min())
+		offset.append(Point(g1).distance(g2))
+
+	gdf_rec['offset']=np.round(offset)
+	offset_treshold=np.median(site_distances)/5
+
+	gdf_rec=gdf_rec.loc[gdf_rec['offset']>=offset_treshold]
+
+	gdf_rec['str']='high XML position offset - '+gdf_rec['offset'].astype(int).astype('str')+' m'
+
+	if len(gdf_rec)>0:
+		recs_list.extend(gdf_rec.index)
+		qc_msg.extend(gdf_rec['str'])
+	return recs_list,qc_msg
+
+def run_qc(ignore_exceptions,print_qc_msg):
+	if print_qc_msg==True:
+		print('Running qc check...')
 	gdf_rec=load_gdf('rec')
 	gdf_xml=load_gdf('xml')
 	gdf_edi=load_gdf('edi')
@@ -239,7 +262,6 @@ def run_qc(ignore_exceptions):
 		if len(exceptions)>0:
 			print(f'\nFollowing RECs are excluded from qc checks by user:\n\t{exceptions}')
 	else:
-		print('\tIgnoring exceptions during qc!')
 		gdf_except=gdf_rec
 
 	recs_list,qc_msg=qc_rec_start_span(gdf_xml,gdf_except,recs_list,qc_msg)
@@ -254,22 +276,35 @@ def run_qc(ignore_exceptions):
 	recs_list,qc_msg=qc_dc_offset(recs_list,qc_msg)
 	recs_list,qc_msg=qc_res(recs_list,qc_msg)
 	recs_list,qc_msg=qc_ser_num(recs_list,qc_msg)
+	recs_list,qc_msg=qc_xml_offset(recs_list,qc_msg)
 
-	df_qc_msg=pd.DataFrame(data={'ID_rec':recs_list,'qc_msg':qc_msg})
+	df_qc_msg=pd.DataFrame(data={'ID_rec':recs_list,'rec_qc_check_msg':qc_msg})
 	if len(df_qc_msg)>0:
-		print('\n\tFound following issues:\n')
-		df_qc_msg=df_qc_msg.sort_values('ID_rec')
-		df_qc_msg['ID_rec']=df_qc_msg['ID_rec'].astype(int)
-		df_qc_msg=df_qc_msg.loc[df_qc_msg['ID_rec']>0]
+			df_qc_msg=df_qc_msg.sort_values('ID_rec')
+			df_qc_msg['ID_rec']=df_qc_msg['ID_rec'].astype(int)
+			df_qc_msg=df_qc_msg.loc[df_qc_msg['ID_rec']>0]
 
-		for rec in df_qc_msg['ID_rec']:
-			gb=df_qc_msg.copy().loc[df_qc_msg['ID_rec']==rec]
-			msg=gb['qc_msg'].agg(lambda x:'\n\t\t'.join(x.dropna()), axis=0)
-			print(f"\t{rec}:\t{msg}")
+			messages=[]
+			for rec in df_qc_msg['ID_rec']:
+				gb=df_qc_msg.copy().loc[df_qc_msg['ID_rec']==rec]
+				messages.append(gb['rec_qc_check_msg'].agg(lambda x:'\n\t\t'.join(x.dropna()), axis=0))
+				
+			if print_qc_msg==True:
+				print('\n\tFound following issues:\n')
+				for rec,msg in zip(df_qc_msg['ID_rec'],messages):
+					print(f"\t{rec}:\t{msg}")
 
-		rec_string=f'ID_rec IN ({df_qc_msg['ID_rec'].drop_duplicates().astype(str).agg(lambda x:','.join(x.dropna()), axis=0)})'
-		print(f'\n\tFilter string copied to clipboard!')
-		pyperclip.copy(rec_string)
+				print(f'\n\tFilter string copied to clipboard!')
+
+			df_qc_msg['rec_qc_check_msg']=messages
+			df_qc_msg['rec_qc_check_msg']=df_qc_msg['rec_qc_check_msg'].str.replace('\t','')
+
+			gdf_rec=load_gdf('rec')
+			gdf_rec=pd.merge(gdf_rec.drop(columns='rec_qc_check_msg'),df_qc_msg.set_index('ID_rec'),'left',left_on='ID_rec',right_index=True)
+			save_gdf(gdf_rec,'rec')
+
+			rec_string=f'ID_rec IN ({df_qc_msg['ID_rec'].drop_duplicates().astype(str).agg(lambda x:','.join(x.dropna()), axis=0)})'
+			pyperclip.copy(rec_string)
 
 	else:
 		print('\tQC check finished! Congrats. no issues found!')

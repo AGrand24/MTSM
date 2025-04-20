@@ -105,16 +105,17 @@ except Exception as error:
 print()
 print(80*'_')
 
-try:
-	run_proc_report()
-except Exception as error:
-	traceback.print_exc()
-	input('Press ENTER to continue!')
-print()
-print(80*'_')
+# try:
+# 	run_proc_report()
+# except Exception as error:
+# 	traceback.print_exc()
+# 	input('Press ENTER to continue!')
+# print()
+# print(80*'_')
 
 try:
-	run_qc(False)
+	run_qc(ignore_exceptions=False,print_qc_msg=True)
+	run_qc(ignore_exceptions=True,print_qc_msg=False)
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')
