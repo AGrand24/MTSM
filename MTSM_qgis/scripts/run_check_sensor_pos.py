@@ -9,7 +9,7 @@ os.chdir( Path(__file__).parents[2])
 
 
 try:
-	run_check_sensor_pos()
+	run_check_sensor_pos(recs_list=[],qc_msg=[])
 except Exception as error:
 	traceback.print_exc()
 	# input('Press ENTER to continue!')

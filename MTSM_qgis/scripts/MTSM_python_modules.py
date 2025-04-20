@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 from astral import LocationInfo
 from astral.sun import sun
+import pyperclip
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', 'GeoSeries.notna', UserWarning)
