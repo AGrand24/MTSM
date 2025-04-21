@@ -18,3 +18,4 @@ __pycache__
 !.gitignore
 !MTSM_qgis
 !osm_simplify.ipynb
+MTSM_qgis/sites.csv

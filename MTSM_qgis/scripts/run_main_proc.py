@@ -26,7 +26,7 @@ print(80*'_')
 
 try:
 	print('Loading sites...')
-	load_new_sites()
+	load_sites()
 except Exception as error:
 	traceback.print_exc()
 	input('Press ENTER to continue!')

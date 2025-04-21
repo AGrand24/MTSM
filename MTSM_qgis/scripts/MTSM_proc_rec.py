@@ -53,37 +53,46 @@ def merge_xml2rec(gb):
 	gdf_rec=save_gdf(gdf_rec,'rec')
 	return gdf_rec
 
-def load_new_sites():
+def load_sites():
 	print('\tLooking for new sites...')
 
+	df_site=load_gdf('site')
 
-	df_site_csv=pd.read_csv('MTSM_qgis/sites.csv')
-	gdf_site_gpkg=load_gdf('site')
+	df_site['site_x']=df_site.get_coordinates().iloc[:,0]
+	df_site['site_y']=df_site.get_coordinates().iloc[:,1]
+	df_site=df_site.drop(columns='geometry')
 
+	df_site=df_site.rename(columns={'site_x':'rec_x','site_y':'rec_y'})
+	df_site['ID_rec']=df_site['ID_site'].astype(int)*10
 
-	gdf_site_gpkg['site_x']=gdf_site_gpkg.get_coordinates().iloc[:,0]
-	gdf_site_gpkg['site_y']=gdf_site_gpkg.get_coordinates().iloc[:,1]
-	df_site_gpkg=gdf_site_gpkg.drop(columns='geometry')
+	gdf_rec=load_gdf('rec').dropna(subset='ID_site')
+	gdf_rec=pd.concat([gdf_rec,df_site],axis=0).drop_duplicates(subset='ID_rec',keep='first').drop_duplicates('ID_rec',keep='first').dropna(subset='ID_site')
+	gdf_rec['ID_site']=gdf_rec['ID_site'].astype(int)
 
-	df_site=pd.concat([df_site_gpkg,df_site_csv]).drop_duplicates('ID_site',keep='first').sort_values('ID_site')
-	gdf_site=save_gdf(df_site[['ID_site','site_x','site_y']],'site')
+	gdf_new=gdf_rec.loc[~gdf_rec['ID_site'].isin(df_site['ID_site'])]
 
-	gdf_site=gdf_site.rename(columns={'site_x':'rec_x','site_y':'rec_y'})
-	gdf_site['ID_rec']=gdf_site['ID_site']*10
-	gdf_rec=load_gdf('rec')
+	if len (gdf_new)>0:
+		gdf_new['rec_x']=gdf_new.get_coordinates().iloc[:,0]
+		gdf_new['rec_y']=gdf_new.get_coordinates().iloc[:,1]
+		for site,x,y in zip(gdf_new['ID_site'],gdf_new['rec_x'],gdf_new['rec_y']):
+			ipt=input(f'\tSite {site} is in REC database but missing in SITE db. To remove this site type "r". To keep press ENTER!')
+			if ipt=='r':
+				gdf_rec=gdf_rec.loc[gdf_rec['ID_site']!=site]
+			else:
+				df_site_append=pd.DataFrame(data={'ID_site':[site],'rec_x':[x],'rec_y':[y]})
+				df_site=pd.concat([df_site,df_site_append],axis=0)
 
-	gdf_rec=pd.concat([gdf_rec,gdf_site]).drop_duplicates(subset='ID_rec',keep='first').reset_index(drop=True)
+	df_site=df_site.drop(columns='ID_rec')
+	df_site['site_x']=df_site['rec_x']
+	df_site['site_y']=df_site['rec_y']
+	df_site=df_site.reset_index(drop=True).drop_duplicates('ID_site',keep='last')
+	df_site=df_site.sort_values('ID_site')
+	save_gdf(df_site,'site')
 
-	new_sites=gdf_site.loc[~gdf_site['ID_site'].isin(gdf_rec['ID_site'])]['ID_site']
-	if len(new_sites)>0:
-		new_sites=new_sites.sort_values().to_list()
-		print(f'\t\t Loaded new sites - {list(set(new_sites))}')
-	
-	gdf_site=gdf_site.drop(columns='ID_rec')
-	
 	print('\tReloading site geometries...')
-	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),gdf_site.set_index('ID_site'),left_on='ID_site',right_index=True,how='left')
+	gdf_rec=pd.merge(gdf_rec.drop(columns=['rec_x','rec_y']),df_site.set_index('ID_site'),left_on='ID_site',right_index=True,how='left')
 	save_gdf(gdf_rec,'rec')
+
 
 
 def get_number_of_jobs():
@@ -138,7 +147,7 @@ def run_proc_rec():
 	gb=groupby_xml()
 	gdf_rec=merge_xml2rec(gb)
 	
-	load_new_sites()
+	load_sites()
 
 	print('\tCalculating magnetic declination...')
 	rec_mag_dec()
