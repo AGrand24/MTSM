@@ -213,40 +213,6 @@ def get_sunrise_sunset(latitude, longitude, date):
 	s = sun(location.observer, date=date)
 	return pd.Timestamp(s['sunrise']).round('1T').tz_localize(None),pd.Timestamp(s['sunset']).round('1T').tz_localize(None)
 
-def import_sites_csv():
-	with open('./fp_sites_csv.txt') as file:
-		fp=file.read().strip()
-	print(f'Reading new sites from {fp}\n')
-	df=pd.read_csv(fp,header=None,names=['ID_site','site_x','site_y'])
-	df=df.sort_values('ID_site')
-	if len(df)>0:
-		print('Found sites:')
-		print(tabulate(df,showindex=False,headers=['ID_site','LON','LAT']))
-
-		gdf_site=load_gdf('site')
-
-		df_new=df.copy().loc[~df['ID_site'].isin(gdf_site['ID_site'])]
-
-		if len(df_new)>0:
-			print('\nFound new sites:')
-			print(tabulate(df_new,showindex=False,headers=['ID_site','LON','LAT']))
-			ipt=input('To load new sites type "y"!')
-			if ipt=='y':
-				gdf_site_out=pd.concat([gdf_site,df],axis=0)
-				ipt=input('To overwrite coordinates of duplicate sites, with csv coordinate type "y"!')
-				if ipt=='y':
-					gdf_site_out=gdf_site_out=gdf_site_out.drop_duplicates(subset='ID_site',keep='last')
-				else:
-					gdf_site_out=gdf_site_out=gdf_site_out.drop_duplicates(subset='ID_site',keep='first')
-				gdf_site_out=gdf_site_out.sort_values('ID_site')
-				save_gdf(gdf_site_out,'site')
-		else:
-			ipt=input('No new site found! To replace coordinates in SITE db with coordinates from csv type "y"!')
-			if ipt=='y':
-				gdf_site_out=df
-				save_gdf(gdf_site_out,'site')
-		print('Loading finished press ENTER to exit!')
-
 def export_site_db():
 	df_site=load_gdf('rec').drop_duplicates(subset='ID_site',keep='first')[['ID_site','rec_x0','rec_y0']]
 	df_site=df_site.rename(columns={'rec_x0':'site_x','rec_y0':'site_y'})
