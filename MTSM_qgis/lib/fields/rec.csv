@@ -19,6 +19,10 @@ rec_qc_status,str
 rec_qc_exception,float
 rec_x,float
 rec_y,float
+rec_x0,float
+rec_y0,float
+edi_x,float
+edi_y,float
 xml_rec_start,datetime64[ms]
 xml_rec_end,datetime64[ms]
 rec_xml_num_of_jobs,float

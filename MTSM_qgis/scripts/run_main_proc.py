@@ -24,13 +24,13 @@ except Exception as error:
 print()
 print(80*'_')
 
-try:
-	print('Loading sites...')
-	load_sites()
-except Exception as error:
-	traceback.print_exc()
-	input('Press ENTER to continue!')
-print(80*'_')
+# try:
+# 	print('Loading sites...')
+# 	load_sites()
+# except Exception as error:
+# 	traceback.print_exc()
+# 	input('Press ENTER to continue!')
+# print(80*'_')
 
 
 try:

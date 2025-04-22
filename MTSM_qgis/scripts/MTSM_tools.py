@@ -14,12 +14,7 @@ def df_to_gdf(df,db_name,geometry,**kwargs):
 	crs=kwargs.get('crs',4326)
 	
 	if geometry==True:
-		if db_name=='rec':
-			df.loc[~df['xml_x'].isnull(),'rec_x']=df['xml_x']
-			df.loc[~df['xml_y'].isnull(),'rec_y']=df['xml_y']
-			gdf=gdf.set_geometry(gpd.points_from_xy(df['rec_x'],df['rec_y']))
-		else:
-			gdf=gdf.set_geometry(gpd.points_from_xy(df[f'{db_name}_x'],df[f'{db_name}_y']))
+		gdf=gdf.set_geometry(gpd.points_from_xy(df[f'{db_name}_x'],df[f'{db_name}_y']))
 		gdf=gdf.set_crs(crs)
 
 	gdf=gdf.sort_index(axis='columns')
@@ -252,3 +247,7 @@ def import_sites_csv():
 				save_gdf(gdf_site_out,'site')
 		print('Loading finished press ENTER to exit!')
 
+def export_site_db():
+	df_site=load_gdf('rec').drop_duplicates(subset='ID_site',keep='first')[['ID_site','rec_x0','rec_y0']]
+	df_site=df_site.rename(columns={'rec_x0':'site_x','rec_y0':'site_y'})
+	save_gdf(df_site,'site')
