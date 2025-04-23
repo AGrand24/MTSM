@@ -10,7 +10,7 @@ from MTSM_proc_rec import rec_unify_coords
 os.chdir( Path(__file__).parents[2])
 
 def load_csv_data():
-	with open('./fp_sites_csv.txt') as file:
+	with open('tmp/fp_sites_csv.txt') as file:
 		fp=file.read().strip()
 	print(f'Reading new sites from {fp}')
 	df=pd.read_csv(fp,header=None,names=['ID_site','rec_x0','rec_y0']).dropna()
@@ -28,10 +28,6 @@ def load_csv_data():
 		df=pd.DataFrame()
 	
 	return df, data_check
-
-
-
-
 
 def import_sites_csv():
 
@@ -75,10 +71,7 @@ def import_sites_csv():
 		rec_unify_coords()
 		export_site_db()
 
-
-
 try:
-
 	import_sites_csv()
 	input('\nImport finished! Press ENTER to continue!')
 except Exception as error:

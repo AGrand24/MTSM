@@ -15,14 +15,16 @@ os.chdir( Path(__file__).parents[2])
 def ts_sync():
 	ld=get_ld('ts')
 
-	ld_delete=ld.copy().loc[~ld['file_path'].str.endswith(('ats','xml'))]
 
-	if len(ld_delete)>0:
-		for fp in ld_delete['file_path']:
-			os.remove(fp)
-			print(f'\tDeleted {fp}')
 
 	if len(ld)>0:
+		ld_delete=ld.copy().loc[~ld['file_path'].str.endswith(('ats','xml'))]
+
+		if len(ld_delete)>0:
+			for fp in ld_delete['file_path']:
+				os.remove(fp)
+				print(f'\tDeleted {fp}')
+
 		ld=ld.copy().loc[ld['file_path'].str.endswith(('ats','xml'))]
 		ld['file_path']=ld['file_path'].str.replace('\\','/')
 		# 

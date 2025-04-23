@@ -8,8 +8,8 @@ from MTSM_tools import *
 
 os.chdir( Path(__file__).parents[2])
 
-def run_check_sensor_pos(recs_list,qc_msg,**kwargs):
-	gdf_rec=load_gdf('rec').set_index('ID_rec')
+def run_check_sensor_pos(gdf_except,recs_list,qc_msg,**kwargs):
+	gdf_rec=gdf_except.set_index('ID_rec')
 	gdf_xml=load_gdf('xml').set_index('ID_xml')
 	gdf_xml=gdf_xml.dropna(subset='ID_rec').query('ID_rec!=0')
 	gdf_xml['ID_rec']=gdf_xml['ID_rec'].astype(int)
@@ -59,7 +59,8 @@ def run_check_sensor_pos(recs_list,qc_msg,**kwargs):
 
 
 def qc_exception(gdf_rec):
-	gdf_rec=gdf_rec.loc[gdf_rec['rec_qc_exception']!=1].reset_index(drop=True)
+	# gdf_rec=gdf_rec.loc[gdf_rec['rec_qc_exception']!=1].reset_index(drop=True)
+	gdf_rec=gdf_rec.loc[(gdf_rec['rec_qc_status'].isnull()) | (gdf_rec['rec_qc_status']=='Raw')]
 	return gdf_rec
 
 def qc_rec_start_span(gdf_xml,gdf_rec,recs_list,qc_msg):
@@ -67,9 +68,9 @@ def qc_rec_start_span(gdf_xml,gdf_rec,recs_list,qc_msg):
 	gdf_xml=gdf_xml.loc[gdf_xml['ID_rec'].isin(gdf_rec['ID_rec'])]
 		
 	gdf_rec=gdf_rec[['ID_rec','rec_qc_status']].set_index('ID_rec')
-	gdf_xml=pd.merge(gdf_xml,gdf_rec,how='left',left_on='ID_rec',right_index=True)
+	# gdf_xml=pd.merge(gdf_xml,gdf_rec,how='left',left_on='ID_rec',right_index=True)
 
-	gdf_xml=gdf_xml.loc[~gdf_xml["rec_qc_status"].isin(["Recording","Accepted","Processed","Remeasured"])]
+	# gdf_xml=gdf_xml.loc[~gdf_xml["rec_qc_status"].isin(["Recording","Accepted","Processed","Remeasured"])]
 
 	gb=gdf_xml.groupby('ID_rec',as_index=False).agg(first=('xml_rec_start','min'),last=('xml_rec_start','max'))
 	gb['td']=(gb['last']-gb['first'])
@@ -132,8 +133,8 @@ def qc_n_jobs(gdf_rec,recs_list,qc_msg):
 			qc_msg.append(f'inconsitent number of jobs - {data} (data), {jl} (joblist) {test} (test)')
 	return recs_list,qc_msg
 
-def qc_missing_fl_data(recs_list,qc_msg):
-	gdf_rec=load_gdf('rec')
+def qc_missing_fl_data(gdf_except,recs_list,qc_msg):
+	gdf_rec=gdf_except
 	gdf_qc=gdf_rec.copy().loc[gdf_rec['rec_qc_status']!='Cancelled']
 
 	qc_cols=['ID_rec','rec_fl_rec_start','rec_fl_operator','rec_fl_joblist','rec_fl_adu']
@@ -160,8 +161,8 @@ def qc_missing_fl_data(recs_list,qc_msg):
 			qc_msg.append(f'missing FL data: {s}')
 	return recs_list,qc_msg
 
-def qc_memory(recs_list,qc_msg):
-	gdf=load_gdf('rec')
+def qc_memory(gdf_except,recs_list,qc_msg):
+	gdf=gdf_except
 	gdf['xml_disk_space_free']/=(10**6)
 	gdf['xml_disk_space_free']=np.round(gdf['xml_disk_space_free'],1)
 	gdf=gdf.loc[gdf['xml_disk_space_free']<2]
@@ -172,8 +173,8 @@ def qc_memory(recs_list,qc_msg):
 			qc_msg.append(f'low memory - ADU {adu}  {mem} GB')
 	return recs_list,qc_msg
 
-def qc_dc_offset(recs_list,qc_msg):
-	gdf_rec=load_gdf('rec').set_index('ID_rec')
+def qc_dc_offset(gdf_except,recs_list,qc_msg):
+	gdf_rec=gdf_except.set_index('ID_rec')
 
 	cols_dc=[f'xml_ch0{ch}_st_dc_offset' for ch in range(1,3)]
 
@@ -189,8 +190,8 @@ def qc_dc_offset(recs_list,qc_msg):
 		qc_msg.extend(df_out['str'].to_list())
 	return recs_list,qc_msg
 
-def qc_res(recs_list,qc_msg):
-	gdf_rec=load_gdf('rec').set_index('ID_rec')
+def qc_res(gdf_except,recs_list,qc_msg):
+	gdf_rec=gdf_except.set_index('ID_rec')
 
 	cols_dc=[f'xml_ch0{ch}_st_res' for ch in range(1,3)]
 
@@ -206,8 +207,8 @@ def qc_res(recs_list,qc_msg):
 		qc_msg.extend(df_out['str'].to_list())
 	return recs_list,qc_msg
 
-def qc_ser_num(recs_list,qc_msg):
-	gdf_rec=load_gdf('rec').set_index('ID_rec').dropna(subset='ID_xml')
+def qc_ser_num(gdf_except,recs_list,qc_msg):
+	gdf_rec=gdf_except.set_index('ID_rec').dropna(subset='ID_xml')
 	cols=[f'xml_ch0{ch}_ser_num' for ch in range(3,6)]
 
 	df_out=pd.DataFrame()
@@ -222,8 +223,8 @@ def qc_ser_num(recs_list,qc_msg):
 		qc_msg.extend(df_out['str'].to_list())
 	return recs_list,qc_msg
 
-def qc_xml_offset(recs_list,qc_msg):
-	gdf_rec=load_gdf('rec').to_crs(get_project_crs()).set_index('ID_rec')[['ID_site','geometry']]
+def qc_xml_offset(gdf_except,recs_list,qc_msg):
+	gdf_rec=gdf_except.to_crs(get_project_crs()).set_index('ID_rec')[['ID_site','geometry']]
 	gdf_site=load_gdf('site').to_crs(get_project_crs()).set_index('ID_site')['geometry']
 	gdf_rec=pd.merge(gdf_rec,gdf_site,'left',left_on='ID_site',right_index=True)
 
@@ -258,25 +259,25 @@ def run_qc(ignore_exceptions,print_qc_msg):
 
 	if ignore_exceptions==False:
 		gdf_except=qc_exception(gdf_rec)
-		exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
-		if len(exceptions)>0:
-			print(f'\nFollowing RECs are excluded from qc checks by user:\n\t{exceptions}')
+		# exceptions=gdf_rec.loc[~gdf_rec['ID_rec'].isin(gdf_except['ID_rec'])]['ID_rec'].sort_values().to_list()
+		# if len(exceptions)>0:
+			# print(f'\nFollowing RECs are excluded from qc checks by user:\n\t{exceptions}')
 	else:
 		gdf_except=gdf_rec
 
 	recs_list,qc_msg=qc_rec_start_span(gdf_xml,gdf_except,recs_list,qc_msg)
 	recs_list,qc_msg=qc_missing_edi(gdf_edi,gdf_xml,recs_list,qc_msg)
-	recs_list,qc_msg=qc_missing_data(gdf_xml,recs_list,qc_msg)
+	# recs_list,qc_msg=qc_missing_data(gdf_xml,recs_list,qc_msg)
 
 	recs_list,qc_msg=qc_gps_sync(gdf_except,recs_list,qc_msg)
 	recs_list,qc_msg=qc_n_jobs(gdf_except,recs_list,qc_msg)
-	recs_list,qc_msg=run_check_sensor_pos(html=False,recs_list=recs_list,qc_msg=qc_msg)
-	recs_list,qc_msg=qc_missing_fl_data(recs_list,qc_msg)
-	recs_list,qc_msg=qc_memory(recs_list,qc_msg)
-	recs_list,qc_msg=qc_dc_offset(recs_list,qc_msg)
-	recs_list,qc_msg=qc_res(recs_list,qc_msg)
-	recs_list,qc_msg=qc_ser_num(recs_list,qc_msg)
-	recs_list,qc_msg=qc_xml_offset(recs_list,qc_msg)
+	recs_list,qc_msg=run_check_sensor_pos(gdf_except=gdf_except,html=False,recs_list=recs_list,qc_msg=qc_msg)
+	recs_list,qc_msg=qc_missing_fl_data(gdf_except,recs_list,qc_msg)
+	recs_list,qc_msg=qc_memory(gdf_except,recs_list,qc_msg)
+	recs_list,qc_msg=qc_dc_offset(gdf_except,recs_list,qc_msg)
+	recs_list,qc_msg=qc_res(gdf_except,recs_list,qc_msg)
+	recs_list,qc_msg=qc_ser_num(gdf_except,recs_list,qc_msg)
+	recs_list,qc_msg=qc_xml_offset(gdf_except,recs_list,qc_msg)
 
 	df_qc_msg=pd.DataFrame(data={'ID_rec':recs_list,'rec_qc_check_msg':qc_msg})
 	if len(df_qc_msg)>0:
@@ -284,19 +285,20 @@ def run_qc(ignore_exceptions,print_qc_msg):
 			df_qc_msg['ID_rec']=df_qc_msg['ID_rec'].astype(int)
 			df_qc_msg=df_qc_msg.loc[df_qc_msg['ID_rec']>0]
 
-			messages=[]
-			for rec in df_qc_msg['ID_rec']:
-				gb=df_qc_msg.copy().loc[df_qc_msg['ID_rec']==rec]
-				messages.append(gb['rec_qc_check_msg'].agg(lambda x:'\n\t\t'.join(x.dropna()), axis=0))
-				
+			# for rec in df_qc_msg['ID_rec']:
+				# gb=df_qc_msg.copy().loc[df_qc_msg['ID_rec']==rec]
+				# messages.append(gb['rec_qc_check_msg'].agg(lambda x:'\n\t\t'.join(x.dropna()), axis=0))
+				# recs.append(rec)
+			df_qc_msg=df_qc_msg.groupby('ID_rec').agg(lambda x:'\n\t\t'.join(x.dropna()))
+			df_qc_msg=df_qc_msg.reset_index()
+			# df_qc_msg=pd.DataFrame(data={'ID_rec':recs,'rec_qc_check_msg':messages}).drop_duplicates('ID_rec')
 			if print_qc_msg==True:
 				print('\n\tFound following issues:\n')
-				for rec,msg in zip(df_qc_msg['ID_rec'],messages):
+				for rec,msg in zip(df_qc_msg['ID_rec'],df_qc_msg['rec_qc_check_msg']):
 					print(f"\t{rec}:\t{msg}")
 
 				print(f'\n\tFilter string copied to clipboard!')
 
-			df_qc_msg['rec_qc_check_msg']=messages
 			df_qc_msg['rec_qc_check_msg']=df_qc_msg['rec_qc_check_msg'].str.replace('\t','')
 
 			gdf_rec=load_gdf('rec')

@@ -351,11 +351,12 @@ def run_plot_edi():
 	gdf_edi[['x','y']]=gdf_edi.get_coordinates()
 
 	for edi,rec in zip(gdf_edi['file_path'],gdf_edi['ID_rec']):
-		try:
-			df=edi_to_df(edi)
-			plot_edi([df],colors1,colors2,[rec],alpha)
-		except:
-			print(f'\tCannot read {edi}')
+		if os.path.exists(edi):
+			try:
+				df=edi_to_df(edi)
+				plot_edi([df],colors1,colors2,[rec],alpha)
+			except:
+				print(f'\tCannot read {edi}')
 
 
 def clear_edi_img():

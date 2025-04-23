@@ -12,7 +12,7 @@ os.chdir( Path(__file__).parents[2])
 
 def get_report_date():
 	try:
-		with open('report_date.txt','r') as file:
+		with open('tmp/report_date.txt','r') as file:
 			date=file.read()
 	except:
 		date=date.today().strftime('%yyyy-%mm-%ddd')
@@ -410,9 +410,9 @@ def pd_export():
 
 
 def run_proc_report():
-	with open('tl_range.txt','r') as file:
+	with open('tmp/tl_range.txt','r') as file:
 		tl_range=int(file.read().strip())
-	with open('tl_page_range.txt','r') as file:
+	with open('tmp/tl_page_range.txt','r') as file:
 		page_range=int(file.read().strip())
 	
 	print(f'Generating report data...')

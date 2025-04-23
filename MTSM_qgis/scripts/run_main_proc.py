@@ -42,7 +42,7 @@ print(80*'_')
 
 
 try:
-	with open('xml_reload_type.txt','r') as file:
+	with open('tmp/xml_reload_type.txt','r') as file:
 		reload=file.read().strip()
 
 	ld=get_ld('ts',endswith='.xml')
@@ -56,7 +56,7 @@ try:
 			[print('\t'+x) for x in gdf_xml['ID_xml']]
 			print(f'\tFound {len(gdf_xml)} unmatched xml data:')
 
-			with open('search_radius.txt') as file:
+			with open('tmp/search_radius.txt') as file:
 				search_radius=int(file.read().strip())
 
 			print(f"\n\tSearh radius set to {search_radius}m!")

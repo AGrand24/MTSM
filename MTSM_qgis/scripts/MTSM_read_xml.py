@@ -20,7 +20,7 @@ def get_xml_ld(gdf_xml,reload):
 	if reload=='full':
 		rec_excluded=[]
 	else:
-		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None]))]['ID_rec'].astype(float)
+		rec_excluded=gdf_rec.loc[~(gdf_rec['rec_qc_status'].isin(['Recording',None,'Raw']))]['ID_rec'].astype(float)
 		rec_excluded=rec_excluded.to_list()
 		rec_excluded.append(0)
 	
@@ -87,11 +87,12 @@ def merge_xml_data(gdf_xml,df_xml_read):
 def reload_xml_paths():
 	print('\tReloading xml paths...')
 	gdf_xml=load_gdf_xml().drop(columns='xml_path')
-	ld=get_ld('ts/',endswith='.xml').set_index('ID_xml').rename(columns={'file_path':'xml_path'})['xml_path'].str.replace('\\','/').astype(str)
-
-	gdf_xml=pd.merge(gdf_xml,ld,how='left',left_on=['ID_xml'],right_index=True)
-
-	gdf_xml=save_gdf(gdf_xml,'xml')
+	ld=get_ld('ts/',endswith='.xml')
+	
+	if len(ld)>0:
+		ld=ld.set_index('ID_xml').rename(columns={'file_path':'xml_path'})['xml_path'].str.replace('\\','/').astype(str)
+		gdf_xml=pd.merge(gdf_xml,ld,how='left',left_on=['ID_xml'],right_index=True)
+		gdf_xml=save_gdf(gdf_xml,'xml')
 
 def run_xml_read(reload):
 	print('Reading xml data...')

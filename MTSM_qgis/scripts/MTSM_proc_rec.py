@@ -161,7 +161,10 @@ def rec_unify_coords():
 	save_gdf(gdf_rec,'rec')
 	# print(gdf_rec.loc[gdf_rec['ID_rec']==8201,['ID_rec','rec_x','rec_y','rec_x0','rec_y0']])
 
-
+def rec_set_raw():
+	gdf_rec=load_gdf('rec')
+	gdf_rec.loc[(gdf_rec['rec_qc_status'].isnull()) & (~gdf_rec['ID_xml'].isnull()),'rec_qc_status']='Raw'
+	save_gdf(gdf_rec,'rec')
 
 def rec_edi_coords():
 	gdf_rec=load_gdf('rec').drop(columns=['edi_x','edi_y'])

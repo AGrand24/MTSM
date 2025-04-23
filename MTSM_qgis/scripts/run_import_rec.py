@@ -9,7 +9,7 @@ from MTSM_proc_rec import run_proc_rec
 os.chdir( Path(__file__).parents[2])
 
 try:
-	with open('fp_rec.txt','r') as file:
+	with open('tmp/fp_rec.txt','r') as file:
 		fpath=file.read().strip()
 	fpath=import_rec(fpath)
 	run_proc_rec()
