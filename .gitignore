@@ -12,6 +12,7 @@
 *qgz
 *.qgs~
 MTSM_qgis/.qfieldsync
+MTSM_qgis/joblists
 MTSM_qgis/sites.csv
 *.gpkg-shm
 
