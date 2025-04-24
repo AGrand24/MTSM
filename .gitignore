@@ -9,6 +9,7 @@
 *.gpkg
 *.gpkg-wal
 *.qgs
+*qgz
 *.qgs~
 MTSM_qgis/.qfieldsync
 MTSM_qgis/sites.csv

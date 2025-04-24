@@ -1,0 +1,22 @@
+1.	Install QGIS v3.42.2
+		download link	https://qgis.org/downloads/QGIS-OSGeo4W-3.42.2-2.msi
+
+2.	Install QGIS plugins:
+		GitHub link	https://raw.githubusercontent.com/AGrand24/mtsm_plugin/refs/heads/main/plugins.xml
+		video	
+
+3.	Create project folder:
+		video	
+
+4.	Synchronize project from QField cloud:
+		video	
+
+5.	Install Python v 3.12.7
+		download link	https://www.python.org/ftp/python/3.12.7/python-3.12.7-amd64.exe
+		video	
+
+6.	Install python packages
+		video	
+
+7.	Setup default Windows programs for .xml and .edi files:
+		video	

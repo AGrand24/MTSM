@@ -1,0 +1,125 @@
+KEY fields:
+ID_rec	integer	unique REC key (ID_site+measurment number 0,1,2...)
+ID_site	integer	unique SITE key
+ID_xml	string	unique XML key (format = ADU_measurment_start eg.  282_2025-03-04_10-38-50)
+
+FIELDS manuallly edited  by operators:
+rec_fl_adu	string	ADU (3 digits) - operator manual input
+rec_fl_ex_n	float	sensor position North - operator manual input
+rec_fl_ex_s	float	sensor position South - operator manual input
+rec_fl_ey_e	float	sensor position East - operator manual input
+rec_fl_ey_w	float	sensor position West - operator manual input
+rec_fl_joblist	string	unique joblist key - same as folder name in MTSM_qgis/joblists
+rec_fl_note	string	field not manual operator input
+rec_fl_num_test_jobs	float	number of test measurments before start of normal recording manual operator input
+rec_fl_operator	string	field not - manual operator input
+rec_fl_rec_start	datetime	assemly/ rec start time - manual operator input
+
+FIELDS manuallly edited by QC operator:
+rec_qc_date	datetime	QC date manual input
+rec_qc_note	string	QC note manual input
+rec_qc_qcby	string	QC by (who did the QC) manual input
+rec_qc_status	string	QC status manual input
+
+FIELDS calculated druing processing:
+rec_xml_num_of_jobs	float	number of XMLs
+rec_mag_dec	float	magnetic declination (IGRF from lat/lon and datetime) - calculated during processing
+rec_qc_check_msg	string	Auto QC message deriverd during processing
+
+rec_x	float	REC longitude deriverd druing processing (for sites with XML data = xml_x, for sites without XML data = rec_x0)
+rec_x0	float	original longitude (planned position)
+rec_y	float	REC latitude deriverd druing processing (for sites with XML data = xml_x, for sites without XML data = rec_x0)
+rec_y0	float	original latitude (planned position)
+
+edi_x	float	EDI file longitude
+edi_y	float	EDI file longitude
+
+FIELDS calculated from XML data during processing:
+xml_adu	string	xml data - ADU (3 digits)
+xml_ch01_amplitude_max	float
+xml_ch01_ch_type	string
+xml_ch01_sensor_pos_x1	float
+xml_ch01_sensor_pos_x2	float
+xml_ch01_sensor_type	string
+xml_ch01_ser_num	string
+xml_ch01_st_adb_error	float
+xml_ch01_st_dc_offset	float
+xml_ch01_st_lsb_hf	float
+xml_ch01_st_lsb_lf	float
+xml_ch01_st_res	float
+xml_ch01_st_resNE	float
+xml_ch01_st_resSW	float
+xml_ch01_st_severity	string
+xml_ch02_amplitude_max	float
+xml_ch02_ch_type	string
+xml_ch02_sensor_pos_y1	float
+xml_ch02_sensor_pos_y2	float
+xml_ch02_sensor_type	string
+xml_ch02_ser_num	string
+xml_ch02_st_adb_error	float
+xml_ch02_st_dc_offset	float
+xml_ch02_st_lsb_hf	float
+xml_ch02_st_lsb_lf	float
+xml_ch02_st_res	float
+xml_ch02_st_resNE	float
+xml_ch02_st_resSW	float
+xml_ch02_st_severity	string
+xml_ch03_amplitude_max	float
+xml_ch03_ch_type	string
+xml_ch03_sensor_type	string
+xml_ch03_ser_num	string
+xml_ch03_st_adb_error	float
+xml_ch03_st_dc_offset	float
+xml_ch03_st_lsb_hf	float
+xml_ch03_st_lsb_lf	float
+xml_ch03_st_res	float
+xml_ch03_st_resNE	float
+xml_ch03_st_resSW	float
+xml_ch03_st_severity	string
+xml_ch04_amplitude_max	float
+xml_ch04_ch_type	string
+xml_ch04_sensor_type	string
+xml_ch04_ser_num	string
+xml_ch04_st_adb_error	float
+xml_ch04_st_dc_offset	float
+xml_ch04_st_lsb_hf	float
+xml_ch04_st_lsb_lf	float
+xml_ch04_st_res	float
+xml_ch04_st_resNE	float
+xml_ch04_st_resSW	float
+xml_ch04_st_severity	string
+xml_ch05_amplitude_max	float
+xml_ch05_ch_type	string
+xml_ch05_sensor_type	string
+xml_ch05_ser_num	string
+xml_ch05_st_adb_error	float
+xml_ch05_st_dc_offset	float
+xml_ch05_st_lsb_hf	float
+xml_ch05_st_lsb_lf	float
+xml_ch05_st_res	float
+xml_ch05_st_resNE	float
+xml_ch05_st_resSW	float
+xml_ch05_st_severity	string
+xml_disk_space_free	float	xml data (minimum)- free disk space (Kb)
+xml_disk_space_total	float	xml data (minimum) - total disk space (Kb)
+xml_freq_base	string	xml data (list) - Tx frequency
+xml_freq_cal	string	xml data (list) - calibration frequency
+xml_freq_sample	string	xml data (list) - sampling rate
+xml_gps_dynamic_mode	float	xml data - dynamic mode yes/no
+xml_gps_height	float	xml data (median) - gps height
+xml_gps_num_sats	float	xml data (average) - number of sat
+xml_gps_sync	float	xml data (average) -
+xml_meas_mode	string	unused
+xml_meas_type	string	unused
+xml_num_of_ch	float	unused
+xml_path	string	xml data (list) - paths of all XMLs
+xml_rec_duration	float	total xml data rec duration in seconds
+xml_rec_duration_str	string	total xml data rec duration HH:MM:SS
+xml_rec_end	datetime	xml data rec end (maximum)
+xml_rec_end_date	string	unused
+xml_rec_end_time	string	unused
+xml_rec_start	datetime	xml data rec start (minimum)
+xml_rec_start_date	string	unused
+xml_rec_start_time	string	unused
+xml_x	float	xml data longitude (median)
+xml_y	float	xml data latitude (median)
