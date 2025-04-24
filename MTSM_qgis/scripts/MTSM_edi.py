@@ -359,7 +359,15 @@ def run_plot_edi():
 				print(f'\tCannot read {edi}')
 
 
-def clear_edi_img():
-	ld=get_ld('edi_sorted/img/')
-	for fp in ld['file_path']:
-		os.remove(fp)
+def clear_edi_img(full):
+	if full==False:
+		with open('tmp/delete_edi.txt') as file:
+			rec=file.read().strip()
+		fps=[f"edi_sorted/img/{rec}.png"]
+	else:
+		ld=get_ld('edi_sorted/img/')
+		fps=ld['file_path']
+	
+	for fp in fps:
+		if os.path.exists(fp):
+			os.remove(fp)

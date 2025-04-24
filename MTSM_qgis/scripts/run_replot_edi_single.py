@@ -8,7 +8,7 @@ from MTSM_tools import *
 from MTSM_edi import clear_edi_img,run_plot_edi
 os.chdir( Path(__file__).parents[2])
 try:
-	clear_edi_img(full=True)
+	clear_edi_img(full=False)
 	run_plot_edi()
 	input('\nPress ENTER to continue!')
 except Exception as error:
