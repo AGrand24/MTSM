@@ -1,1 +1,1 @@
-MT Survey Manager for QGIS.
+MT Survey Manager Python scripts.
