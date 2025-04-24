@@ -13,11 +13,10 @@
 *.qgs~
 MTSM_qgis/.qfieldsync
 MTSM_qgis/joblists
-MTSM_qgis/sites.csv
 *.gpkg-shm
-
 __pycache__
+
+
 !.gitignore
 !MTSM_qgis
 !osm_simplify.ipynb
-MTSM_qgis/sites.csv
