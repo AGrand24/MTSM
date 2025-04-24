@@ -10,9 +10,9 @@ os.chdir(dname)
 def install_requirements(requirements_file):
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", requirements_file])
-        print(f"Successfully installed packages from {requirements_file}")
+        input(f"\n\nSuccessfully installed packages from {requirements_file}! Press ENTER to exit!")
     except subprocess.CalledProcessError as e:
-        print(f"Failed to install packages from {requirements_file}: {e}")
+        input(f"\n\nFailed to install packages from {requirements_file}: {e}\nPress ENTER to exit!")
 
 # Example usage
 install_requirements("req.txt")
