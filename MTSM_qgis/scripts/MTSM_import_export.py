@@ -27,7 +27,7 @@ def import_rec(fpath):
 	df=pd.DataFrame(columns=df_fields['field'])
 	for field,dtype in zip(df_fields['field'],df_fields['dtype']):
 		df[field]=df[field].astype(dtype)
-
+		
 	df_import=pd.read_csv(fpath,sep='\t')
 	fields_rec=pd.read_csv('MTSM_qgis/lib/fields/rec.csv')['field'].to_list()
 	fields_import=df_import.columns.to_list()
